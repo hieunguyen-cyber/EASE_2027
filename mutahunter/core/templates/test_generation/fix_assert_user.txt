@@ -1,0 +1,50 @@
+# Unit Test Fix for {{ language }} using {{ test_framework }}
+
+## Failed Tests
+The following tests failed in the test suite:
+{{ failed_tests }}
+You are processing assertion failures, i.e., without any compilation errors, please match only one of these guidelines and then try to correct the failed tests according to the given error messages. Do not introduce extra function invocations or assertions, that is, only modify the assertion function name or its parameters as needed.
+	1.	Direct Invocation:
+	•	Always use assertion functions directly (e.g., assertEquals(value1, value2)) instead of prefixed calls like Assert.assertEquals(value1, value2).
+	2.	Handling assertEquals Mismatches:
+	•	If an error follows the pattern:
+	•	test_file_name:line_number: expected:<error_value> but was:<correct_value>
+	•	And involves assertEquals, replace the expected value with the correct one.
+	•	Example:
+	•	assertEquals(expected_value, xxx); → assertEquals(correct_value, xxx);
+	3.	Fixing assertTrue / assertFalse Errors:
+	•	If an error follows the pattern:
+	•	classname:line_number:null
+	•	And involves assertTrue or assertFalse, swap the function name while keeping all parameters unchanged.
+	•	Example:
+	•	assertTrue(xxx); → assertFalse(xxx);
+  4. Handling ambiguous 
+	•	If an error has the pattern:
+	• reference to assertEquals is ambiguous  
+	•	And involves assertEquals, add type casts to both parameters based on their respective types.
+	•	Example:
+	•	assertEquals(expected_value, actual_value); → assertEquals((long) expected_value, (long) actual_value);
+
+## Example Output
+Provide a YAML object conforming to the $NewTests type, please keep the same key name:
+```python
+class TestCases(BaseModel):
+    test_code: str 
+
+class NewTests(BaseModel):
+    new_tests: List[TestCases]
+```
+
+## Requirements
+1. Fixed Test code must be full complete function in {{ language }} using {{ test_framework }}.
+2. Retain test tags before each test case
+3. Double check the test code for correctness
+4. Double check all the necessary imports are included
+
+## Output Format
+```yaml
+new_tests:
+  - test_code: |
+      ...
+```
+Provide only the YAML output, containing all keys in the above example. Do not include any additional explanations or comments. 

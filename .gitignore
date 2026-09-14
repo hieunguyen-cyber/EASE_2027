@@ -1,0 +1,9 @@
+/runs/
+/logs/
+/slurm_logs/
+/slurm-*.out
+/slurm-*.err
+/.venv/
+/.tools/
+__pycache__/
+*.py[cod]
