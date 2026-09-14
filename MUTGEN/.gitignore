@@ -1,0 +1,18 @@
+# --- Dữ liệu và kết quả chạy: KHÔNG bao giờ nằm trong repo code ---
+# Vị trí chuẩn là thư mục cha (mutgen_repo/), xem README mục "Repository layout".
+/data
+/puts
+/runs
+/logs
+/slurm_logs
+/evaluation_results
+/slurm-*.out
+/slurm-*.err
+
+# --- Toolchain tải về (JDK, maven wrapper) ---
+/.tools
+
+# --- Python ---
+/.venv
+__pycache__/
+*.py[cod]

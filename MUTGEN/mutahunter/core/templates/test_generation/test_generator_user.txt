@@ -1,0 +1,54 @@
+# Unit Test Generator for {{ language }} using {{ test_framework }}
+
+## Source code description
+{{ source_description | default("") }}
+
+## Source File
+```{{ language }}
+{{ source_code }}
+```
+
+## Mutation Report
+{{ mutation_feedback | default("") }}
+
+## Existing Test Class
+```{{ language }}
+{{ test_file | default("") }}
+```
+
+## Example Output
+Provide a YAML object conforming to the $NewTests type, please keep the same key name:
+```python
+class TestCases(BaseModel):
+    test_behavior: str
+    test_name: str
+    test_code: str 
+    new_imports_: str
+
+class NewTests(BaseModel):
+    new_tests: List[TestCases]
+```
+
+## Requirements
+1. Given additional test cases and try to cover all situations considered in the test plan, please pay attention to the description of source code, and make sure the format and type are correct.
+2. Test code must assert one concept per test case.
+3. Test code must be full complete function in {{ language }} using {{ test_framework }}.
+4. Focus on testing a single behavior or outcome per test case.
+5. Include only the test function, not boilerplate code.
+6. Specify new imports if needed. 
+7. Use appropriate test tags before each test case
+8. Double check the test code for correctness
+9. Double check all the necessary imports are included
+
+## Output Format
+```yaml
+new_tests:
+  - test_behavior: "Verify user login with valid credentials"
+    test_name: "test_valid_user_login"
+    test_code: |
+      ...
+    new_imports_: |
+        ...
+        ...
+```
+Provide only the YAML output, containing all keys in the above example. Do not include any additional explanations or comments. 

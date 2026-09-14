@@ -1,0 +1,40 @@
+# Unit Test Fix for {{ language }} using {{ test_framework }}
+
+## Failed Tests
+The following tests failed in the test suite:
+{{ failed_tests }}
+You need to correct the code according to the compilation errors. Specifically,
+	1.	Method name conflicts
+	•	If an error follows the pattern: method is already defined in the class,
+    •	only append a number to the method name.
+    •	Example:
+        public void test_null() -> public void test_null1();
+
+## Example Output
+Provide a YAML object conforming to the $NewTests type, please keep the same key name:
+```python
+class TestCases(BaseModel):
+    test_code: str 
+    new_imports_: str
+
+class NewTests(BaseModel):
+    new_tests: List[TestCases]
+```
+
+## Requirements
+1. Fixed Test code must be full complete function in {{ language }} using {{ test_framework }}.
+2. Specify new imports if needed. 
+3. Retain test tags before each test case
+4. Double check the test code for correctness
+5. Double check all the necessary imports are included
+
+## Output Format
+```yaml
+new_tests:
+  - test_code: |
+      ...
+    new_imports_: |
+        ...
+        ...
+```
+Provide only the YAML output, containing all keys in the above example. Do not include any additional explanations or comments. 
