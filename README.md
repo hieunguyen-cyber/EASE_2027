@@ -105,6 +105,17 @@ Verify connectivity before starting a batch run:
 curl --fail "${OLLAMA_SERVER_URL}/api/tags"
 ```
 
+### Fixed LLM runtime
+
+Mutahunter runs only with local Ollama model `llama3.3:70b` at
+`http://127.0.0.1:11434`. The model is pulled automatically if it is not installed.
+
+```bash
+PYTHONPATH="$PWD" python3 -m mutahunter.main gen \
+  --test-command pytest --test-file-path tests/test_app.py \
+  --source-file-path app.py
+```
+
 ### One KTester focal method (repository-level smoke run)
 
 The first prepared task is

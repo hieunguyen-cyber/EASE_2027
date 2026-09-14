@@ -1,5 +1,4 @@
 import argparse
-import os
 import sys
 
 from mutahunter.core.analyzer import Analyzer
@@ -13,6 +12,7 @@ from mutahunter.core.entities.config import (
 )
 from mutahunter.core.io import FileOperationHandler
 from mutahunter.core.llm_mutation_engine import LLMMutationEngine
+from mutahunter.core.llm_backend import configure_backend
 from mutahunter.core.prompt_factory import (
     MutationTestingPromptFactory,
     TestGenerationPromptFactory,
@@ -25,27 +25,8 @@ from mutahunter.core.unit_test_gen import UnittestGenLine
 from mutahunter.core.unit_test_gen_with_mutants import UnittestGenMutation
 
 
-DEFAULT_OLLAMA_SERVER_URL = os.getenv(
-    "OLLAMA_SERVER_URL", "http://172.16.0.10:11434"
-).rstrip("/")
-DEFAULT_OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.3:70b")
-DEFAULT_MODEL = os.getenv("MUTGEN_MODEL", f"ollama/{DEFAULT_OLLAMA_MODEL}")
-
-
 def add_mutation_testing_subparser(subparsers):
     parser = subparsers.add_parser("run", help="Run the mutation testing process.")
-    parser.add_argument(
-        "--model",
-        type=str,
-        default=DEFAULT_MODEL,
-        help=f"The LiteLLM model identifier. Default is '{DEFAULT_MODEL}'.",
-    )
-    parser.add_argument(
-        "--api-base",
-        type=str,
-        default=DEFAULT_OLLAMA_SERVER_URL,
-        help=f"The self-hosted LLM base URL. Default is '{DEFAULT_OLLAMA_SERVER_URL}'.",
-    )
     parser.add_argument(
         "--test-command",
         type=str,
@@ -121,18 +102,6 @@ def add_gen_line_subparser(subparsers):
         help="The command to run the tests (e.g., 'pytest'). This argument is required.",
     )
     parser.add_argument(
-        "--model",
-        type=str,
-        default=DEFAULT_MODEL,
-        help=f"The LiteLLM model identifier. Default is '{DEFAULT_MODEL}'.",
-    )
-    parser.add_argument(
-        "--api-base",
-        type=str,
-        default=DEFAULT_OLLAMA_SERVER_URL,
-        help=f"The self-hosted LLM base URL. Default is '{DEFAULT_OLLAMA_SERVER_URL}'.",
-    )
-    parser.add_argument(
         "--target-line-coverage-rate",
         type=float,
         default=0.9,
@@ -178,18 +147,6 @@ def add_gen_mutation_subparser(subparsers):
         help="The command to run the tests (e.g., 'pytest'). This argument is required.",
     )
     parser.add_argument(
-        "--model",
-        type=str,
-        default=DEFAULT_MODEL,
-        help=f"The LiteLLM model identifier. Default is '{DEFAULT_MODEL}'.",
-    )
-    parser.add_argument(
-        "--api-base",
-        type=str,
-        default=DEFAULT_OLLAMA_SERVER_URL,
-        help=f"The self-hosted LLM base URL. Default is '{DEFAULT_OLLAMA_SERVER_URL}'.",
-    )
-    parser.add_argument(
         "--target-mutation-coverage-rate",
         type=float,
         default=0.9,
@@ -224,9 +181,10 @@ def parse_arguments():
 def create_run_mutation_testing_controller(
     args: argparse.Namespace,
 ) -> MutationTestController:
+    model, api_base = configure_backend()
     config = MutationTestControllerConfig(
-        model=args.model,
-        api_base=args.api_base,
+        model=model,
+        api_base=api_base,
         test_command=args.test_command,
         code_coverage_report_path=args.code_coverage_report_path,
         coverage_type=args.coverage_type,
@@ -262,9 +220,10 @@ def create_run_mutation_testing_controller(
 
 
 def create_gen_line_controller(args: argparse.Namespace) -> UnittestGenLine:
+    model, api_base = configure_backend()
     config = UnittestGeneratorLineConfig(
-        model=args.model,
-        api_base=args.api_base,
+        model=model,
+        api_base=api_base,
         test_file_path=args.test_file_path,
         source_file_path=args.source_file_path,
         test_command=args.test_command,
