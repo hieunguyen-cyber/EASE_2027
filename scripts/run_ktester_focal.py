@@ -952,7 +952,6 @@ def parse_focal_jacoco_coverage(
     except Exception:
         start_line, end_line = None, None
 
-    focal_class_simple = task["class"].rsplit(".", 1)[-1]
     # JaCoCo reports source file names without directory prefix
     source_filename = Path(task["source-path"]).name
 
@@ -1320,10 +1319,8 @@ def score_ktester_reference(
                 # surefire reports already reflect only the passing tests.
                 if disabled_methods:
                     cov_passed = cov_all  # already filtered
-                    counts_passed = counts_all
                 else:
                     cov_passed = cov_all
-                    counts_passed = counts_all
                 coverage_metrics = {
                     "cpr": 1.0,
                     "epr": counts_all["epr"],
@@ -1398,7 +1395,6 @@ def run(args: argparse.Namespace) -> int:
             "Run này đã completed. Dùng một run directory mới để giữ tính tái lập; "
             "hoặc truyền --allow-rerun nếu bạn chủ động muốn chạy trên test hiện tại."
         )
-    workspace = Path(manifest["workspace"])
     build_dir = Path(manifest.get("build_dir", manifest["workspace"]))
     task = manifest["task"]
     results_dir = run_dir / "results"
@@ -1499,7 +1495,6 @@ def run(args: argparse.Namespace) -> int:
 
         # ── Run final test + measure MutGen coverage (LC, BC, LCP, BCP) ────
         print("\n[Coverage] Đo LC, BC, LCP, BCP cho MutGen test...")
-        mutgen_compile_ok = True
         mutgen_coverage: dict = {}
         try:
             mutgen_coverage = measure_focal_coverage(
@@ -1514,7 +1509,6 @@ def run(args: argparse.Namespace) -> int:
             )
         except Exception as cov_err:
             print(f"[WARNING] Không thể đo coverage cho MutGen: {cov_err}")
-            mutgen_compile_ok = False
             mutgen_coverage = {"cpr": 0.0, "coverage_error": str(cov_err)}
 
         # ── Final test run (for PIT, needs a clean execution) ────────────────
@@ -1702,7 +1696,7 @@ def status(args: argparse.Namespace) -> int:
         kstatus = ktester.get("status", "N/A")
         kstats = ktester.get("stats") or {}
         print(f"KTester MS: {kstats.get('detected')}/{kstats.get('total')} ({kstats.get('mutation_score')}) [{kstatus}]")
-        print(f"KTester Coverage:")
+        print("KTester Coverage:")
         print(f"  LC={ktester.get('lc')}  BC={ktester.get('bc')}  LCP={ktester.get('lcp')}  BCP={ktester.get('bcp')}")
         print(f"  CPR={ktester.get('cpr')}  EPR={ktester.get('epr')}")
         print("")
