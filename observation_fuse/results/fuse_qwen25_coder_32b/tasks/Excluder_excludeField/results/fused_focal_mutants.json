@@ -1,0 +1,244 @@
+{
+  "mutants": [
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Excluder.java",
+      "line": 151,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Excluder.java",
+      "line": 151,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 155,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 156,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 160,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 164,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 171,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 171,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 175,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 179,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Excluder.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 183,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 41,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Excluder.java",
+      "line": 152,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 157,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 161,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 167,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 172,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 176,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Excluder.java",
+      "line": 184,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Excluder.java",
+      "line": 189,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/Excluder::excludeField",
+      "method_description": "(Ljava/lang/reflect/Field;Z)Z"
+    }
+  ]
+}

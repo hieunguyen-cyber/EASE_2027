@@ -1,0 +1,33 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (25 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 240 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (raw != originalRaw && fields.length > 0) {
+- line 291 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0, size = fieldNames.size(); i < size; ++i) {
+- line 231 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (raw.isInterface()) {
+- line 236 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (raw != Object.class) {
+- line 240 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (raw != originalRaw && fields.length > 0) {
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (filterResult == FilterResult.BLOCK_ALL) {
+- line 247 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: blockInaccessible = filterResult == FilterResult.BLOCK_INACCESSIBLE;
+- line 253 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!serialize && !deserialize) {
+- line 253 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!serialize && !deserialize) {
+- line 259 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isRecord) {
+- line 263 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Modifier.isStatic(field.getModifiers())) {
+- line 268 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!blockInaccessible) {
+- line 275 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (accessor.getAnnotation(SerializedName.class) != null
+- line 276 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && field.getAnnotation(SerializedName.class) == null) {
+- line 285 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!blockInaccessible && accessor == null) {
+- line 285 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!blockInaccessible && accessor == null) {
+- line 293 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (i != 0) serialize = false; // only serialize the default name
+- line 297 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous == null) previous = replaced;
+- line 299 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous != null) {
+- line 240 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (raw != originalRaw && fields.length > 0) {
+- line 291 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0, size = fieldNames.size(); i < size; ++i) {
+- line 269 | VoidMethodCallMutator | removed call to com/google/gson/internal/reflect/ReflectionHelper::makeAccessible | source: ReflectionHelper.makeAccessible(accessor);
+- line 286 | VoidMethodCallMutator | removed call to com/google/gson/internal/reflect/ReflectionHelper::makeAccessible | source: ReflectionHelper.makeAccessible(field);
+- line 232 | EmptyObjectReturnValsMutator | replaced return value with Collections.emptyMap for com/google/gson/internal/bind/ReflectiveTypeAdapterFactory::getBoundFields | source: return result;
+- line 308 | EmptyObjectReturnValsMutator | replaced return value with Collections.emptyMap for com/google/gson/internal/bind/ReflectiveTypeAdapterFactory::getBoundFields | source: return result;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetBoundFields

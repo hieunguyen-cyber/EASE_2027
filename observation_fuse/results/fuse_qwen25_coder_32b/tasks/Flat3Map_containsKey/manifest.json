@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:03:26.771002+00:00",
+  "task_id": "Flat3Map_containsKey",
+  "project": "commons-collections",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-collections",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Flat3Map_containsKey",
+    "package": "org.apache.commons.collections4.map",
+    "class": "org.apache.commons.collections4.map.Flat3Map",
+    "test-class": "org.apache.commons.collections4.map.Flat3Map_containsKey_Test",
+    "method-name": "containsKey(Object)",
+    "source-path": "src/main/java/org/apache/commons/collections4/map/Flat3Map.java",
+    "test-path": "src/test/java/org/apache/commons/collections4/map/Flat3Map_containsKey_Test.java",
+    "focal-method": "@Override\r\npublic boolean containsKey(final Object key) {\r\n    if (delegateMap != null) {\r\n        return delegateMap.containsKey(key);\r\n    }\r\n    if (key == null) {\r\n        switch (size) {\r\n            // drop through\r\n            case 3 :\r\n                if (key3 == null) {\r\n                    return true;\r\n                }\r\n            case 2 :\r\n                if (key2 == null) {\r\n                    return true;\r\n                }\r\n            case 1 :\r\n                if (key1 == null) {\r\n                    return true;\r\n                }\r\n        }\r\n    } else if (size > 0) {\r\n        final int hashCode = key.hashCode();\r\n        switch (size) {\r\n            // drop through\r\n            case 3 :\r\n                if ((hash3 == hashCode) && key.equals(key3)) {\r\n                    return true;\r\n                }\r\n            case 2 :\r\n                if ((hash2 == hashCode) && key.equals(key2)) {\r\n                    return true;\r\n                }\r\n            case 1 :\r\n                if ((hash1 == hashCode) && key.equals(key1)) {\r\n                    return true;\r\n                }\r\n        }\r\n    }\r\n    return false;\r\n}",
+    "class-code": "package org.apache.commons.collections4.map;\nimport org.apache.commons.collections4.iterators.EmptyMapIterator;\nimport java.util.Set;\nimport org.apache.commons.collections4.iterators.EmptyIterator;\nimport java.io.IOException;\nimport java.util.AbstractCollection;\nimport java.util.AbstractSet;\nimport org.apache.commons.collections4.ResettableIterator;\nimport java.io.ObjectOutputStream;\nimport org.apache.commons.collections4.CollectionUtils;\nimport org.apache.commons.collections4.MapIterator;\nimport org.apache.commons.collections4.IterableMap;\nimport java.io.ObjectInputStream;\nimport java.util.Collection;\nimport java.util.Iterator;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.util.Map;\nimport java.io.Serializable;\npublic class Flat3Map<K, V> implements IterableMap<K, V> , Serializable , Cloneable {\n    private transient int size;\n    private transient int hash1;\n    private transient int hash2;\n    private transient int hash3;\n    private transient K key1;\n    private transient K key2;\n    private transient K key3;\n    private transient AbstractHashedMap<K, V> delegateMap;\n    @Override\r\n    public boolean containsKey(final Object key) {\r\n        if (delegateMap != null) {\r\n            return delegateMap.containsKey(key);\r\n        }\r\n        if (key == null) {\r\n            switch (size) {\r\n                // drop through\r\n                case 3 :\r\n                    if (key3 == null) {\r\n                        return true;\r\n                    }\r\n                case 2 :\r\n                    if (key2 == null) {\r\n                        return true;\r\n                    }\r\n                case 1 :\r\n                    if (key1 == null) {\r\n                        return true;\r\n                    }\r\n            }\r\n        } else if (size > 0) {\r\n            final int hashCode = key.hashCode();\r\n            switch (size) {\r\n                // drop through\r\n                case 3 :\r\n                    if ((hash3 == hashCode) && key.equals(key3)) {\r\n                        return true;\r\n                    }\r\n                case 2 :\r\n                    if ((hash2 == hashCode) && key.equals(key2)) {\r\n                        return true;\r\n                    }\r\n                case 1 :\r\n                    if ((hash1 == hashCode) && key.equals(key1)) {\r\n                        return true;\r\n                    }\r\n            }\r\n        }\r\n        return false;\r\n    }\n@Override\r\npublic void clear();\n    @Override\r\n@SuppressWarnings(\"unchecked\")\r\npublic Flat3Map<K, V> clone();\n    @Override\r\npublic boolean containsValue(final Object value);\n    protected AbstractHashedMap<K, V> createDelegateMap();\n    @Override\r\npublic Set<Map.Entry<K, V>> entrySet();\n    @Override\r\npublic boolean equals(final Object obj);\n    @Override\r\npublic V get(final Object key);\n    @Override\r\npublic int hashCode();\n    @Override\r\npublic boolean isEmpty();\n    @Override\r\npublic Set<K> keySet();\n    @Override\r\npublic MapIterator<K, V> mapIterator();\n    @Override\r\npublic V put(final K key, final V value);\n    @Override\r\npublic void putAll(final Map<? extends K, ? extends V> map);\n    @Override\r\npublic V remove(final Object key);\n    @Override\r\npublic int size();\n    @Override\r\npublic String toString();\n    @Override\r\npublic Collection<V> values();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-collections/src/test/java/org/apache/commons/collections4/map/Flat3Map_containsKey_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace/src/test/java/org/apache/commons/collections4/map/Flat3Map_containsKey_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace/src/test/java/org/apache/commons/collections4/map/Flat3Map_containsKey_Test.java"
+  },
+  "started_at": "2026-09-15T06:03:26.851106+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Flat3Map_containsKey/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

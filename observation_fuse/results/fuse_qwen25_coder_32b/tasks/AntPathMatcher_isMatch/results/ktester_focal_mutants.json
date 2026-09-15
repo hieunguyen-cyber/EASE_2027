@@ -1,0 +1,324 @@
+{
+  "mutants": [
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 65,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 78,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 43,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 45,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 45,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 46,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 48,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 48,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 55,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 57,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 58,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 59,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 59,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 60,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 66,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 76,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 77,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 36,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 77,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 78,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 65,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 39,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 44,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 47,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 51,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 61,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 43,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 67,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 71,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 45,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 44,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 49,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AntPathMatcher.java",
+      "line": 51,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AntPathMatcher.java",
+      "line": 58,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 49,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 71,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
+      "id": 50,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AntPathMatcher.java",
+      "line": 76,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Z"
+    }
+  ]
+}

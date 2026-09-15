@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 8,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 721,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 724,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 725,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 726,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printCDATA",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 728,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printText",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 13,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 733,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printCDATA",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 736,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printComment",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 739,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printElement",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 742,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printEntityRef",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 745,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printProcessingInstruction",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 749,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printText",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXStreamProcessor.java",
+      "line": 752,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printDocType",
+      "method_description": "(Ljavax/xml/stream/XMLStreamWriter;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (25 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 395 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int t = 0, length = args.length; t < length; t++) {
+- line 351 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (toResolve instanceof TypeVariable) {
+- line 354 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previouslyResolved != null) {
+- line 356 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: return (previouslyResolved == Void.TYPE) ? toResolve : previouslyResolved;
+- line 361 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (resolving == null) {
+- line 366 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (toResolve == typeVariable) {
+- line 370 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (toResolve instanceof Class && ((Class<?>) toResolve).isArray()) {
+- line 370 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (toResolve instanceof Class && ((Class<?>) toResolve).isArray()) {
+- line 374 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: toResolve = equal(componentType, newComponentType)
+- line 379 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (toResolve instanceof GenericArrayType) {
+- line 383 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: toResolve = equal(componentType, newComponentType)
+- line 388 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (toResolve instanceof ParameterizedType) {
+- line 392 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: boolean changed = !equal(newOwnerType, ownerType);
+- line 397 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!equal(resolvedTypeArgument, args[t])) {
+- line 398 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!changed) {
+- line 406 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: toResolve = changed
+- line 411 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (toResolve instanceof WildcardType) {
+- line 416 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (originalLowerBound.length == 1) {
+- line 418 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (lowerBound != originalLowerBound[0]) {
+- line 422 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (originalUpperBound.length == 1) {
+- line 424 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (upperBound != originalUpperBound[0]) {
+- line 437 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (resolving != null) {
+- line 395 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int t = 0, length = args.length; t < length; t++) {
+- line 356 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::resolve | source: return (previouslyResolved == Void.TYPE) ? toResolve : previouslyResolved;
+- line 440 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::resolve | source: return toResolve;

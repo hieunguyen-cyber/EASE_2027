@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 1,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 345,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 2,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 321,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 3,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 323,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 4,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 324,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 5,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 332,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 6,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 332,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 7,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 335,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 8,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 340,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 342,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 361,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 345,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/StringBuilder::setCharAt",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DTDParser.java",
+      "line": 368,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/jdom2/input/stax/DTDParser::formatInternal",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

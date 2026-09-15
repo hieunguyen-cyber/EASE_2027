@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 924,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 926,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 18,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 929,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 930,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::textCDATA",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 932,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::textRaw",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 937,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printCDATA",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 940,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printComment",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 943,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printDocType",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 24,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 946,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printElement",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 949,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printEntityRef",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 952,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printProcessingInstruction",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractXMLOutputProcessor.java",
+      "line": 956,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printText",
+      "method_description": "(Ljava/io/Writer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    }
+  ]
+}

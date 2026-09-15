@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:35:54.530713+00:00",
+  "task_id": "Rule_pattern",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Rule_pattern",
+    "package": "org.apache.commons.codec.language.bm",
+    "class": "org.apache.commons.codec.language.bm.Rule",
+    "test-class": "org.apache.commons.codec.language.bm.Rule_pattern_Test",
+    "method-name": "pattern(String)",
+    "source-path": "src/main/java/org/apache/commons/codec/language/bm/Rule.java",
+    "test-path": "src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java",
+    "focal-method": "private static RPattern pattern(final String regex) {\r\n    final boolean startsWith = regex.startsWith(\"^\");\r\n    final boolean endsWith = regex.endsWith(\"$\");\r\n    final String content = regex.substring(startsWith ? 1 : 0, endsWith ? regex.length() - 1 : regex.length());\r\n    final boolean boxes = content.contains(\"[\");\r\n    if (!boxes) {\r\n        if (startsWith && endsWith) {\r\n            // exact match\r\n            if (content.isEmpty()) {\r\n                // empty\r\n                return input -> input.length() == 0;\r\n            }\r\n            return input -> input.equals(content);\r\n        }\r\n        if ((startsWith || endsWith) && content.isEmpty()) {\r\n            // matches every string\r\n            return ALL_STRINGS_RMATCHER;\r\n        }\r\n        if (startsWith) {\r\n            // matches from start\r\n            return input -> startsWith(input, content);\r\n        }\r\n        if (endsWith) {\r\n            // matches from start\r\n            return input -> endsWith(input, content);\r\n        }\r\n    } else {\r\n        final boolean startsWithBox = content.startsWith(\"[\");\r\n        final boolean endsWithBox = content.endsWith(\"]\");\r\n        if (startsWithBox && endsWithBox) {\r\n            String boxContent = content.substring(1, content.length() - 1);\r\n            if (!boxContent.contains(\"[\")) {\r\n                // box containing alternatives\r\n                final boolean negate = boxContent.startsWith(\"^\");\r\n                if (negate) {\r\n                    boxContent = boxContent.substring(1);\r\n                }\r\n                final String bContent = boxContent;\r\n                final boolean shouldMatch = !negate;\r\n                if (startsWith && endsWith) {\r\n                    // exact match\r\n                    return input -> (input.length() == 1) && (contains(bContent, input.charAt(0)) == shouldMatch);\r\n                }\r\n                if (startsWith) {\r\n                    // first char\r\n                    return input -> (input.length() > 0) && (contains(bContent, input.charAt(0)) == shouldMatch);\r\n                }\r\n                if (endsWith) {\r\n                    // last char\r\n                    return input -> (input.length() > 0) && (contains(bContent, input.charAt(input.length() - 1)) == shouldMatch);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    return new RPattern() {\r\n        final Pattern pattern = Pattern.compile(regex);\r\n\r\n        @Override\r\n        public boolean isMatch(final CharSequence input) {\r\n            final Matcher matcher = pattern.matcher(input);\r\n            return matcher.find();\r\n        }\r\n    };\r\n}",
+    "class-code": "package org.apache.commons.codec.language.bm;\nimport java.util.Scanner;\nimport java.util.regex.Pattern;\nimport java.util.Set;\nimport java.util.HashMap;\nimport java.util.regex.Matcher;\nimport java.util.ArrayList;\nimport java.util.Comparator;\nimport org.apache.commons.codec.Resources;\nimport org.apache.commons.codec.language.bm.Languages.LanguageSet;\nimport java.util.EnumMap;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Collections;\npublic class Rule {\n    public static final RPattern ALL_STRINGS_RMATCHER = input -> true;\n    public static final String ALL = \"ALL\";\n    private static RPattern pattern(final String regex) {\r\n        final boolean startsWith = regex.startsWith(\"^\");\r\n        final boolean endsWith = regex.endsWith(\"$\");\r\n        final String content = regex.substring(startsWith ? 1 : 0, endsWith ? regex.length() - 1 : regex.length());\r\n        final boolean boxes = content.contains(\"[\");\r\n        if (!boxes) {\r\n            if (startsWith && endsWith) {\r\n                // exact match\r\n                if (content.isEmpty()) {\r\n                    // empty\r\n                    return input -> input.length() == 0;\r\n                }\r\n                return input -> input.equals(content);\r\n            }\r\n            if ((startsWith || endsWith) && content.isEmpty()) {\r\n                // matches every string\r\n                return ALL_STRINGS_RMATCHER;\r\n            }\r\n            if (startsWith) {\r\n                // matches from start\r\n                return input -> startsWith(input, content);\r\n            }\r\n            if (endsWith) {\r\n                // matches from start\r\n                return input -> endsWith(input, content);\r\n            }\r\n        } else {\r\n            final boolean startsWithBox = content.startsWith(\"[\");\r\n            final boolean endsWithBox = content.endsWith(\"]\");\r\n            if (startsWithBox && endsWithBox) {\r\n                String boxContent = content.substring(1, content.length() - 1);\r\n                if (!boxContent.contains(\"[\")) {\r\n                    // box containing alternatives\r\n                    final boolean negate = boxContent.startsWith(\"^\");\r\n                    if (negate) {\r\n                        boxContent = boxContent.substring(1);\r\n                    }\r\n                    final String bContent = boxContent;\r\n                    final boolean shouldMatch = !negate;\r\n                    if (startsWith && endsWith) {\r\n                        // exact match\r\n                        return input -> (input.length() == 1) && (contains(bContent, input.charAt(0)) == shouldMatch);\r\n                    }\r\n                    if (startsWith) {\r\n                        // first char\r\n                        return input -> (input.length() > 0) && (contains(bContent, input.charAt(0)) == shouldMatch);\r\n                    }\r\n                    if (endsWith) {\r\n                        // last char\r\n                        return input -> (input.length() > 0) && (contains(bContent, input.charAt(input.length() - 1)) == shouldMatch);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        return new RPattern() {\r\n            final Pattern pattern = Pattern.compile(regex);\r\n    \r\n            @Override\r\n            public boolean isMatch(final CharSequence input) {\r\n                final Matcher matcher = pattern.matcher(input);\r\n                return matcher.find();\r\n            }\r\n        };\r\n    }\nprivate static boolean contains(final CharSequence chars, final char input);\n    private static boolean endsWith(final CharSequence input, final CharSequence suffix);\n    public static List<Rule> getInstance(final NameType nameType, final RuleType rt, final String lang);\n    public static List<Rule> getInstance(final NameType nameType, final RuleType rt, final Languages.LanguageSet langs);\n    public static Map<String, List<Rule>> getInstanceMap(final NameType nameType, final RuleType rt, final String lang);\n    public static Map<String, List<Rule>> getInstanceMap(final NameType nameType, final RuleType rt, final Languages.LanguageSet langs);\n    public RPattern getLContext();\n    public String getPattern();\n    public PhonemeExpr getPhoneme();\n    public RPattern getRContext();\n    public boolean patternAndContextMatches(final CharSequence input, final int i);\n    private static boolean startsWith(final CharSequence input, final CharSequence prefix);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace/src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace/src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java"
+  },
+  "started_at": "2026-09-15T05:35:54.595741+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Rule_pattern/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

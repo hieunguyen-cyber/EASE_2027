@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (22 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 2010 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (lengthInBits == 0) {
+- line 2011 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (root.isEmpty()) {
+- line 2020 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (compareKeys(key, found.key)) {
+- line 2021 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (found.isEmpty()) { // <- must be the root
+- line 2030 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!KeyAnalyzer.isOutOfBoundsIndex(bitIndex)) {
+- line 2031 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isValidBitIndex(bitIndex)) { // in 99.999...9% the case
+- line 2038 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isNullBitKey(bitIndex)) {
+- line 2043 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (root.isEmpty()) {
+- line 2051 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isEqualBitKey(bitIndex) && found != root) { // NOPMD
+- line 2051 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isEqualBitKey(bitIndex) && found != root) { // NOPMD
+- line 2012 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize | source: incrementSize();
+- line 2014 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount | source: incrementModCount();
+- line 2022 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize | source: incrementSize();
+- line 2024 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount | source: incrementModCount();
+- line 2035 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize | source: incrementSize();
+- line 2044 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize | source: incrementSize();
+- line 2046 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount | source: incrementModCount();
+- line 2052 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount | source: incrementModCount();
+- line 2016 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put | source: return root.setKeyValue(key, value);
+- line 2026 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put | source: return found.setKeyValue(key, value);
+- line 2048 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put | source: return root.setKeyValue(key, value);
+- line 2053 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put | source: return found.setKeyValue(key, value);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPut_WithKeyLengthZero_shouldHandleRootNode, testPut_whenBitKeyGreaterThanExistingKey_shouldAddEntry, testPut_whenInvalidBitKeyPass_shouldThrowException, testPut_whenKeyExists_shouldUpdateValue, testPut_whenNullBitKeyAndEntryNotFound_shouldThrowException, testPut_whenReadingFromStream_shouldStoreEntries, testPut_withDuplicateKey_shouldThrowException, testPut_withKeyAtRoot_shouldHandleCorrectly, testPut_withKeyLengthZero_shouldHandleRootNode, testPut_withNewKeyInValidBitIndex_shouldAddEntry, testPut_withNullBitKey_shouldStoreAtRoot, testPut_withNullKey_shouldThrowException, testPut_withValidKey_shouldStoreValue

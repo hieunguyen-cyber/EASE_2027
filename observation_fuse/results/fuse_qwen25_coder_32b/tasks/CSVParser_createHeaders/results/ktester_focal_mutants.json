@@ -1,0 +1,224 @@
+{
+  "mutants": [
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 504,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 523,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise OR with AND",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVParser.java",
+      "line": 480,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 483,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 13,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 486,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 491,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 493,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 501,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 507,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 507,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 512,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 514,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 515,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 517,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 517,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 517,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 517,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 524,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 526,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 534,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVParser.java",
+      "line": 504,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 539,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/CSVParser::createHeaders",
+      "method_description": "()Lorg/apache/commons/csv/CSVParser$Headers;"
+    }
+  ]
+}

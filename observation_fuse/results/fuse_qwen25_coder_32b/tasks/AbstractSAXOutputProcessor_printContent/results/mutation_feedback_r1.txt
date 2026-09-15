@@ -1,0 +1,21 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 667 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (walker.hasNext()) {
+
+NO_COVERAGE (10 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 669 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == null) {
+- line 672 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.isCDATA()) {
+- line 673 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printCDATA | source: printCDATA(out, fstack, new CDATA(text));
+- line 675 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printText | source: printText(out, fstack, new Text(text));
+- line 680 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printCDATA | source: printCDATA(out, fstack, (CDATA)c);
+- line 683 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printComment | source: printComment(out, fstack, (Comment)c);
+- line 689 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printElement | source: printElement(out, fstack, nstack, (Element)c);
+- line 692 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printEntityRef | source: printEntityRef(out, fstack, (EntityRef)c);
+- line 695 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printProcessingInstruction | source: printProcessingInstruction(out, fstack,
+- line 699 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printText | source: printText(out, fstack, (Text)c);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintContent, testPrintContent_CDATAThrowsException, testPrintContent_EmptyWalker, testPrintContent_InvalidContentType, testPrintContent_InvalidElements, testPrintContent_NullParameters, testPrintContent_ProcessTextContent

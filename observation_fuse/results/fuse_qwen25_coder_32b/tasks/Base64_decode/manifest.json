@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:20:19.207671+00:00",
+  "task_id": "Base64_decode",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Base64_decode",
+    "package": "org.apache.commons.codec.binary",
+    "class": "org.apache.commons.codec.binary.Base64",
+    "test-class": "org.apache.commons.codec.binary.Base64_decode_Test",
+    "method-name": "decode(byte[], int, int, Context)",
+    "source-path": "src/main/java/org/apache/commons/codec/binary/Base64.java",
+    "test-path": "src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java",
+    "focal-method": "@Override\r\nvoid decode(final byte[] input, int inPos, final int inAvail, final Context context) {\r\n    if (context.eof) {\r\n        return;\r\n    }\r\n    if (inAvail < 0) {\r\n        context.eof = true;\r\n    }\r\n    final int decodeSize = this.encodeSize - 1;\r\n    for (int i = 0; i < inAvail; i++) {\r\n        final byte[] buffer = ensureBufferSize(decodeSize, context);\r\n        final byte b = input[inPos++];\r\n        if (b == pad) {\r\n            // We're done.\r\n            context.eof = true;\r\n            break;\r\n        }\r\n        if ((b >= 0) && (b < decodeTable.length)) {\r\n            final int result = decodeTable[b];\r\n            if (result >= 0) {\r\n                context.modulus = (context.modulus + 1) % BYTES_PER_ENCODED_BLOCK;\r\n                context.ibitWorkArea = (context.ibitWorkArea << BITS_PER_ENCODED_BYTE) + result;\r\n                if (context.modulus == 0) {\r\n                    buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 16) & MASK_8BITS));\r\n                    buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 8) & MASK_8BITS));\r\n                    buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                }\r\n            }\r\n        }\r\n    }\r\n    // Two forms of EOF as far as base64 decoder is concerned: actual\r\n    // EOF (-1) and first time '=' character is encountered in stream.\r\n    // This approach makes the '=' padding characters completely optional.\r\n    if (context.eof && (context.modulus != 0)) {\r\n        final byte[] buffer = ensureBufferSize(decodeSize, context);\r\n        // We have some spare bits remaining\r\n        // Output all whole multiples of 8 bits and ignore the rest\r\n        switch (context.modulus) {\r\n            // case 0 : // impossible, as excluded above\r\n            case 1 :\r\n                // 6 bits - either ignore entirely, or raise an exception\r\n                validateTrailingCharacter();\r\n                break;\r\n            case 2 :\r\n                // 12 bits = 8 + 4\r\n                validateCharacter(MASK_4BITS, context);\r\n                context.ibitWorkArea = context.ibitWorkArea >> 4;// dump the extra 4 bits\r\n\r\n                buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                break;\r\n            case 3 :\r\n                // 18 bits = 8 + 8 + 2\r\n                validateCharacter(MASK_2BITS, context);\r\n                context.ibitWorkArea = context.ibitWorkArea >> 2;// dump 2 bits\r\n\r\n                buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 8) & MASK_8BITS));\r\n                buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                break;\r\n            default :\r\n                throw new IllegalStateException(\"Impossible modulus \" + context.modulus);\r\n        }\r\n    }\r\n}",
+    "class-code": "package org.apache.commons.codec.binary;\nimport java.math.BigInteger;\nimport java.util.Objects;\nimport org.apache.commons.codec.CodecPolicy;\nimport java.util.Arrays;\npublic class Base64 extends BaseNCodec {\n    private static final int BITS_PER_ENCODED_BYTE = 6;\n    private static final int BYTES_PER_ENCODED_BLOCK = 4;\n    private static final int MASK_4BITS = 0xf;\n    private static final int MASK_2BITS = 0x3;\n    private final byte[] decodeTable;\n    private final int encodeSize;\n    @Override\r\n    void decode(final byte[] input, int inPos, final int inAvail, final Context context) {\r\n        if (context.eof) {\r\n            return;\r\n        }\r\n        if (inAvail < 0) {\r\n            context.eof = true;\r\n        }\r\n        final int decodeSize = this.encodeSize - 1;\r\n        for (int i = 0; i < inAvail; i++) {\r\n            final byte[] buffer = ensureBufferSize(decodeSize, context);\r\n            final byte b = input[inPos++];\r\n            if (b == pad) {\r\n                // We're done.\r\n                context.eof = true;\r\n                break;\r\n            }\r\n            if ((b >= 0) && (b < decodeTable.length)) {\r\n                final int result = decodeTable[b];\r\n                if (result >= 0) {\r\n                    context.modulus = (context.modulus + 1) % BYTES_PER_ENCODED_BLOCK;\r\n                    context.ibitWorkArea = (context.ibitWorkArea << BITS_PER_ENCODED_BYTE) + result;\r\n                    if (context.modulus == 0) {\r\n                        buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 16) & MASK_8BITS));\r\n                        buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 8) & MASK_8BITS));\r\n                        buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        // Two forms of EOF as far as base64 decoder is concerned: actual\r\n        // EOF (-1) and first time '=' character is encountered in stream.\r\n        // This approach makes the '=' padding characters completely optional.\r\n        if (context.eof && (context.modulus != 0)) {\r\n            final byte[] buffer = ensureBufferSize(decodeSize, context);\r\n            // We have some spare bits remaining\r\n            // Output all whole multiples of 8 bits and ignore the rest\r\n            switch (context.modulus) {\r\n                // case 0 : // impossible, as excluded above\r\n                case 1 :\r\n                    // 6 bits - either ignore entirely, or raise an exception\r\n                    validateTrailingCharacter();\r\n                    break;\r\n                case 2 :\r\n                    // 12 bits = 8 + 4\r\n                    validateCharacter(MASK_4BITS, context);\r\n                    context.ibitWorkArea = context.ibitWorkArea >> 4;// dump the extra 4 bits\r\n    \r\n                    buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                    break;\r\n                case 3 :\r\n                    // 18 bits = 8 + 8 + 2\r\n                    validateCharacter(MASK_2BITS, context);\r\n                    context.ibitWorkArea = context.ibitWorkArea >> 2;// dump 2 bits\r\n    \r\n                    buffer[context.pos++] = ((byte) ((context.ibitWorkArea >> 8) & MASK_8BITS));\r\n                    buffer[context.pos++] = ((byte) (context.ibitWorkArea & MASK_8BITS));\r\n                    break;\r\n                default :\r\n                    throw new IllegalStateException(\"Impossible modulus \" + context.modulus);\r\n            }\r\n        }\r\n    }\npublic static Builder builder();\n    public static byte[] decodeBase64(final byte[] base64Data);\n    public static byte[] decodeBase64(final String base64String);\n    public static BigInteger decodeInteger(final byte[] pArray);\n    @Override\r\nvoid encode(final byte[] in, int inPos, final int inAvail, final Context context);\n    public static byte[] encodeBase64(final byte[] binaryData);\n    public static byte[] encodeBase64(final byte[] binaryData, final boolean isChunked);\n    public static byte[] encodeBase64(final byte[] binaryData, final boolean isChunked, final boolean urlSafe);\n    public static byte[] encodeBase64(final byte[] binaryData, final boolean isChunked, final boolean urlSafe, final int maxResultSize);\n    public static byte[] encodeBase64Chunked(final byte[] binaryData);\n    public static String encodeBase64String(final byte[] binaryData);\n    public static byte[] encodeBase64URLSafe(final byte[] binaryData);\n    public static String encodeBase64URLSafeString(final byte[] binaryData);\n    public static byte[] encodeInteger(final BigInteger bigInteger);\n    byte[] getLineSeparator();\n    public static boolean isBase64(final byte octet);\n    public static boolean isBase64(final byte[] arrayOctet);\n    public static boolean isBase64(final String base64);\n    @Override\r\nprotected boolean isInAlphabet(final byte octet);\n    public boolean isUrlSafe();\n    static byte[] toIntegerBytes(final BigInteger bigInt);\n    private void validateCharacter(final int emptyBitsMask, final Context context);\n    private void validateTrailingCharacter();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace/src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace/src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java"
+  },
+  "started_at": "2026-09-15T05:20:19.271582+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Base64_decode/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

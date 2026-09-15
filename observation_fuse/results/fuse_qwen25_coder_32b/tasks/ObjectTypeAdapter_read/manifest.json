@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:58:34.443940+00:00",
+  "task_id": "ObjectTypeAdapter_read",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "ObjectTypeAdapter_read",
+    "package": "com.google.gson.internal.bind",
+    "class": "com.google.gson.internal.bind.ObjectTypeAdapter",
+    "test-class": "com.google.gson.internal.bind.ObjectTypeAdapter_read_Test",
+    "method-name": "read(JsonReader)",
+    "source-path": "src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java",
+    "test-path": "src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java",
+    "focal-method": "@Override\r\npublic Object read(JsonReader in) throws IOException {\r\n    // Either List or Map\r\n    Object current;\r\n    JsonToken peeked = in.peek();\r\n    current = tryBeginNesting(in, peeked);\r\n    if (current == null) {\r\n        return readTerminal(in, peeked);\r\n    }\r\n    Deque<Object> stack = new ArrayDeque<>();\r\n    while (true) {\r\n        while (in.hasNext()) {\r\n            String name = null;\r\n            // Name is only used for JSON object members\r\n            if (current instanceof Map) {\r\n                name = in.nextName();\r\n            }\r\n            peeked = in.peek();\r\n            Object value = tryBeginNesting(in, peeked);\r\n            boolean isNesting = value != null;\r\n            if (value == null) {\r\n                value = readTerminal(in, peeked);\r\n            }\r\n            if (current instanceof List) {\r\n                @SuppressWarnings(\"unchecked\")\r\n                List<Object> list = ((List<Object>) (current));\r\n                list.add(value);\r\n            } else {\r\n                @SuppressWarnings(\"unchecked\")\r\n                Map<String, Object> map = ((Map<String, Object>) (current));\r\n                map.put(name, value);\r\n            }\r\n            if (isNesting) {\r\n                stack.addLast(current);\r\n                current = value;\r\n            }\r\n        } \r\n        // End current element\r\n        if (current instanceof List) {\r\n            in.endArray();\r\n        } else {\r\n            in.endObject();\r\n        }\r\n        if (stack.isEmpty()) {\r\n            return current;\r\n        } else {\r\n            // Continue with enclosing element\r\n            current = stack.removeLast();\r\n        }\r\n    } \r\n}",
+    "class-code": "package com.google.gson.internal.bind;\nimport com.google.gson.TypeAdapterFactory;\nimport java.util.ArrayDeque;\nimport com.google.gson.internal.LinkedTreeMap;\nimport java.util.ArrayList;\nimport java.io.IOException;\nimport com.google.gson.reflect.TypeToken;\nimport com.google.gson.stream.JsonWriter;\nimport java.util.Deque;\nimport com.google.gson.Gson;\nimport com.google.gson.ToNumberPolicy;\nimport com.google.gson.stream.JsonToken;\nimport com.google.gson.ToNumberStrategy;\nimport com.google.gson.TypeAdapter;\nimport java.util.List;\nimport java.util.Map;\nimport com.google.gson.stream.JsonReader;\npublic final class ObjectTypeAdapter extends TypeAdapter<Object> {\n    \n    @Override\r\n    public Object read(JsonReader in) throws IOException {\r\n        // Either List or Map\r\n        Object current;\r\n        JsonToken peeked = in.peek();\r\n        current = tryBeginNesting(in, peeked);\r\n        if (current == null) {\r\n            return readTerminal(in, peeked);\r\n        }\r\n        Deque<Object> stack = new ArrayDeque<>();\r\n        while (true) {\r\n            while (in.hasNext()) {\r\n                String name = null;\r\n                // Name is only used for JSON object members\r\n                if (current instanceof Map) {\r\n                    name = in.nextName();\r\n                }\r\n                peeked = in.peek();\r\n                Object value = tryBeginNesting(in, peeked);\r\n                boolean isNesting = value != null;\r\n                if (value == null) {\r\n                    value = readTerminal(in, peeked);\r\n                }\r\n                if (current instanceof List) {\r\n                    @SuppressWarnings(\"unchecked\")\r\n                    List<Object> list = ((List<Object>) (current));\r\n                    list.add(value);\r\n                } else {\r\n                    @SuppressWarnings(\"unchecked\")\r\n                    Map<String, Object> map = ((Map<String, Object>) (current));\r\n                    map.put(name, value);\r\n                }\r\n                if (isNesting) {\r\n                    stack.addLast(current);\r\n                    current = value;\r\n                }\r\n            } \r\n            // End current element\r\n            if (current instanceof List) {\r\n                in.endArray();\r\n            } else {\r\n                in.endObject();\r\n            }\r\n            if (stack.isEmpty()) {\r\n                return current;\r\n            } else {\r\n                // Continue with enclosing element\r\n                current = stack.removeLast();\r\n            }\r\n        } \r\n    }\npublic static TypeAdapterFactory getFactory(ToNumberStrategy toNumberStrategy);\n    private Object readTerminal(JsonReader in, JsonToken peeked) throws IOException;\n    private Object tryBeginNesting(JsonReader in, JsonToken peeked) throws IOException;\n    @Override\r\npublic void write(JsonWriter out, Object value) throws IOException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace/gson/src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace/gson/src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java"
+  },
+  "started_at": "2026-09-15T06:58:34.521063+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ObjectTypeAdapter_read/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 3,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 734,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 4,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 738,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 5,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 739,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 6,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 740,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printCDATA",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 7,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 742,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printText",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 8,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 747,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printCDATA",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 9,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 750,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printComment",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 10,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 753,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printElement",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 11,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 756,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printEntityRef",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 759,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printProcessingInstruction",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 763,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printText",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 766,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printDocType",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/output/support/Walker;)V"
+    }
+  ]
+}

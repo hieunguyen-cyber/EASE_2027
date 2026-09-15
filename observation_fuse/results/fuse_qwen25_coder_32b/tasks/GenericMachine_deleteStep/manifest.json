@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:37.133778+00:00",
+  "task_id": "GenericMachine_deleteStep",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "GenericMachine_deleteStep",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.GenericMachine",
+    "test-class": "software.amazon.event.ruler.GenericMachine_deleteStep_Test",
+    "method-name": "deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+    "source-path": "src/main/java/software/amazon/event/ruler/GenericMachine.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_Test.java",
+    "focal-method": "private void deleteStep(final NameState state, final List<String> keys, final int keyIndex, final Map<String, List<Patterns>> patterns, final T ruleName, List<String> deletedKeys) {\r\n    final String key = keys.get(keyIndex);\r\n    ByteMachine byteMachine = state.getTransitionOn(key);\r\n    NameMatcher<NameState> nameMatcher = state.getKeyTransitionOn(key);\r\n    // matchers are null, we have nothing to delete.\r\n    if ((byteMachine == null) && (nameMatcher == null)) {\r\n        return;\r\n    }\r\n    for (Patterns pattern : patterns.get(key)) {\r\n        NameState nextNameState = null;\r\n        if (isNamePattern(pattern)) {\r\n            if (nameMatcher != null) {\r\n                nextNameState = nameMatcher.findPattern(pattern);\r\n            }\r\n        } else if (byteMachine != null) {\r\n            nextNameState = byteMachine.findPattern(pattern);\r\n        }\r\n        if (nextNameState != null) {\r\n            // if this was the last step, then reaching the last state means the rule matched.\r\n            final int nextKeyIndex = keyIndex + 1;\r\n            if (nextKeyIndex == keys.size()) {\r\n                if (nextNameState.hasRule(ruleName)) {\r\n                    nextNameState.deleteRule(ruleName);\r\n                    // only when this state have no rules and no next transition, we could remove it.\r\n                    if (checkAndDeleteNameState(nextNameState, state, key, pattern)) {\r\n                        deletedKeys.add(key);\r\n                    }\r\n                }\r\n            } else {\r\n                deleteStep(nextNameState, keys, nextKeyIndex, patterns, ruleName, deletedKeys);\r\n                // only when this state have no rules and no next transition, we could remove it.\r\n                if (checkAndDeleteNameState(nextNameState, state, key, pattern)) {\r\n                    deletedKeys.add(key);\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport java.util.stream.Collectors;\nimport java.util.HashMap;\nimport java.io.InputStream;\nimport java.util.ArrayList;\nimport java.io.IOException;\nimport com.fasterxml.jackson.databind.JsonNode;\nimport com.fasterxml.jackson.core.JsonParseException;\nimport java.io.Reader;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.Arrays;\nimport javax.annotation.Nonnull;\nimport java.util.HashSet;\nimport java.util.Collections;\npublic class GenericMachine<T> {\n    \n    private void deleteStep(final NameState state, final List<String> keys, final int keyIndex, final Map<String, List<Patterns>> patterns, final T ruleName, List<String> deletedKeys) {\r\n        final String key = keys.get(keyIndex);\r\n        ByteMachine byteMachine = state.getTransitionOn(key);\r\n        NameMatcher<NameState> nameMatcher = state.getKeyTransitionOn(key);\r\n        // matchers are null, we have nothing to delete.\r\n        if ((byteMachine == null) && (nameMatcher == null)) {\r\n            return;\r\n        }\r\n        for (Patterns pattern : patterns.get(key)) {\r\n            NameState nextNameState = null;\r\n            if (isNamePattern(pattern)) {\r\n                if (nameMatcher != null) {\r\n                    nextNameState = nameMatcher.findPattern(pattern);\r\n                }\r\n            } else if (byteMachine != null) {\r\n                nextNameState = byteMachine.findPattern(pattern);\r\n            }\r\n            if (nextNameState != null) {\r\n                // if this was the last step, then reaching the last state means the rule matched.\r\n                final int nextKeyIndex = keyIndex + 1;\r\n                if (nextKeyIndex == keys.size()) {\r\n                    if (nextNameState.hasRule(ruleName)) {\r\n                        nextNameState.deleteRule(ruleName);\r\n                        // only when this state have no rules and no next transition, we could remove it.\r\n                        if (checkAndDeleteNameState(nextNameState, state, key, pattern)) {\r\n                            deletedKeys.add(key);\r\n                        }\r\n                    }\r\n                } else {\r\n                    deleteStep(nextNameState, keys, nextKeyIndex, patterns, ruleName, deletedKeys);\r\n                    // only when this state have no rules and no next transition, we could remove it.\r\n                    if (checkAndDeleteNameState(nextNameState, state, key, pattern)) {\r\n                        deletedKeys.add(key);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\npublic void addPatternRule(final T name, final Map<String, List<Patterns>> namevals);\n    public void addRule(final T name, final byte[] json) throws IOException;\n    public void addRule(final T name, final InputStream json) throws IOException;\n    public void addRule(final T name, final Reader json) throws IOException;\n    public void addRule(final T name, final String json) throws IOException;\n    public void addRule(final T name, final Map<String, List<String>> namevals);\n    public int approximateObjectCount();\n    private boolean checkAndDeleteNameState(final NameState currentNameState, final NameState parentNameState, final String key, Patterns pattern);\n    public void deletePatternRule(final T name, final Map<String, List<Patterns>> namevals);\n    public void deleteRule(final T name, final InputStream json) throws IOException;\n    public void deleteRule(final T name, final Reader json) throws IOException;\n    public void deleteRule(final T name, final String json) throws IOException;\n    public void deleteRule(final T name, final Map<String, List<String>> namevals);\n    public int evaluateComplexity(MachineComplexityEvaluator evaluator);\n    final NameState getStartState();\n    public boolean isEmpty();\n    boolean isFieldStepUsed(final String stepName);\n    private boolean isNamePattern(Patterns pattern);\n    @SuppressWarnings(\"unchecked\")\r\npublic List<T> rulesForEvent(final String[] event);\n    @SuppressWarnings(\"unchecked\")\r\npublic List<T> rulesForEvent(final List<String> event);\n    @SuppressWarnings(\"unchecked\")\r\npublic List<T> rulesForJSONEvent(final JsonNode eventRoot);\n    @SuppressWarnings(\"unchecked\")\r\npublic List<T> rulesForJSONEvent(final String jsonEvent) throws Exception;\n    @Override\r\npublic String toString();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice0.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice3.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice4.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice0.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice3.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_12_0_Test_slice4.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:37.223479+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/GenericMachine_deleteStep/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

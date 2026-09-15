@@ -1,0 +1,200 @@
+{
+  "task_id": "Nysiis_transcodeRemaining",
+  "project": "commons-codec",
+  "focal_class": "org.apache.commons.codec.language.Nysiis",
+  "focal_method": "transcodeRemaining(char, char, char, char)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace/src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 42.295
+  },
+  "started_at": "2026-09-15T05:39:18.243943+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testTranscodeRemaining_SCHToSSS"
+    ],
+    "test_count": 17
+  },
+  "ktester": {
+    "test_cases": 17,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 17,
+    "tests_failed": 1,
+    "line_missed": 4,
+    "line_covered": 16,
+    "line_coverage": 0.8,
+    "branch_missed": 8,
+    "branch_covered": 25,
+    "branch_coverage": 0.757576,
+    "instruction_missed": 11,
+    "instruction_covered": 72,
+    "instruction_coverage": 0.86747,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 26,
+      "detected": 18,
+      "undetected": 8,
+      "killed": 18,
+      "survived": 3,
+      "no_coverage": 5,
+      "mutation_score": 0.692308,
+      "statuses": {
+        "KILLED": 18,
+        "NO_COVERAGE": 5,
+        "SURVIVED": 3
+      }
+    },
+    "kills_per_test": 1.0588,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 12,
+        "detected": 8,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.666667
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 14,
+        "detected": 10,
+        "survived": 3,
+        "no_coverage": 1,
+        "mutation_score": 0.714286
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 8,
+      "existing_tests_before": 17,
+      "tests_after": 22,
+      "seconds": 42.294,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 22,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 22,
+    "tests_failed": 0,
+    "line_missed": 1,
+    "line_covered": 19,
+    "line_coverage": 0.95,
+    "branch_missed": 5,
+    "branch_covered": 28,
+    "branch_coverage": 0.848485,
+    "instruction_missed": 5,
+    "instruction_covered": 78,
+    "instruction_coverage": 0.939759,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 42.295,
+    "inherited_disabled_methods": 1,
+    "stats": {
+      "total": 26,
+      "detected": 21,
+      "undetected": 5,
+      "killed": 21,
+      "survived": 3,
+      "no_coverage": 2,
+      "mutation_score": 0.807692,
+      "statuses": {
+        "KILLED": 21,
+        "NO_COVERAGE": 2,
+        "SURVIVED": 3
+      }
+    },
+    "kills_per_test": 0.9545,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 12,
+        "detected": 11,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.916667
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 14,
+        "detected": 10,
+        "survived": 3,
+        "no_coverage": 1,
+        "mutation_score": 0.714286
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.15,
+    "branch_coverage": 0.090909,
+    "instruction_coverage": 0.072289,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": -0.1043,
+    "mutation_score": 0.115384,
+    "mutation_score_points": 11.538,
+    "newly_killed": 3,
+    "lost_kills": 0,
+    "added_test_methods": 5,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 136,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining"
+      },
+      {
+        "line": 138,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining"
+      },
+      {
+        "line": 140,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T05:40:23.196010+00:00"
+}

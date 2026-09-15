@@ -1,0 +1,37 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (19 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 735 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (executorNodeLabelValues != null && executorNodeLabelValues.size() > 0) {
+- line 693 | MathMutator | Replaced double multiplication with division | source: long adjustedExecutorCores = Math.round(originalExecutorCores * executorCpuBufferRatioQueue);
+- line 701 | MathMutator | Replaced integer multiplication with division | source: Math.ceil(executorSpec.getCores() * CORE_LIMIT_RATIO * executorCpuBufferRatioQueue)));
+- line 701 | MathMutator | Replaced double multiplication with division | source: Math.ceil(executorSpec.getCores() * CORE_LIMIT_RATIO * executorCpuBufferRatioQueue)));
+- line 711 | MathMutator | Replaced double multiplication with division | source: long adjustedExecutorMem = (long) Math.ceil(originalExecutorMem * executorMemBufferRatioQueue);
+- line 660 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorLabels != null) {
+- line 680 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && request.getVolumes() != null
+- line 681 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && !request.getVolumes().isEmpty()) {
+- line 697 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorSpec.getCoreLimit() == null || executorSpec.getCoreLimit().isEmpty()) {
+- line 725 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorSpec.getAffinity() == null) {
+- line 728 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (request.getSpotInstance()) {
+- line 735 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorNodeLabelValues != null && executorNodeLabelValues.size() > 0) {
+- line 735 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (executorNodeLabelValues != null && executorNodeLabelValues.size() > 0) {
+- line 682 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setVolumeMounts | source: executorSpec.setVolumeMounts(request.getExecutor().getVolumeMounts());
+- line 694 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setCores | source: executorSpec.setCores((int) adjustedExecutorCores);
+- line 698 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setCoreLimit | source: executorSpec.setCoreLimit(
+- line 713 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setMemory | source: executorSpec.setMemory(adjustedExecutorMem + memUnit);
+- line 757 | VoidMethodCallMutator | removed call to io/fabric8/kubernetes/api/model/PodDNSConfig::setOptions | source: executorPodDNSConfig.setOptions(
+- line 760 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setDnsConfig | source: executorSpec.setDnsConfig(executorPodDNSConfig);
+
+NO_COVERAGE (8 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 704 | MathMutator | Replaced double multiplication with division | source: long adjustedExecutorCoreLimit =
+- line 662 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorLabels.containsKey(DAG_NAME_LABEL)) {
+- line 667 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorLabels.containsKey(TASK_NAME_LABEL)) {
+- line 697 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (executorSpec.getCoreLimit() == null || executorSpec.getCoreLimit().isEmpty()) {
+- line 672 | VoidMethodCallMutator | removed call to java/util/Map::putAll | source: executorLabels.putAll(labels);
+- line 673 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setLabels | source: executorSpec.setLabels(executorLabels);
+- line 706 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setCoreLimit | source: executorSpec.setCoreLimit(String.valueOf(adjustedExecutorCoreLimit));
+- line 752 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setAffinity | source: executorSpec.setAffinity(new Affinity(nodeAffinityOnExecutor));
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetExecutorSpec, testGetExecutorSpec_executorHasNoCoresSet, testGetExecutorSpec_withAnnotations, testGetExecutorSpec_withCores, testGetExecutorSpec_withExecutorAndLabels, testGetExecutorSpec_withExecutorAndVolumes, testGetExecutorSpec_withInvalidMemoryFormat, testGetExecutorSpec_withNullAppConfig, testGetExecutorSpec_withNullRequest, testGetExecutorSpec_withNullSparkCluster, testGetExecutorSpec_withSparkClusterVolumes

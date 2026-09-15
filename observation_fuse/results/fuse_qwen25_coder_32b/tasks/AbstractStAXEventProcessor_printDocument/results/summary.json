@@ -1,0 +1,218 @@
+{
+  "task_id": "AbstractStAXEventProcessor_printDocument",
+  "project": "jdom2",
+  "focal_class": "org.jdom2.output.support.AbstractStAXEventProcessor",
+  "focal_method": "printDocument(XMLEventConsumer, FormatStack, NamespaceStack, XMLEventFactory, Document)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/AbstractStAXEventProcessor_printDocument_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXEventProcessor_printDocument/workspace/src/test/java/org/jdom2/output/support/AbstractStAXEventProcessor_printDocument_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 165.386
+  },
+  "started_at": "2026-09-15T08:11:32.878274+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testPrintDocument",
+      "testPrintDocument_EmptyDocument",
+      "testPrintDocument_ThrowsXMLStreamException_OnEmptyDocument",
+      "testPrintDocument_ThrowsXMLStreamException_WhenEventFactoryFails",
+      "testPrintDocument_ThrowsXMLStreamException_WhenOutputConsumerFails",
+      "testPrintDocument_WithEncodingAndSeparator",
+      "testPrintDocument_WithMultipleContents",
+      "testPrintDocument_WithMultipleContents_ThrowsXMLStreamException_WhenWalkerFails",
+      "testPrintDocument_WithOmitDeclaration",
+      "testPrintDocument_WithOmitEncoding",
+      "testPrintDocument_WithRootElement"
+    ],
+    "test_count": 11
+  },
+  "ktester": {
+    "test_cases": 11,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 11,
+    "tests_failed": 11,
+    "line_missed": 30,
+    "line_covered": 9,
+    "line_coverage": 0.230769,
+    "branch_missed": 27,
+    "branch_covered": 6,
+    "branch_coverage": 0.181818,
+    "instruction_missed": 128,
+    "instruction_covered": 36,
+    "instruction_coverage": 0.219512,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 27,
+      "detected": 0,
+      "undetected": 27,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 27,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 27
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "VoidMethodCallMutator": {
+        "total": 12,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 12,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 13,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 13,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 27,
+      "existing_tests_before": 11,
+      "tests_after": 11,
+      "seconds": 165.384,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 11,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 11,
+    "tests_failed": 0,
+    "line_missed": 39,
+    "line_covered": 0,
+    "line_coverage": 0.0,
+    "branch_missed": 33,
+    "branch_covered": 0,
+    "branch_coverage": 0.0,
+    "instruction_missed": 164,
+    "instruction_covered": 0,
+    "instruction_coverage": 0.0,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 165.386,
+    "inherited_disabled_methods": 11,
+    "stats": {
+      "total": 27,
+      "detected": 0,
+      "undetected": 27,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 27,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 27
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "VoidMethodCallMutator": {
+        "total": 12,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 12,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 13,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 13,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": -0.230769,
+    "branch_coverage": -0.181818,
+    "instruction_coverage": -0.219512,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": 0.0,
+    "mutation_score": 0,
+    "mutation_score_points": 0,
+    "newly_killed": 0,
+    "lost_kills": 0,
+    "added_test_methods": 0,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T08:14:40.521230+00:00"
+}

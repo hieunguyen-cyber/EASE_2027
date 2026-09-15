@@ -1,0 +1,504 @@
+{
+  "mutants": [
+    {
+      "id": 328,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 714,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()I"
+    },
+    {
+      "id": 329,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 714,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()I"
+    },
+    {
+      "id": 330,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()I"
+    },
+    {
+      "id": 331,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()I"
+    },
+    {
+      "id": 332,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 664,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "()I"
+    },
+    {
+      "id": 333,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 721,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "()I"
+    },
+    {
+      "id": 334,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 743,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "()I"
+    },
+    {
+      "id": 335,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 665,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()I"
+    },
+    {
+      "id": 336,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 671,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()I"
+    },
+    {
+      "id": 337,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 678,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()I"
+    },
+    {
+      "id": 338,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 721,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()I"
+    },
+    {
+      "id": 339,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 727,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "()I"
+    },
+    {
+      "id": 340,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 727,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()I"
+    },
+    {
+      "id": 341,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 727,
+      "mutator": "MathMutator",
+      "description": "Replaced long subtraction with addition",
+      "method_description": "()I"
+    },
+    {
+      "id": 342,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "()I"
+    },
+    {
+      "id": 343,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 744,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()I"
+    },
+    {
+      "id": 344,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 665,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 345,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 666,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 346,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 671,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 347,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 681,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 348,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 685,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 349,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 692,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 350,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 700,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 351,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 700,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 352,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 707,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 353,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 715,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 354,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 720,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 355,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 720,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 356,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 723,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 357,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 724,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 358,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 359,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 731,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 360,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 733,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 361,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 733,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 362,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 363,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 364,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 365,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 366,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 367,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 742,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 368,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 743,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 369,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 746,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 370,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 746,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 371,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 746,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 372,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 714,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 373,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 714,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 374,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 375,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 728,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()I"
+    },
+    {
+      "id": 376,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 745,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::peekNumber",
+      "method_description": "()I"
+    },
+    {
+      "id": 377,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 749,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::peekNumber",
+      "method_description": "()I"
+    }
+  ]
+}

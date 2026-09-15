@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:29:25.946089+00:00",
+  "task_id": "CSVParser_nextRecord",
+  "project": "commons-csv",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "CSVParser_nextRecord",
+    "package": "org.apache.commons.csv",
+    "class": "org.apache.commons.csv.CSVParser",
+    "test-class": "org.apache.commons.csv.CSVParser_nextRecord_Test",
+    "method-name": "nextRecord()",
+    "source-path": "src/main/java/org/apache/commons/csv/CSVParser.java",
+    "test-path": "src/test/java/org/apache/commons/csv/CSVParser_nextRecord_Test.java",
+    "focal-method": "CSVRecord nextRecord() throws IOException {\r\n    CSVRecord result = null;\r\n    this.recordList.clear();\r\n    StringBuilder sb = null;\r\n    final long startCharPosition = lexer.getCharacterPosition() + this.characterOffset;\r\n    do {\r\n        this.reusableToken.reset();\r\n        this.lexer.nextToken(this.reusableToken);\r\n        switch (this.reusableToken.type) {\r\n            case TOKEN :\r\n                this.addRecordValue(false);\r\n                break;\r\n            case EORECORD :\r\n                this.addRecordValue(true);\r\n                break;\r\n            case EOF :\r\n                if (this.reusableToken.isReady) {\r\n                    this.addRecordValue(true);\r\n                } else if (sb != null) {\r\n                    trailerComment = sb.toString();\r\n                }\r\n                break;\r\n            case INVALID :\r\n                throw new IOException((\"(line \" + this.getCurrentLineNumber()) + \") invalid parse sequence\");\r\n            case COMMENT :\r\n                // Ignored currently\r\n                if (sb == null) {\r\n                    // first comment for this record\r\n                    sb = new StringBuilder();\r\n                } else {\r\n                    sb.append(Constants.LF);\r\n                }\r\n                sb.append(this.reusableToken.content);\r\n                this.reusableToken.type = TOKEN;// Read another token\r\n\r\n                break;\r\n            default :\r\n                throw new IllegalStateException(\"Unexpected Token type: \" + this.reusableToken.type);\r\n        }\r\n    } while (this.reusableToken.type == TOKEN );\r\n    if (!this.recordList.isEmpty()) {\r\n        this.recordNumber++;\r\n        final String comment = (sb == null) ? null : sb.toString();\r\n        result = new CSVRecord(this, this.recordList.toArray(Constants.EMPTY_STRING_ARRAY), comment, this.recordNumber, startCharPosition);\r\n    }\r\n    return result;\r\n}",
+    "class-code": "package org.apache.commons.csv;\nimport java.io.Closeable;\nimport java.util.ArrayList;\nimport java.util.LinkedHashMap;\nimport java.io.UncheckedIOException;\nimport java.io.Reader;\nimport java.net.URL;\nimport java.nio.file.Files;\nimport java.util.stream.StreamSupport;\nimport java.io.StringReader;\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.stream.Stream;\nimport java.util.Spliterator;\nimport static org.apache.commons.csv.Token.Type.TOKEN;\nimport java.util.Collections;\nimport java.util.stream.Collectors;\nimport java.nio.file.Path;\nimport java.io.InputStream;\nimport java.io.InputStreamReader;\nimport java.io.IOException;\nimport java.nio.charset.Charset;\nimport java.util.TreeMap;\nimport java.util.Spliterators;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.io.File;\nimport java.util.Map;\nimport java.util.Arrays;\npublic final class CSVParser implements Iterable<CSVRecord> , Closeable {\n    private String trailerComment;\n    private final Lexer lexer;\n    private final List<String> recordList = new ArrayList<>();\n    private long recordNumber;\n    private final long characterOffset;\n    private final Token reusableToken = new Token();\n    CSVRecord nextRecord() throws IOException {\r\n        CSVRecord result = null;\r\n        this.recordList.clear();\r\n        StringBuilder sb = null;\r\n        final long startCharPosition = lexer.getCharacterPosition() + this.characterOffset;\r\n        do {\r\n            this.reusableToken.reset();\r\n            this.lexer.nextToken(this.reusableToken);\r\n            switch (this.reusableToken.type) {\r\n                case TOKEN :\r\n                    this.addRecordValue(false);\r\n                    break;\r\n                case EORECORD :\r\n                    this.addRecordValue(true);\r\n                    break;\r\n                case EOF :\r\n                    if (this.reusableToken.isReady) {\r\n                        this.addRecordValue(true);\r\n                    } else if (sb != null) {\r\n                        trailerComment = sb.toString();\r\n                    }\r\n                    break;\r\n                case INVALID :\r\n                    throw new IOException((\"(line \" + this.getCurrentLineNumber()) + \") invalid parse sequence\");\r\n                case COMMENT :\r\n                    // Ignored currently\r\n                    if (sb == null) {\r\n                        // first comment for this record\r\n                        sb = new StringBuilder();\r\n                    } else {\r\n                        sb.append(Constants.LF);\r\n                    }\r\n                    sb.append(this.reusableToken.content);\r\n                    this.reusableToken.type = TOKEN;// Read another token\r\n    \r\n                    break;\r\n                default :\r\n                    throw new IllegalStateException(\"Unexpected Token type: \" + this.reusableToken.type);\r\n            }\r\n        } while (this.reusableToken.type == TOKEN );\r\n        if (!this.recordList.isEmpty()) {\r\n            this.recordNumber++;\r\n            final String comment = (sb == null) ? null : sb.toString();\r\n            result = new CSVRecord(this, this.recordList.toArray(Constants.EMPTY_STRING_ARRAY), comment, this.recordNumber, startCharPosition);\r\n        }\r\n        return result;\r\n    }\nprivate void addRecordValue(final boolean lastRecord);\n    @Override\r\npublic void close() throws IOException;\n    public long getCurrentLineNumber();\n    public String getFirstEndOfLine();\n    public String getHeaderComment();\n    public Map<String, Integer> getHeaderMap();\n    Map<String, Integer> getHeaderMapRaw();\n    public List<String> getHeaderNames();\n    public long getRecordNumber();\n    public List<CSVRecord> getRecords();\n    public String getTrailerComment();\n    public boolean hasHeaderComment();\n    public boolean hasTrailerComment();\n    public boolean isClosed();\n    @Override\r\npublic Iterator<CSVRecord> iterator();\n    public static CSVParser parse(final File file, final Charset charset, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final InputStream inputStream, final Charset charset, final CSVFormat format) throws IOException;\n    public static CSVParser parse(final Reader reader, final CSVFormat format) throws IOException;\n    public static CSVParser parse(final String string, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final URL url, final Charset charset, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final Path path, final Charset charset, final CSVFormat format) throws IOException;\n    public Stream<CSVRecord> stream();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv/src/test/java/org/apache/commons/csv/CSVParser_nextRecord_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace/src/test/java/org/apache/commons/csv/CSVParser_nextRecord_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace/src/test/java/org/apache/commons/csv/CSVParser_nextRecord_Test.java"
+  },
+  "started_at": "2026-09-15T06:29:26.021385+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_nextRecord/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

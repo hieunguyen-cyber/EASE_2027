@@ -1,0 +1,29 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1127 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size > 0) {
+- line 1058 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (size == 0) {
+- line 1064 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key3 == null) {
+- line 1072 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key2 == null) {
+
+NO_COVERAGE (15 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1096 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key2 == null) {
+- line 1104 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key1 == null) {
+- line 1150 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash1 == hashCode && key.equals(key1)) {
+- line 1150 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash1 == hashCode && key.equals(key1)) {
+- line 1163 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash2 == hashCode && key.equals(key2)) {
+- line 1163 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash2 == hashCode && key.equals(key2)) {
+- line 1171 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash1 == hashCode && key.equals(key1)) {
+- line 1171 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash1 == hashCode && key.equals(key1)) {
+- line 1070 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1081 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1102 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1113 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1159 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1169 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+- line 1180 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::remove | source: return old;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testRemoveFromEmptyMap, testRemoveKeyWhenThreeElementsExist, testRemoveNonExistentKey, testRemoveNullKey, testRemoveNullKeyAdaptivelyWithThreeElements, testRemoveNullKeyWhenThreeElementsExist, testRemoveParameterized, testRemoveWhenDelegateMapIsNonNull, testRemoveWithMultipleElements, testRemoveWithSingleElement

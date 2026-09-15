@@ -1,0 +1,94 @@
+{
+  "mutants": [
+    {
+      "id": 108,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Element.java",
+      "line": 1723,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Element.java",
+      "line": 1725,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 110,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1730,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 111,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1733,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 112,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1741,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 113,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1743,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 114,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1749,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 115,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1749,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/util/List;"
+    },
+    {
+      "id": 116,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 1759,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with Collections.emptyList for org/jdom2/Element::getNamespacesInScope",
+      "method_description": "()Ljava/util/List;"
+    }
+  ]
+}

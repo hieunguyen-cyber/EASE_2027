@@ -1,0 +1,224 @@
+{
+  "mutants": [
+    {
+      "id": 173,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2010,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 174,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2011,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 175,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2020,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 176,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2021,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 177,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2030,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 178,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2031,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 179,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2038,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 180,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2043,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 181,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2051,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 182,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2051,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 183,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2012,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 184,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2014,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 185,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2022,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 186,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2024,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 187,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2035,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 188,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2044,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 189,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2046,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 190,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2052,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementModCount",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 191,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2016,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 192,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2026,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 193,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2048,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "id": 194,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractPatriciaTrie.java",
+      "line": 2053,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::put",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    }
+  ]
+}

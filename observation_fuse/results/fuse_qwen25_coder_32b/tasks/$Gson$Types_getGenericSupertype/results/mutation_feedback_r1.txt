@@ -1,0 +1,21 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supertype == rawType) {
+- line 250 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (interfaces[i] == supertype) {
+- line 252 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (supertype.isAssignableFrom(interfaces[i])) {
+- line 259 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!rawType.isInterface()) {
+- line 260 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (rawType != Object.class) {
+- line 262 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (rawSupertype == supertype) {
+- line 264 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (supertype.isAssignableFrom(rawSupertype)) {
+
+NO_COVERAGE (4 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 243 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype | source: return context;
+- line 253 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype | source: return getGenericSupertype(rawType.getGenericInterfaces()[i], interfaces[i], supertype);
+- line 263 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype | source: return rawType.getGenericSuperclass();
+- line 265 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype | source: return getGenericSupertype(rawType.getGenericSuperclass(), rawSupertype, supertype);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetGenericSupertype_WithInterface_ShouldReturnCorrectGenericInterface, testGetGenericSupertype_WithNullContext_ShouldReturnNull, testGetGenericSupertype_WithRawTypeNotAssignable_ShouldReturnSupertype, testGetGenericSupertype_WithValidParameters_ShouldReturnGenericSupertype, testGetGenericSupertype_withConcreteSubclass_ShouldReturnCorrectType, testGetGenericSupertype_withContextAsPrimitiveType_ShouldThrowIllegalArgumentException, testGetGenericSupertype_withInvalidSupertype_ShouldReturnSupertype, testGetGenericSupertype_withNonAssignableSupertype_ShouldReturnSupertype, testGetGenericSupertype_withNonGenericSuperclass_ShouldReturnGenericSupertype, testGetGenericSupertype_withNullContext, testGetGenericSupertype_withNullRawType_ShouldReturnSupertype, testGetGenericSupertype_withRawTypeNotAssignable, testGetGenericSupertype_withRawTypeNotAssignable_ShouldReturnSupertype, testGetGenericSupertype_withSubclassOfInterface_ShouldReturnParameterizedType, testGetGenericSupertype_withValidParameters

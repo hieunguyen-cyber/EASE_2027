@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:43:04.487353+00:00",
+  "task_id": "Primitives_unwrap",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Primitives_unwrap",
+    "package": "com.google.gson.internal",
+    "class": "com.google.gson.internal.Primitives",
+    "test-class": "com.google.gson.internal.Primitives_unwrap_Test",
+    "method-name": "unwrap(Class<T>)",
+    "source-path": "src/main/java/com/google/gson/internal/Primitives.java",
+    "test-path": "src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java",
+    "focal-method": "@SuppressWarnings(\"unchecked\")\r\npublic static <T> Class<T> unwrap(Class<T> type) {\r\n    if (type == Integer.class)\r\n        return ((Class<T>) (int.class));\r\n\r\n    if (type == Float.class)\r\n        return ((Class<T>) (float.class));\r\n\r\n    if (type == Byte.class)\r\n        return ((Class<T>) (byte.class));\r\n\r\n    if (type == Double.class)\r\n        return ((Class<T>) (double.class));\r\n\r\n    if (type == Long.class)\r\n        return ((Class<T>) (long.class));\r\n\r\n    if (type == Character.class)\r\n        return ((Class<T>) (char.class));\r\n\r\n    if (type == Boolean.class)\r\n        return ((Class<T>) (boolean.class));\r\n\r\n    if (type == Short.class)\r\n        return ((Class<T>) (short.class));\r\n\r\n    if (type == Void.class)\r\n        return ((Class<T>) (void.class));\r\n\r\n    return type;\r\n}",
+    "class-code": "package com.google.gson.internal;\nimport java.lang.reflect.Type;\npublic final class Primitives {\n    \n    @SuppressWarnings(\"unchecked\")\r\n    public static <T> Class<T> unwrap(Class<T> type) {\r\n        if (type == Integer.class)\r\n            return ((Class<T>) (int.class));\r\n    \r\n        if (type == Float.class)\r\n            return ((Class<T>) (float.class));\r\n    \r\n        if (type == Byte.class)\r\n            return ((Class<T>) (byte.class));\r\n    \r\n        if (type == Double.class)\r\n            return ((Class<T>) (double.class));\r\n    \r\n        if (type == Long.class)\r\n            return ((Class<T>) (long.class));\r\n    \r\n        if (type == Character.class)\r\n            return ((Class<T>) (char.class));\r\n    \r\n        if (type == Boolean.class)\r\n            return ((Class<T>) (boolean.class));\r\n    \r\n        if (type == Short.class)\r\n            return ((Class<T>) (short.class));\r\n    \r\n        if (type == Void.class)\r\n            return ((Class<T>) (void.class));\r\n    \r\n        return type;\r\n    }\npublic static boolean isPrimitive(Type type);\n    public static boolean isWrapperType(Type type);\n    @SuppressWarnings(\"unchecked\")\r\npublic static <T> Class<T> wrap(Class<T> type);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace/gson/src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace/gson/src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java"
+  },
+  "started_at": "2026-09-15T06:43:04.582004+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Primitives_unwrap/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

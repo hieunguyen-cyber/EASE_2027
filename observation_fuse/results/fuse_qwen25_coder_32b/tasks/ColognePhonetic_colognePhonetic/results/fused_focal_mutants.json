@@ -1,0 +1,464 @@
+{
+  "mutants": [
+    {
+      "id": 4,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 339,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 5,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 339,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 6,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 323,
+      "mutator": "MathMutator",
+      "description": "Replaced integer multiplication with division",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 7,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 318,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 8,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 330,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 9,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 333,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 10,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 343,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 11,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 347,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 15,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 347,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 347,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 349,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 18,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 351,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 353,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 353,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 356,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 356,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 358,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 359,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 360,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 365,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ColognePhonetic.java",
+      "line": 365,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 370,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 339,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 339,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 344,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 32,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 346,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 348,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 350,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 352,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 36,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 354,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 355,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 357,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 39,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 361,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 363,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 366,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ColognePhonetic.java",
+      "line": 368,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ColognePhonetic.java",
+      "line": 371,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 44,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 375,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 45,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 378,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 46,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 382,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ColognePhonetic.java",
+      "line": 385,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 319,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/ColognePhonetic::colognePhonetic",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 49,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ColognePhonetic.java",
+      "line": 394,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/ColognePhonetic::colognePhonetic",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

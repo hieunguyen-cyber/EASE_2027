@@ -1,0 +1,14 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 895 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c >= 'a' && c <= 'z') return true;
+- line 897 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c >= '\'' && c <= ';') return true;
+- line 903 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == '$') return true;
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 903 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter | source: if (c == '$') return true;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testIsXMLPublicIDCharacter_Reflection_InvalidCharacter, testIsXMLPublicIDCharacter_WithInvalidCharacters, testIsXMLPublicIDCharacter_WithNonValidCharacters, testIsXMLPublicIDCharacter_WithReservedCharacters, testIsXMLPublicIDCharacter_WithValidCharacters

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:50:33.586070+00:00",
+  "task_id": "LinkedTreeMap_find",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "LinkedTreeMap_find",
+    "package": "com.google.gson.internal",
+    "class": "com.google.gson.internal.LinkedTreeMap",
+    "test-class": "com.google.gson.internal.LinkedTreeMap_find_Test",
+    "method-name": "find(K, boolean)",
+    "source-path": "src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+    "test-path": "src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java",
+    "focal-method": "Node<K, V> find(K key, boolean create) {\r\n    Comparator<? super K> comparator = this.comparator;\r\n    Node<K, V> nearest = root;\r\n    int comparison = 0;\r\n    if (nearest != null) {\r\n        // Micro-optimization: avoid polymorphic calls to Comparator.compare().\r\n        // Throws a ClassCastException below if there's trouble.\r\n        @SuppressWarnings(\"unchecked\")\r\n        Comparable<Object> comparableKey = (comparator == NATURAL_ORDER) ? ((Comparable<Object>) (key)) : null;\r\n        while (true) {\r\n            comparison = (comparableKey != null) ? comparableKey.compareTo(nearest.key) : comparator.compare(key, nearest.key);\r\n            // We found the requested key.\r\n            if (comparison == 0) {\r\n                return nearest;\r\n            }\r\n            // If it exists, the key is in a subtree. Go deeper.\r\n            Node<K, V> child = (comparison < 0) ? nearest.left : nearest.right;\r\n            if (child == null) {\r\n                break;\r\n            }\r\n            nearest = child;\r\n        } \r\n    }\r\n    // The key doesn't exist in this tree.\r\n    if (!create) {\r\n        return null;\r\n    }\r\n    // Create the node and add it to the tree or the table.\r\n    Node<K, V> header = this.header;\r\n    Node<K, V> created;\r\n    if (nearest == null) {\r\n        // Check that the value is comparable if we didn't do any comparisons.\r\n        if ((comparator == NATURAL_ORDER) && (!(key instanceof Comparable))) {\r\n            throw new ClassCastException(key.getClass().getName() + \" is not Comparable\");\r\n        }\r\n        created = new Node<>(allowNullValues, nearest, key, header, header.prev);\r\n        root = created;\r\n    } else {\r\n        created = new Node<>(allowNullValues, nearest, key, header, header.prev);\r\n        if (comparison < 0) {\r\n            // nearest.key is higher\r\n            nearest.left = created;\r\n        } else {\r\n            // comparison > 0, nearest.key is lower\r\n            nearest.right = created;\r\n        }\r\n        rebalance(nearest, true);\r\n    }\r\n    size++;\r\n    modCount++;\r\n    return created;\r\n}",
+    "class-code": "package com.google.gson.internal;\nimport java.util.Set;\nimport java.util.ConcurrentModificationException;\nimport java.io.IOException;\nimport java.util.AbstractSet;\nimport java.util.LinkedHashMap;\nimport java.util.Comparator;\nimport java.util.AbstractMap;\nimport java.io.ObjectInputStream;\nimport java.io.InvalidObjectException;\nimport java.util.Iterator;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.io.ObjectStreamException;\nimport java.io.Serializable;\n@SuppressWarnings(\"serial\")\r\npublic final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Serializable {\n    @SuppressWarnings({ \"unchecked\", \"rawtypes\" })\r\nprivate static final Comparator<Comparable> NATURAL_ORDER = new Comparator<Comparable>() {\r\n    @Override\r\n    public int compare(Comparable a, Comparable b) {\r\n        return a.compareTo(b);\r\n    }\r\n};\n    private final boolean allowNullValues;\n    Node<K, V> root;\n    int size = 0;\n    int modCount = 0;\n    final Node<K, V> header;\n    Node<K, V> find(K key, boolean create) {\r\n        Comparator<? super K> comparator = this.comparator;\r\n        Node<K, V> nearest = root;\r\n        int comparison = 0;\r\n        if (nearest != null) {\r\n            // Micro-optimization: avoid polymorphic calls to Comparator.compare().\r\n            // Throws a ClassCastException below if there's trouble.\r\n            @SuppressWarnings(\"unchecked\")\r\n            Comparable<Object> comparableKey = (comparator == NATURAL_ORDER) ? ((Comparable<Object>) (key)) : null;\r\n            while (true) {\r\n                comparison = (comparableKey != null) ? comparableKey.compareTo(nearest.key) : comparator.compare(key, nearest.key);\r\n                // We found the requested key.\r\n                if (comparison == 0) {\r\n                    return nearest;\r\n                }\r\n                // If it exists, the key is in a subtree. Go deeper.\r\n                Node<K, V> child = (comparison < 0) ? nearest.left : nearest.right;\r\n                if (child == null) {\r\n                    break;\r\n                }\r\n                nearest = child;\r\n            } \r\n        }\r\n        // The key doesn't exist in this tree.\r\n        if (!create) {\r\n            return null;\r\n        }\r\n        // Create the node and add it to the tree or the table.\r\n        Node<K, V> header = this.header;\r\n        Node<K, V> created;\r\n        if (nearest == null) {\r\n            // Check that the value is comparable if we didn't do any comparisons.\r\n            if ((comparator == NATURAL_ORDER) && (!(key instanceof Comparable))) {\r\n                throw new ClassCastException(key.getClass().getName() + \" is not Comparable\");\r\n            }\r\n            created = new Node<>(allowNullValues, nearest, key, header, header.prev);\r\n            root = created;\r\n        } else {\r\n            created = new Node<>(allowNullValues, nearest, key, header, header.prev);\r\n            if (comparison < 0) {\r\n                // nearest.key is higher\r\n                nearest.left = created;\r\n            } else {\r\n                // comparison > 0, nearest.key is lower\r\n                nearest.right = created;\r\n            }\r\n            rebalance(nearest, true);\r\n        }\r\n        size++;\r\n        modCount++;\r\n        return created;\r\n    }\n@Override\r\npublic void clear();\n    @Override\r\npublic boolean containsKey(Object key);\n    @Override\r\npublic Set<Entry<K, V>> entrySet();\n    Node<K, V> findByEntry(Entry<?, ?> entry);\n    @SuppressWarnings(\"unchecked\")\r\nNode<K, V> findByObject(Object key);\n    @Override\r\npublic V get(Object key);\n    @Override\r\npublic Set<K> keySet();\n    @Override\r\npublic V put(K key, V value);\n    private void rebalance(Node<K, V> unbalanced, boolean insert);\n    @Override\r\npublic V remove(Object key);\n    void removeInternal(Node<K, V> node, boolean unlink);\n    Node<K, V> removeInternalByKey(Object key);\n    @Override\r\npublic int size();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java"
+  },
+  "started_at": "2026-09-15T06:50:33.682826+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_find/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

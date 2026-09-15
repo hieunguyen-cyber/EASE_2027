@@ -1,0 +1,304 @@
+{
+  "mutants": [
+    {
+      "id": 58,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 175,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 183,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 189,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 177,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 186,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 63,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 190,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 191,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 65,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 194,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 66,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 181,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 67,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 188,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 189,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 69,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 171,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 171,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 176,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 185,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 185,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 79,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 80,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 187,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 81,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 189,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 82,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 175,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 83,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 183,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 84,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 189,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 172,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValues::toJavaNames",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValues.java",
+      "line": 180,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValues::toJavaNames",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 87,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValues.java",
+      "line": 197,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValues::toJavaNames",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    }
+  ]
+}

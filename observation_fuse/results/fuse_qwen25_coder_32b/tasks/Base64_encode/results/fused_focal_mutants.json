@@ -1,0 +1,624 @@
+{
+  "mutants": [
+    {
+      "id": 59,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 833,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 869,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 869,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 874,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 878,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 888,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 888,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 66,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 877,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 879,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 256 to -256",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 845,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 845,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 845,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 847,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 847,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 847,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 850,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 851,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 856,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 856,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 856,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 857,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 80,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 857,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 81,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 857,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 82,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 858,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 83,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 858,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 84,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 858,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 861,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 867,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 867,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 871,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 876,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 90,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 876,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 91,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 881,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 92,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 881,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 93,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 883,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 94,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 883,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 95,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 883,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 96,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 884,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 97,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 884,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 98,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 884,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 99,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 885,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 100,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 885,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 101,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 885,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 102,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 886,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 103,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 886,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 104,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 887,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 890,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 106,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 828,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 835,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 835,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 849,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 110,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 860,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 111,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 882,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 112,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 833,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 869,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 869,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 115,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Base64.java",
+      "line": 874,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 878,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Base64.java",
+      "line": 888,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 118,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 888,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 870,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Base64.java",
+      "line": 889,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BIILorg/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:22:45.583470+00:00",
+  "task_id": "QuotedPrintableCodec_encodeQuotedPrintable",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "QuotedPrintableCodec_encodeQuotedPrintable",
+    "package": "org.apache.commons.codec.net",
+    "class": "org.apache.commons.codec.net.QuotedPrintableCodec",
+    "test-class": "org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test",
+    "method-name": "encodeQuotedPrintable(BitSet, byte[], boolean)",
+    "source-path": "src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java",
+    "test-path": "src/test/java/org/apache/commons/codec/net/QuotedPrintableCodec_encodeQuotedPrintable_Test.java",
+    "focal-method": "public static final byte[] encodeQuotedPrintable(BitSet printable, final byte[] bytes, final boolean strict) {\r\n    if (bytes == null) {\r\n        return null;\r\n    }\r\n    if (printable == null) {\r\n        printable = PRINTABLE_CHARS;\r\n    }\r\n    final ByteArrayOutputStream buffer = new ByteArrayOutputStream();\r\n    final int bytesLength = bytes.length;\r\n    if (strict) {\r\n        if (bytesLength < MIN_BYTES) {\r\n            return null;\r\n        }\r\n        int pos = 1;\r\n        // encode up to buffer.length - 3, the last three octets will be treated\r\n        // separately for simplification of note #3\r\n        for (int i = 0; i < (bytesLength - 3); i++) {\r\n            final int b = getUnsignedOctet(i, bytes);\r\n            if (pos < SAFE_LENGTH) {\r\n                // up to this length it is safe to add any byte, encoded or not\r\n                pos += encodeByte(b, !printable.get(b), buffer);\r\n            } else {\r\n                // rule #3: whitespace at the end of a line *must* be encoded\r\n                encodeByte(b, (!printable.get(b)) || isWhitespace(b), buffer);\r\n                // rule #5: soft line break\r\n                buffer.write(ESCAPE_CHAR);\r\n                buffer.write(CR);\r\n                buffer.write(LF);\r\n                pos = 1;\r\n            }\r\n        }\r\n        // rule #3: whitespace at the end of a line *must* be encoded\r\n        // if we would do a soft break line after this octet, encode whitespace\r\n        int b = getUnsignedOctet(bytesLength - 3, bytes);\r\n        boolean encode = (!printable.get(b)) || (isWhitespace(b) && (pos > (SAFE_LENGTH - 5)));\r\n        pos += encodeByte(b, encode, buffer);\r\n        // note #3: '=' *must not* be the ultimate or penultimate character\r\n        // simplification: if < 6 bytes left, do a soft line break as we may need\r\n        // exactly 6 bytes space for the last 2 bytes\r\n        if (pos > (SAFE_LENGTH - 2)) {\r\n            buffer.write(ESCAPE_CHAR);\r\n            buffer.write(CR);\r\n            buffer.write(LF);\r\n        }\r\n        for (int i = bytesLength - 2; i < bytesLength; i++) {\r\n            b = getUnsignedOctet(i, bytes);\r\n            // rule #3: trailing whitespace shall be encoded\r\n            encode = (!printable.get(b)) || ((i > (bytesLength - 2)) && isWhitespace(b));\r\n            encodeByte(b, encode, buffer);\r\n        }\r\n    } else {\r\n        for (final byte c : bytes) {\r\n            int b = c;\r\n            if (b < 0) {\r\n                b = 256 + b;\r\n            }\r\n            if (printable.get(b)) {\r\n                buffer.write(b);\r\n            } else {\r\n                encodeQuotedPrintable(b, buffer);\r\n            }\r\n        }\r\n    }\r\n    return buffer.toByteArray();\r\n}",
+    "class-code": "package org.apache.commons.codec.net;\nimport java.io.UnsupportedEncodingException;\nimport java.nio.charset.StandardCharsets;\nimport java.nio.charset.Charset;\nimport org.apache.commons.codec.BinaryDecoder;\nimport java.io.ByteArrayOutputStream;\nimport java.util.BitSet;\nimport org.apache.commons.codec.StringDecoder;\nimport java.nio.charset.IllegalCharsetNameException;\nimport org.apache.commons.codec.BinaryEncoder;\nimport org.apache.commons.codec.DecoderException;\nimport org.apache.commons.codec.EncoderException;\nimport java.nio.charset.UnsupportedCharsetException;\nimport org.apache.commons.codec.StringEncoder;\nimport org.apache.commons.codec.binary.StringUtils;\npublic class QuotedPrintableCodec implements BinaryEncoder , BinaryDecoder , StringEncoder , StringDecoder {\n    private static final BitSet PRINTABLE_CHARS = new BitSet(256);\n    private static final byte ESCAPE_CHAR = '=';\n    private static final byte CR = 13;\n    private static final byte LF = 10;\n    private static final int MIN_BYTES = 3;\n    private static final int SAFE_LENGTH = 73;\n    public static final byte[] encodeQuotedPrintable(BitSet printable, final byte[] bytes, final boolean strict) {\r\n        if (bytes == null) {\r\n            return null;\r\n        }\r\n        if (printable == null) {\r\n            printable = PRINTABLE_CHARS;\r\n        }\r\n        final ByteArrayOutputStream buffer = new ByteArrayOutputStream();\r\n        final int bytesLength = bytes.length;\r\n        if (strict) {\r\n            if (bytesLength < MIN_BYTES) {\r\n                return null;\r\n            }\r\n            int pos = 1;\r\n            // encode up to buffer.length - 3, the last three octets will be treated\r\n            // separately for simplification of note #3\r\n            for (int i = 0; i < (bytesLength - 3); i++) {\r\n                final int b = getUnsignedOctet(i, bytes);\r\n                if (pos < SAFE_LENGTH) {\r\n                    // up to this length it is safe to add any byte, encoded or not\r\n                    pos += encodeByte(b, !printable.get(b), buffer);\r\n                } else {\r\n                    // rule #3: whitespace at the end of a line *must* be encoded\r\n                    encodeByte(b, (!printable.get(b)) || isWhitespace(b), buffer);\r\n                    // rule #5: soft line break\r\n                    buffer.write(ESCAPE_CHAR);\r\n                    buffer.write(CR);\r\n                    buffer.write(LF);\r\n                    pos = 1;\r\n                }\r\n            }\r\n            // rule #3: whitespace at the end of a line *must* be encoded\r\n            // if we would do a soft break line after this octet, encode whitespace\r\n            int b = getUnsignedOctet(bytesLength - 3, bytes);\r\n            boolean encode = (!printable.get(b)) || (isWhitespace(b) && (pos > (SAFE_LENGTH - 5)));\r\n            pos += encodeByte(b, encode, buffer);\r\n            // note #3: '=' *must not* be the ultimate or penultimate character\r\n            // simplification: if < 6 bytes left, do a soft line break as we may need\r\n            // exactly 6 bytes space for the last 2 bytes\r\n            if (pos > (SAFE_LENGTH - 2)) {\r\n                buffer.write(ESCAPE_CHAR);\r\n                buffer.write(CR);\r\n                buffer.write(LF);\r\n            }\r\n            for (int i = bytesLength - 2; i < bytesLength; i++) {\r\n                b = getUnsignedOctet(i, bytes);\r\n                // rule #3: trailing whitespace shall be encoded\r\n                encode = (!printable.get(b)) || ((i > (bytesLength - 2)) && isWhitespace(b));\r\n                encodeByte(b, encode, buffer);\r\n            }\r\n        } else {\r\n            for (final byte c : bytes) {\r\n                int b = c;\r\n                if (b < 0) {\r\n                    b = 256 + b;\r\n                }\r\n                if (printable.get(b)) {\r\n                    buffer.write(b);\r\n                } else {\r\n                    encodeQuotedPrintable(b, buffer);\r\n                }\r\n            }\r\n        }\r\n        return buffer.toByteArray();\r\n    }\n@Override\r\npublic byte[] decode(final byte[] bytes) throws DecoderException;\n    @Override\r\npublic Object decode(final Object obj) throws DecoderException;\n    @Override\r\npublic String decode(final String sourceStr) throws DecoderException;\n    public String decode(final String sourceStr, final String sourceCharset) throws DecoderException, UnsupportedEncodingException;\n    public String decode(final String sourceStr, final Charset sourceCharset) throws DecoderException;\n    public static final byte[] decodeQuotedPrintable(final byte[] bytes) throws DecoderException;\n    @Override\r\npublic byte[] encode(final byte[] bytes);\n    @Override\r\npublic Object encode(final Object obj) throws EncoderException;\n    @Override\r\npublic String encode(final String sourceStr) throws EncoderException;\n    public String encode(final String sourceStr, final String sourceCharset) throws UnsupportedEncodingException;\n    public String encode(final String sourceStr, final Charset sourceCharset);\n    private static int encodeByte(final int b, final boolean encode, final ByteArrayOutputStream buffer);\n    private static final int encodeQuotedPrintable(final int b, final ByteArrayOutputStream buffer);\n    public static final byte[] encodeQuotedPrintable(final BitSet printable, final byte[] bytes);\n    public Charset getCharset();\n    public String getDefaultCharset();\n    private static int getUnsignedOctet(final int index, final byte[] bytes);\n    private static boolean isWhitespace(final int b);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/net/QuotedPrintableCodec_encodeQuotedPrintable_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace/src/test/java/org/apache/commons/codec/net/QuotedPrintableCodec_encodeQuotedPrintable_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace/src/test/java/org/apache/commons/codec/net/QuotedPrintableCodec_encodeQuotedPrintable_Test.java"
+  },
+  "started_at": "2026-09-15T05:22:45.650652+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/QuotedPrintableCodec_encodeQuotedPrintable/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

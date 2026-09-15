@@ -1,0 +1,15 @@
+# Stage B (MutGen augmentation) and the reporting layer.
+# These are already satisfied by the environment MUTGEN runs in.
+litellm
+tree_sitter==0.21.3
+tree_sitter_languages
+grep_ast
+PyYAML
+Jinja2
+
+# Stage A only when FUSE_KTESTER_SOURCE=generate (re-running KTester's own
+# pipeline). Not needed for the default artifact-seeded run.
+JPype1==1.6.0
+openai
+tenacity
+networkx

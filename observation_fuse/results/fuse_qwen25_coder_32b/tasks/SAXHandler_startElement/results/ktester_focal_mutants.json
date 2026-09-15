@@ -1,0 +1,394 @@
+{
+  "mutants": [
+    {
+      "id": 93,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 584,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 605,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 95,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 621,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 641,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 683,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 707,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 590,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 100,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 647,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 101,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 575,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 581,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 103,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 589,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 589,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 598,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 611,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 626,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 630,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 635,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 110,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 635,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 111,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 646,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 112,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 656,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 657,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 658,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 669,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 669,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 684,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 118,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 691,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 706,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 717,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 121,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 584,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 122,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 605,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 123,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 621,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 124,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 641,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 125,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 683,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 126,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 606,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/input/sax/SAXHandler::transferNamespaces",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 127,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 609,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/input/sax/SAXHandler::flushCharacters",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 128,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 612,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/JDOMFactory::setRoot",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 129,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 616,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/JDOMFactory::addContent",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 130,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 719,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/Attribute::setSpecified",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    },
+    {
+      "id": 131,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SAXHandler.java",
+      "line": 721,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/JDOMFactory::setAttribute",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V"
+    }
+  ]
+}

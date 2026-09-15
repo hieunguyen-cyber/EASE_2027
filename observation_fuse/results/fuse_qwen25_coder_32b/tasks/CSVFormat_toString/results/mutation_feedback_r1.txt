@@ -1,0 +1,11 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 2205 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (quoteMode != null) {
+- line 2217 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (recordSeparator != null) {
+- line 2224 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (getIgnoreSurroundingSpaces()) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testToString, testToString_throwsIOException_whenPrintFails, testToString_throwsIllegalArgumentException_whenInvalidSettings, testToString_withCustomDelimiterAndQuoteCharacter, testToString_withDefaultSettings, testToString_withEscapeCharacter, testToString_withHeadersAndHeaderComments, testToString_withIgnoreEmptyLines, testToString_withIgnoreHeaderCase, testToString_withNullStringAndCommentMarker, testToString_withSkipHeaderRecord

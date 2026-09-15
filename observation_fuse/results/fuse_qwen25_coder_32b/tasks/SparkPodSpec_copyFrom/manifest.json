@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:07:17.264314+00:00",
+  "task_id": "SparkPodSpec_copyFrom",
+  "project": "batch-processing-gateway",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/batch-processing-gateway",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "SparkPodSpec_copyFrom",
+    "package": "com.apple.spark.operator",
+    "class": "com.apple.spark.operator.SparkPodSpec",
+    "test-class": "com.apple.spark.operator.SparkPodSpec_copyFrom_Test",
+    "method-name": "copyFrom(SparkPodSpec)",
+    "source-path": "src/main/java/com/apple/spark/operator/SparkPodSpec.java",
+    "test-path": "src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java",
+    "focal-method": "protected void copyFrom(SparkPodSpec another) {\r\n    if (another.cores != null) {\r\n        this.cores = another.cores;\r\n    }\r\n    if (another.coreLimit != null) {\r\n        this.coreLimit = another.coreLimit;\r\n    }\r\n    if (another.memory != null) {\r\n        this.memory = another.memory;\r\n    }\r\n    if (another.memoryOverhead != null) {\r\n        this.memoryOverhead = another.memoryOverhead;\r\n    }\r\n    if (another.image != null) {\r\n        this.image = another.image;\r\n    }\r\n    if (another.env == null) {\r\n        this.env = null;\r\n    } else {\r\n        this.env = new ArrayList<>(another.env);\r\n    }\r\n    if (another.labels == null) {\r\n        this.labels = null;\r\n    } else {\r\n        this.labels = new HashMap<>(another.labels);\r\n    }\r\n    if (another.annotations == null) {\r\n        this.annotations = null;\r\n    } else {\r\n        this.annotations = new HashMap<>(another.annotations);\r\n    }\r\n    this.terminationGracePeriodSeconds = another.terminationGracePeriodSeconds;\r\n    this.serviceAccount = another.serviceAccount;\r\n    if (another.volumeMounts == null) {\r\n        this.volumeMounts = null;\r\n    } else {\r\n        this.volumeMounts = new ArrayList<>(another.volumeMounts);\r\n    }\r\n    this.securityContext = another.securityContext;\r\n    this.affinity = another.affinity;\r\n    this.coreRequest = another.coreRequest;\r\n    this.javaOptions = another.javaOptions;\r\n}",
+    "class-code": "package com.apple.spark.operator;\nimport io.swagger.v3.oas.annotations.Hidden;\nimport java.util.HashMap;\nimport java.util.ArrayList;\nimport com.fasterxml.jackson.annotation.JsonInclude;\nimport java.util.List;\nimport com.fasterxml.jackson.annotation.JsonIgnoreProperties;\nimport java.util.Map;\nimport io.fabric8.kubernetes.api.model.PodDNSConfig;\n@JsonInclude(Include.NON_NULL)\r\n@JsonIgnoreProperties(ignoreUnknown = true)\r\npublic class SparkPodSpec {\n    private Integer cores;\n    private String coreRequest;\n    private String coreLimit;\n    private String memory;\n    private String memoryOverhead;\n    private String image;\n    private List<EnvVar> env;\n    private Map<String, String> labels;\n    private Map<String, String> annotations;\n    @Hidden\r\nprivate Long terminationGracePeriodSeconds;\n    @Hidden\r\nprivate String serviceAccount;\n    @Hidden\r\nprivate List<VolumeMount> volumeMounts;\n    @Hidden\r\nprivate SecurityContext securityContext;\n    @Hidden\r\nprivate Affinity affinity;\n    @Hidden\r\nprivate String javaOptions;\n    protected void copyFrom(SparkPodSpec another) {\r\n        if (another.cores != null) {\r\n            this.cores = another.cores;\r\n        }\r\n        if (another.coreLimit != null) {\r\n            this.coreLimit = another.coreLimit;\r\n        }\r\n        if (another.memory != null) {\r\n            this.memory = another.memory;\r\n        }\r\n        if (another.memoryOverhead != null) {\r\n            this.memoryOverhead = another.memoryOverhead;\r\n        }\r\n        if (another.image != null) {\r\n            this.image = another.image;\r\n        }\r\n        if (another.env == null) {\r\n            this.env = null;\r\n        } else {\r\n            this.env = new ArrayList<>(another.env);\r\n        }\r\n        if (another.labels == null) {\r\n            this.labels = null;\r\n        } else {\r\n            this.labels = new HashMap<>(another.labels);\r\n        }\r\n        if (another.annotations == null) {\r\n            this.annotations = null;\r\n        } else {\r\n            this.annotations = new HashMap<>(another.annotations);\r\n        }\r\n        this.terminationGracePeriodSeconds = another.terminationGracePeriodSeconds;\r\n        this.serviceAccount = another.serviceAccount;\r\n        if (another.volumeMounts == null) {\r\n            this.volumeMounts = null;\r\n        } else {\r\n            this.volumeMounts = new ArrayList<>(another.volumeMounts);\r\n        }\r\n        this.securityContext = another.securityContext;\r\n        this.affinity = another.affinity;\r\n        this.coreRequest = another.coreRequest;\r\n        this.javaOptions = another.javaOptions;\r\n    }\npublic Affinity getAffinity();\n    public Map<String, String> getAnnotations();\n    public String getCoreLimit();\n    public String getCoreRequest();\n    public Integer getCores();\n    public PodDNSConfig getDnsConfig();\n    public List<EnvVar> getEnv();\n    public String getImage();\n    public String getJavaOptions();\n    public Map<String, String> getLabels();\n    public String getMemory();\n    public String getMemoryOverhead();\n    public SecurityContext getSecurityContext();\n    public String getServiceAccount();\n    public Long getTerminationGracePeriodSeconds();\n    public List<VolumeMount> getVolumeMounts();\n    public void setAffinity(Affinity affinity);\n    public void setAnnotations(Map<String, String> annotations);\n    public void setCoreLimit(String coreLimit);\n    public void setCoreRequest(String coreRequest);\n    public void setCores(Integer cores);\n    public void setDnsConfig(PodDNSConfig dnsConfig);\n    public void setEnv(List<EnvVar> env);\n    public void setImage(String image);\n    public void setJavaOptions(String javaOptions);\n    public void setLabels(Map<String, String> labels);\n    public void setMemory(String memory);\n    public void setMemoryOverhead(String memoryOverhead);\n    public void setSecurityContext(SecurityContext securityContext);\n    public void setServiceAccount(String serviceAccount);\n    public void setTerminationGracePeriodSeconds(Long terminationGracePeriodSeconds);\n    public void setVolumeMounts(List<VolumeMount> volumeMounts);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/batch-processing-gateway/src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace/src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace/src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java"
+  },
+  "started_at": "2026-09-15T05:07:17.339439+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SparkPodSpec_copyFrom/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

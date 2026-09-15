@@ -1,0 +1,404 @@
+{
+  "mutants": [
+    {
+      "id": 141,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 431,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 142,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 434,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 143,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 441,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 144,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 445,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 3 to -3",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 145,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 452,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 146,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 460,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 147,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 465,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 3 to -3",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 148,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 468,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 2 to -2",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 149,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 470,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 150,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 437,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 151,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 442,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 152,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 463,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 153,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 466,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 154,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 466,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 155,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 429,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 156,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 432,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 157,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 432,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 158,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 435,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 159,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 437,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 160,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 438,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 161,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 442,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 162,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 446,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 163,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 446,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 164,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 447,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 165,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 450,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 166,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 453,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 167,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 455,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 168,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 463,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 169,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 466,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 170,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 467,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 171,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 430,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 172,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 433,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 173,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 440,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 174,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 444,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 175,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 451,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 176,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 456,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 177,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 458,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 178,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 462,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 179,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 449,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/apache/commons/codec/language/DoubleMetaphone::handleC",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    },
+    {
+      "id": 180,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 474,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/apache/commons/codec/language/DoubleMetaphone::handleC",
+      "method_description": "(Ljava/lang/String;Lorg/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult;I)I"
+    }
+  ]
+}

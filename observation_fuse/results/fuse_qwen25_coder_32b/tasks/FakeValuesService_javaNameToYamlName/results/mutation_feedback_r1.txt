@@ -1,0 +1,14 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (6 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 780 | ConditionalsBoundaryMutator | changed conditional boundary | source: final boolean firstLetterUpperCase = length > 0 && Character.isUpperCase(expression.charAt(0));
+- line 795 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (cnt > 0) {
+- line 801 | IncrementsMutator | Changed increment from -1 to 1 | source: cnt--;
+- line 775 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (result != null) {
+- line 787 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0) {
+- line 789 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/service/FakeValuesService::javaNameToYamlName | source: return expression;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testJavaNameToYamlName_AlreadyFormatted, testJavaNameToYamlName_EmptyString, testJavaNameToYamlName_LowerCamelCase, testJavaNameToYamlName_NonCamelCase, testJavaNameToYamlName_NullInput, testJavaNameToYamlName_NumericStart, testJavaNameToYamlName_ParameterizedValidCase, testJavaNameToYamlName_RepeatedRequests, testJavaNameToYamlName_SingleUpperCaseLetter, testJavaNameToYamlName_SpecialCharacters, testJavaNameToYamlName_UpperCamelCase

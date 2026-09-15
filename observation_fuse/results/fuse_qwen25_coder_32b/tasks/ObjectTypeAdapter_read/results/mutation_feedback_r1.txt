@@ -1,0 +1,13 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (2 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 115 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current == null) {
+- line 155 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::endArray | source: in.endArray();
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 116 | NullReturnValsMutator | replaced return value with null for com/google/gson/internal/bind/ObjectTypeAdapter::read | source: return readTerminal(in, peeked);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testRead_emptyJsonArray, testRead_emptyJsonObject, testRead_invalidJson, testRead_invalidJsonArray, testRead_invalidJsonUnexpectedEnd, testRead_invalidJson_Nesting, testRead_invalidNestedObject, testRead_nestedJsonStructure, testRead_unexpectedToken, testRead_validJsonArray, testRead_validJsonObject, testRead_variedJsonInputs

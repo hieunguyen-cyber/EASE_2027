@@ -1,0 +1,344 @@
+{
+  "mutants": [
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 283,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 284,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 285,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 295,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 304,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 284,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 284,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 285,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 285,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 286,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 290,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 296,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Nysiis.java",
+      "line": 300,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Nysiis.java",
+      "line": 301,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 305,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Nysiis.java",
+      "line": 308,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 314,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 251,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 258,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 290,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 299,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 307,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 307,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 313,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 319,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 283,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 284,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 285,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 40,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 295,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 304,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 42,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 287,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 43,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 252,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/Nysiis::nysiis",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 259,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/Nysiis::nysiis",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 45,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 319,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/Nysiis::nysiis",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 404 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!hasnext) {
+- line 408 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (multitext != null && mtpos + 1 >= mtsize) {
+- line 413 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pendingmt != null) {
+- line 430 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (multitext != null) {
+- line 456 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pending == null) {
+- line 461 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isTextLike(pending)) {
+- line 488 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (newlineindent != null) {
+
+NO_COVERAGE (27 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 408 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (multitext != null && mtpos + 1 >= mtsize) {
+- line 442 | ConditionalsBoundaryMutator | changed conditional boundary | source: hasnext = mtpos + 1 < mtsize ||
+- line 467 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (mtsize > 0) {
+- line 408 | MathMutator | Replaced integer addition with subtraction | source: if (multitext != null && mtpos + 1 >= mtsize) {
+- line 435 | MathMutator | Replaced integer addition with subtraction | source: mtpos++;
+- line 442 | MathMutator | Replaced integer addition with subtraction | source: hasnext = mtpos + 1 < mtsize ||
+- line 416 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (mtwasescape != null &&
+- line 417 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: fstack.getEscapeOutput() != mtwasescape.booleanValue()) {
+- line 437 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final Content ret = mttext[mtpos] == null
+- line 442 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: hasnext = mtpos + 1 < mtsize ||
+- line 472 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pending != null && newlineindent != null) {
+- line 472 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pending != null && newlineindent != null) {
+- line 482 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: hasnext = pending != null;
+- line 408 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (multitext != null && mtpos + 1 >= mtsize) {
+- line 442 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: hasnext = mtpos + 1 < mtsize ||
+- line 467 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (mtsize > 0) {
+- line 411 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText | source: resetMultiText();
+- line 423 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker::analyzeMultiText | source: analyzeMultiText(pendingmt, 0, mtsourcesize);
+- line 424 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done | source: pendingmt.done();
+- line 464 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker::analyzeMultiText | source: analyzeMultiText(pendingmt, 0, mtsourcesize);
+- line 465 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done | source: pendingmt.done();
+- line 475 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText | source: resetMultiText();
+- line 477 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::forceAppend | source: pendingmt.forceAppend(newlineindent);
+- line 478 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done | source: pendingmt.done();
+- line 489 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText | source: resetMultiText();
+- line 491 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::forceAppend | source: pendingmt.forceAppend(newlineindent);
+- line 492 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done | source: pendingmt.done();
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNext, testNextHandlesChangingEscapeOutput, testNextWithPendingMultiText

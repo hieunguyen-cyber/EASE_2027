@@ -1,0 +1,19 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (6 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1214 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < 0x00B6) return false;  // quick short circuit
+- line 1226 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < 0x3031) return false;  if (c <= 0x3035) return true;
+- line 1227 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < 0x309D) return false;  if (c <= 0x309E) return true;
+- line 1228 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < 0x30FC) return false;  if (c <= 0x30FE) return true;
+- line 1214 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (c < 0x00B6) return false;  // quick short circuit
+- line 1227 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (c < 0x309D) return false;  if (c <= 0x309E) return true;
+
+NO_COVERAGE (3 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1214 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/jdom2/Verifier::isXMLExtender | source: if (c < 0x00B6) return false;  // quick short circuit
+- line 1227 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/jdom2/Verifier::isXMLExtender | source: if (c < 0x309D) return false;  if (c <= 0x309E) return true;
+- line 1230 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/jdom2/Verifier::isXMLExtender | source: return false;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testIsXMLExtender, testIsXMLExtender_Parameter_FalseCases, testIsXMLExtender_Parameter_TrueCases, testIsXMLExtender_WithFalseCase, testIsXMLExtender_WithInvalidChars, testIsXMLExtender_WithTrueCase

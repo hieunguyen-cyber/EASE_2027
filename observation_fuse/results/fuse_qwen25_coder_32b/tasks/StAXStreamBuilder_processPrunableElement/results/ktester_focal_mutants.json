@@ -1,0 +1,214 @@
+{
+  "mutants": [
+    {
+      "id": 51,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 308,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 323,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 318,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 321,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 335,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 306,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 57,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 298,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 308,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 312,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 323,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 324,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 325,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 327,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 338,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 351,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 357,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 363,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 308,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 323,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StAXStreamBuilder.java",
+      "line": 375,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/input/StAXStreamBuilder::processPrunableElement",
+      "method_description": "(Lorg/jdom2/JDOMFactory;Ljavax/xml/stream/XMLStreamReader;ILorg/jdom2/input/stax/StAXFilter;)Lorg/jdom2/Element;"
+    }
+  ]
+}

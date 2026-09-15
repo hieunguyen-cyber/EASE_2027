@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:49:14.475445+00:00",
+  "task_id": "DTDParser_formatInternal",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "DTDParser_formatInternal",
+    "package": "org.jdom2.input.stax",
+    "class": "org.jdom2.input.stax.DTDParser",
+    "test-class": "org.jdom2.input.stax.DTDParser_formatInternal_Test",
+    "method-name": "formatInternal(String)",
+    "source-path": "src/main/java/org/jdom2/input/stax/DTDParser.java",
+    "test-path": "src/test/java/org/jdom2/input/stax/DTDParser_formatInternal_Test.java",
+    "focal-method": "private static String formatInternal(String internal) {\r\n    StringBuilder sb = new StringBuilder(internal.length());\r\n    char quote = ' ';\r\n    boolean white = true;\r\n    for (char ch : internal.toCharArray()) {\r\n        if (quote == ' ') {\r\n            // we are not in a quoted value...\r\n            if (isWhite(ch)) {\r\n                if (!white) {\r\n                    // this will be the first whitespace.\r\n                    // replace it with a single ' '\r\n                    sb.append(' ');\r\n                    white = true;\r\n                }\r\n                // subsequent (unquoted) whitespace is ignored\r\n            } else {\r\n                if ((ch == '\\'') || (ch == '\"')) {\r\n                    // we are entering a quoted value.\r\n                    quote = ch;\r\n                } else if (ch == '<') {\r\n                    // we are starting some form of declaration.\r\n                    sb.append(\"  \");\r\n                }\r\n                if (ch == '>') {\r\n                    // we are ending a declaration.\r\n                    if (white) {\r\n                        // the declaration ended with whitespace, which we\r\n                        // remove.\r\n                        sb.setCharAt(sb.length() - 1, ch);\r\n                    } else {\r\n                        // the declaration had no whitespace at the end. OK\r\n                        sb.append(ch);\r\n                    }\r\n                    // all declarations end with a new-line.\r\n                    sb.append('\\n');\r\n                    // and subsequent lines start as trimmed whitespace.\r\n                    white = true;\r\n                } else {\r\n                    sb.append(ch);\r\n                    white = false;\r\n                }\r\n            }\r\n        } else {\r\n            // we are in a quoted value...\r\n            if (ch == quote) {\r\n                // we are leaving the quoted value.\r\n                quote = ' ';\r\n            }\r\n            sb.append(ch);\r\n        }\r\n    }\r\n    return sb.toString();\r\n}",
+    "class-code": "package org.jdom2.input.stax;\nimport java.util.regex.Pattern;\nimport org.jdom2.JDOMException;\nimport java.util.HashMap;\nimport java.util.regex.Matcher;\nimport org.jdom2.JDOMFactory;\nimport org.jdom2.DocType;\npublic class DTDParser {\n    \n    private static String formatInternal(String internal) {\r\n        StringBuilder sb = new StringBuilder(internal.length());\r\n        char quote = ' ';\r\n        boolean white = true;\r\n        for (char ch : internal.toCharArray()) {\r\n            if (quote == ' ') {\r\n                // we are not in a quoted value...\r\n                if (isWhite(ch)) {\r\n                    if (!white) {\r\n                        // this will be the first whitespace.\r\n                        // replace it with a single ' '\r\n                        sb.append(' ');\r\n                        white = true;\r\n                    }\r\n                    // subsequent (unquoted) whitespace is ignored\r\n                } else {\r\n                    if ((ch == '\\'') || (ch == '\"')) {\r\n                        // we are entering a quoted value.\r\n                        quote = ch;\r\n                    } else if (ch == '<') {\r\n                        // we are starting some form of declaration.\r\n                        sb.append(\"  \");\r\n                    }\r\n                    if (ch == '>') {\r\n                        // we are ending a declaration.\r\n                        if (white) {\r\n                            // the declaration ended with whitespace, which we\r\n                            // remove.\r\n                            sb.setCharAt(sb.length() - 1, ch);\r\n                        } else {\r\n                            // the declaration had no whitespace at the end. OK\r\n                            sb.append(ch);\r\n                        }\r\n                        // all declarations end with a new-line.\r\n                        sb.append('\\n');\r\n                        // and subsequent lines start as trimmed whitespace.\r\n                        white = true;\r\n                    } else {\r\n                        sb.append(ch);\r\n                        white = false;\r\n                    }\r\n                }\r\n            } else {\r\n                // we are in a quoted value...\r\n                if (ch == quote) {\r\n                    // we are leaving the quoted value.\r\n                    quote = ' ';\r\n                }\r\n                sb.append(ch);\r\n            }\r\n        }\r\n        return sb.toString();\r\n    }\nprivate static final boolean isWhite(char ch);\n    public static DocType parse(final String input, final JDOMFactory factory) throws JDOMException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/input/stax/DTDParser_formatInternal_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace/src/test/java/org/jdom2/input/stax/DTDParser_formatInternal_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace/src/test/java/org/jdom2/input/stax/DTDParser_formatInternal_Test.java"
+  },
+  "started_at": "2026-09-15T07:49:14.550104+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DTDParser_formatInternal/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

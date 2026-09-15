@@ -1,0 +1,16 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 653 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (value3 == null) {
+- line 657 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (value2 == null) {
+- line 672 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (value.equals(value2)) {
+- line 648 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/apache/commons/collections4/map/Flat3Map::containsValue | source: return delegateMap.containsValue(value);
+
+NO_COVERAGE (2 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 654 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue | source: return true;
+- line 673 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue | source: return true;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testContainsValue_AfterClear, testContainsValue_EmptyMap, testContainsValue_ExactMatchingNullValue, testContainsValue_ExistingValue, testContainsValue_MultipleNullVsAlternativeValues, testContainsValue_NonExistingValue, testContainsValue_NullValue, testContainsValue_NullWithNoValues, testContainsValue_ValueAtBoundarySize3, testContainsValue_ValueMatchesSize1Value, testContainsValue_ValueMatchesSize2Value, testContainsValue_ValueMatchesSize3Value

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:22:21.544181+00:00",
+  "task_id": "Lexer_parseEncapsulatedToken",
+  "project": "commons-csv",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Lexer_parseEncapsulatedToken",
+    "package": "org.apache.commons.csv",
+    "class": "org.apache.commons.csv.Lexer",
+    "test-class": "org.apache.commons.csv.Lexer_parseEncapsulatedToken_Test",
+    "method-name": "parseEncapsulatedToken(Token)",
+    "source-path": "src/main/java/org/apache/commons/csv/Lexer.java",
+    "test-path": "src/test/java/org/apache/commons/csv/Lexer_parseEncapsulatedToken_Test.java",
+    "focal-method": "private Token parseEncapsulatedToken(final Token token) throws IOException {\r\n    token.isQuoted = true;\r\n    // save current line number in case needed for IOE\r\n    final long startLineNumber = getCurrentLineNumber();\r\n    int c;\r\n    while (true) {\r\n        c = reader.read();\r\n        if (isEscape(c)) {\r\n            if (isEscapeDelimiter()) {\r\n                token.content.append(delimiter);\r\n            } else {\r\n                final int unescaped = readEscape();\r\n                if (unescaped == END_OF_STREAM) {\r\n                    // unexpected char after escape\r\n                    token.content.append(((char) (c))).append(((char) (reader.getLastChar())));\r\n                } else {\r\n                    token.content.append(((char) (unescaped)));\r\n                }\r\n            }\r\n        } else if (isQuoteChar(c)) {\r\n            if (isQuoteChar(reader.lookAhead())) {\r\n                // double or escaped encapsulator -> add single encapsulator to token\r\n                c = reader.read();\r\n                token.content.append(((char) (c)));\r\n            } else {\r\n                // token finish mark (encapsulator) reached: ignore whitespace till delimiter\r\n                while (true) {\r\n                    c = reader.read();\r\n                    if (isDelimiter(c)) {\r\n                        token.type = TOKEN;\r\n                        return token;\r\n                    }\r\n                    if (isEndOfFile(c)) {\r\n                        token.type = EOF;\r\n                        token.isReady = true;// There is data at EOF\r\n\r\n                        return token;\r\n                    }\r\n                    if (readEndOfLine(c)) {\r\n                        token.type = EORECORD;\r\n                        return token;\r\n                    }\r\n                    if (!Character.isWhitespace(((char) (c)))) {\r\n                        // error invalid char between token and next delimiter\r\n                        throw new IOException((\"(line \" + getCurrentLineNumber()) + \") invalid char between encapsulated token and delimiter\");\r\n                    }\r\n                } \r\n            }\r\n        } else if (isEndOfFile(c)) {\r\n            // error condition (end of file before end of token)\r\n            throw new IOException((\"(startline \" + startLineNumber) + \") EOF reached before encapsulated token finished\");\r\n        } else {\r\n            // consume character\r\n            token.content.append(((char) (c)));\r\n        }\r\n    } \r\n}",
+    "class-code": "package org.apache.commons.csv;\nimport static org.apache.commons.csv.Constants.FF;\nimport static org.apache.commons.csv.Token.Type.INVALID;\nimport static org.apache.commons.csv.Constants.BACKSPACE;\nimport static org.apache.commons.csv.Constants.UNDEFINED;\nimport java.io.Closeable;\nimport java.io.IOException;\nimport static org.apache.commons.csv.Token.Type.EORECORD;\nimport static org.apache.commons.csv.Constants.CR;\nimport static org.apache.commons.csv.Token.Type.COMMENT;\nimport static org.apache.commons.csv.Constants.TAB;\nimport static org.apache.commons.csv.Constants.LF;\nimport static org.apache.commons.csv.Token.Type.EOF;\nimport static org.apache.commons.csv.Token.Type.TOKEN;\nimport static org.apache.commons.csv.Constants.END_OF_STREAM;\nfinal class Lexer implements Closeable {\n    private final char[] delimiter;\n    private final ExtendedBufferedReader reader;\n    private Token parseEncapsulatedToken(final Token token) throws IOException {\r\n        token.isQuoted = true;\r\n        // save current line number in case needed for IOE\r\n        final long startLineNumber = getCurrentLineNumber();\r\n        int c;\r\n        while (true) {\r\n            c = reader.read();\r\n            if (isEscape(c)) {\r\n                if (isEscapeDelimiter()) {\r\n                    token.content.append(delimiter);\r\n                } else {\r\n                    final int unescaped = readEscape();\r\n                    if (unescaped == END_OF_STREAM) {\r\n                        // unexpected char after escape\r\n                        token.content.append(((char) (c))).append(((char) (reader.getLastChar())));\r\n                    } else {\r\n                        token.content.append(((char) (unescaped)));\r\n                    }\r\n                }\r\n            } else if (isQuoteChar(c)) {\r\n                if (isQuoteChar(reader.lookAhead())) {\r\n                    // double or escaped encapsulator -> add single encapsulator to token\r\n                    c = reader.read();\r\n                    token.content.append(((char) (c)));\r\n                } else {\r\n                    // token finish mark (encapsulator) reached: ignore whitespace till delimiter\r\n                    while (true) {\r\n                        c = reader.read();\r\n                        if (isDelimiter(c)) {\r\n                            token.type = TOKEN;\r\n                            return token;\r\n                        }\r\n                        if (isEndOfFile(c)) {\r\n                            token.type = EOF;\r\n                            token.isReady = true;// There is data at EOF\r\n    \r\n                            return token;\r\n                        }\r\n                        if (readEndOfLine(c)) {\r\n                            token.type = EORECORD;\r\n                            return token;\r\n                        }\r\n                        if (!Character.isWhitespace(((char) (c)))) {\r\n                            // error invalid char between token and next delimiter\r\n                            throw new IOException((\"(line \" + getCurrentLineNumber()) + \") invalid char between encapsulated token and delimiter\");\r\n                        }\r\n                    } \r\n                }\r\n            } else if (isEndOfFile(c)) {\r\n                // error condition (end of file before end of token)\r\n                throw new IOException((\"(startline \" + startLineNumber) + \") EOF reached before encapsulated token finished\");\r\n            } else {\r\n                // consume character\r\n                token.content.append(((char) (c)));\r\n            }\r\n        } \r\n    }\n@Override\r\npublic void close() throws IOException;\n    long getCharacterPosition();\n    long getCurrentLineNumber();\n    String getFirstEol();\n    boolean isClosed();\n    boolean isCommentStart(final int ch);\n    boolean isDelimiter(final int ch) throws IOException;\n    boolean isEndOfFile(final int ch);\n    boolean isEscape(final int ch);\n    boolean isEscapeDelimiter() throws IOException;\n    boolean isQuoteChar(final int ch);\n    boolean isStartOfLine(final int ch);\n    Token nextToken(final Token token) throws IOException;\n    boolean readEndOfLine(int ch) throws IOException;\n    int readEscape() throws IOException;\n    void trimTrailingSpaces(final StringBuilder buffer);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv/src/test/java/org/apache/commons/csv/Lexer_parseEncapsulatedToken_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace/src/test/java/org/apache/commons/csv/Lexer_parseEncapsulatedToken_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace/src/test/java/org/apache/commons/csv/Lexer_parseEncapsulatedToken_Test.java"
+  },
+  "started_at": "2026-09-15T06:22:21.639079+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_parseEncapsulatedToken/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

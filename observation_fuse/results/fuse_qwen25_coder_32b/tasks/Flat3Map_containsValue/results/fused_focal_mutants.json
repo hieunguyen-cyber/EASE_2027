@@ -1,0 +1,174 @@
+{
+  "mutants": [
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 647,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 650,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 653,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 657,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 32,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 661,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 668,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 672,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 676,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 36,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 648,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 654,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 658,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 39,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 662,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 40,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 669,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 41,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 673,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 42,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 677,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Flat3Map.java",
+      "line": 648,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "id": 44,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Flat3Map.java",
+      "line": 681,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/apache/commons/collections4/map/Flat3Map::containsValue",
+      "method_description": "(Ljava/lang/Object;)Z"
+    }
+  ]
+}

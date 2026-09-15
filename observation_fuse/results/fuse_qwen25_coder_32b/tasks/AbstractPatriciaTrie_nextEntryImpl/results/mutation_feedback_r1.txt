@@ -1,0 +1,29 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (21 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1827 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous == null || start != previous.predecessor) {
+- line 1827 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous == null || start != previous.predecessor) {
+- line 1828 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (!current.left.isEmpty()) {
+- line 1831 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous == current.left) {
+- line 1835 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isValidUplink(current.left, current)) {
+- line 1844 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current.isEmpty()) {
+- line 1857 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current.right == null) {
+- line 1862 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous != current.right) {
+- line 1864 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isValidUplink(current.right, current)) {
+- line 1874 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (current == current.parent.right) {
+- line 1876 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current == tree) {
+- line 1884 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current == tree) {
+- line 1889 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current.parent.right == null) {
+- line 1894 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (previous != current.parent.right
+- line 1895 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && isValidUplink(current.parent.right, current.parent)) {
+- line 1900 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current.parent.right == current.parent) {
+- line 1836 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::nextEntryImpl | source: return current.left;
+- line 1865 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::nextEntryImpl | source: return current.right;
+- line 1869 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::nextEntryImpl | source: return nextEntryImpl(current.right, previous, tree);
+- line 1896 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::nextEntryImpl | source: return current.parent.right;
+- line 1905 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::nextEntryImpl | source: return nextEntryImpl(current.parent.right, previous, tree);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNextEntryImpl_WhenAtRootWithNoMoreNodes_ShouldReturnNull, testNextEntryImpl_WhenCurrentEntryIsEmpty_ShouldReturnNull, testNextEntryImpl_WhenCurrentHasNoChildren_ShouldReturnNull, testNextEntryImpl_WhenOnlyRightEntryValid_ShouldReturnValidRightEntry, testNextEntryImpl_WhenPreviousIsNull_ShouldReturnFirstEntry, testNextEntryImpl_WhenStartIsNull_ShouldReturnNull, testNextEntryImpl_WhenTraversingRightFromLeftAlreadyReturned_ShouldReturnValidRightEntry, testNextEntryImpl_WhenValidLeftEntryExists_ShouldReturnValidLeftEntry

@@ -1,0 +1,274 @@
+{
+  "mutants": [
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 477,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 500,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 535,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 523,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 18,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 523,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 467,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 481,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 487,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 492,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 495,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 496,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 499,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 500,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 505,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 32,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 512,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 519,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 477,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 500,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 497,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/List::clear",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 510,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DaitchMokotoffSoundex$Branch::processNextReplacement",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 520,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Set::clear",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 39,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 534,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DaitchMokotoffSoundex$Branch::finish",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    },
+    {
+      "id": 40,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DaitchMokotoffSoundex.java",
+      "line": 538,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/DaitchMokotoffSoundex::soundex",
+      "method_description": "(Ljava/lang/String;Z)[Ljava/lang/String;"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "mutants": [
+    {
+      "id": 111,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 222,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 112,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 228,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 234,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 239,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 244,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 249,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 254,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 118,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 220,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 226,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 232,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 121,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 237,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 122,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 123,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 247,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 124,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 252,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 125,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 222,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 126,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 228,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 127,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 234,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 128,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 239,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 129,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 244,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 130,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 249,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 131,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 254,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "id": 132,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SqlTransformer.java",
+      "line": 258,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/transformations/sql/SqlTransformer::handlePrimitivesInArray",
+      "method_description": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;"
+    }
+  ]
+}

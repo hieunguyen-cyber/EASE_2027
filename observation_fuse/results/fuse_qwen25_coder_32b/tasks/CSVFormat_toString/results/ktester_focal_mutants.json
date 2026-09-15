@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 224,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2197,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 225,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2201,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 226,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2205,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 227,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2209,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 228,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2213,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 229,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2217,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 230,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2221,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 231,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2224,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 232,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2227,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 233,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2231,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 234,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2235,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 235,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2239,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/csv/CSVFormat::toString",
+      "method_description": "()Ljava/lang/String;"
+    }
+  ]
+}

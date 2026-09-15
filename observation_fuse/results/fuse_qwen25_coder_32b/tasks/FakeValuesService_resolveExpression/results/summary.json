@@ -1,0 +1,323 @@
+{
+  "task_id": "FakeValuesService_resolveExpression",
+  "project": "datafaker",
+  "focal_class": "net.datafaker.service.FakeValuesService",
+  "focal_method": "resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/datafaker/src/test/java/net/datafaker/service/FakeValuesService_resolveExpression_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_resolveExpression/workspace/src/test/java/net/datafaker/service/FakeValuesService_resolveExpression_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 71.768
+  },
+  "started_at": "2026-09-15T07:33:55.947671+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testResolveExpression_HandlesIOException",
+      "testResolveExpression_HandlesMethodInvocationException",
+      "testResolveExpression_ReturnsValueFromCurrent",
+      "testResolveExpression_ThrowsException",
+      "testResolveExpression_ThrowsIllegalAccessException",
+      "testResolveExpression_ThrowsRuntimeException",
+      "testResolveExpression_ThrowsUnresolvableDirective",
+      "testResolveExpression_UsesRootProvider"
+    ],
+    "test_count": 9
+  },
+  "ktester": {
+    "test_cases": 9,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 9,
+    "tests_failed": 8,
+    "line_missed": 20,
+    "line_covered": 20,
+    "line_coverage": 0.5,
+    "branch_missed": 23,
+    "branch_covered": 21,
+    "branch_coverage": 0.477273,
+    "instruction_missed": 88,
+    "instruction_covered": 84,
+    "instruction_coverage": 0.488372,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 35,
+      "detected": 1,
+      "undetected": 34,
+      "killed": 1,
+      "survived": 20,
+      "no_coverage": 14,
+      "mutation_score": 0.028571,
+      "statuses": {
+        "KILLED": 1,
+        "NO_COVERAGE": 14,
+        "SURVIVED": 20
+      }
+    },
+    "kills_per_test": 0.1111,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 4,
+        "detected": 0,
+        "survived": 4,
+        "no_coverage": 0,
+        "mutation_score": 0.0
+      },
+      "MathMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "NullReturnValsMutator": {
+        "total": 8,
+        "detected": 0,
+        "survived": 1,
+        "no_coverage": 7,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 18,
+        "detected": 1,
+        "survived": 11,
+        "no_coverage": 6,
+        "mutation_score": 0.055556
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 4,
+        "detected": 0,
+        "survived": 4,
+        "no_coverage": 0,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 34,
+      "existing_tests_before": 9,
+      "tests_after": 11,
+      "seconds": 71.766,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 11,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 11,
+    "tests_failed": 0,
+    "line_missed": 19,
+    "line_covered": 21,
+    "line_coverage": 0.525,
+    "branch_missed": 27,
+    "branch_covered": 17,
+    "branch_coverage": 0.386364,
+    "instruction_missed": 101,
+    "instruction_covered": 71,
+    "instruction_coverage": 0.412791,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 71.768,
+    "inherited_disabled_methods": 8,
+    "stats": {
+      "total": 35,
+      "detected": 22,
+      "undetected": 13,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 13,
+      "mutation_score": 0.628571,
+      "statuses": {
+        "NO_COVERAGE": 13,
+        "RUN_ERROR": 22
+      }
+    },
+    "kills_per_test": 2.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 4,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "MathMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "NullReturnValsMutator": {
+        "total": 8,
+        "detected": 2,
+        "survived": 0,
+        "no_coverage": 6,
+        "mutation_score": 0.25
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 18,
+        "detected": 12,
+        "survived": 0,
+        "no_coverage": 6,
+        "mutation_score": 0.666667
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 4,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.025,
+    "branch_coverage": -0.090909,
+    "instruction_coverage": -0.075581,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": 1.8889,
+    "mutation_score": 0.6,
+    "mutation_score_points": 60.0,
+    "newly_killed": 18,
+    "lost_kills": 0,
+    "added_test_methods": 2,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 658,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 659,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression"
+      },
+      {
+        "line": 664,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 667,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 668,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 679,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 684,
+        "mutator": "ConditionalsBoundaryMutator",
+        "description": "changed conditional boundary"
+      },
+      {
+        "line": 684,
+        "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+        "description": "removed conditional - replaced comparison check with false"
+      },
+      {
+        "line": 696,
+        "mutator": "ConditionalsBoundaryMutator",
+        "description": "changed conditional boundary"
+      },
+      {
+        "line": 696,
+        "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+        "description": "removed conditional - replaced comparison check with false"
+      },
+      {
+        "line": 704,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 710,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 712,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 719,
+        "mutator": "ConditionalsBoundaryMutator",
+        "description": "changed conditional boundary"
+      },
+      {
+        "line": 719,
+        "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+        "description": "removed conditional - replaced comparison check with false"
+      },
+      {
+        "line": 732,
+        "mutator": "ConditionalsBoundaryMutator",
+        "description": "changed conditional boundary"
+      },
+      {
+        "line": 732,
+        "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+        "description": "removed conditional - replaced comparison check with false"
+      },
+      {
+        "line": 737,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T07:35:37.672473+00:00"
+}

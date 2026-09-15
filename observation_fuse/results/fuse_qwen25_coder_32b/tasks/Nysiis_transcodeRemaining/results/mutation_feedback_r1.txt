@@ -1,0 +1,18 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 151 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (curr == 'S' && next == 'C' && aNext == 'H') {
+- line 151 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (curr == 'S' && next == 'C' && aNext == 'H') {
+- line 161 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (curr == 'H' && (!isVowel(prev) || !isVowel(next))) {
+
+NO_COVERAGE (5 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 151 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (curr == 'S' && next == 'C' && aNext == 'H') {
+- line 136 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining | source: return CHARS_G;
+- line 138 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining | source: return CHARS_S;
+- line 140 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining | source: return CHARS_N;
+- line 152 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining | source: return CHARS_SSS;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testTranscodeRemaining_DefaultReturnsCurr, testTranscodeRemaining_EvToAf, testTranscodeRemaining_HToPrevIfNonVowel, testTranscodeRemaining_HWithVowelNext, testTranscodeRemaining_KNToNN, testTranscodeRemaining_KToC, testTranscodeRemaining_PHToFF, testTranscodeRemaining_SAndVowelNext, testTranscodeRemaining_SCHToSSS, testTranscodeRemaining_VowelA_ToA, testTranscodeRemaining_VowelE_ToA, testTranscodeRemaining_VowelI_ToA, testTranscodeRemaining_VowelO_ToA, testTranscodeRemaining_VowelToA, testTranscodeRemaining_VowelU_ToA, testTranscodeRemaining_WToPrevIfVowel, testTranscodeRemaining_WWithNonVowelPrev

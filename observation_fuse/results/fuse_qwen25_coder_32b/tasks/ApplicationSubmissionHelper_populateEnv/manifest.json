@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:13:33.689615+00:00",
+  "task_id": "ApplicationSubmissionHelper_populateEnv",
+  "project": "batch-processing-gateway",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/batch-processing-gateway",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "ApplicationSubmissionHelper_populateEnv",
+    "package": "com.apple.spark.core",
+    "class": "com.apple.spark.core.ApplicationSubmissionHelper",
+    "test-class": "com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test",
+    "method-name": "populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+    "source-path": "src/main/java/com/apple/spark/core/ApplicationSubmissionHelper.java",
+    "test-path": "src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java",
+    "focal-method": "public static void populateEnv(SparkApplicationSpec sparkSpec, SubmitApplicationRequest request, AppConfig.SparkCluster sparkCluster) {\r\n    if ((sparkCluster.getDriver() != null) && (sparkCluster.getDriver().getEnv() != null)) {\r\n        // there is env in spark cluster driver configure, copy it to spark spec\r\n        if (sparkSpec.getDriver() == null) {\r\n            sparkSpec.setDriver(new DriverSpec());\r\n        }\r\n        if (sparkSpec.getDriver().getEnv() == null) {\r\n            sparkSpec.getDriver().setEnv(new ArrayList<>());\r\n        }\r\n        SparkSpecHelper.copyEnv(sparkCluster.getDriver().getEnv(), sparkSpec.getDriver().getEnv());\r\n    }\r\n    if ((request.getDriver() != null) && (request.getDriver().getEnv() != null)) {\r\n        // there is env in request driver configure, copy it to spark spec\r\n        if (sparkSpec.getDriver() == null) {\r\n            sparkSpec.setDriver(new DriverSpec());\r\n        }\r\n        if (sparkSpec.getDriver().getEnv() == null) {\r\n            sparkSpec.getDriver().setEnv(new ArrayList<>());\r\n        }\r\n        SparkSpecHelper.copyEnv(request.getDriver().getEnv(), sparkSpec.getDriver().getEnv());\r\n    }\r\n    if ((sparkCluster.getExecutor() != null) && (sparkCluster.getExecutor().getEnv() != null)) {\r\n        // there is env in spark cluster executor configure, copy it to spark spec\r\n        if (sparkSpec.getExecutor() == null) {\r\n            sparkSpec.setExecutor(new ExecutorSpec());\r\n        }\r\n        if (sparkSpec.getExecutor().getEnv() == null) {\r\n            sparkSpec.getExecutor().setEnv(new ArrayList<>());\r\n        }\r\n        SparkSpecHelper.copyEnv(sparkCluster.getExecutor().getEnv(), sparkSpec.getExecutor().getEnv());\r\n    }\r\n    if ((request.getExecutor() != null) && (request.getExecutor().getEnv() != null)) {\r\n        // there is env in request executor configure, copy it to spark spec\r\n        if (sparkSpec.getExecutor() == null) {\r\n            sparkSpec.setExecutor(new ExecutorSpec());\r\n        }\r\n        if (sparkSpec.getExecutor().getEnv() == null) {\r\n            sparkSpec.getExecutor().setEnv(new ArrayList<>());\r\n        }\r\n        SparkSpecHelper.copyEnv(request.getExecutor().getEnv(), sparkSpec.getExecutor().getEnv());\r\n    }\r\n}",
+    "class-code": "package com.apple.spark.core;\nimport com.apple.spark.operator.NodeAffinity;\nimport static com.apple.spark.core.BatchSchedulerConstants.YUNIKORN_ROOT_QUEUE;\nimport com.apple.spark.api.SubmitApplicationRequest;\nimport com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;\nimport java.util.HashMap;\nimport static com.apple.spark.core.BatchSchedulerConstants.YUNIKORN_SPARK_DEFAULT_QUEUE;\nimport java.util.ArrayList;\nimport com.apple.spark.util.ExceptionUtils;\nimport org.slf4j.Logger;\nimport com.apple.spark.operator.SparkApplicationSpec;\nimport static com.apple.spark.core.SparkConstants.DRIVER_MEM_BUFFER_RATIO;\nimport static com.apple.spark.core.SparkConstants.EXECUTOR_MEM_BUFFER_RATIO;\nimport com.apple.spark.operator.ExecutorSpec;\nimport static com.apple.spark.core.BatchSchedulerConstants.PLACEHOLDER_TIMEOUT_IN_SECONDS;\nimport org.apache.commons.lang3.StringUtils;\nimport com.apple.spark.operator.NodeSelectorTerm;\nimport com.fasterxml.jackson.dataformat.yaml.YAMLFactory;\nimport com.apple.spark.operator.DriverSpec;\nimport com.apple.spark.operator.BatchSchedulerConfiguration;\nimport java.util.List;\nimport java.util.UUID;\nimport static com.apple.spark.core.SparkConstants.DRIVER_CPU_BUFFER_RATIO;\nimport org.slf4j.LoggerFactory;\nimport com.apple.spark.operator.NodeSelectorOperator;\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport java.util.Collections;\nimport java.util.regex.Pattern;\nimport java.util.stream.Collectors;\nimport java.util.Optional;\nimport com.apple.spark.AppConfig;\nimport com.apple.spark.operator.RequiredDuringSchedulingIgnoredDuringExecutionTerm;\nimport com.apple.spark.operator.NodeSelectorRequirement;\nimport static com.apple.spark.core.SparkConstants.EXECUTOR_CPU_BUFFER_RATIO;\nimport io.fabric8.kubernetes.api.model.PodDNSConfig;\nimport com.apple.spark.operator.Volume;\nimport javax.ws.rs.core.Response;\nimport static com.apple.spark.core.Constants.*;\nimport io.fabric8.kubernetes.api.model.PodDNSConfigOption;\nimport com.apple.spark.operator.SparkUIConfiguration;\nimport com.apple.spark.operator.Affinity;\nimport javax.ws.rs.WebApplicationException;\nimport com.apple.spark.AppConfig.SparkCluster;\nimport java.util.Map;\nimport java.util.Arrays;\nimport static com.apple.spark.core.SparkConstants.CORE_LIMIT_RATIO;\npublic class ApplicationSubmissionHelper {\n    \n    public static void populateEnv(SparkApplicationSpec sparkSpec, SubmitApplicationRequest request, AppConfig.SparkCluster sparkCluster) {\r\n        if ((sparkCluster.getDriver() != null) && (sparkCluster.getDriver().getEnv() != null)) {\r\n            // there is env in spark cluster driver configure, copy it to spark spec\r\n            if (sparkSpec.getDriver() == null) {\r\n                sparkSpec.setDriver(new DriverSpec());\r\n            }\r\n            if (sparkSpec.getDriver().getEnv() == null) {\r\n                sparkSpec.getDriver().setEnv(new ArrayList<>());\r\n            }\r\n            SparkSpecHelper.copyEnv(sparkCluster.getDriver().getEnv(), sparkSpec.getDriver().getEnv());\r\n        }\r\n        if ((request.getDriver() != null) && (request.getDriver().getEnv() != null)) {\r\n            // there is env in request driver configure, copy it to spark spec\r\n            if (sparkSpec.getDriver() == null) {\r\n                sparkSpec.setDriver(new DriverSpec());\r\n            }\r\n            if (sparkSpec.getDriver().getEnv() == null) {\r\n                sparkSpec.getDriver().setEnv(new ArrayList<>());\r\n            }\r\n            SparkSpecHelper.copyEnv(request.getDriver().getEnv(), sparkSpec.getDriver().getEnv());\r\n        }\r\n        if ((sparkCluster.getExecutor() != null) && (sparkCluster.getExecutor().getEnv() != null)) {\r\n            // there is env in spark cluster executor configure, copy it to spark spec\r\n            if (sparkSpec.getExecutor() == null) {\r\n                sparkSpec.setExecutor(new ExecutorSpec());\r\n            }\r\n            if (sparkSpec.getExecutor().getEnv() == null) {\r\n                sparkSpec.getExecutor().setEnv(new ArrayList<>());\r\n            }\r\n            SparkSpecHelper.copyEnv(sparkCluster.getExecutor().getEnv(), sparkSpec.getExecutor().getEnv());\r\n        }\r\n        if ((request.getExecutor() != null) && (request.getExecutor().getEnv() != null)) {\r\n            // there is env in request executor configure, copy it to spark spec\r\n            if (sparkSpec.getExecutor() == null) {\r\n                sparkSpec.setExecutor(new ExecutorSpec());\r\n            }\r\n            if (sparkSpec.getExecutor().getEnv() == null) {\r\n                sparkSpec.getExecutor().setEnv(new ArrayList<>());\r\n            }\r\n            SparkSpecHelper.copyEnv(request.getExecutor().getEnv(), sparkSpec.getExecutor().getEnv());\r\n        }\r\n    }\nstatic Map<String, String> applyFeatureGate(SubmitApplicationRequest request, Map<String, String> conf);\n    public static String generateSubmissionId(String clusterId);\n    public static String generateSubmissionId(String clusterId, String submissionIdSuffix);\n    public static String getClusterIdFromSubmissionId(String submissionId);\n    public static DriverSpec getDriverSpec(SubmitApplicationRequest request, AppConfig appConfig, String parentQueue, SparkCluster sparkCluster);\n    public static ExecutorSpec getExecutorSpec(SubmitApplicationRequest request, AppConfig appConfig, String parentQueue, SparkCluster sparkCluster);\n    public static String getImage(AppConfig appConfig, SubmitApplicationRequest request, String type, String sparkVersion, String proxyUser);\n    public static String getProxyUser(String user, String dagUser);\n    public static Map<String, String> getSparkConf(String submissionId, SubmitApplicationRequest request, AppConfig appConfig, AppConfig.SparkCluster sparkCluster);\n    public static SparkUIConfiguration getSparkUIConfiguration(String submissionId, AppConfig.SparkCluster sparkCluster);\n    public static String getType(String specifiedType, String mainClass);\n    public static List<Volume> getVolumes(SubmitApplicationRequest request, AppConfig.SparkCluster sparkCluster);\n    public static BatchSchedulerConfiguration getYuniKornSchedulerConfig(String queue);\n    public static boolean looksLikeFilePath(String requestBody);\n    public static SubmitApplicationRequest parseSubmitRequest(String requestBody, String contentType);\n    public static void validateQueueToken(String queue, String queueToken, AppConfig appConfig);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/batch-processing-gateway/src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace/src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace/src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java"
+  },
+  "started_at": "2026-09-15T05:13:33.773283+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ApplicationSubmissionHelper_populateEnv/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

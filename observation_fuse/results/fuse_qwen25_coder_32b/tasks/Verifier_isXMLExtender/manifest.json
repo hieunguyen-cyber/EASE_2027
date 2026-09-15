@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:10:18.277649+00:00",
+  "task_id": "Verifier_isXMLExtender",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Verifier_isXMLExtender",
+    "package": "org.jdom2",
+    "class": "org.jdom2.Verifier",
+    "test-class": "org.jdom2.Verifier_isXMLExtender_Test",
+    "method-name": "isXMLExtender(char)",
+    "source-path": "src/main/java/org/jdom2/Verifier.java",
+    "test-path": "src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java",
+    "focal-method": "public static boolean isXMLExtender(final char c) {\r\n    /* This function is not accellerated by the bitmask system because\r\n    there are no longer any actual calls to it from the JDOM code.\r\n    It used to be called by the isXMLNameCharacter() method before\r\n    the bitmask optimization. Now the VerifierBuilder code actually\r\n    calls this method instead.\r\n     */\r\n    if (c < 0xb6)\r\n        return false;\r\n    // quick short circuit\r\n\r\n    // Extenders\r\n    if (c == 0xb7)\r\n        return true;\r\n\r\n    if (c == 0x2d0)\r\n        return true;\r\n\r\n    if (c == 0x2d1)\r\n        return true;\r\n\r\n    if (c == 0x387)\r\n        return true;\r\n\r\n    if (c == 0x640)\r\n        return true;\r\n\r\n    if (c == 0xe46)\r\n        return true;\r\n\r\n    if (c == 0xec6)\r\n        return true;\r\n\r\n    if (c == 0x3005)\r\n        return true;\r\n\r\n    if (c < 0x3031)\r\n        return false;\r\n\r\n    if (c <= 0x3035)\r\n        return true;\r\n\r\n    if (c < 0x309d)\r\n        return false;\r\n\r\n    if (c <= 0x309e)\r\n        return true;\r\n\r\n    if (c < 0x30fc)\r\n        return false;\r\n\r\n    if (c <= 0x30fe)\r\n        return true;\r\n\r\n    return false;\r\n}",
+    "class-code": "package org.jdom2;\nimport java.util.*;\npublic final class Verifier {\n    \n    public static boolean isXMLExtender(final char c) {\r\n        /* This function is not accellerated by the bitmask system because\r\n        there are no longer any actual calls to it from the JDOM code.\r\n        It used to be called by the isXMLNameCharacter() method before\r\n        the bitmask optimization. Now the VerifierBuilder code actually\r\n        calls this method instead.\r\n         */\r\n        if (c < 0xb6)\r\n            return false;\r\n        // quick short circuit\r\n    \r\n        // Extenders\r\n        if (c == 0xb7)\r\n            return true;\r\n    \r\n        if (c == 0x2d0)\r\n            return true;\r\n    \r\n        if (c == 0x2d1)\r\n            return true;\r\n    \r\n        if (c == 0x387)\r\n            return true;\r\n    \r\n        if (c == 0x640)\r\n            return true;\r\n    \r\n        if (c == 0xe46)\r\n            return true;\r\n    \r\n        if (c == 0xec6)\r\n            return true;\r\n    \r\n        if (c == 0x3005)\r\n            return true;\r\n    \r\n        if (c < 0x3031)\r\n            return false;\r\n    \r\n        if (c <= 0x3035)\r\n            return true;\r\n    \r\n        if (c < 0x309d)\r\n            return false;\r\n    \r\n        if (c <= 0x309e)\r\n            return true;\r\n    \r\n        if (c < 0x30fc)\r\n            return false;\r\n    \r\n        if (c <= 0x30fe)\r\n            return true;\r\n    \r\n        return false;\r\n    }\npublic static String checkAttributeName(final String name);\n    public static String checkCDATASection(final String data);\n    public static String checkCharacterData(final String text);\n    public static String checkCommentData(final String data);\n    public static String checkElementName(final String name);\n    public static String checkNamespaceCollision(final Attribute attribute, final Element element);\n    public static String checkNamespaceCollision(final Attribute attribute, final Element element, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final List<?> list);\n    public static String checkNamespaceCollision(final Namespace namespace, final List<?> list, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final Attribute attribute);\n    public static String checkNamespaceCollision(final Namespace namespace, final Element element);\n    public static String checkNamespaceCollision(final Namespace namespace, final Element element, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final Namespace other);\n    public static String checkNamespacePrefix(final String prefix);\n    public static String checkNamespaceURI(final String uri);\n    public static String checkProcessingInstructionData(final String data);\n    public static String checkProcessingInstructionTarget(final String target);\n    public static String checkPublicID(final String publicID);\n    public static String checkSystemLiteral(final String systemLiteral);\n    public static String checkURI(final String uri);\n    public static String checkXMLName(final String name);\n    public static int decodeSurrogatePair(final char high, final char low);\n    public static final boolean isAllXMLWhitespace(final String value);\n    public static boolean isHexDigit(final char c);\n    public static boolean isHighSurrogate(final char ch);\n    public static boolean isLowSurrogate(final char ch);\n    public static boolean isURICharacter(final char c);\n    public static boolean isXMLCharacter(final int c);\n    public static boolean isXMLCombiningChar(final char c);\n    public static boolean isXMLDigit(final char c);\n    public static boolean isXMLLetter(final char c);\n    public static boolean isXMLLetterOrDigit(final char c);\n    public static boolean isXMLNameCharacter(final char c);\n    public static boolean isXMLNameStartCharacter(final char c);\n    public static boolean isXMLPublicIDCharacter(final char c);\n    public static boolean isXMLWhitespace(final char c);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace/src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace/src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java"
+  },
+  "started_at": "2026-09-15T08:10:18.358700+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

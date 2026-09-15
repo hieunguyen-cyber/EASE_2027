@@ -1,0 +1,33 @@
+{
+  "task_id": "JsonRuleCompiler_processMatchExpression",
+  "project": "ruler",
+  "focal_class": "software.amazon.event.ruler.JsonRuleCompiler",
+  "focal_method": "processMatchExpression(JsonParser)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "missing",
+    "seed_files": [],
+    "installed": [],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "started_at": "2026-09-15T08:29:15.274867+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "status": "SEED_MISSING",
+  "completed_at": "2026-09-15T08:29:17.584263+00:00"
+}

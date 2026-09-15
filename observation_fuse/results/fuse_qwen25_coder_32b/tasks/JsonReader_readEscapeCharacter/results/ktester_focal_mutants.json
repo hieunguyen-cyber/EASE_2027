@@ -1,0 +1,404 @@
+{
+  "mutants": [
+    {
+      "id": 381,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1602,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 382,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1607,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 383,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1610,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 384,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1610,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 385,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1612,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 386,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1612,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 387,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1614,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 388,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1614,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()C"
+    },
+    {
+      "id": 389,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "JsonReader.java",
+      "line": 1599,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 390,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1602,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 391,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1607,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 392,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1609,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "()C"
+    },
+    {
+      "id": 393,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1611,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()C"
+    },
+    {
+      "id": 394,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1611,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 395,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1613,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()C"
+    },
+    {
+      "id": 396,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1613,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 397,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1613,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 398,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1615,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()C"
+    },
+    {
+      "id": 399,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1615,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 400,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1615,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 401,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "JsonReader.java",
+      "line": 1620,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 402,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1639,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()C"
+    },
+    {
+      "id": 403,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1595,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 404,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1595,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 405,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1602,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 406,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1602,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 407,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1607,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 408,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1610,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 409,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1610,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 410,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1612,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 411,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1612,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 412,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1614,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 413,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1614,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()C"
+    },
+    {
+      "id": 414,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1621,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 415,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1624,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 416,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1627,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 417,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1630,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 418,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1633,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 419,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1636,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    },
+    {
+      "id": 420,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1647,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter",
+      "method_description": "()C"
+    }
+  ]
+}

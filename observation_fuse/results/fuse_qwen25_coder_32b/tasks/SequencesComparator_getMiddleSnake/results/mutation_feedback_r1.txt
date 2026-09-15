@@ -1,0 +1,49 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (49 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 273 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int d = 0; d <= offset; ++d) {
+- line 275 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int k = -d; k <= d; k += 2) {
+- line 279 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (k == -d || k != d && vDown[i-1] < vDown[i+1]) {
+- line 293 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 != 0 && delta - d <= k && k <= delta + d && vUp[i-delta] <= vDown[i]) { // NOPMD
+- line 293 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 != 0 && delta - d <= k && k <= delta + d && vUp[i-delta] <= vDown[i]) { // NOPMD
+- line 293 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 != 0 && delta - d <= k && k <= delta + d && vUp[i-delta] <= vDown[i]) { // NOPMD
+- line 311 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (x >= start1 && y >= start2
+- line 311 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (x >= start1 && y >= start2
+- line 317 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 317 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 317 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 314 | IncrementsMutator | Changed increment from -1 to 1 | source: y--;
+- line 275 | InvertNegsMutator | removed negation | source: for (int k = -d; k <= d; k += 2) {
+- line 317 | InvertNegsMutator | removed negation | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 261 | MathMutator | Replaced integer subtraction with addition | source: final int m = end1 - start1;
+- line 262 | MathMutator | Replaced integer subtraction with addition | source: final int n = end2 - start2;
+- line 269 | MathMutator | Replaced integer modulus with multiplication | source: final int offset = (sum % 2 == 0 ? sum : sum + 1) / 2;
+- line 269 | MathMutator | Replaced integer addition with subtraction | source: final int offset = (sum % 2 == 0 ? sum : sum + 1) / 2;
+- line 271 | MathMutator | Replaced integer addition with subtraction | source: vUp[1+offset]   = end1 + 1;
+- line 279 | MathMutator | Replaced integer subtraction with addition | source: if (k == -d || k != d && vDown[i-1] < vDown[i+1]) {
+- line 279 | MathMutator | Replaced integer addition with subtraction | source: if (k == -d || k != d && vDown[i-1] < vDown[i+1]) {
+- line 280 | MathMutator | Replaced integer addition with subtraction | source: vDown[i] = vDown[i+1];
+- line 282 | MathMutator | Replaced integer subtraction with addition | source: vDown[i] = vDown[i-1] + 1;
+- line 286 | MathMutator | Replaced integer subtraction with addition | source: int y = x - start1 + start2 - k;
+- line 286 | MathMutator | Replaced integer addition with subtraction | source: int y = x - start1 + start2 - k;
+- line 293 | MathMutator | Replaced integer modulus with multiplication | source: if (delta % 2 != 0 && delta - d <= k && k <= delta + d && vUp[i-delta] <= vDown[i]) { // NOPMD
+- line 293 | MathMutator | Replaced integer subtraction with addition | source: if (delta % 2 != 0 && delta - d <= k && k <= delta + d && vUp[i-delta] <= vDown[i]) { // NOPMD
+- line 294 | MathMutator | Replaced integer subtraction with addition | source: return buildSnake(vUp[i-delta], k + start1 - start2, end1, end2);
+- line 294 | MathMutator | Replaced integer addition with subtraction | source: return buildSnake(vUp[i-delta], k + start1 - start2, end1, end2);
+- line 294 | MathMutator | Replaced integer subtraction with addition | source: return buildSnake(vUp[i-delta], k + start1 - start2, end1, end2);
+- line 299 | MathMutator | Replaced integer subtraction with addition | source: for (int k = delta - d; k <= delta + d; k += 2) {
+- line 299 | MathMutator | Replaced integer addition with subtraction | source: for (int k = delta - d; k <= delta + d; k += 2) {
+- line 302 | MathMutator | Replaced integer subtraction with addition | source: if (k == delta - d
+- line 310 | MathMutator | Replaced integer subtraction with addition | source: int y = x - start1 + start2 - k;
+- line 310 | MathMutator | Replaced integer addition with subtraction | source: int y = x - start1 + start2 - k;
+- line 317 | MathMutator | Replaced integer modulus with multiplication | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 317 | MathMutator | Replaced integer addition with subtraction | source: if (delta % 2 == 0 && -d <= k && k <= d && vUp[i] <= vDown[i + delta]) { // NOPMD
+- line 318 | MathMutator | Replaced integer addition with subtraction | source: return buildSnake(vUp[i], k + start1 - start2, end1, end2);
+- line 318 | MathMutator | Replaced integer subtraction with addition | source: return buildSnake(vUp[i], k + start1 - start2, end1, end2);
+- line 269 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final int offset = (sum % 2 == 0 ? sum : sum + 1) / 2;
+- ... and 9 more SURVIVED mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetMiddleSnake, testGetMiddleSnake_HandlesDiagonalCondition, testGetMiddleSnake_HandlesInternalError, testGetMiddleSnake_ReturnsNull_WhenEitherSequenceIsEmpty, testGetMiddleSnake_ReturnsNull_WhenSecondSequenceIsEmpty, testGetMiddleSnake_ReturnsValidSnake_WhenBothSequencesHaveCommonElements

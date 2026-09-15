@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 833 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (inAvail < 0) {
+- line 878 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b < 0) {
+- line 876 | MathMutator | Replaced integer addition with subtraction | source: context.modulus = (context.modulus + 1) % BYTES_PER_UNENCODED_BLOCK;
+- line 887 | MathMutator | Replaced integer addition with subtraction | source: context.currentLinePos += BYTES_PER_ENCODED_BLOCK;
+- line 833 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (inAvail < 0) {
+- line 878 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (b < 0) {
+- line 888 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && lineLength <= context.currentLinePos) {
+
+NO_COVERAGE (35 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 869 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && context.currentLinePos > 0) {
+- line 869 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && context.currentLinePos > 0) {
+- line 888 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && lineLength <= context.currentLinePos) {
+- line 879 | IncrementsMutator | Changed increment from 256 to -256 | source: b += 256;
+- line 845 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 2 & MASK_6BITS];
+- line 845 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 2 & MASK_6BITS];
+- line 845 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 2 & MASK_6BITS];
+- line 847 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 4 & MASK_6BITS];
+- line 847 | MathMutator | Replaced Shift Left with Shift Right | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 4 & MASK_6BITS];
+- line 847 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 4 & MASK_6BITS];
+- line 850 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 851 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 856 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 10 & MASK_6BITS];
+- line 856 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 10 & MASK_6BITS];
+- line 856 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 10 & MASK_6BITS];
+- line 857 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 4 & MASK_6BITS];
+- line 857 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 4 & MASK_6BITS];
+- line 857 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea >> 4 & MASK_6BITS];
+- line 858 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 2 & MASK_6BITS];
+- line 858 | MathMutator | Replaced Shift Left with Shift Right | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 2 & MASK_6BITS];
+- line 858 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[context.ibitWorkArea << 2 & MASK_6BITS];
+- line 861 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 867 | MathMutator | Replaced integer subtraction with addition | source: context.currentLinePos += context.pos - savedPos; // keep track of current line position
+- line 867 | MathMutator | Replaced integer addition with subtraction | source: context.currentLinePos += context.pos - savedPos; // keep track of current line position
+- line 871 | MathMutator | Replaced integer addition with subtraction | source: context.pos += lineSeparator.length;
+- line 890 | MathMutator | Replaced integer addition with subtraction | source: context.pos += lineSeparator.length;
+- line 835 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (0 == context.modulus && lineLength == 0) {
+- line 835 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (0 == context.modulus && lineLength == 0) {
+- line 849 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (encodeTable == STANDARD_ENCODE_TABLE) {
+- line 860 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (encodeTable == STANDARD_ENCODE_TABLE) {
+- line 869 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && context.currentLinePos > 0) {
+- line 869 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && context.currentLinePos > 0) {
+- line 888 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && lineLength <= context.currentLinePos) {
+- ... and 2 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  encodeTest_WithEdgeCases_ShouldHandleProperly, encodeTest_WithValidInput_ShouldReturnExpectedOutput, encode_WithEOFBeforeInvocation_ShouldNotProcess, encode_WithEOF_ShouldHandleFinalFlush, encode_WithEmptyInput_ShouldHandleProperly, encode_WithFullBuffer_ShouldThrowArrayIndexOutOfBoundsException, encode_WithInvalidModulus_ShouldThrowException, encode_WithModulusOne_ShouldProcessRemainingBits, encode_WithModulusTwo_ShouldProcessRemainingBits, encode_WithNullContext_ShouldThrowNullPointerException, encode_WithValidInput_ShouldReturnExpectedOutput

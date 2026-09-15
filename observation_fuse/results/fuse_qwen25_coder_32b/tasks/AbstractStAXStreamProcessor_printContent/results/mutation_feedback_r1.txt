@@ -1,0 +1,20 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (12 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 721 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (walker.hasNext()) {
+- line 724 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (content == null) {
+- line 725 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.isCDATA()) {
+- line 726 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printCDATA | source: printCDATA(out, fstack, new CDATA(walker.text()));
+- line 728 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printText | source: printText(out, fstack, new Text(walker.text()));
+- line 733 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printCDATA | source: printCDATA(out, fstack, (CDATA) content);
+- line 736 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printComment | source: printComment(out, fstack, (Comment) content);
+- line 739 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printElement | source: printElement(out, fstack, nstack, (Element) content);
+- line 742 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printEntityRef | source: printEntityRef(out, fstack, (EntityRef) content);
+- line 745 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printProcessingInstruction | source: printProcessingInstruction(out, fstack,
+- line 749 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printText | source: printText(out, fstack, (Text) content);
+- line 752 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printDocType | source: printDocType(out, fstack, (DocType) content);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintContent, testPrintContent_InvalidWalkerState_ShouldThrowXMLStreamException, testPrintContent_WithCommentContent, testPrintContent_WithNormalContent, testPrintContent_WithNullContent_ShouldThrowXMLStreamException, testPrintContent_WithNullContent_WhenWalkerIsCDATA, testPrintContent_WithNullContent_WhenWalkerIsText, testPrintContent_WithUnexpectedContentType_ShouldThrowIllegalStateException, testPrintContent_WithUnsupportedContentType

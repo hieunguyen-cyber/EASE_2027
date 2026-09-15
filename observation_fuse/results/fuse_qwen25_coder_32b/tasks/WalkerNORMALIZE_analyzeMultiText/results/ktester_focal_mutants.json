@@ -1,0 +1,254 @@
+{
+  "mutants": [
+    {
+      "id": 1,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 103,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 2,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 109,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 3,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 124,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 4,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 104,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 5,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 108,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 6,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 109,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 7,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 113,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 8,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 113,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 113,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 123,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 124,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 128,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 13,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 128,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 128,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 141,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 141,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 103,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 109,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 124,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 114,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 116,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 129,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 131,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendCDATA",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 142,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerNORMALIZE.java",
+      "line": 144,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendRaw",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    }
+  ]
+}

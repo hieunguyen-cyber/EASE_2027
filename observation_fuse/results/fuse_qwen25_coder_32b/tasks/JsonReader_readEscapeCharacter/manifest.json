@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:00:37.361970+00:00",
+  "task_id": "JsonReader_readEscapeCharacter",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "JsonReader_readEscapeCharacter",
+    "package": "com.google.gson.stream",
+    "class": "com.google.gson.stream.JsonReader",
+    "test-class": "com.google.gson.stream.JsonReader_readEscapeCharacter_Test",
+    "method-name": "readEscapeCharacter()",
+    "source-path": "src/main/java/com/google/gson/stream/JsonReader.java",
+    "test-path": "src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java",
+    "focal-method": "@SuppressWarnings(\"fallthrough\")\r\nprivate char readEscapeCharacter() throws IOException {\r\n    if ((pos == limit) && (!fillBuffer(1))) {\r\n        throw syntaxError(\"Unterminated escape sequence\");\r\n    }\r\n    char escaped = buffer[pos++];\r\n    switch (escaped) {\r\n        case 'u' :\r\n            if (((pos + 4) > limit) && (!fillBuffer(4))) {\r\n                throw syntaxError(\"Unterminated escape sequence\");\r\n            }\r\n            // Equivalent to Integer.parseInt(stringPool.get(buffer, pos, 4), 16);\r\n            char result = 0;\r\n            for (int i = pos, end = i + 4; i < end; i++) {\r\n                char c = buffer[i];\r\n                result <<= 4;\r\n                if ((c >= '0') && (c <= '9')) {\r\n                    result += c - '0';\r\n                } else if ((c >= 'a') && (c <= 'f')) {\r\n                    result += (c - 'a') + 10;\r\n                } else if ((c >= 'A') && (c <= 'F')) {\r\n                    result += (c - 'A') + 10;\r\n                } else {\r\n                    throw new NumberFormatException(\"\\\\u\" + new String(buffer, pos, 4));\r\n                }\r\n            }\r\n            pos += 4;\r\n            return result;\r\n        case 't' :\r\n            return '\\t';\r\n        case 'b' :\r\n            return '\\b';\r\n        case 'n' :\r\n            return '\\n';\r\n        case 'r' :\r\n            return '\\r';\r\n        case 'f' :\r\n            return '\\f';\r\n        case '\\n' :\r\n            lineNumber++;\r\n            lineStart = pos;\r\n            // fall-through\r\n        case '\\'' :\r\n        case '\"' :\r\n        case '\\\\' :\r\n        case '/' :\r\n            return escaped;\r\n        default :\r\n            // throw error when none of the above cases are matched\r\n            throw syntaxError(\"Invalid escape sequence\");\r\n    }\r\n}",
+    "class-code": "package com.google.gson.stream;\nimport com.google.gson.internal.bind.JsonTreeReader;\nimport java.io.Closeable;\nimport java.io.IOException;\nimport java.util.Objects;\nimport java.util.Arrays;\nimport com.google.gson.internal.JsonReaderInternalAccess;\nimport java.io.Reader;\nimport java.io.EOFException;\npublic class JsonReader implements Closeable {\n    static final int BUFFER_SIZE = 1024;\n    private final char[] buffer = new char[BUFFER_SIZE];\n    private int pos = 0;\n    private int limit = 0;\n    private int lineNumber = 0;\n    private int lineStart = 0;\n    int peeked = PEEKED_NONE;\n    @SuppressWarnings(\"fallthrough\")\r\n    private char readEscapeCharacter() throws IOException {\r\n        if ((pos == limit) && (!fillBuffer(1))) {\r\n            throw syntaxError(\"Unterminated escape sequence\");\r\n        }\r\n        char escaped = buffer[pos++];\r\n        switch (escaped) {\r\n            case 'u' :\r\n                if (((pos + 4) > limit) && (!fillBuffer(4))) {\r\n                    throw syntaxError(\"Unterminated escape sequence\");\r\n                }\r\n                // Equivalent to Integer.parseInt(stringPool.get(buffer, pos, 4), 16);\r\n                char result = 0;\r\n                for (int i = pos, end = i + 4; i < end; i++) {\r\n                    char c = buffer[i];\r\n                    result <<= 4;\r\n                    if ((c >= '0') && (c <= '9')) {\r\n                        result += c - '0';\r\n                    } else if ((c >= 'a') && (c <= 'f')) {\r\n                        result += (c - 'a') + 10;\r\n                    } else if ((c >= 'A') && (c <= 'F')) {\r\n                        result += (c - 'A') + 10;\r\n                    } else {\r\n                        throw new NumberFormatException(\"\\\\u\" + new String(buffer, pos, 4));\r\n                    }\r\n                }\r\n                pos += 4;\r\n                return result;\r\n            case 't' :\r\n                return '\\t';\r\n            case 'b' :\r\n                return '\\b';\r\n            case 'n' :\r\n                return '\\n';\r\n            case 'r' :\r\n                return '\\r';\r\n            case 'f' :\r\n                return '\\f';\r\n            case '\\n' :\r\n                lineNumber++;\r\n                lineStart = pos;\r\n                // fall-through\r\n            case '\\'' :\r\n            case '\"' :\r\n            case '\\\\' :\r\n            case '/' :\r\n                return escaped;\r\n            default :\r\n                // throw error when none of the above cases are matched\r\n                throw syntaxError(\"Invalid escape sequence\");\r\n        }\r\n    }\npublic void beginArray() throws IOException;\n    public void beginObject() throws IOException;\n    @Override\r\npublic void close() throws IOException;\n    @SuppressWarnings(\"fallthrough\")\r\nint doPeek() throws IOException;\n    public void endArray() throws IOException;\n    public void endObject() throws IOException;\n    private boolean fillBuffer(int minimum) throws IOException;\n    public String getPath();\n    public String getPreviousPath();\n    public boolean hasNext() throws IOException;\n    public final boolean isLenient();\n    String locationString();\n    public boolean nextBoolean() throws IOException;\n    public double nextDouble() throws IOException;\n    public int nextInt() throws IOException;\n    public long nextLong() throws IOException;\n    public String nextName() throws IOException;\n    public void nextNull() throws IOException;\n    public String nextString() throws IOException;\n    public JsonToken peek() throws IOException;\n    public final void setLenient(boolean lenient);\n    public void skipValue() throws IOException;\n    private IOException syntaxError(String message) throws IOException;\n    @Override\r\npublic String toString();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson/src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson/src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java"
+  },
+  "started_at": "2026-09-15T07:00:37.438988+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

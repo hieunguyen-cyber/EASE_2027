@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:24:26.586101+00:00",
+  "task_id": "Format_escapeAttribute",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Format_escapeAttribute",
+    "package": "org.jdom2.output",
+    "class": "org.jdom2.output.Format",
+    "test-class": "org.jdom2.output.Format_escapeAttribute_Test",
+    "method-name": "escapeAttribute(EscapeStrategy, String)",
+    "source-path": "src/main/java/org/jdom2/output/Format.java",
+    "test-path": "src/test/java/org/jdom2/output/Format_escapeAttribute_Test.java",
+    "focal-method": "public static final String escapeAttribute(final EscapeStrategy strategy, final String value) {\r\n    final int len = value.length();\r\n    int idx = 0;\r\n    checkloop : while (idx < len) {\r\n        final char ch = value.charAt(idx);\r\n        if ((((((((ch == '<') || (ch == '>')) || (ch == '&')) || (ch == '\\r')) || (ch == '\\n')) || (ch == '\"')) || (ch == '\\t')) || strategy.shouldEscape(ch)) {\r\n            break checkloop;\r\n        }\r\n        idx++;\r\n    } \r\n    if (idx == len) {\r\n        return value;\r\n    }\r\n    char highsurrogate = 0;\r\n    final StringBuilder sb = new StringBuilder(len + 5);\r\n    sb.append(value, 0, idx);\r\n    while (idx < len) {\r\n        final char ch = value.charAt(idx++);\r\n        if (highsurrogate > 0) {\r\n            if (!Verifier.isLowSurrogate(ch)) {\r\n                throw new IllegalDataException(((\"Could not decode surrogate pair 0x\" + Integer.toHexString(highsurrogate)) + \" / 0x\") + Integer.toHexString(ch));\r\n            }\r\n            int chp = Verifier.decodeSurrogatePair(highsurrogate, ch);\r\n            sb.append(\"&#x\");\r\n            sb.append(Integer.toHexString(chp));\r\n            sb.append(';');\r\n            highsurrogate = 0;\r\n            continue;\r\n        }\r\n        switch (ch) {\r\n            case '<' :\r\n                sb.append(\"&lt;\");\r\n                break;\r\n            case '>' :\r\n                sb.append(\"&gt;\");\r\n                break;\r\n            case '&' :\r\n                sb.append(\"&amp;\");\r\n                break;\r\n            case '\\r' :\r\n                sb.append(\"&#xD;\");\r\n                break;\r\n            case '\"' :\r\n                sb.append(\"&quot;\");\r\n                break;\r\n            case '\\t' :\r\n                sb.append(\"&#x9;\");\r\n                break;\r\n            case '\\n' :\r\n                sb.append(\"&#xA;\");\r\n                break;\r\n            default :\r\n                if (strategy.shouldEscape(ch)) {\r\n                    // make sure what we are escaping is not the\r\n                    // beginning of a multi-byte character.\r\n                    if (Verifier.isHighSurrogate(ch)) {\r\n                        // this is a the high of a surrogate pair\r\n                        highsurrogate = ch;\r\n                    } else {\r\n                        sb.append(\"&#x\");\r\n                        sb.append(Integer.toHexString(ch));\r\n                        sb.append(';');\r\n                    }\r\n                } else {\r\n                    sb.append(ch);\r\n                }\r\n                break;\r\n        }\r\n    } \r\n    if (highsurrogate > 0) {\r\n        throw new IllegalDataException((\"Surrogate pair 0x\" + Integer.toHexString(highsurrogate)) + \"truncated\");\r\n    }\r\n    return sb.toString();\r\n}",
+    "class-code": "package org.jdom2.output;\nimport org.jdom2.IllegalDataException;\nimport java.nio.charset.Charset;\nimport java.nio.charset.CharsetEncoder;\nimport org.jdom2.Verifier;\npublic class Format implements Cloneable {\n    String indent = null;\n    String lineSeparator = STANDARD_LINE_SEPARATOR;\n    String encoding = STANDARD_ENCODING;\n    boolean omitDeclaration = false;\n    boolean omitEncoding = false;\n    boolean specifiedAttributesOnly = false;\n    boolean expandEmptyElements = false;\n    boolean ignoreTrAXEscapingPIs = false;\n    TextMode mode = TextMode.PRESERVE;\n    EscapeStrategy escapeStrategy = DefaultEscapeStrategy;\n    public static final String escapeAttribute(final EscapeStrategy strategy, final String value) {\r\n        final int len = value.length();\r\n        int idx = 0;\r\n        checkloop : while (idx < len) {\r\n            final char ch = value.charAt(idx);\r\n            if ((((((((ch == '<') || (ch == '>')) || (ch == '&')) || (ch == '\\r')) || (ch == '\\n')) || (ch == '\"')) || (ch == '\\t')) || strategy.shouldEscape(ch)) {\r\n                break checkloop;\r\n            }\r\n            idx++;\r\n        } \r\n        if (idx == len) {\r\n            return value;\r\n        }\r\n        char highsurrogate = 0;\r\n        final StringBuilder sb = new StringBuilder(len + 5);\r\n        sb.append(value, 0, idx);\r\n        while (idx < len) {\r\n            final char ch = value.charAt(idx++);\r\n            if (highsurrogate > 0) {\r\n                if (!Verifier.isLowSurrogate(ch)) {\r\n                    throw new IllegalDataException(((\"Could not decode surrogate pair 0x\" + Integer.toHexString(highsurrogate)) + \" / 0x\") + Integer.toHexString(ch));\r\n                }\r\n                int chp = Verifier.decodeSurrogatePair(highsurrogate, ch);\r\n                sb.append(\"&#x\");\r\n                sb.append(Integer.toHexString(chp));\r\n                sb.append(';');\r\n                highsurrogate = 0;\r\n                continue;\r\n            }\r\n            switch (ch) {\r\n                case '<' :\r\n                    sb.append(\"&lt;\");\r\n                    break;\r\n                case '>' :\r\n                    sb.append(\"&gt;\");\r\n                    break;\r\n                case '&' :\r\n                    sb.append(\"&amp;\");\r\n                    break;\r\n                case '\\r' :\r\n                    sb.append(\"&#xD;\");\r\n                    break;\r\n                case '\"' :\r\n                    sb.append(\"&quot;\");\r\n                    break;\r\n                case '\\t' :\r\n                    sb.append(\"&#x9;\");\r\n                    break;\r\n                case '\\n' :\r\n                    sb.append(\"&#xA;\");\r\n                    break;\r\n                default :\r\n                    if (strategy.shouldEscape(ch)) {\r\n                        // make sure what we are escaping is not the\r\n                        // beginning of a multi-byte character.\r\n                        if (Verifier.isHighSurrogate(ch)) {\r\n                            // this is a the high of a surrogate pair\r\n                            highsurrogate = ch;\r\n                        } else {\r\n                            sb.append(\"&#x\");\r\n                            sb.append(Integer.toHexString(ch));\r\n                            sb.append(';');\r\n                        }\r\n                    } else {\r\n                        sb.append(ch);\r\n                    }\r\n                    break;\r\n            }\r\n        } \r\n        if (highsurrogate > 0) {\r\n            throw new IllegalDataException((\"Surrogate pair 0x\" + Integer.toHexString(highsurrogate)) + \"truncated\");\r\n        }\r\n        return sb.toString();\r\n    }\n@Override\r\npublic Format clone();\n    public static final String compact(String str);\n    public static final String escapeText(final EscapeStrategy strategy, final String eol, final String value);\n    public static Format getCompactFormat();\n    public String getEncoding();\n    public EscapeStrategy getEscapeStrategy();\n    public boolean getExpandEmptyElements();\n    public boolean getIgnoreTrAXEscapingPIs();\n    public String getIndent();\n    public String getLineSeparator();\n    public boolean getOmitDeclaration();\n    public boolean getOmitEncoding();\n    public static Format getPrettyFormat();\n    public static Format getRawFormat();\n    public Format.TextMode getTextMode();\n    public boolean isSpecifiedAttributesOnly();\n    public Format setEncoding(String encoding);\n    public Format setEscapeStrategy(EscapeStrategy strategy);\n    public Format setExpandEmptyElements(boolean expandEmptyElements);\n    public void setIgnoreTrAXEscapingPIs(boolean ignoreTrAXEscapingPIs);\n    public Format setIndent(String indent);\n    public Format setLineSeparator(String separator);\n    public Format setLineSeparator(LineSeparator separator);\n    public Format setOmitDeclaration(boolean omitDeclaration);\n    public Format setOmitEncoding(boolean omitEncoding);\n    public void setSpecifiedAttributesOnly(boolean specifiedAttributesOnly);\n    public Format setTextMode(Format.TextMode mode);\n    public static final String trimBoth(final String str);\n    public static final String trimLeft(final String str);\n    public static final String trimRight(String str);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/Format_escapeAttribute_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace/src/test/java/org/jdom2/output/Format_escapeAttribute_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace/src/test/java/org/jdom2/output/Format_escapeAttribute_Test.java"
+  },
+  "started_at": "2026-09-15T08:24:26.673520+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Format_escapeAttribute/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

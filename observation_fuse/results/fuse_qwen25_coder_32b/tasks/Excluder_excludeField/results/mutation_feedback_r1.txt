@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 155 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (version != Excluder.IGNORE_VERSIONS
+- line 160 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (field.isSynthetic()) {
+- line 164 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (requireExpose) {
+- line 171 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!serializeInnerClasses && isInnerClass(field.getType())) {
+- line 175 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isAnonymousOrNonStaticLocal(field.getType())) {
+- line 179 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: List<ExclusionStrategy> list = serialize ? serializationStrategies : deserializationStrategies;
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!list.isEmpty()) {
+
+NO_COVERAGE (13 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 156 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && !isValidVersion(field.getAnnotation(Since.class), field.getAnnotation(Until.class))) {
+- line 166 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (annotation == null || (serialize ? !annotation.serialize() : !annotation.deserialize())) {
+- line 166 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (annotation == null || (serialize ? !annotation.serialize() : !annotation.deserialize())) {
+- line 166 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (annotation == null || (serialize ? !annotation.serialize() : !annotation.deserialize())) {
+- line 166 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (annotation == null || (serialize ? !annotation.serialize() : !annotation.deserialize())) {
+- line 171 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!serializeInnerClasses && isInnerClass(field.getType())) {
+- line 183 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (exclusionStrategy.shouldSkipField(fieldAttributes)) {
+- line 157 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+- line 161 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+- line 167 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+- line 172 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+- line 176 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+- line 184 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/Excluder::excludeField | source: return true;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testExcludeField_withExposeAnnotation, testExcludeField_withModifiers, testExcludeField_withPublicModifier, testExcludeField_withSyntheticField, testExcludeField_withTransientModifier, testExcludeField_withValidVersion

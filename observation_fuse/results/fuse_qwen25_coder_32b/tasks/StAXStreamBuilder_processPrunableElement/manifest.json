@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:01:18.261615+00:00",
+  "task_id": "StAXStreamBuilder_processPrunableElement",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "StAXStreamBuilder_processPrunableElement",
+    "package": "org.jdom2.input",
+    "class": "org.jdom2.input.StAXStreamBuilder",
+    "test-class": "org.jdom2.input.StAXStreamBuilder_processPrunableElement_Test",
+    "method-name": "processPrunableElement(JDOMFactory, XMLStreamReader, int, StAXFilter)",
+    "source-path": "src/main/java/org/jdom2/input/StAXStreamBuilder.java",
+    "test-path": "src/test/java/org/jdom2/input/StAXStreamBuilder_processPrunableElement_Test.java",
+    "focal-method": "private static final Element processPrunableElement(final JDOMFactory factory, final XMLStreamReader reader, final int topdepth, StAXFilter filter) throws XMLStreamException, JDOMException {\r\n    if (START_ELEMENT != reader.getEventType()) {\r\n        throw new JDOMException((\"JDOM requires that the XMLStreamReader \" + \"is at the START_ELEMENT state when retrieving an \") + \"Element Fragment.\");\r\n    }\r\n    final Element fragment = processElement(factory, reader);\r\n    Element current = fragment;\r\n    int depth = topdepth + 1;\r\n    String text = null;\r\n    while ((depth > topdepth) && reader.hasNext()) {\r\n        switch (reader.next()) {\r\n            case START_ELEMENT :\r\n                QName qn = reader.getName();\r\n                if (!filter.pruneElement(depth, qn.getLocalPart(), Namespace.getNamespace(qn.getPrefix(), qn.getNamespaceURI()))) {\r\n                    Element tmp = processElement(factory, reader);\r\n                    current.addContent(tmp);\r\n                    current = tmp;\r\n                    depth++;\r\n                } else {\r\n                    final int edepth = depth;\r\n                    depth++;\r\n                    int state = 0;\r\n                    while (((depth > edepth) && reader.hasNext()) && ((state = reader.next()) != END_DOCUMENT)) {\r\n                        if (state == START_ELEMENT) {\r\n                            depth++;\r\n                        } else if (state == END_ELEMENT) {\r\n                            depth--;\r\n                        }\r\n                    } \r\n                }\r\n                break;\r\n            case END_ELEMENT :\r\n                current = current.getParentElement();\r\n                depth--;\r\n                break;\r\n            case CDATA :\r\n                if ((text = filter.pruneCDATA(depth, reader.getText())) != null) {\r\n                    current.addContent(factory.cdata(text));\r\n                }\r\n                break;\r\n            case SPACE :\r\n            case CHARACTERS :\r\n                if ((text = filter.pruneText(depth, reader.getText())) != null) {\r\n                    current.addContent(factory.text(text));\r\n                }\r\n                break;\r\n            case COMMENT :\r\n                if ((text = filter.pruneComment(depth, reader.getText())) != null) {\r\n                    current.addContent(factory.comment(text));\r\n                }\r\n                break;\r\n            case ENTITY_REFERENCE :\r\n                if (!filter.pruneEntityRef(depth, reader.getLocalName())) {\r\n                    current.addContent(factory.entityRef(reader.getLocalName()));\r\n                }\r\n                break;\r\n            case PROCESSING_INSTRUCTION :\r\n                if (!filter.pruneProcessingInstruction(depth, reader.getPITarget())) {\r\n                    current.addContent(factory.processingInstruction(reader.getPITarget(), reader.getPIData()));\r\n                }\r\n                break;\r\n            default :\r\n                throw new JDOMException(\"Unexpected XMLStream event \" + reader.getEventType());\r\n        }\r\n    } \r\n    return fragment;\r\n}",
+    "class-code": "package org.jdom2.input;\nimport org.jdom2.input.stax.StAXFilter;\nimport javax.xml.stream.XMLStreamReader;\nimport org.jdom2.JDOMException;\nimport org.jdom2.Element;\nimport java.util.ArrayList;\nimport javax.xml.namespace.QName;\nimport org.jdom2.JDOMFactory;\nimport org.jdom2.Namespace;\nimport org.jdom2.Document;\nimport org.jdom2.Verifier;\nimport org.jdom2.DefaultJDOMFactory;\nimport javax.xml.stream.XMLStreamException;\nimport org.jdom2.Content;\nimport org.jdom2.AttributeType;\nimport java.util.List;\nimport org.jdom2.input.stax.DTDParser;\nimport static javax.xml.stream.XMLStreamConstants.*;\npublic class StAXStreamBuilder {\n    \n    private static final Element processPrunableElement(final JDOMFactory factory, final XMLStreamReader reader, final int topdepth, StAXFilter filter) throws XMLStreamException, JDOMException {\r\n        if (START_ELEMENT != reader.getEventType()) {\r\n            throw new JDOMException((\"JDOM requires that the XMLStreamReader \" + \"is at the START_ELEMENT state when retrieving an \") + \"Element Fragment.\");\r\n        }\r\n        final Element fragment = processElement(factory, reader);\r\n        Element current = fragment;\r\n        int depth = topdepth + 1;\r\n        String text = null;\r\n        while ((depth > topdepth) && reader.hasNext()) {\r\n            switch (reader.next()) {\r\n                case START_ELEMENT :\r\n                    QName qn = reader.getName();\r\n                    if (!filter.pruneElement(depth, qn.getLocalPart(), Namespace.getNamespace(qn.getPrefix(), qn.getNamespaceURI()))) {\r\n                        Element tmp = processElement(factory, reader);\r\n                        current.addContent(tmp);\r\n                        current = tmp;\r\n                        depth++;\r\n                    } else {\r\n                        final int edepth = depth;\r\n                        depth++;\r\n                        int state = 0;\r\n                        while (((depth > edepth) && reader.hasNext()) && ((state = reader.next()) != END_DOCUMENT)) {\r\n                            if (state == START_ELEMENT) {\r\n                                depth++;\r\n                            } else if (state == END_ELEMENT) {\r\n                                depth--;\r\n                            }\r\n                        } \r\n                    }\r\n                    break;\r\n                case END_ELEMENT :\r\n                    current = current.getParentElement();\r\n                    depth--;\r\n                    break;\r\n                case CDATA :\r\n                    if ((text = filter.pruneCDATA(depth, reader.getText())) != null) {\r\n                        current.addContent(factory.cdata(text));\r\n                    }\r\n                    break;\r\n                case SPACE :\r\n                case CHARACTERS :\r\n                    if ((text = filter.pruneText(depth, reader.getText())) != null) {\r\n                        current.addContent(factory.text(text));\r\n                    }\r\n                    break;\r\n                case COMMENT :\r\n                    if ((text = filter.pruneComment(depth, reader.getText())) != null) {\r\n                        current.addContent(factory.comment(text));\r\n                    }\r\n                    break;\r\n                case ENTITY_REFERENCE :\r\n                    if (!filter.pruneEntityRef(depth, reader.getLocalName())) {\r\n                        current.addContent(factory.entityRef(reader.getLocalName()));\r\n                    }\r\n                    break;\r\n                case PROCESSING_INSTRUCTION :\r\n                    if (!filter.pruneProcessingInstruction(depth, reader.getPITarget())) {\r\n                        current.addContent(factory.processingInstruction(reader.getPITarget(), reader.getPIData()));\r\n                    }\r\n                    break;\r\n                default :\r\n                    throw new JDOMException(\"Unexpected XMLStream event \" + reader.getEventType());\r\n            }\r\n        } \r\n        return fragment;\r\n    }\npublic Document build(XMLStreamReader reader) throws JDOMException;\n    public List<Content> buildFragments(XMLStreamReader reader, StAXFilter filter) throws JDOMException;\n    public Content fragment(XMLStreamReader reader) throws JDOMException;\n    public JDOMFactory getFactory();\n    private static final Element processElement(final JDOMFactory factory, final XMLStreamReader reader);\n    public void setFactory(JDOMFactory factory);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/input/StAXStreamBuilder_processPrunableElement_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace/src/test/java/org/jdom2/input/StAXStreamBuilder_processPrunableElement_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace/src/test/java/org/jdom2/input/StAXStreamBuilder_processPrunableElement_Test.java"
+  },
+  "started_at": "2026-09-15T08:01:18.344092+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StAXStreamBuilder_processPrunableElement/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,26 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (14 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 365 | MathMutator | Replaced integer addition with subtraction | source: final StringBuilder sb = new StringBuilder(len + 5);
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '<' || ch == '>' || ch == '&' || ch == '\r' || ch == '\n'
+- line 354 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: || ch == '"' || ch == '\t' || strategy.shouldEscape(ch)) {
+- line 360 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (idx == len) {
+- line 407 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (strategy.shouldEscape(ch)) {
+- line 351 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: checkloop: while (idx < len) {
+- line 369 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (highsurrogate > 0) {
+- line 424 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (highsurrogate > 0) {
+
+NO_COVERAGE (2 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 370 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!Verifier.isLowSurrogate(ch)) {
+- line 410 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Verifier.isHighSurrogate(ch)) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEscapeAttribute_withAmpersand, testEscapeAttribute_withEscapableCharacters, testEscapeAttribute_withNewLine, testEscapeAttribute_withQuotes, testEscapeAttribute_withSurrogatePair, testEscapeAttribute_withTabCharacter, testEscapeAttribute_withValidString

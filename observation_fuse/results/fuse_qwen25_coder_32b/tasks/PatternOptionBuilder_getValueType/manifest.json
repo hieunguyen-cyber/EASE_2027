@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T07:31:04.125136+00:00",
+  "task_id": "PatternOptionBuilder_getValueType",
+  "project": "commons-cli",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-cli",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "PatternOptionBuilder_getValueType",
+    "package": "org.apache.commons.cli",
+    "class": "org.apache.commons.cli.PatternOptionBuilder",
+    "test-class": "org.apache.commons.cli.PatternOptionBuilder_getValueType_Test",
+    "method-name": "getValueType(char)",
+    "source-path": "src/main/java/org/apache/commons/cli/PatternOptionBuilder.java",
+    "test-path": "src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java",
+    "focal-method": "public static Class<?> getValueType(final char ch) {\r\n    switch (ch) {\r\n        case '@' :\r\n            return PatternOptionBuilder.OBJECT_VALUE;\r\n        case ':' :\r\n            return PatternOptionBuilder.STRING_VALUE;\r\n        case '%' :\r\n            return PatternOptionBuilder.NUMBER_VALUE;\r\n        case '+' :\r\n            return PatternOptionBuilder.CLASS_VALUE;\r\n        case '#' :\r\n            return PatternOptionBuilder.DATE_VALUE;\r\n        case '<' :\r\n            return PatternOptionBuilder.EXISTING_FILE_VALUE;\r\n        case '>' :\r\n            return PatternOptionBuilder.FILE_VALUE;\r\n        case '*' :\r\n            return PatternOptionBuilder.FILES_VALUE;\r\n        case '/' :\r\n            return PatternOptionBuilder.URL_VALUE;\r\n    }\r\n    return null;\r\n}",
+    "class-code": "package org.apache.commons.cli;\nimport java.net.URL;\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.util.Date;\npublic class PatternOptionBuilder {\n    public static final Class<String> STRING_VALUE = String.class;\n    public static final Class<Object> OBJECT_VALUE = Object.class;\n    public static final Class<Number> NUMBER_VALUE = Number.class;\n    public static final Class<Date> DATE_VALUE = Date.class;\n    public static final Class<?> CLASS_VALUE = Class.class;\n    public static final Class<FileInputStream> EXISTING_FILE_VALUE = FileInputStream.class;\n    public static final Class<File> FILE_VALUE = File.class;\n    public static final Class<File[]> FILES_VALUE = File[].class;\n    public static final Class<URL> URL_VALUE = URL.class;\n    static final Converter<?, UnsupportedOperationException> NOT_IMPLEMENTED = s -> {\r\n    throw new UnsupportedOperationException(\"Not yet implemented\");\r\n};\n    public static Class<?> getValueType(final char ch) {\r\n        switch (ch) {\r\n            case '@' :\r\n                return PatternOptionBuilder.OBJECT_VALUE;\r\n            case ':' :\r\n                return PatternOptionBuilder.STRING_VALUE;\r\n            case '%' :\r\n                return PatternOptionBuilder.NUMBER_VALUE;\r\n            case '+' :\r\n                return PatternOptionBuilder.CLASS_VALUE;\r\n            case '#' :\r\n                return PatternOptionBuilder.DATE_VALUE;\r\n            case '<' :\r\n                return PatternOptionBuilder.EXISTING_FILE_VALUE;\r\n            case '>' :\r\n                return PatternOptionBuilder.FILE_VALUE;\r\n            case '*' :\r\n                return PatternOptionBuilder.FILES_VALUE;\r\n            case '/' :\r\n                return PatternOptionBuilder.URL_VALUE;\r\n        }\r\n        return null;\r\n    }\npublic static boolean isValueCode(final char ch);\n    public static Options parsePattern(final String pattern);\n    public static void registerTypes();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-cli/src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace/src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace/src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java"
+  },
+  "started_at": "2026-09-15T07:31:04.225322+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

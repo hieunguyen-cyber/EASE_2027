@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:40:23.380581+00:00",
+  "task_id": "MurmurHash3_hash128x64Internal",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "MurmurHash3_hash128x64Internal",
+    "package": "org.apache.commons.codec.digest",
+    "class": "org.apache.commons.codec.digest.MurmurHash3",
+    "test-class": "org.apache.commons.codec.digest.MurmurHash3_hash128x64Internal_Test",
+    "method-name": "hash128x64Internal(byte[], int, int, long)",
+    "source-path": "src/main/java/org/apache/commons/codec/digest/MurmurHash3.java",
+    "test-path": "src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java",
+    "focal-method": "private static long[] hash128x64Internal(final byte[] data, final int offset, final int length, final long seed) {\r\n    long h1 = seed;\r\n    long h2 = seed;\r\n    final int nblocks = length >> 4;\r\n    // body\r\n    for (int i = 0; i < nblocks; i++) {\r\n        final int index = offset + (i << 4);\r\n        long k1 = getLittleEndianLong(data, index);\r\n        long k2 = getLittleEndianLong(data, index + 8);\r\n        // mix functions for k1\r\n        k1 *= C1;\r\n        k1 = Long.rotateLeft(k1, R1);\r\n        k1 *= C2;\r\n        h1 ^= k1;\r\n        h1 = Long.rotateLeft(h1, R2);\r\n        h1 += h2;\r\n        h1 = (h1 * M) + N1;\r\n        // mix functions for k2\r\n        k2 *= C2;\r\n        k2 = Long.rotateLeft(k2, R3);\r\n        k2 *= C1;\r\n        h2 ^= k2;\r\n        h2 = Long.rotateLeft(h2, R1);\r\n        h2 += h1;\r\n        h2 = (h2 * M) + N2;\r\n    }\r\n    // tail\r\n    long k1 = 0;\r\n    long k2 = 0;\r\n    final int index = offset + (nblocks << 4);\r\n    switch ((offset + length) - index) {\r\n        case 15 :\r\n            k2 ^= (((long) (data[index + 14])) & 0xff) << 48;\r\n        case 14 :\r\n            k2 ^= (((long) (data[index + 13])) & 0xff) << 40;\r\n        case 13 :\r\n            k2 ^= (((long) (data[index + 12])) & 0xff) << 32;\r\n        case 12 :\r\n            k2 ^= (((long) (data[index + 11])) & 0xff) << 24;\r\n        case 11 :\r\n            k2 ^= (((long) (data[index + 10])) & 0xff) << 16;\r\n        case 10 :\r\n            k2 ^= (((long) (data[index + 9])) & 0xff) << 8;\r\n        case 9 :\r\n            k2 ^= data[index + 8] & 0xff;\r\n            k2 *= C2;\r\n            k2 = Long.rotateLeft(k2, R3);\r\n            k2 *= C1;\r\n            h2 ^= k2;\r\n        case 8 :\r\n            k1 ^= (((long) (data[index + 7])) & 0xff) << 56;\r\n        case 7 :\r\n            k1 ^= (((long) (data[index + 6])) & 0xff) << 48;\r\n        case 6 :\r\n            k1 ^= (((long) (data[index + 5])) & 0xff) << 40;\r\n        case 5 :\r\n            k1 ^= (((long) (data[index + 4])) & 0xff) << 32;\r\n        case 4 :\r\n            k1 ^= (((long) (data[index + 3])) & 0xff) << 24;\r\n        case 3 :\r\n            k1 ^= (((long) (data[index + 2])) & 0xff) << 16;\r\n        case 2 :\r\n            k1 ^= (((long) (data[index + 1])) & 0xff) << 8;\r\n        case 1 :\r\n            k1 ^= data[index] & 0xff;\r\n            k1 *= C1;\r\n            k1 = Long.rotateLeft(k1, R1);\r\n            k1 *= C2;\r\n            h1 ^= k1;\r\n    }\r\n    // finalization\r\n    h1 ^= length;\r\n    h2 ^= length;\r\n    h1 += h2;\r\n    h2 += h1;\r\n    h1 = fmix64(h1);\r\n    h2 = fmix64(h2);\r\n    h1 += h2;\r\n    h2 += h1;\r\n    return new long[]{ h1, h2 };\r\n}",
+    "class-code": "package org.apache.commons.codec.digest;\nimport org.apache.commons.codec.binary.StringUtils;\npublic final class MurmurHash3 {\n    public static final int DEFAULT_SEED = 104729;\n    private static final long C1 = 0x87c37b91114253d5L;\n    private static final long C2 = 0x4cf5ad432745937fL;\n    private static final int R1 = 31;\n    private static final int R2 = 27;\n    private static final int R3 = 33;\n    private static final int M = 5;\n    private static final int N1 = 0x52dce729;\n    private static final int N2 = 0x38495ab5;\n    private static long[] hash128x64Internal(final byte[] data, final int offset, final int length, final long seed) {\r\n        long h1 = seed;\r\n        long h2 = seed;\r\n        final int nblocks = length >> 4;\r\n        // body\r\n        for (int i = 0; i < nblocks; i++) {\r\n            final int index = offset + (i << 4);\r\n            long k1 = getLittleEndianLong(data, index);\r\n            long k2 = getLittleEndianLong(data, index + 8);\r\n            // mix functions for k1\r\n            k1 *= C1;\r\n            k1 = Long.rotateLeft(k1, R1);\r\n            k1 *= C2;\r\n            h1 ^= k1;\r\n            h1 = Long.rotateLeft(h1, R2);\r\n            h1 += h2;\r\n            h1 = (h1 * M) + N1;\r\n            // mix functions for k2\r\n            k2 *= C2;\r\n            k2 = Long.rotateLeft(k2, R3);\r\n            k2 *= C1;\r\n            h2 ^= k2;\r\n            h2 = Long.rotateLeft(h2, R1);\r\n            h2 += h1;\r\n            h2 = (h2 * M) + N2;\r\n        }\r\n        // tail\r\n        long k1 = 0;\r\n        long k2 = 0;\r\n        final int index = offset + (nblocks << 4);\r\n        switch ((offset + length) - index) {\r\n            case 15 :\r\n                k2 ^= (((long) (data[index + 14])) & 0xff) << 48;\r\n            case 14 :\r\n                k2 ^= (((long) (data[index + 13])) & 0xff) << 40;\r\n            case 13 :\r\n                k2 ^= (((long) (data[index + 12])) & 0xff) << 32;\r\n            case 12 :\r\n                k2 ^= (((long) (data[index + 11])) & 0xff) << 24;\r\n            case 11 :\r\n                k2 ^= (((long) (data[index + 10])) & 0xff) << 16;\r\n            case 10 :\r\n                k2 ^= (((long) (data[index + 9])) & 0xff) << 8;\r\n            case 9 :\r\n                k2 ^= data[index + 8] & 0xff;\r\n                k2 *= C2;\r\n                k2 = Long.rotateLeft(k2, R3);\r\n                k2 *= C1;\r\n                h2 ^= k2;\r\n            case 8 :\r\n                k1 ^= (((long) (data[index + 7])) & 0xff) << 56;\r\n            case 7 :\r\n                k1 ^= (((long) (data[index + 6])) & 0xff) << 48;\r\n            case 6 :\r\n                k1 ^= (((long) (data[index + 5])) & 0xff) << 40;\r\n            case 5 :\r\n                k1 ^= (((long) (data[index + 4])) & 0xff) << 32;\r\n            case 4 :\r\n                k1 ^= (((long) (data[index + 3])) & 0xff) << 24;\r\n            case 3 :\r\n                k1 ^= (((long) (data[index + 2])) & 0xff) << 16;\r\n            case 2 :\r\n                k1 ^= (((long) (data[index + 1])) & 0xff) << 8;\r\n            case 1 :\r\n                k1 ^= data[index] & 0xff;\r\n                k1 *= C1;\r\n                k1 = Long.rotateLeft(k1, R1);\r\n                k1 *= C2;\r\n                h1 ^= k1;\r\n        }\r\n        // finalization\r\n        h1 ^= length;\r\n        h2 ^= length;\r\n        h1 += h2;\r\n        h2 += h1;\r\n        h1 = fmix64(h1);\r\n        h2 = fmix64(h2);\r\n        h1 += h2;\r\n        h2 += h1;\r\n        return new long[]{ h1, h2 };\r\n    }\nprivate static long fmix64(long hash);\n    private static long getLittleEndianLong(final byte[] data, final int index);\n    public static long[] hash128(final byte[] data);\n    public static long[] hash128x64(final byte[] data);\n    public static long[] hash128x64(final byte[] data, final int offset, final int length, final int seed);\n    public static int hash32(final long data);\n    public static int hash32(final long data, final int seed);\n    public static int hash32(final long data1, final long data2);\n    public static int hash32(final long data1, final long data2, final int seed);\n    public static int hash32x86(final byte[] data);\n    public static int hash32x86(final byte[] data, final int offset, final int length, final int seed);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace/src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace/src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java"
+  },
+  "started_at": "2026-09-15T05:40:23.448074+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

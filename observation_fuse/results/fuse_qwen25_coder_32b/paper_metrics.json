@@ -1,0 +1,219 @@
+{
+  "completed": 90,
+  "selected": 111,
+  "ktester_arm": {
+    "cpr": 1.0,
+    "epr": 0.1556,
+    "line_coverage": 60.6436,
+    "branch_coverage": 53.2666,
+    "instruction_coverage": 59.2812,
+    "line_coverage_passed": 11.1874,
+    "branch_coverage_passed": 9.7527,
+    "instruction_coverage_passed": 11.179,
+    "average_test_cases": 9.3111,
+    "average_time_seconds": null,
+    "mutation_score": 33.3149,
+    "kills_per_test": 0.999,
+    "total_mutants": 2814,
+    "total_killed": 832,
+    "total_survived": 620,
+    "total_no_coverage": 1362
+  },
+  "fuse_arm": {
+    "cpr": 1.0,
+    "epr": 0.1556,
+    "line_coverage": 61.4474,
+    "branch_coverage": 54.2566,
+    "instruction_coverage": 59.9653,
+    "line_coverage_passed": 12.3063,
+    "branch_coverage_passed": 11.3099,
+    "instruction_coverage_passed": 12.361,
+    "average_test_cases": 14.2556,
+    "average_time_seconds": 88.0551,
+    "mutation_score": 43.1874,
+    "kills_per_test": 0.8698,
+    "total_mutants": 2814,
+    "total_killed": 1144,
+    "total_survived": 661,
+    "total_no_coverage": 1009
+  },
+  "paper_ktester_published": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "delta_fuse_minus_ktester": {
+    "cpr": 0.0,
+    "epr": 0.0,
+    "line_coverage": 0.8038,
+    "branch_coverage": 0.99,
+    "instruction_coverage": 0.6841,
+    "line_coverage_passed": 1.1189,
+    "branch_coverage_passed": 1.5572,
+    "instruction_coverage_passed": 1.182,
+    "average_test_cases": 4.9445,
+    "mutation_score": 9.8725,
+    "kills_per_test": -0.1292,
+    "total_mutants": 0,
+    "total_killed": 312,
+    "total_survived": 41,
+    "total_no_coverage": -353
+  },
+  "significance": {
+    "mutation_score": {
+      "n_pairs": 90,
+      "n_nonzero": 49,
+      "improved": 46,
+      "regressed": 3,
+      "statistic": 25.0,
+      "p_value": 5.091796279699493e-09,
+      "effect_size_rank_biserial": 0.8776
+    },
+    "line_coverage": {
+      "n_pairs": 90,
+      "n_nonzero": 50,
+      "improved": 33,
+      "regressed": 17,
+      "statistic": 526.0,
+      "p_value": 0.2817665619894054,
+      "effect_size_rank_biserial": 0.32
+    },
+    "branch_coverage": {
+      "n_pairs": 90,
+      "n_nonzero": 60,
+      "improved": 38,
+      "regressed": 22,
+      "statistic": 756.0,
+      "p_value": 0.24178433422710066,
+      "effect_size_rank_biserial": 0.2667
+    }
+  },
+  "per_method_outcome": {
+    "fuse_wins": 46,
+    "ktester_wins": 3,
+    "ties": 41
+  },
+  "mutants": {
+    "total": 2814,
+    "killed_ktester": 832,
+    "killed_fuse": 1144,
+    "newly_killed": 283,
+    "lost_kills": 4
+  },
+  "by_mutator": {
+    "RemoveConditionalMutator_EQUAL_ELSE": {
+      "kt_total": 1065,
+      "kt_killed": 306,
+      "f_total": 1065,
+      "f_killed": 427,
+      "kt_ms": 28.73,
+      "f_ms": 40.09,
+      "delta_pp": 11.36
+    },
+    "MathMutator": {
+      "kt_total": 572,
+      "kt_killed": 115,
+      "f_total": 572,
+      "f_killed": 189,
+      "kt_ms": 20.1,
+      "f_ms": 33.04,
+      "delta_pp": 12.94
+    },
+    "VoidMethodCallMutator": {
+      "kt_total": 365,
+      "kt_killed": 59,
+      "f_total": 365,
+      "f_killed": 78,
+      "kt_ms": 16.16,
+      "f_ms": 21.37,
+      "delta_pp": 5.21
+    },
+    "ConditionalsBoundaryMutator": {
+      "kt_total": 191,
+      "kt_killed": 54,
+      "f_total": 191,
+      "f_killed": 73,
+      "kt_ms": 28.27,
+      "f_ms": 38.22,
+      "delta_pp": 9.95
+    },
+    "RemoveConditionalMutator_ORDER_ELSE": {
+      "kt_total": 191,
+      "kt_killed": 77,
+      "f_total": 191,
+      "f_killed": 97,
+      "kt_ms": 40.31,
+      "f_ms": 50.79,
+      "delta_pp": 10.48
+    },
+    "NullReturnValsMutator": {
+      "kt_total": 181,
+      "kt_killed": 93,
+      "f_total": 181,
+      "f_killed": 122,
+      "kt_ms": 51.38,
+      "f_ms": 67.4,
+      "delta_pp": 16.02
+    },
+    "IncrementsMutator": {
+      "kt_total": 69,
+      "kt_killed": 34,
+      "f_total": 69,
+      "f_killed": 40,
+      "kt_ms": 49.28,
+      "f_ms": 57.97,
+      "delta_pp": 8.69
+    },
+    "BooleanFalseReturnValsMutator": {
+      "kt_total": 61,
+      "kt_killed": 42,
+      "f_total": 61,
+      "f_killed": 48,
+      "kt_ms": 68.85,
+      "f_ms": 78.69,
+      "delta_pp": 9.84
+    },
+    "PrimitiveReturnsMutator": {
+      "kt_total": 40,
+      "kt_killed": 10,
+      "f_total": 40,
+      "f_killed": 21,
+      "kt_ms": 25.0,
+      "f_ms": 52.5,
+      "delta_pp": 27.5
+    },
+    "BooleanTrueReturnValsMutator": {
+      "kt_total": 38,
+      "kt_killed": 22,
+      "f_total": 38,
+      "f_killed": 29,
+      "kt_ms": 57.89,
+      "f_ms": 76.32,
+      "delta_pp": 18.43
+    },
+    "EmptyObjectReturnValsMutator": {
+      "kt_total": 31,
+      "kt_killed": 18,
+      "f_total": 31,
+      "f_killed": 18,
+      "kt_ms": 58.06,
+      "f_ms": 58.06,
+      "delta_pp": 0.0
+    },
+    "InvertNegsMutator": {
+      "kt_total": 10,
+      "kt_killed": 2,
+      "f_total": 10,
+      "f_killed": 2,
+      "kt_ms": 20.0,
+      "f_ms": 20.0,
+      "delta_pp": 0.0
+    }
+  },
+  "green_suites": 88
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:55:46.773431+00:00",
+  "task_id": "AbstractSAXOutputProcessor_printContent",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "AbstractSAXOutputProcessor_printContent",
+    "package": "org.jdom2.output.support",
+    "class": "org.jdom2.output.support.AbstractSAXOutputProcessor",
+    "test-class": "org.jdom2.output.support.AbstractSAXOutputProcessor_printContent_Test",
+    "method-name": "printContent(SAXTarget, FormatStack, NamespaceStack, Walker)",
+    "source-path": "src/main/java/org/jdom2/output/support/AbstractSAXOutputProcessor.java",
+    "test-path": "src/test/java/org/jdom2/output/support/AbstractSAXOutputProcessor_printContent_Test.java",
+    "focal-method": "protected void printContent(final SAXTarget out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws SAXException {\r\n    while (walker.hasNext()) {\r\n        final Content c = walker.next();\r\n        if (c == null) {\r\n            // Formatted Text or CDATA\r\n            final String text = walker.text();\r\n            if (walker.isCDATA()) {\r\n                printCDATA(out, fstack, new CDATA(text));\r\n            } else {\r\n                printText(out, fstack, new Text(text));\r\n            }\r\n        } else {\r\n            switch (c.getCType()) {\r\n                case CDATA :\r\n                    printCDATA(out, fstack, ((CDATA) (c)));\r\n                    break;\r\n                case Comment :\r\n                    printComment(out, fstack, ((Comment) (c)));\r\n                    break;\r\n                case DocType :\r\n                    // do nothing.\r\n                    break;\r\n                case Element :\r\n                    printElement(out, fstack, nstack, ((Element) (c)));\r\n                    break;\r\n                case EntityRef :\r\n                    printEntityRef(out, fstack, ((EntityRef) (c)));\r\n                    break;\r\n                case ProcessingInstruction :\r\n                    printProcessingInstruction(out, fstack, ((ProcessingInstruction) (c)));\r\n                    break;\r\n                case Text :\r\n                    printText(out, fstack, ((Text) (c)));\r\n                    break;\r\n            }\r\n        }\r\n    } \r\n}",
+    "class-code": "package org.jdom2.output.support;\nimport org.xml.sax.InputSource;\nimport org.jdom2.output.XMLOutputter;\nimport org.jdom2.Attribute;\nimport org.jdom2.Element;\nimport org.jdom2.Document;\nimport org.xml.sax.SAXException;\nimport org.xml.sax.ContentHandler;\nimport org.jdom2.util.NamespaceStack;\nimport org.xml.sax.ext.DeclHandler;\nimport org.xml.sax.ext.LexicalHandler;\nimport org.jdom2.output.Format.TextMode;\nimport static org.jdom2.JDOMConstants.*;\nimport org.xml.sax.SAXParseException;\nimport org.jdom2.AttributeType;\nimport java.io.StringReader;\nimport java.util.List;\nimport org.xml.sax.helpers.XMLReaderFactory;\nimport org.xml.sax.helpers.AttributesImpl;\nimport org.jdom2.EntityRef;\nimport org.jdom2.output.Format;\nimport org.jdom2.Comment;\nimport java.util.Collections;\nimport org.xml.sax.XMLReader;\nimport org.jdom2.DocType;\nimport org.jdom2.JDOMException;\nimport java.io.IOException;\nimport java.lang.reflect.Method;\nimport org.jdom2.Namespace;\nimport org.jdom2.Text;\nimport org.xml.sax.helpers.DefaultHandler;\nimport java.lang.reflect.InvocationTargetException;\nimport org.jdom2.Content;\nimport org.jdom2.ProcessingInstruction;\nimport org.xml.sax.DTDHandler;\nimport org.jdom2.CDATA;\npublic class AbstractSAXOutputProcessor extends AbstractOutputProcessor implements SAXOutputProcessor {\n    \n    protected void printContent(final SAXTarget out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws SAXException {\r\n        while (walker.hasNext()) {\r\n            final Content c = walker.next();\r\n            if (c == null) {\r\n                // Formatted Text or CDATA\r\n                final String text = walker.text();\r\n                if (walker.isCDATA()) {\r\n                    printCDATA(out, fstack, new CDATA(text));\r\n                } else {\r\n                    printText(out, fstack, new Text(text));\r\n                }\r\n            } else {\r\n                switch (c.getCType()) {\r\n                    case CDATA :\r\n                        printCDATA(out, fstack, ((CDATA) (c)));\r\n                        break;\r\n                    case Comment :\r\n                        printComment(out, fstack, ((Comment) (c)));\r\n                        break;\r\n                    case DocType :\r\n                        // do nothing.\r\n                        break;\r\n                    case Element :\r\n                        printElement(out, fstack, nstack, ((Element) (c)));\r\n                        break;\r\n                    case EntityRef :\r\n                        printEntityRef(out, fstack, ((EntityRef) (c)));\r\n                        break;\r\n                    case ProcessingInstruction :\r\n                        printProcessingInstruction(out, fstack, ((ProcessingInstruction) (c)));\r\n                        break;\r\n                    case Text :\r\n                        printText(out, fstack, ((Text) (c)));\r\n                        break;\r\n                }\r\n            }\r\n        } \r\n    }\nprotected XMLReader createParser() throws Exception;\n    protected void printCDATA(final SAXTarget out, final FormatStack fstack, final CDATA cdata) throws SAXException;\n    protected void printComment(final SAXTarget out, final FormatStack fstack, final Comment comment) throws SAXException;\n    protected void printDocType(final SAXTarget out, final FormatStack fstack, final DocType docType) throws SAXException;\n    protected void printDocument(final SAXTarget out, final FormatStack fstack, final NamespaceStack nstack, final Document document) throws SAXException;\n    protected void printElement(final SAXTarget out, final FormatStack fstack, final NamespaceStack nstack, final Element element) throws SAXException;\n    protected void printEntityRef(final SAXTarget out, final FormatStack fstack, final EntityRef entity) throws SAXException;\n    protected void printProcessingInstruction(final SAXTarget out, final FormatStack fstack, final ProcessingInstruction pi) throws SAXException;\n    protected void printText(final SAXTarget out, final FormatStack fstack, final Text text) throws SAXException;\n    @Override\r\npublic void process(SAXTarget out, Format format, List<? extends Content> list) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, CDATA cdata) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, Comment comment) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, DocType doctype) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, Document doc) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, Element element) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, EntityRef entity) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, ProcessingInstruction pi) throws JDOMException;\n    @Override\r\npublic void process(SAXTarget out, Format format, Text text) throws JDOMException;\n    @Override\r\npublic void processAsDocument(SAXTarget out, Format format, List<? extends Content> nodes) throws JDOMException;\n    @Override\r\npublic void processAsDocument(SAXTarget out, Format format, Element node) throws JDOMException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/AbstractSAXOutputProcessor_printContent_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractSAXOutputProcessor_printContent_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractSAXOutputProcessor_printContent_Test.java"
+  },
+  "started_at": "2026-09-15T07:55:46.853404+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractSAXOutputProcessor_printContent/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

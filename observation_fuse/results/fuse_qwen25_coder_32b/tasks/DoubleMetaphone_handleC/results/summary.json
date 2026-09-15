@@ -1,0 +1,247 @@
+{
+  "task_id": "DoubleMetaphone_handleC",
+  "project": "commons-codec",
+  "focal_class": "org.apache.commons.codec.language.DoubleMetaphone",
+  "focal_method": "handleC(String, DoubleMetaphoneResult, int)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/language/DoubleMetaphone_handleC_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/DoubleMetaphone_handleC/workspace/src/test/java/org/apache/commons/codec/language/DoubleMetaphone_handleC_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 79.394
+  },
+  "started_at": "2026-09-15T05:51:59.374397+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testHandleC_CZWithoutWICZ"
+    ],
+    "test_count": 14
+  },
+  "ktester": {
+    "test_cases": 10,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 14,
+    "tests_failed": 1,
+    "line_missed": 10,
+    "line_covered": 24,
+    "line_coverage": 0.705882,
+    "branch_missed": 12,
+    "branch_covered": 20,
+    "branch_coverage": 0.625,
+    "instruction_missed": 39,
+    "instruction_covered": 222,
+    "instruction_coverage": 0.850575,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 40,
+      "detected": 15,
+      "undetected": 25,
+      "killed": 15,
+      "survived": 11,
+      "no_coverage": 14,
+      "mutation_score": 0.375,
+      "statuses": {
+        "KILLED": 15,
+        "NO_COVERAGE": 14,
+        "SURVIVED": 11
+      }
+    },
+    "kills_per_test": 1.5,
+    "by_mutator": {
+      "IncrementsMutator": {
+        "total": 9,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 5,
+        "mutation_score": 0.444444
+      },
+      "MathMutator": {
+        "total": 5,
+        "detected": 1,
+        "survived": 3,
+        "no_coverage": 1,
+        "mutation_score": 0.2
+      },
+      "VoidMethodCallMutator": {
+        "total": 8,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.5
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 2,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.5
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 16,
+        "detected": 5,
+        "survived": 8,
+        "no_coverage": 3,
+        "mutation_score": 0.3125
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 25,
+      "existing_tests_before": 10,
+      "tests_after": 15,
+      "seconds": 79.393,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 15,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 19,
+    "tests_failed": 0,
+    "line_missed": 9,
+    "line_covered": 25,
+    "line_coverage": 0.735294,
+    "branch_missed": 10,
+    "branch_covered": 22,
+    "branch_coverage": 0.6875,
+    "instruction_missed": 37,
+    "instruction_covered": 224,
+    "instruction_coverage": 0.858238,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 79.394,
+    "inherited_disabled_methods": 1,
+    "stats": {
+      "total": 40,
+      "detected": 19,
+      "undetected": 21,
+      "killed": 19,
+      "survived": 11,
+      "no_coverage": 10,
+      "mutation_score": 0.475,
+      "statuses": {
+        "KILLED": 19,
+        "NO_COVERAGE": 10,
+        "SURVIVED": 11
+      }
+    },
+    "kills_per_test": 1.2667,
+    "by_mutator": {
+      "IncrementsMutator": {
+        "total": 9,
+        "detected": 5,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.555556
+      },
+      "MathMutator": {
+        "total": 5,
+        "detected": 1,
+        "survived": 3,
+        "no_coverage": 1,
+        "mutation_score": 0.2
+      },
+      "VoidMethodCallMutator": {
+        "total": 8,
+        "detected": 5,
+        "survived": 0,
+        "no_coverage": 3,
+        "mutation_score": 0.625
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 2,
+        "detected": 2,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 16,
+        "detected": 6,
+        "survived": 8,
+        "no_coverage": 2,
+        "mutation_score": 0.375
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.029412,
+    "branch_coverage": 0.0625,
+    "instruction_coverage": 0.007663,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": -0.2333,
+    "mutation_score": 0.1,
+    "mutation_score_points": 10.0,
+    "newly_killed": 4,
+    "lost_kills": 0,
+    "added_test_methods": 5,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 435,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 449,
+        "mutator": "PrimitiveReturnsMutator",
+        "description": "replaced int return with 0 for org/apache/commons/codec/language/DoubleMetaphone::handleC"
+      },
+      {
+        "line": 451,
+        "mutator": "VoidMethodCallMutator",
+        "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append"
+      },
+      {
+        "line": 452,
+        "mutator": "IncrementsMutator",
+        "description": "Changed increment from 2 to -2"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T05:53:47.792426+00:00"
+}

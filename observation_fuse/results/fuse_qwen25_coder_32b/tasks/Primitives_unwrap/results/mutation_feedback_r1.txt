@@ -1,0 +1,8 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+The existing suite already kills every focal mutant.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testUnwrap_withBooleanClass, testUnwrap_withByteClass, testUnwrap_withCharacterClass, testUnwrap_withDoubleClass, testUnwrap_withFloatClass, testUnwrap_withIntegerClass, testUnwrap_withLongClass, testUnwrap_withNullInput, testUnwrap_withPrimitiveClass, testUnwrap_withShortClass, testUnwrap_withUnknownClass, testUnwrap_withVoidClass, testUnwrap_withWrapperClasses

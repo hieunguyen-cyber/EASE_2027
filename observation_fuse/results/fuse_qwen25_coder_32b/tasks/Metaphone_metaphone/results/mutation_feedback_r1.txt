@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (29 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 216 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (code.length() < this.getMaxCodeLen() && n < wdsz) { // max code size of 4 works well
+- line 280 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (n > 0 && (regionMatch(local, n, "GN") || regionMatch(local, n, "GNED"))) {
+- line 285 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (!isLastChar(wdsz, n) && FRONTV.indexOf(local.charAt(n + 1)) >= 0 && !hard) {
+- line 295 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (n > 0 && VARSON.indexOf(local.charAt(n - 1)) >= 0) {
+- line 295 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (n > 0 && VARSON.indexOf(local.charAt(n - 1)) >= 0) {
+- line 311 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (n > 0) { // not initial
+- line 375 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (code.length() > this.getMaxCodeLen()) {
+- line 266 | MathMutator | Replaced integer addition with subtraction | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'G') && FRONTV.indexOf(local.charAt(n + 2)) >= 0) { // DGE DGI DGY -> J
+- line 277 | MathMutator | Replaced integer addition with subtraction | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'H') && !isVowel(local, n + 2)) {
+- line 167 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (txtLength == 1) {
+- line 187 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (inwd[1] == 'E') {
+- line 233 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isPreviousChar(local, n, 'M') && isLastChar(wdsz, n)) { // B is silent if word ends in MB
+- line 243 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (regionMatch(local, n, "CIA")) { // "CIA" -> X
+- line 251 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isPreviousChar(local, n, 'S') && isNextChar(local, n, 'H')) { // SCH->sk
+- line 255 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isNextChar(local, n, 'H')) { // detect CH
+- line 266 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'G') && FRONTV.indexOf(local.charAt(n + 2)) >= 0) { // DGE DGI DGY -> J
+- line 266 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'G') && FRONTV.indexOf(local.charAt(n + 2)) >= 0) { // DGE DGI DGY -> J
+- line 277 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'H') && !isVowel(local, n + 2)) {
+- line 277 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'H') && !isVowel(local, n + 2)) {
+- line 277 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'H') && !isVowel(local, n + 2)) {
+- line 280 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (n > 0 && (regionMatch(local, n, "GN") || regionMatch(local, n, "GNED"))) {
+- line 285 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n) && FRONTV.indexOf(local.charAt(n + 1)) >= 0 && !hard) {
+- line 292 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isLastChar(wdsz, n)) {
+- line 331 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (regionMatch(local, n, "SH") || regionMatch(local, n, "SIO") || regionMatch(local, n, "SIA")) {
+- line 338 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (regionMatch(local, n, "TIA") || regionMatch(local, n, "TIO")) {
+- line 342 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (regionMatch(local, n, "TCH")) {
+- line 347 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (regionMatch(local, n, "TH")) {
+- line 358 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLastChar(wdsz, n) && isVowel(local, n + 1)) {
+- line 285 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (!isLastChar(wdsz, n) && FRONTV.indexOf(local.charAt(n + 1)) >= 0 && !hard) {
+
+NO_COVERAGE (24 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 256 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (n == 0 && wdsz >= 3 && isVowel(local, 2)) { // CH consonant -> K consonant
+- line 266 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'G') && FRONTV.indexOf(local.charAt(n + 2)) >= 0) { // DGE DGI DGY -> J
+- line 268 | IncrementsMutator | Changed increment from 2 to -2 | source: n += 2;
+- line 188 | MathMutator | Replaced integer subtraction with addition | source: local.append(inwd, 1, inwd.length - 1);
+- line 195 | MathMutator | Replaced integer subtraction with addition | source: local.append(inwd, 1, inwd.length - 1);
+- line 199 | MathMutator | Replaced integer subtraction with addition | source: local.append(inwd, 1, inwd.length - 1);
+- line 266 | MathMutator | Replaced integer addition with subtraction | source: if (!isLastChar(wdsz, n + 1) && isNextChar(local, n, 'G') && FRONTV.indexOf(local.charAt(n + 2)) >= 0) { // DGE DGI DGY -> J
+- line 298 | MathMutator | Replaced integer addition with subtraction | source: if (isVowel(local, n + 1)) {
+- line 358 | MathMutator | Replaced integer addition with subtraction | source: if (!isLastChar(wdsz, n) && isVowel(local, n + 1)) {
+- line 194 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (inwd[1] == 'R') { // WR -> R
+- line 198 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (inwd[1] == 'H') {
+- ... and 13 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEmptyString, testMaxCodeLength, testMaxLengthExceeded, testMetaphone, testMetaphoneEqual, testMetaphoneEqualCases, testMetaphoneParameterized, testMetaphoneWithInvalidCharacters, testMetaphoneWithScientificWords, testMetaphoneWithSpecialCases, testMultipleConsequentSameCharacters, testNullInput, testSilentGN, testSilentHAfterG

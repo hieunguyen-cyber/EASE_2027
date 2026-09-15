@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:42:16.635165+00:00",
+  "task_id": "Nysiis_nysiis",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Nysiis_nysiis",
+    "package": "org.apache.commons.codec.language",
+    "class": "org.apache.commons.codec.language.Nysiis",
+    "test-class": "org.apache.commons.codec.language.Nysiis_nysiis_Test",
+    "method-name": "nysiis(String)",
+    "source-path": "src/main/java/org/apache/commons/codec/language/Nysiis.java",
+    "test-path": "src/test/java/org/apache/commons/codec/language/Nysiis_nysiis_Test.java",
+    "focal-method": "public String nysiis(String str) {\r\n    if (str == null) {\r\n        return null;\r\n    }\r\n    // Use the same clean rules as Soundex\r\n    str = SoundexUtils.clean(str);\r\n    if (str.isEmpty()) {\r\n        return str;\r\n    }\r\n    // Translate first characters of name:\r\n    // MAC -> MCC, KN -> NN, K -> C, PH | PF -> FF, SCH -> SSS\r\n    str = PAT_MAC.matcher(str).replaceFirst(\"MCC\");\r\n    str = PAT_KN.matcher(str).replaceFirst(\"NN\");\r\n    str = PAT_K.matcher(str).replaceFirst(\"C\");\r\n    str = PAT_PH_PF.matcher(str).replaceFirst(\"FF\");\r\n    str = PAT_SCH.matcher(str).replaceFirst(\"SSS\");\r\n    // Translate last characters of name:\r\n    // EE -> Y, IE -> Y, DT | RT | RD | NT | ND -> D\r\n    str = PAT_EE_IE.matcher(str).replaceFirst(\"Y\");\r\n    str = PAT_DT_ETC.matcher(str).replaceFirst(\"D\");\r\n    // First character of key = first character of name.\r\n    final StringBuilder key = new StringBuilder(str.length());\r\n    key.append(str.charAt(0));\r\n    // Transcode remaining characters, incrementing by one character each time\r\n    final char[] chars = str.toCharArray();\r\n    final int len = chars.length;\r\n    for (int i = 1; i < len; i++) {\r\n        final char next = (i < (len - 1)) ? chars[i + 1] : SPACE;\r\n        final char aNext = (i < (len - 2)) ? chars[i + 2] : SPACE;\r\n        final char[] transcoded = transcodeRemaining(chars[i - 1], chars[i], next, aNext);\r\n        System.arraycopy(transcoded, 0, chars, i, transcoded.length);\r\n        // only append the current char to the key if it is different from the last one\r\n        if (chars[i] != chars[i - 1]) {\r\n            key.append(chars[i]);\r\n        }\r\n    }\r\n    if (key.length() > 1) {\r\n        char lastChar = key.charAt(key.length() - 1);\r\n        // If last character is S, remove it.\r\n        if (lastChar == 'S') {\r\n            key.deleteCharAt(key.length() - 1);\r\n            lastChar = key.charAt(key.length() - 1);\r\n        }\r\n        if (key.length() > 2) {\r\n            final char last2Char = key.charAt(key.length() - 2);\r\n            // If last characters are AY, replace with Y.\r\n            if ((last2Char == 'A') && (lastChar == 'Y')) {\r\n                key.deleteCharAt(key.length() - 2);\r\n            }\r\n        }\r\n        // If last character is A, remove it.\r\n        if (lastChar == 'A') {\r\n            key.deleteCharAt(key.length() - 1);\r\n        }\r\n    }\r\n    final String string = key.toString();\r\n    return this.isStrict() ? string.substring(0, Math.min(TRUE_LENGTH, string.length())) : string;\r\n}",
+    "class-code": "package org.apache.commons.codec.language;\nimport java.util.regex.Pattern;\nimport org.apache.commons.codec.EncoderException;\nimport org.apache.commons.codec.StringEncoder;\npublic class Nysiis implements StringEncoder {\n    private static final Pattern PAT_MAC = Pattern.compile(\"^MAC\");\n    private static final Pattern PAT_KN = Pattern.compile(\"^KN\");\n    private static final Pattern PAT_K = Pattern.compile(\"^K\");\n    private static final Pattern PAT_PH_PF = Pattern.compile(\"^(PH|PF)\");\n    private static final Pattern PAT_SCH = Pattern.compile(\"^SCH\");\n    private static final Pattern PAT_EE_IE = Pattern.compile(\"(EE|IE)$\");\n    private static final Pattern PAT_DT_ETC = Pattern.compile(\"(DT|RT|RD|NT|ND)$\");\n    private static final char SPACE = ' ';\n    private static final int TRUE_LENGTH = 6;\n    public String nysiis(String str) {\r\n        if (str == null) {\r\n            return null;\r\n        }\r\n        // Use the same clean rules as Soundex\r\n        str = SoundexUtils.clean(str);\r\n        if (str.isEmpty()) {\r\n            return str;\r\n        }\r\n        // Translate first characters of name:\r\n        // MAC -> MCC, KN -> NN, K -> C, PH | PF -> FF, SCH -> SSS\r\n        str = PAT_MAC.matcher(str).replaceFirst(\"MCC\");\r\n        str = PAT_KN.matcher(str).replaceFirst(\"NN\");\r\n        str = PAT_K.matcher(str).replaceFirst(\"C\");\r\n        str = PAT_PH_PF.matcher(str).replaceFirst(\"FF\");\r\n        str = PAT_SCH.matcher(str).replaceFirst(\"SSS\");\r\n        // Translate last characters of name:\r\n        // EE -> Y, IE -> Y, DT | RT | RD | NT | ND -> D\r\n        str = PAT_EE_IE.matcher(str).replaceFirst(\"Y\");\r\n        str = PAT_DT_ETC.matcher(str).replaceFirst(\"D\");\r\n        // First character of key = first character of name.\r\n        final StringBuilder key = new StringBuilder(str.length());\r\n        key.append(str.charAt(0));\r\n        // Transcode remaining characters, incrementing by one character each time\r\n        final char[] chars = str.toCharArray();\r\n        final int len = chars.length;\r\n        for (int i = 1; i < len; i++) {\r\n            final char next = (i < (len - 1)) ? chars[i + 1] : SPACE;\r\n            final char aNext = (i < (len - 2)) ? chars[i + 2] : SPACE;\r\n            final char[] transcoded = transcodeRemaining(chars[i - 1], chars[i], next, aNext);\r\n            System.arraycopy(transcoded, 0, chars, i, transcoded.length);\r\n            // only append the current char to the key if it is different from the last one\r\n            if (chars[i] != chars[i - 1]) {\r\n                key.append(chars[i]);\r\n            }\r\n        }\r\n        if (key.length() > 1) {\r\n            char lastChar = key.charAt(key.length() - 1);\r\n            // If last character is S, remove it.\r\n            if (lastChar == 'S') {\r\n                key.deleteCharAt(key.length() - 1);\r\n                lastChar = key.charAt(key.length() - 1);\r\n            }\r\n            if (key.length() > 2) {\r\n                final char last2Char = key.charAt(key.length() - 2);\r\n                // If last characters are AY, replace with Y.\r\n                if ((last2Char == 'A') && (lastChar == 'Y')) {\r\n                    key.deleteCharAt(key.length() - 2);\r\n                }\r\n            }\r\n            // If last character is A, remove it.\r\n            if (lastChar == 'A') {\r\n                key.deleteCharAt(key.length() - 1);\r\n            }\r\n        }\r\n        final String string = key.toString();\r\n        return this.isStrict() ? string.substring(0, Math.min(TRUE_LENGTH, string.length())) : string;\r\n    }\n@Override\r\npublic Object encode(final Object obj) throws EncoderException;\n    @Override\r\npublic String encode(final String str);\n    public boolean isStrict();\n    private static char[] transcodeRemaining(final char prev, final char curr, final char next, final char aNext);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/language/Nysiis_nysiis_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace/src/test/java/org/apache/commons/codec/language/Nysiis_nysiis_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace/src/test/java/org/apache/commons/codec/language/Nysiis_nysiis_Test.java"
+  },
+  "started_at": "2026-09-15T05:42:16.699377+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_nysiis/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

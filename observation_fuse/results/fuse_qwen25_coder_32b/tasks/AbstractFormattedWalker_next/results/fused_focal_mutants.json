@@ -1,0 +1,364 @@
+{
+  "mutants": [
+    {
+      "id": 40,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 408,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 442,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 467,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 408,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 435,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 442,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 404,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 408,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 413,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 416,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 417,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 430,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 437,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 442,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 54,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 451,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 456,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 472,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 472,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 482,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 488,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 408,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 442,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 467,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 411,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 423,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker::analyzeMultiText",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 424,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 464,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker::analyzeMultiText",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 465,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 475,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 477,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::forceAppend",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 478,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 489,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker::resetMultiText",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 491,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::forceAppend",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 492,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::done",
+      "method_description": "()Lorg/jdom2/Content;"
+    },
+    {
+      "id": 75,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "AbstractFormattedWalker.java",
+      "line": 497,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/output/support/AbstractFormattedWalker::next",
+      "method_description": "()Lorg/jdom2/Content;"
+    }
+  ]
+}

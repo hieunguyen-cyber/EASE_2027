@@ -1,0 +1,234 @@
+{
+  "mutants": [
+    {
+      "id": 1,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 86,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 2,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 100,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 3,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 113,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 4,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 96,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 5,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 97,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 6,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 110,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 7,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 101,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 8,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 101,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 115,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 124,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 88,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 90,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 13,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 102,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 104,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 115,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 118,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 121,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 86,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 100,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 113,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 127,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 130,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendCDATA",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "WalkerTRIM.java",
+      "line": 136,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendRaw",
+      "method_description": "(Lorg/jdom2/output/support/AbstractFormattedWalker$MultiText;II)V"
+    }
+  ]
+}

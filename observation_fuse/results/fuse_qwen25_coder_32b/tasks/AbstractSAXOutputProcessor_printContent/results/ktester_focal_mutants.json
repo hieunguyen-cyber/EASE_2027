@@ -1,0 +1,114 @@
+{
+  "mutants": [
+    {
+      "id": 25,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 667,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 669,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 672,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 673,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printCDATA",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 675,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printText",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 680,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printCDATA",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 683,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printComment",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 689,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printElement",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 692,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printEntityRef",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 695,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printProcessingInstruction",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractSAXOutputProcessor.java",
+      "line": 699,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractSAXOutputProcessor::printText",
+      "method_description": "(Lorg/jdom2/output/support/SAXTarget;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Lorg/jdom2/output/support/Walker;)V"
+    }
+  ]
+}

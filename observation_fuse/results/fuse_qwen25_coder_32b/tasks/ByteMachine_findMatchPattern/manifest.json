@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:34.598811+00:00",
+  "task_id": "ByteMachine_findMatchPattern",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "ByteMachine_findMatchPattern",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.ByteMachine",
+    "test-class": "software.amazon.event.ruler.ByteMachine_findMatchPattern_Test",
+    "method-name": "findMatchPattern(InputCharacter[], Patterns)",
+    "source-path": "src/main/java/software/amazon/event/ruler/ByteMachine.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_Test.java",
+    "focal-method": "private NameState findMatchPattern(final InputCharacter[] characters, final Patterns pattern) {\r\n    Set<SingleByteTransition> transitionsToProcess = new HashSet<>();\r\n    transitionsToProcess.add(startState);\r\n    ByteTransition shortcutTrans = null;\r\n    // Iterate down all possible paths in machine that match characters.\r\n    outerLoop : for (int i = 0; i < (characters.length - 1); i++) {\r\n        Set<SingleByteTransition> nextTransitionsToProcess = new HashSet<>();\r\n        for (SingleByteTransition trans : transitionsToProcess) {\r\n            ByteTransition nextTrans = getTransition(trans, characters[i]);\r\n            for (SingleByteTransition eachTrans : nextTrans.expand()) {\r\n                // Shortcut and stop outer character loop\r\n                if (SHORTCUT_MATCH_TYPES.contains(pattern.type()) && eachTrans.isShortcutTrans()) {\r\n                    shortcutTrans = eachTrans;\r\n                    break outerLoop;\r\n                }\r\n                SingleByteTransition nextByteState = eachTrans.getNextByteState();\r\n                if (nextByteState == null) {\r\n                    return null;\r\n                }\r\n                // We are interested in the first state that hasn't simply led back to trans\r\n                if (trans != nextByteState) {\r\n                    nextTransitionsToProcess.add(nextByteState);\r\n                }\r\n            }\r\n        }\r\n        transitionsToProcess = nextTransitionsToProcess;\r\n    }\r\n    // Get all possible transitions for final character.\r\n    Set<ByteTransition> finalTransitionsToProcess = new HashSet<>();\r\n    if (shortcutTrans != null) {\r\n        finalTransitionsToProcess.add(shortcutTrans);\r\n    } else {\r\n        for (SingleByteTransition trans : transitionsToProcess) {\r\n            finalTransitionsToProcess.add(getTransition(trans, characters[characters.length - 1]));\r\n        }\r\n    }\r\n    // Check matches for all possible final transitions until we find the pattern we are looking for.\r\n    for (ByteTransition nextTrans : finalTransitionsToProcess) {\r\n        for (ByteMatch match : nextTrans.getMatches()) {\r\n            if (match.getPattern().equals(pattern)) {\r\n                return match.getNextNameState();\r\n            }\r\n        }\r\n    }\r\n    return null;\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport software.amazon.event.ruler.input.InputMultiByteSet;\nimport java.util.Set;\nimport static software.amazon.event.ruler.MatchType.ANYTHING_BUT_SUFFIX;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_FIRST_BYTE_FOR_TWO_BYTE_CHAR;\nimport java.util.AbstractMap;\nimport java.util.concurrent.ConcurrentHashMap;\nimport static software.amazon.event.ruler.input.DefaultParser.getParser;\nimport static software.amazon.event.ruler.MatchType.EXACT;\nimport static software.amazon.event.ruler.input.MultiByte.MIN_FIRST_BYTE_FOR_ONE_BYTE_CHAR;\nimport software.amazon.event.ruler.input.InputCharacter;\nimport java.util.HashSet;\nimport java.util.Collections;\nimport java.util.stream.Collectors;\nimport java.util.ArrayDeque;\nimport static software.amazon.event.ruler.MatchType.SUFFIX;\nimport software.amazon.event.ruler.input.InputCharacterType;\nimport static software.amazon.event.ruler.MatchType.EXISTS;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_FIRST_BYTE_FOR_ONE_BYTE_CHAR;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_NON_FIRST_BYTE;\nimport java.nio.charset.StandardCharsets;\nimport static software.amazon.event.ruler.CompoundByteTransition.coalesce;\nimport javax.annotation.concurrent.ThreadSafe;\nimport java.util.concurrent.atomic.AtomicInteger;\nimport com.fasterxml.jackson.core.io.doubleparser.FastDoubleParser;\nimport static software.amazon.event.ruler.input.MultiByte.MIN_FIRST_BYTE_FOR_TWO_BYTE_CHAR;\nimport software.amazon.event.ruler.input.InputByte;\nimport software.amazon.event.ruler.input.MultiByte;\nimport java.util.Arrays;\n@ThreadSafe\r\nclass ByteMachine {\n    private static final Set<MatchType> SHORTCUT_MATCH_TYPES = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(EXACT)));\n    private final ByteState startState = new ByteState();\n    private NameState findMatchPattern(final InputCharacter[] characters, final Patterns pattern) {\r\n        Set<SingleByteTransition> transitionsToProcess = new HashSet<>();\r\n        transitionsToProcess.add(startState);\r\n        ByteTransition shortcutTrans = null;\r\n        // Iterate down all possible paths in machine that match characters.\r\n        outerLoop : for (int i = 0; i < (characters.length - 1); i++) {\r\n            Set<SingleByteTransition> nextTransitionsToProcess = new HashSet<>();\r\n            for (SingleByteTransition trans : transitionsToProcess) {\r\n                ByteTransition nextTrans = getTransition(trans, characters[i]);\r\n                for (SingleByteTransition eachTrans : nextTrans.expand()) {\r\n                    // Shortcut and stop outer character loop\r\n                    if (SHORTCUT_MATCH_TYPES.contains(pattern.type()) && eachTrans.isShortcutTrans()) {\r\n                        shortcutTrans = eachTrans;\r\n                        break outerLoop;\r\n                    }\r\n                    SingleByteTransition nextByteState = eachTrans.getNextByteState();\r\n                    if (nextByteState == null) {\r\n                        return null;\r\n                    }\r\n                    // We are interested in the first state that hasn't simply led back to trans\r\n                    if (trans != nextByteState) {\r\n                        nextTransitionsToProcess.add(nextByteState);\r\n                    }\r\n                }\r\n            }\r\n            transitionsToProcess = nextTransitionsToProcess;\r\n        }\r\n        // Get all possible transitions for final character.\r\n        Set<ByteTransition> finalTransitionsToProcess = new HashSet<>();\r\n        if (shortcutTrans != null) {\r\n            finalTransitionsToProcess.add(shortcutTrans);\r\n        } else {\r\n            for (SingleByteTransition trans : transitionsToProcess) {\r\n                finalTransitionsToProcess.add(getTransition(trans, characters[characters.length - 1]));\r\n            }\r\n        }\r\n        // Check matches for all possible final transitions until we find the pattern we are looking for.\r\n        for (ByteTransition nextTrans : finalTransitionsToProcess) {\r\n            for (ByteMatch match : nextTrans.getMatches()) {\r\n                if (match.getPattern().equals(pattern)) {\r\n                    return match.getNextNameState();\r\n                }\r\n            }\r\n        }\r\n        return null;\r\n    }\nNameState addPattern(final Patterns pattern);\n    void deletePattern(final Patterns pattern);\n    public int evaluateComplexity(MachineComplexityEvaluator evaluator);\n    NameState findPattern(final Patterns pattern);\n    public void gatherObjects(Set<Object> objectSet);\n    private static ByteTransition getTransition(ByteTransition trans, byte b);\n    private static ByteTransition getTransition(SingleByteTransition trans, InputCharacter character);\n    boolean isEmpty();\n    @Override\r\npublic String toString();\n    Set<NameState> transitionOn(String valString);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_1_Test_slice5.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice12.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice7.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice8.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_3_Test_slice10.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_1_Test_slice5.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice12.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice7.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_2_Test_slice8.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_28_3_Test_slice10.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:34.692063+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_findMatchPattern/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

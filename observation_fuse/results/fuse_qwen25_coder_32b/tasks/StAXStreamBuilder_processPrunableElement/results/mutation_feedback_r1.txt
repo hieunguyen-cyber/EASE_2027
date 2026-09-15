@@ -1,0 +1,28 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (20 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 308 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (depth > topdepth && reader.hasNext()) {
+- line 323 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (depth > edepth && reader.hasNext() &&
+- line 318 | IncrementsMutator | Changed increment from 1 to -1 | source: depth++;
+- line 321 | IncrementsMutator | Changed increment from 1 to -1 | source: depth++;
+- line 335 | IncrementsMutator | Changed increment from -1 to 1 | source: depth--;
+- line 306 | MathMutator | Replaced integer addition with subtraction | source: int depth = topdepth + 1;
+- line 308 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (depth > topdepth && reader.hasNext()) {
+- line 312 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!filter.pruneElement(depth, qn.getLocalPart(),
+- line 323 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (depth > edepth && reader.hasNext() &&
+- line 324 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: (state = reader.next()) != END_DOCUMENT) {
+- line 325 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (state == START_ELEMENT) {
+- line 327 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (state == END_ELEMENT) {
+- line 338 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((text = filter.pruneCDATA(depth, reader.getText())) != null) {
+- line 345 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((text = filter.pruneText(depth, reader.getText())) != null) {
+- line 351 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((text = filter.pruneComment(depth, reader.getText())) != null) {
+- line 357 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!filter.pruneEntityRef(depth, reader.getLocalName())) {
+- line 363 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!filter.pruneProcessingInstruction(depth, reader.getPITarget())) {
+- line 308 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (depth > topdepth && reader.hasNext()) {
+- line 323 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (depth > edepth && reader.hasNext() &&
+- line 375 | NullReturnValsMutator | replaced return value with null for org/jdom2/input/StAXStreamBuilder::processPrunableElement | source: return fragment;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testProcessPrunableElement_ThrowsJDOMException_WhenNotAtStartElement, testProcessPrunableElement_ThrowsJDOMException_WhenXMLStreamExceptionOccurs

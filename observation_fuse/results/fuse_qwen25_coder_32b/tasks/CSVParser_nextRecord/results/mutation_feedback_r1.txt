@@ -1,0 +1,12 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 767 | MathMutator | Replaced long addition with subtraction | source: final long startCharPosition = lexer.getCharacterPosition() + this.characterOffset;
+- line 802 | MathMutator | Replaced long addition with subtraction | source: this.recordNumber++;
+- line 781 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (sb != null) {
+- line 776 | VoidMethodCallMutator | removed call to org/apache/commons/csv/CSVParser::addRecordValue | source: this.addRecordValue(true);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNextRecord_CommentLine, testNextRecord_EOF, testNextRecord_MultipleConsecutiveEmptyLines, testNextRecord_ThrowsIOExceptionOnEOF, testNextRecord_ThrowsIOExceptionOnInvalidParseSequence, testNextRecord_ThrowsIOExceptionOnInvalidToken, testNextRecord_ThrowsIllegalStateExceptionOnUnexpectedTokenType, testNextRecord_ValidCSVRecords

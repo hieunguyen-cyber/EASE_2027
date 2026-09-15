@@ -1,0 +1,41 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (10 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 301 | IncrementsMutator | Changed increment from 1 to -1 | source: index++;
+- line 311 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'F' ? index + 2 : index + 1;
+- line 324 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'K' ? index + 2 : index + 1;
+- line 335 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'N' ? index + 2 : index + 1;
+- line 280 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: int index = isSilentStart(value) ? 1 : 0;
+- line 311 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'F' ? index + 2 : index + 1;
+- line 324 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'K' ? index + 2 : index + 1;
+- line 331 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = conditionM0(value, index) ? index + 2 : index + 1;
+- line 335 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'N' ? index + 2 : index + 1;
+- line 276 | EmptyObjectReturnValsMutator | replaced return value with "" for org/apache/commons/codec/language/DoubleMetaphone::doubleMetaphone | source: return null;
+
+NO_COVERAGE (21 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 340 | IncrementsMutator | Changed increment from 1 to -1 | source: index++;
+- line 296 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'B' ? index + 2 : index + 1;
+- line 296 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'B' ? index + 2 : index + 1;
+- line 296 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'B' ? index + 2 : index + 1;
+- line 311 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'F' ? index + 2 : index + 1;
+- line 324 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'K' ? index + 2 : index + 1;
+- line 331 | MathMutator | Replaced integer addition with subtraction | source: index = conditionM0(value, index) ? index + 2 : index + 1;
+- line 335 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'N' ? index + 2 : index + 1;
+- line 347 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'Q' ? index + 2 : index + 1;
+- line 347 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'Q' ? index + 2 : index + 1;
+- line 347 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'Q' ? index + 2 : index + 1;
+- line 360 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'V' ? index + 2 : index + 1;
+- line 360 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'V' ? index + 2 : index + 1;
+- line 360 | MathMutator | Replaced integer addition with subtraction | source: index = charAt(value, index + 1) == 'V' ? index + 2 : index + 1;
+- line 296 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'B' ? index + 2 : index + 1;
+- line 347 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'Q' ? index + 2 : index + 1;
+- line 360 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: index = charAt(value, index + 1) == 'V' ? index + 2 : index + 1;
+- line 295 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('P');
+- line 339 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('N');
+- line 346 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('K');
+- line 359 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('F');
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testDoubleMetaphoneBasicFunctionality, testDoubleMetaphoneComplexName, testDoubleMetaphoneEdgeCases, testDoubleMetaphoneEmptyString, testDoubleMetaphoneEqual, testDoubleMetaphoneHandlesInvalidStrings, testDoubleMetaphoneHandlesSpecialCharacters, testDoubleMetaphoneReturnPrimaryForAlternateFalse, testDoubleMetaphoneReturnsAlternateEncoding, testDoubleMetaphoneWithNullInput, testDoubleMetaphoneWithNumericInput, testDoubleMetaphoneWithSingleCharacter, testDoubleMetaphoneWithSlavoGermanic, testDoubleMetaphoneWithSpecialCharacter

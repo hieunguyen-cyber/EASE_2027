@@ -1,0 +1,1024 @@
+{
+  "mutants": [
+    {
+      "id": 6,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 260,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 7,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "Sha2Crypt.java",
+      "line": 284,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 8,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 312,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 334,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 353,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 11,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 376,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 12,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 393,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 13,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 262,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 285,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 290,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Sha2Crypt.java",
+      "line": 334,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 336,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 338,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 353,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 353,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Sha2Crypt.java",
+      "line": 376,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 378,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 380,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 393,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 405,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 415,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 423,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 432,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 178,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 183,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 285,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 405,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 415,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 423,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 432,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Sha2Crypt.java",
+      "line": 493,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 260,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 284,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 312,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 334,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 353,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 376,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 393,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 203,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 218,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 231,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 237,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 243,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 261,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 267,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 286,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 288,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 313,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 335,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 338,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 354,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Sha2Crypt.java",
+      "line": 377,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 380,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/lang/System::arraycopy",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 406,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 408,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 416,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 424,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 433,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 435,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::update",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 494,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 495,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 496,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 497,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 498,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 499,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 500,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 501,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 502,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 503,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 504,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 506,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 507,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 80,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 508,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 81,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 509,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 82,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 510,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 83,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 511,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 84,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 512,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 513,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 514,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 515,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 516,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 517,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 518,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 519,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 92,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 520,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 521,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 522,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 95,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 523,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 524,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 525,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 526,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 527,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/digest/B64::b64from24bit",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 100,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 535,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Arrays::fill",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 101,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 536,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Arrays::fill",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 537,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Arrays::fill",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 103,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 538,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::reset",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 539,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/security/MessageDigest::reset",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 540,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Arrays::fill",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 541,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Arrays::fill",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Sha2Crypt.java",
+      "line": 543,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/digest/Sha2Crypt::sha2Crypt",
+      "method_description": "([BLjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (6 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 249 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkCluster.getDriver() != null && sparkCluster.getDriver().getEnv() != null) {
+- line 249 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkCluster.getDriver() != null && sparkCluster.getDriver().getEnv() != null) {
+- line 259 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (request.getDriver() != null && request.getDriver().getEnv() != null) {
+- line 259 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (request.getDriver() != null && request.getDriver().getEnv() != null) {
+- line 269 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkCluster.getExecutor() != null && sparkCluster.getExecutor().getEnv() != null) {
+- line 269 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkCluster.getExecutor() != null && sparkCluster.getExecutor().getEnv() != null) {
+
+NO_COVERAGE (15 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 251 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getDriver() == null) {
+- line 254 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getDriver().getEnv() == null) {
+- line 261 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getDriver() == null) {
+- line 264 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getDriver().getEnv() == null) {
+- line 271 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getExecutor() == null) {
+- line 274 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (sparkSpec.getExecutor().getEnv() == null) {
+- line 252 | VoidMethodCallMutator | removed call to com/apple/spark/operator/SparkApplicationSpec::setDriver | source: sparkSpec.setDriver(new DriverSpec());
+- line 255 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setEnv | source: sparkSpec.getDriver().setEnv(new ArrayList<>());
+- line 257 | VoidMethodCallMutator | removed call to com/apple/spark/core/SparkSpecHelper::copyEnv | source: SparkSpecHelper.copyEnv(sparkCluster.getDriver().getEnv(), sparkSpec.getDriver().getEnv());
+- line 262 | VoidMethodCallMutator | removed call to com/apple/spark/operator/SparkApplicationSpec::setDriver | source: sparkSpec.setDriver(new DriverSpec());
+- line 265 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setEnv | source: sparkSpec.getDriver().setEnv(new ArrayList<>());
+- line 267 | VoidMethodCallMutator | removed call to com/apple/spark/core/SparkSpecHelper::copyEnv | source: SparkSpecHelper.copyEnv(request.getDriver().getEnv(), sparkSpec.getDriver().getEnv());
+- line 272 | VoidMethodCallMutator | removed call to com/apple/spark/operator/SparkApplicationSpec::setExecutor | source: sparkSpec.setExecutor(new ExecutorSpec());
+- line 275 | VoidMethodCallMutator | removed call to com/apple/spark/operator/ExecutorSpec::setEnv | source: sparkSpec.getExecutor().setEnv(new ArrayList<>());
+- line 277 | VoidMethodCallMutator | removed call to com/apple/spark/core/SparkSpecHelper::copyEnv | source: SparkSpecHelper.copyEnv(
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPopulateEnv_NoEnvInSparkClusterOrRequest, testPopulateEnv_WithDriverEnvFromRequest, testPopulateEnv_WithDriverEnvFromSparkCluster, testPopulateEnv_WithExecutorEnvFromRequest, testPopulateEnv_WithExecutorEnvFromSparkCluster, testPopulateEnv_WithJsonProcessingException, testPopulateEnv_WithNullRequest, testPopulateEnv_WithNullSparkCluster, testPopulateEnv_WithNullSparkSpec

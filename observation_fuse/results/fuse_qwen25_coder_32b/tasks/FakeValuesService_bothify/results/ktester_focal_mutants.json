@@ -1,0 +1,84 @@
+{
+  "mutants": [
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 300,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 314,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 298,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 303,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 308,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 313,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 300,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 322,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValuesService::bothify",
+      "method_description": "(Ljava/lang/String;Lnet/datafaker/service/FakerContext;ZZZ)Ljava/lang/String;"
+    }
+  ]
+}

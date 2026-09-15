@@ -1,0 +1,21 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (9 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 2083 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c <= COMMENT) {
+- line 2053 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final char escapeChar = isEscapeCharacterSet() ? getEscapeCharacter().charValue() : quoteChar;
+- line 2098 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!quote) {
+- line 2103 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isTrimChar(c)) {
+- line 2110 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!quote) {
+- line 2120 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!quote) {
+- line 2133 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == quoteChar || c == escapeChar) {
+- line 2133 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == quoteChar || c == escapeChar) {
+- line 2083 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (c <= COMMENT) {
+
+NO_COVERAGE (2 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 2065 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: quote = !(object instanceof Number);
+- line 2069 | VoidMethodCallMutator | removed call to org/apache/commons/csv/CSVFormat::printWithEscapes | source: printWithEscapes(charSeq, out);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintWithQuotes, testPrintWithQuotesContainingLineBreaks, testPrintWithQuotesEmptyStringNewRecord, testPrintWithQuotesForNull, testPrintWithQuotesIOException, testPrintWithQuotesNoQuotesNeeded, testPrintWithQuotesNumericValue, testPrintWithQuotesSpecialCharacters, testPrintWithQuotesUnexpectedQuoteMode, testPrintWithQuotesWithEscapeChar

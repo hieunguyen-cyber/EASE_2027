@@ -1,0 +1,264 @@
+{
+  "mutants": [
+    {
+      "id": 193,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2072,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 194,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2083,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 195,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2089,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 196,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2131,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 197,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2139,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 198,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2099,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 199,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2053,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 200,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2056,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 201,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVFormat.java",
+      "line": 2065,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 202,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2077,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 203,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2091,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 204,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2091,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 205,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2091,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 206,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2091,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 207,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2091,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 208,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2098,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 209,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2103,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 210,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2110,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 211,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2120,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 212,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2133,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 213,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2133,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 214,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2072,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 215,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVFormat.java",
+      "line": 2083,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 216,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2089,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 217,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVFormat.java",
+      "line": 2131,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    },
+    {
+      "id": 218,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "CSVFormat.java",
+      "line": 2069,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/csv/CSVFormat::printWithEscapes",
+      "method_description": "(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/Appendable;Z)V"
+    }
+  ]
+}

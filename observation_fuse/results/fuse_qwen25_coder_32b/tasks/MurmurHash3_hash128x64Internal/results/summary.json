@@ -1,0 +1,386 @@
+{
+  "task_id": "MurmurHash3_hash128x64Internal",
+  "project": "commons-codec",
+  "focal_class": "org.apache.commons.codec.digest.MurmurHash3",
+  "focal_method": "hash128x64Internal(byte[], int, int, long)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MurmurHash3_hash128x64Internal/workspace/src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 85.983
+  },
+  "started_at": "2026-09-15T05:40:23.448074+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testHash128x64Internal_WithDifferentSeeds",
+      "testHash128x64Internal_WithFullLengthBlock",
+      "testHash128x64Internal_WithIncorrectOffset",
+      "testHash128x64Internal_WithLengthExceedingArray",
+      "testHash128x64Internal_WithNegativeOffset",
+      "testHash128x64Internal_WithPartialTail",
+      "testHash128x64Internal_WithZeroLength"
+    ],
+    "test_count": 7
+  },
+  "ktester": {
+    "test_cases": 7,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 9,
+    "tests_failed": 9,
+    "line_missed": 2,
+    "line_covered": 55,
+    "line_coverage": 0.964912,
+    "branch_missed": 13,
+    "branch_covered": 5,
+    "branch_coverage": 0.277778,
+    "instruction_missed": 26,
+    "instruction_covered": 345,
+    "instruction_coverage": 0.929919,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 92,
+      "detected": 0,
+      "undetected": 92,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 92,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 92
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "MathMutator": {
+        "total": 89,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 89,
+        "mutation_score": 0.0
+      },
+      "NullReturnValsMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 92,
+      "existing_tests_before": 7,
+      "tests_after": 17,
+      "seconds": 85.982,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 17,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 17,
+    "tests_failed": 0,
+    "line_missed": 0,
+    "line_covered": 57,
+    "line_coverage": 1.0,
+    "branch_missed": 14,
+    "branch_covered": 4,
+    "branch_coverage": 0.222222,
+    "instruction_missed": 0,
+    "instruction_covered": 371,
+    "instruction_coverage": 1.0,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 85.983,
+    "inherited_disabled_methods": 7,
+    "stats": {
+      "total": 92,
+      "detected": 34,
+      "undetected": 58,
+      "killed": 34,
+      "survived": 58,
+      "no_coverage": 0,
+      "mutation_score": 0.369565,
+      "statuses": {
+        "KILLED": 34,
+        "SURVIVED": 58
+      }
+    },
+    "kills_per_test": 2.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 1,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "MathMutator": {
+        "total": 89,
+        "detected": 31,
+        "survived": 58,
+        "no_coverage": 0,
+        "mutation_score": 0.348315
+      },
+      "NullReturnValsMutator": {
+        "total": 1,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 1,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.035088,
+    "branch_coverage": -0.055556,
+    "instruction_coverage": 0.070081,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": 2.0,
+    "mutation_score": 0.369565,
+    "mutation_score_points": 36.956,
+    "newly_killed": 34,
+    "lost_kills": 0,
+    "added_test_methods": 10,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 518,
+        "mutator": "MathMutator",
+        "description": "Replaced Shift Right with Shift Left"
+      },
+      {
+        "line": 521,
+        "mutator": "ConditionalsBoundaryMutator",
+        "description": "changed conditional boundary"
+      },
+      {
+        "line": 521,
+        "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+        "description": "removed conditional - replaced comparison check with false"
+      },
+      {
+        "line": 524,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 527,
+        "mutator": "MathMutator",
+        "description": "Replaced long multiplication with division"
+      },
+      {
+        "line": 549,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 551,
+        "mutator": "MathMutator",
+        "description": "Replaced Shift Left with Shift Right"
+      },
+      {
+        "line": 551,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 551,
+        "mutator": "MathMutator",
+        "description": "Replaced bitwise AND with OR"
+      },
+      {
+        "line": 551,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 553,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 553,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 555,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 555,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 557,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 557,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 559,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 559,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 561,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 561,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 563,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 563,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 564,
+        "mutator": "MathMutator",
+        "description": "Replaced long multiplication with division"
+      },
+      {
+        "line": 566,
+        "mutator": "MathMutator",
+        "description": "Replaced long multiplication with division"
+      },
+      {
+        "line": 567,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 570,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 572,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 574,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 576,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 578,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 580,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 582,
+        "mutator": "MathMutator",
+        "description": "Replaced integer addition with subtraction"
+      },
+      {
+        "line": 593,
+        "mutator": "MathMutator",
+        "description": "Replaced XOR with AND"
+      },
+      {
+        "line": 604,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/codec/digest/MurmurHash3::hash128x64Internal"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T05:42:16.439579+00:00"
+}

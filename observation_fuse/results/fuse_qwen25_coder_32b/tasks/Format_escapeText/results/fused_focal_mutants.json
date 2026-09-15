@@ -1,0 +1,254 @@
+{
+  "mutants": [
+    {
+      "id": 55,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 459,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 474,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 57,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 478,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 58,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 480,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 529,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 465,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 479,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 461,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 67,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 462,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 468,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Format.java",
+      "line": 481,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 506,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 514,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 517,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 459,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 474,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 75,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 478,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 480,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Format.java",
+      "line": 529,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 78,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 470,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/jdom2/output/Format::escapeText",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 79,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Format.java",
+      "line": 534,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/jdom2/output/Format::escapeText",
+      "method_description": "(Lorg/jdom2/output/EscapeStrategy;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

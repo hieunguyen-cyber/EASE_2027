@@ -1,0 +1,35 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (11 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 442 | MathMutator | Replaced integer addition with subtraction | source: } else if (contains(value, index + 1, 3, "CIA")) {
+- line 463 | MathMutator | Replaced integer addition with subtraction | source: if (contains(value, index + 1, 2, " C", " Q", " G")) {
+- line 466 | MathMutator | Replaced integer addition with subtraction | source: } else if (contains(value, index + 1, 1, "C", "K", "Q") &&
+- line 429 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (conditionC0(value, index)) {  // very confusing, moved out
+- line 435 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index, 2, "CH")) {
+- line 437 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index, 2, "CZ") &&
+- line 442 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index + 1, 3, "CIA")) {
+- line 446 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index, 2, "CC") &&
+- line 450 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index, 2, "CK", "CG", "CQ")) {
+- line 455 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (contains(value, index, 3, "CIO", "CIE", "CIA")) {
+- line 463 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (contains(value, index + 1, 2, " C", " Q", " G")) {
+
+NO_COVERAGE (14 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 431 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 441 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 445 | IncrementsMutator | Changed increment from 3 to -3 | source: index += 3;
+- line 452 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 465 | IncrementsMutator | Changed increment from 3 to -3 | source: index += 3;
+- line 437 | MathMutator | Replaced integer subtraction with addition | source: } else if (contains(value, index, 2, "CZ") &&
+- line 438 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !contains(value, index - 2, 4, "WICZ")) {
+- line 446 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index, 2, "CC") &&
+- line 447 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !(index == 1 && charAt(value, 0) == 'M')) {
+- line 430 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('K');
+- line 440 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('S', 'X');
+- line 444 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('X');
+- line 451 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append | source: result.append('K');
+- line 449 | PrimitiveReturnsMutator | replaced int return with 0 for org/apache/commons/codec/language/DoubleMetaphone::handleC | source: return handleCC(value, result, index);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testHandleC_CIA, testHandleC_CI_CE_CY, testHandleC_CZWithoutWICZ, testHandleC_CaseWithConditionC0, testHandleC_Default, testHandleC_DoubleCC, testHandleC_EmptyString, testHandleC_NullValue, testHandleC_ParameterizedCases, testHandleC_StringWithOnlySpaces

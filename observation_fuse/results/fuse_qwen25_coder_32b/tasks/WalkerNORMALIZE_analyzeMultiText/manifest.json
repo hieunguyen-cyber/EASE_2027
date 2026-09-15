@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:53:47.795249+00:00",
+  "task_id": "WalkerNORMALIZE_analyzeMultiText",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "WalkerNORMALIZE_analyzeMultiText",
+    "package": "org.jdom2.output.support",
+    "class": "org.jdom2.output.support.WalkerNORMALIZE",
+    "test-class": "org.jdom2.output.support.WalkerNORMALIZE_analyzeMultiText_Test",
+    "method-name": "analyzeMultiText(MultiText, int, int)",
+    "source-path": "src/main/java/org/jdom2/output/support/WalkerNORMALIZE.java",
+    "test-path": "src/test/java/org/jdom2/output/support/WalkerNORMALIZE_analyzeMultiText_Test.java",
+    "focal-method": "@Override\r\nprotected void analyzeMultiText(final MultiText mtext, final int offset, final int len) {\r\n    boolean needspace = false;\r\n    boolean between = false;\r\n    String ttext = null;\r\n    for (int i = 0; i < len; i++) {\r\n        final Content c = get(offset + i);\r\n        switch (c.getCType()) {\r\n            case Text :\r\n                ttext = c.getValue();\r\n                if (Verifier.isAllXMLWhitespace(ttext)) {\r\n                    if (between && (ttext.length() > 0)) {\r\n                        needspace = true;\r\n                    }\r\n                } else {\r\n                    if (between && (needspace || isSpaceFirst(ttext))) {\r\n                        mtext.appendText(Trim.NONE, \" \");\r\n                    }\r\n                    mtext.appendText(Trim.COMPACT, ttext);\r\n                    between = true;\r\n                    needspace = isSpaceLast(ttext);\r\n                }\r\n                break;\r\n            case CDATA :\r\n                ttext = c.getValue();\r\n                if (Verifier.isAllXMLWhitespace(ttext)) {\r\n                    if (between && (ttext.length() > 0)) {\r\n                        needspace = true;\r\n                    }\r\n                } else {\r\n                    if (between && (needspace || isSpaceFirst(ttext))) {\r\n                        mtext.appendText(Trim.NONE, \" \");\r\n                    }\r\n                    mtext.appendCDATA(Trim.COMPACT, ttext);\r\n                    between = true;\r\n                    needspace = isSpaceLast(ttext);\r\n                }\r\n                break;\r\n            case EntityRef :\r\n                // treat like any other content.\r\n                // raw.\r\n            default :\r\n                ttext = null;\r\n                if (between && needspace) {\r\n                    mtext.appendText(Trim.NONE, \" \");\r\n                }\r\n                mtext.appendRaw(c);\r\n                between = true;\r\n                needspace = false;\r\n                break;\r\n        }\r\n    }\r\n}",
+    "class-code": "package org.jdom2.output.support;\nimport org.jdom2.Content;\nimport java.util.List;\nimport org.jdom2.Verifier;\npublic class WalkerNORMALIZE extends AbstractFormattedWalker {\n    \n    @Override\r\n    protected void analyzeMultiText(final MultiText mtext, final int offset, final int len) {\r\n        boolean needspace = false;\r\n        boolean between = false;\r\n        String ttext = null;\r\n        for (int i = 0; i < len; i++) {\r\n            final Content c = get(offset + i);\r\n            switch (c.getCType()) {\r\n                case Text :\r\n                    ttext = c.getValue();\r\n                    if (Verifier.isAllXMLWhitespace(ttext)) {\r\n                        if (between && (ttext.length() > 0)) {\r\n                            needspace = true;\r\n                        }\r\n                    } else {\r\n                        if (between && (needspace || isSpaceFirst(ttext))) {\r\n                            mtext.appendText(Trim.NONE, \" \");\r\n                        }\r\n                        mtext.appendText(Trim.COMPACT, ttext);\r\n                        between = true;\r\n                        needspace = isSpaceLast(ttext);\r\n                    }\r\n                    break;\r\n                case CDATA :\r\n                    ttext = c.getValue();\r\n                    if (Verifier.isAllXMLWhitespace(ttext)) {\r\n                        if (between && (ttext.length() > 0)) {\r\n                            needspace = true;\r\n                        }\r\n                    } else {\r\n                        if (between && (needspace || isSpaceFirst(ttext))) {\r\n                            mtext.appendText(Trim.NONE, \" \");\r\n                        }\r\n                        mtext.appendCDATA(Trim.COMPACT, ttext);\r\n                        between = true;\r\n                        needspace = isSpaceLast(ttext);\r\n                    }\r\n                    break;\r\n                case EntityRef :\r\n                    // treat like any other content.\r\n                    // raw.\r\n                default :\r\n                    ttext = null;\r\n                    if (between && needspace) {\r\n                        mtext.appendText(Trim.NONE, \" \");\r\n                    }\r\n                    mtext.appendRaw(c);\r\n                    between = true;\r\n                    needspace = false;\r\n                    break;\r\n            }\r\n        }\r\n    }\nprivate boolean isSpaceFirst(String text);\n    private boolean isSpaceLast(String text);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/WalkerNORMALIZE_analyzeMultiText_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace/src/test/java/org/jdom2/output/support/WalkerNORMALIZE_analyzeMultiText_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace/src/test/java/org/jdom2/output/support/WalkerNORMALIZE_analyzeMultiText_Test.java"
+  },
+  "started_at": "2026-09-15T07:53:47.871221+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerNORMALIZE_analyzeMultiText/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

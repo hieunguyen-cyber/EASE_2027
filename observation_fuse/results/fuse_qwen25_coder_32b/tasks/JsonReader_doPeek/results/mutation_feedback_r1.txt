@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (9 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 471 | MathMutator | Replaced integer subtraction with addition | source: int peekStack = stack[stackSize - 1];
+- line 545 | MathMutator | Replaced integer subtraction with addition | source: stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+- line 472 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack == JsonScope.EMPTY_ARRAY) {
+- line 474 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.NONEMPTY_ARRAY) {
+- line 487 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT) {
+- line 487 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT) {
+- line 525 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.DANGLING_NAME) {
+- line 541 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.EMPTY_DOCUMENT) {
+- line 542 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (lenient) {
+
+NO_COVERAGE (50 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 534 | ConditionalsBoundaryMutator | changed conditional boundary | source: if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+- line 473 | MathMutator | Replaced integer subtraction with addition | source: stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+- line 488 | MathMutator | Replaced integer subtraction with addition | source: stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+- line 518 | MathMutator | Replaced integer subtraction with addition | source: pos--; // Don't consume the first character in an unquoted string.
+- line 526 | MathMutator | Replaced integer subtraction with addition | source: stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+- line 535 | MathMutator | Replaced integer addition with subtraction | source: pos++;
+- line 552 | MathMutator | Replaced integer subtraction with addition | source: pos--;
+- line 570 | MathMutator | Replaced integer subtraction with addition | source: pos--;
+- line 585 | MathMutator | Replaced integer subtraction with addition | source: pos--; // Don't consume the first character in a literal value.
+- line 490 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack == JsonScope.NONEMPTY_OBJECT) {
+- line 511 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack != JsonScope.NONEMPTY_OBJECT) {
+- line 519 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isLiteral((char) c)) {
+- line 534 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+- line 534 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+- line 546 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.NONEMPTY_DOCUMENT) {
+- line 548 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == -1) {
+- line 554 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (peekStack == JsonScope.CLOSED) {
+- line 561 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack == JsonScope.EMPTY_ARRAY) {
+- line 568 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack == JsonScope.EMPTY_ARRAY || peekStack == JsonScope.NONEMPTY_ARRAY) {
+- line 568 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (peekStack == JsonScope.EMPTY_ARRAY || peekStack == JsonScope.NONEMPTY_ARRAY) {
+- line 589 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (result != PEEKED_NONE) {
+- line 594 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (result != PEEKED_NONE) {
+- line 598 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLiteral(buffer[pos])) {
+- line 534 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+- line 481 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient(); // fall-through
+- line 496 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient(); // fall-through
+- line 508 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+- line 517 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+- line 533 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+- line 543 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::consumeNonExecutePrefix | source: consumeNonExecutePrefix();
+- line 551 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+- ... and 19 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testDoPeekHandlesEOF, testDoPeekOnEmptyDocument, testDoPeekOnMalformedEscapeCharacter, testDoPeekUnexpectedValue, testDoPeekUnexpectedValueThrowsSyntaxError, testDoPeekWhenClosed, testDoPeekWithMalformedJsonThrowsException

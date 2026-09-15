@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:51:32.386834+00:00",
+  "task_id": "AbstractStAXStreamProcessor_printContent",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "AbstractStAXStreamProcessor_printContent",
+    "package": "org.jdom2.output.support",
+    "class": "org.jdom2.output.support.AbstractStAXStreamProcessor",
+    "test-class": "org.jdom2.output.support.AbstractStAXStreamProcessor_printContent_Test",
+    "method-name": "printContent(XMLStreamWriter, FormatStack, NamespaceStack, Walker)",
+    "source-path": "src/main/java/org/jdom2/output/support/AbstractStAXStreamProcessor.java",
+    "test-path": "src/test/java/org/jdom2/output/support/AbstractStAXStreamProcessor_printContent_Test.java",
+    "focal-method": "protected void printContent(final XMLStreamWriter out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws XMLStreamException {\r\n    while (walker.hasNext()) {\r\n        final Content content = walker.next();\r\n        if (content == null) {\r\n            if (walker.isCDATA()) {\r\n                printCDATA(out, fstack, new CDATA(walker.text()));\r\n            } else {\r\n                printText(out, fstack, new Text(walker.text()));\r\n            }\r\n        } else {\r\n            switch (content.getCType()) {\r\n                case CDATA :\r\n                    printCDATA(out, fstack, ((CDATA) (content)));\r\n                    break;\r\n                case Comment :\r\n                    printComment(out, fstack, ((Comment) (content)));\r\n                    break;\r\n                case Element :\r\n                    printElement(out, fstack, nstack, ((Element) (content)));\r\n                    break;\r\n                case EntityRef :\r\n                    printEntityRef(out, fstack, ((EntityRef) (content)));\r\n                    break;\r\n                case ProcessingInstruction :\r\n                    printProcessingInstruction(out, fstack, ((ProcessingInstruction) (content)));\r\n                    break;\r\n                case Text :\r\n                    printText(out, fstack, ((Text) (content)));\r\n                    break;\r\n                case DocType :\r\n                    printDocType(out, fstack, ((DocType) (content)));\r\n                    break;\r\n                default :\r\n                    throw new IllegalStateException(\"Unexpected Content \" + content.getCType());\r\n            }\r\n        }\r\n    } \r\n}",
+    "class-code": "package org.jdom2.output.support;\nimport org.jdom2.Attribute;\nimport org.jdom2.Content.CType;\nimport org.jdom2.Element;\nimport java.util.ArrayList;\nimport org.jdom2.Namespace;\nimport org.jdom2.Text;\nimport org.jdom2.Document;\nimport org.jdom2.Verifier;\nimport org.jdom2.util.NamespaceStack;\nimport org.jdom2.output.StAXStreamOutputter;\nimport java.io.StringWriter;\nimport javax.xml.stream.XMLStreamException;\nimport org.jdom2.Content;\nimport org.jdom2.output.Format.TextMode;\nimport javax.xml.stream.XMLStreamWriter;\nimport org.jdom2.JDOMConstants;\nimport org.jdom2.ProcessingInstruction;\nimport java.util.List;\nimport org.jdom2.EntityRef;\nimport org.jdom2.output.Format;\nimport org.jdom2.CDATA;\nimport org.jdom2.Comment;\nimport java.util.Collections;\nimport org.jdom2.DocType;\npublic abstract class AbstractStAXStreamProcessor extends AbstractOutputProcessor implements StAXStreamProcessor {\n    \n    protected void printContent(final XMLStreamWriter out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws XMLStreamException {\r\n        while (walker.hasNext()) {\r\n            final Content content = walker.next();\r\n            if (content == null) {\r\n                if (walker.isCDATA()) {\r\n                    printCDATA(out, fstack, new CDATA(walker.text()));\r\n                } else {\r\n                    printText(out, fstack, new Text(walker.text()));\r\n                }\r\n            } else {\r\n                switch (content.getCType()) {\r\n                    case CDATA :\r\n                        printCDATA(out, fstack, ((CDATA) (content)));\r\n                        break;\r\n                    case Comment :\r\n                        printComment(out, fstack, ((Comment) (content)));\r\n                        break;\r\n                    case Element :\r\n                        printElement(out, fstack, nstack, ((Element) (content)));\r\n                        break;\r\n                    case EntityRef :\r\n                        printEntityRef(out, fstack, ((EntityRef) (content)));\r\n                        break;\r\n                    case ProcessingInstruction :\r\n                        printProcessingInstruction(out, fstack, ((ProcessingInstruction) (content)));\r\n                        break;\r\n                    case Text :\r\n                        printText(out, fstack, ((Text) (content)));\r\n                        break;\r\n                    case DocType :\r\n                        printDocType(out, fstack, ((DocType) (content)));\r\n                        break;\r\n                    default :\r\n                        throw new IllegalStateException(\"Unexpected Content \" + content.getCType());\r\n                }\r\n            }\r\n        } \r\n    }\nprotected void printAttribute(final XMLStreamWriter out, final FormatStack fstack, final Attribute attribute) throws XMLStreamException;\n    protected void printCDATA(final XMLStreamWriter out, final FormatStack fstack, final CDATA cdata) throws XMLStreamException;\n    protected void printComment(final XMLStreamWriter out, final FormatStack fstack, final Comment comment) throws XMLStreamException;\n    protected void printDocType(final XMLStreamWriter out, final FormatStack fstack, final DocType docType) throws XMLStreamException;\n    protected void printDocument(final XMLStreamWriter out, final FormatStack fstack, final NamespaceStack nstack, final Document doc) throws XMLStreamException;\n    protected void printElement(final XMLStreamWriter out, final FormatStack fstack, final NamespaceStack nstack, final Element element) throws XMLStreamException;\n    protected void printEntityRef(final XMLStreamWriter out, final FormatStack fstack, final EntityRef entity) throws XMLStreamException;\n    protected void printNamespace(final XMLStreamWriter out, final FormatStack fstack, final Namespace ns) throws XMLStreamException;\n    protected void printProcessingInstruction(final XMLStreamWriter out, final FormatStack fstack, final ProcessingInstruction pi) throws XMLStreamException;\n    protected void printText(final XMLStreamWriter out, final FormatStack fstack, final Text text) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final List<? extends Content> list) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final CDATA cdata) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final Comment comment) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final DocType doctype) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final Document doc) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final Element element) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final EntityRef entity) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final ProcessingInstruction pi) throws XMLStreamException;\n    @Override\r\npublic void process(final XMLStreamWriter out, final Format format, final Text text) throws XMLStreamException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/AbstractStAXStreamProcessor_printContent_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractStAXStreamProcessor_printContent_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractStAXStreamProcessor_printContent_Test.java"
+  },
+  "started_at": "2026-09-15T07:51:32.460340+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractStAXStreamProcessor_printContent/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

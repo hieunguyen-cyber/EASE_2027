@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:08.294875+00:00",
+  "task_id": "MachineComplexityEvaluator_evaluate",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "MachineComplexityEvaluator_evaluate",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.MachineComplexityEvaluator",
+    "test-class": "software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test",
+    "method-name": "evaluate(ByteState)",
+    "source-path": "src/main/java/software/amazon/event/ruler/MachineComplexityEvaluator.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_evaluate_Test.java",
+    "focal-method": "int evaluate(ByteState state) {\r\n    // Upfront cost: generate the map of all matches accessible from every state in the machine.\r\n    Map<SingleByteTransition, Set<ByteMatch>> matchesAccessibleFromEachTransition = getMatchesAccessibleFromEachTransition(state);\r\n    Set<ByteTransition> visited = new HashSet<>();\r\n    visited.add(state);\r\n    int maxSize = 0;\r\n    // We'll do a breadth-first-search but it shouldn't matter.\r\n    Queue<ByteTransition> transitions = new LinkedList<>(state.getTransitions());\r\n    while (!transitions.isEmpty()) {\r\n        ByteTransition transition = transitions.remove();\r\n        if (visited.contains(transition)) {\r\n            continue;\r\n        }\r\n        visited.add(transition);\r\n        // The sum of all the wildcard patterns accessible from each SingleByteTransition we are present in on our\r\n        // current traversal is the number of wildcard rule prefixes matching a theoretical worst-case input value.\r\n        int size = 0;\r\n        for (SingleByteTransition single : transition.expand()) {\r\n            size += getWildcardPatterns(matchesAccessibleFromEachTransition.get(single)).size();\r\n            // Look for \"transitions for all bytes\" (i.e. wildcard transitions). Since an input value that matches\r\n            // foo will also match foo*, we also need to include in our size wildcard patterns accessible from foo*.\r\n            ByteState nextState = single.getNextByteState();\r\n            if (nextState != null) {\r\n                Set<SingleByteTransition> transitionsForAllBytes = nextState.getTransitionForAllBytes().expand();\r\n                for (SingleByteTransition transitionForAllBytes : transitionsForAllBytes) {\r\n                    if ((!(transitionForAllBytes instanceof ByteMachine.EmptyByteTransition)) && (!transition.expand().contains(transitionForAllBytes))) {\r\n                        size += getWildcardPatterns(matchesAccessibleFromEachTransition.get(transitionForAllBytes)).size();\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        if (size >= maxComplexity) {\r\n            return maxComplexity;\r\n        }\r\n        if (size > maxSize) {\r\n            maxSize = size;\r\n        }\r\n        // Load up our queue with the next round of transitions, where each transition represents a set of states\r\n        // that could be accessed with a particular byte value.\r\n        ByteTransition nextTransition = transition.getTransitionForNextByteStates();\r\n        if (nextTransition != null) {\r\n            transitions.addAll(nextTransition.getTransitions());\r\n        }\r\n    } \r\n    // Now that we have a maxSize for this ByteMachine, let's recursively get the maxSize for each next NameState\r\n    // accessible via any of this ByteMachine's matches. We will return the maximum maxSize.\r\n    int maxSizeFromNextNameStates = 0;\r\n    Set<ByteMatch> uniqueMatches = new HashSet<>();\r\n    for (Set<ByteMatch> matches : matchesAccessibleFromEachTransition.values()) {\r\n        uniqueMatches.addAll(matches);\r\n    }\r\n    for (ByteMatch match : uniqueMatches) {\r\n        NameState nextNameState = match.getNextNameState();\r\n        if (nextNameState != null) {\r\n            maxSizeFromNextNameStates = Math.max(maxSizeFromNextNameStates, nextNameState.evaluateComplexity(this));\r\n        }\r\n    }\r\n    return Math.max(maxSize, maxSizeFromNextNameStates);\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport static software.amazon.event.ruler.MatchType.WILDCARD;\nimport java.util.LinkedList;\nimport java.util.Set;\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.HashSet;\nimport java.util.Queue;\nimport java.util.Stack;\npublic class MachineComplexityEvaluator {\n    private final int maxComplexity;\n    int evaluate(ByteState state) {\r\n        // Upfront cost: generate the map of all matches accessible from every state in the machine.\r\n        Map<SingleByteTransition, Set<ByteMatch>> matchesAccessibleFromEachTransition = getMatchesAccessibleFromEachTransition(state);\r\n        Set<ByteTransition> visited = new HashSet<>();\r\n        visited.add(state);\r\n        int maxSize = 0;\r\n        // We'll do a breadth-first-search but it shouldn't matter.\r\n        Queue<ByteTransition> transitions = new LinkedList<>(state.getTransitions());\r\n        while (!transitions.isEmpty()) {\r\n            ByteTransition transition = transitions.remove();\r\n            if (visited.contains(transition)) {\r\n                continue;\r\n            }\r\n            visited.add(transition);\r\n            // The sum of all the wildcard patterns accessible from each SingleByteTransition we are present in on our\r\n            // current traversal is the number of wildcard rule prefixes matching a theoretical worst-case input value.\r\n            int size = 0;\r\n            for (SingleByteTransition single : transition.expand()) {\r\n                size += getWildcardPatterns(matchesAccessibleFromEachTransition.get(single)).size();\r\n                // Look for \"transitions for all bytes\" (i.e. wildcard transitions). Since an input value that matches\r\n                // foo will also match foo*, we also need to include in our size wildcard patterns accessible from foo*.\r\n                ByteState nextState = single.getNextByteState();\r\n                if (nextState != null) {\r\n                    Set<SingleByteTransition> transitionsForAllBytes = nextState.getTransitionForAllBytes().expand();\r\n                    for (SingleByteTransition transitionForAllBytes : transitionsForAllBytes) {\r\n                        if ((!(transitionForAllBytes instanceof ByteMachine.EmptyByteTransition)) && (!transition.expand().contains(transitionForAllBytes))) {\r\n                            size += getWildcardPatterns(matchesAccessibleFromEachTransition.get(transitionForAllBytes)).size();\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n            if (size >= maxComplexity) {\r\n                return maxComplexity;\r\n            }\r\n            if (size > maxSize) {\r\n                maxSize = size;\r\n            }\r\n            // Load up our queue with the next round of transitions, where each transition represents a set of states\r\n            // that could be accessed with a particular byte value.\r\n            ByteTransition nextTransition = transition.getTransitionForNextByteStates();\r\n            if (nextTransition != null) {\r\n                transitions.addAll(nextTransition.getTransitions());\r\n            }\r\n        } \r\n        // Now that we have a maxSize for this ByteMachine, let's recursively get the maxSize for each next NameState\r\n        // accessible via any of this ByteMachine's matches. We will return the maximum maxSize.\r\n        int maxSizeFromNextNameStates = 0;\r\n        Set<ByteMatch> uniqueMatches = new HashSet<>();\r\n        for (Set<ByteMatch> matches : matchesAccessibleFromEachTransition.values()) {\r\n            uniqueMatches.addAll(matches);\r\n        }\r\n        for (ByteMatch match : uniqueMatches) {\r\n            NameState nextNameState = match.getNextNameState();\r\n            if (nextNameState != null) {\r\n                maxSizeFromNextNameStates = Math.max(maxSizeFromNextNameStates, nextNameState.evaluateComplexity(this));\r\n            }\r\n        }\r\n        return Math.max(maxSize, maxSizeFromNextNameStates);\r\n    }\nprivate Map<SingleByteTransition, Set<ByteMatch>> getMatchesAccessibleFromEachTransition(ByteState state);\n    int getMaxComplexity();\n    private static Set<Patterns> getWildcardPatterns(Set<ByteMatch> matches);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_evaluate_1_1_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_evaluate_1_1_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_evaluate_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:08.370305+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_evaluate/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

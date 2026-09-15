@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:35:38.264862+00:00",
+  "task_id": "FakeValues_toJavaNames",
+  "project": "datafaker",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/datafaker",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "FakeValues_toJavaNames",
+    "package": "net.datafaker.service",
+    "class": "net.datafaker.service.FakeValues",
+    "test-class": "net.datafaker.service.FakeValues_toJavaNames_Test",
+    "method-name": "toJavaNames(String, boolean)",
+    "source-path": "src/main/java/net/datafaker/service/FakeValues.java",
+    "test-path": "src/test/java/net/datafaker/service/FakeValues_toJavaNames_Test.java",
+    "focal-method": "private static String toJavaNames(String string, boolean isMethod) {\r\n    final int length;\r\n    if ((string == null) || ((length = string.length()) == 0)) {\r\n        return string;\r\n    }\r\n    int cnt = 0;\r\n    for (int i = 0; i < length; i++) {\r\n        if (string.charAt(i) == '_') {\r\n            cnt++;\r\n        }\r\n    }\r\n    if ((cnt == 0) && ((Character.isUpperCase(string.charAt(0)) && (!isMethod)) || (isMethod && Character.isLowerCase(string.charAt(0)))))\r\n        return string;\r\n\r\n    final char[] res = new char[length - cnt];\r\n    int pos = 0;\r\n    for (int i = 0; i < length; i++) {\r\n        char c = string.charAt(i);\r\n        if ((i == 0) && Character.isLetter(c)) {\r\n            res[pos++] = (isMethod) ? Character.toLowerCase(c) : Character.toUpperCase(c);\r\n        } else if (c == '_') {\r\n            final char next = string.charAt(i + 1);\r\n            if ((i < (length - 1)) && Character.isLetter(next)) {\r\n                res[pos++] = Character.toUpperCase(next);\r\n                i++;\r\n            }\r\n        } else {\r\n            res[pos++] = c;\r\n        }\r\n    }\r\n    return new String(res);\r\n}",
+    "class-code": "package net.datafaker.service;\nimport java.util.Locale;\nimport java.util.concurrent.locks.ReentrantLock;\nimport java.util.HashMap;\nimport net.datafaker.internal.helper.SingletonLocale;\nimport java.io.InputStream;\nimport java.io.IOException;\nimport java.util.concurrent.locks.Lock;\nimport java.util.logging.Logger;\nimport org.yaml.snakeyaml.Yaml;\nimport java.net.URL;\nimport java.util.Objects;\nimport java.util.logging.Level;\nimport java.util.Map;\npublic class FakeValues implements FakeValuesInterface {\n    \n    private static String toJavaNames(String string, boolean isMethod) {\r\n        final int length;\r\n        if ((string == null) || ((length = string.length()) == 0)) {\r\n            return string;\r\n        }\r\n        int cnt = 0;\r\n        for (int i = 0; i < length; i++) {\r\n            if (string.charAt(i) == '_') {\r\n                cnt++;\r\n            }\r\n        }\r\n        if ((cnt == 0) && ((Character.isUpperCase(string.charAt(0)) && (!isMethod)) || (isMethod && Character.isLowerCase(string.charAt(0)))))\r\n            return string;\r\n    \r\n        final char[] res = new char[length - cnt];\r\n        int pos = 0;\r\n        for (int i = 0; i < length; i++) {\r\n            char c = string.charAt(i);\r\n            if ((i == 0) && Character.isLetter(c)) {\r\n                res[pos++] = (isMethod) ? Character.toLowerCase(c) : Character.toUpperCase(c);\r\n            } else if (c == '_') {\r\n                final char next = string.charAt(i + 1);\r\n                if ((i < (length - 1)) && Character.isLetter(next)) {\r\n                    res[pos++] = Character.toUpperCase(next);\r\n                    i++;\r\n                }\r\n            } else {\r\n                res[pos++] = c;\r\n            }\r\n        }\r\n        return new String(res);\r\n    }\n@Override\r\npublic boolean equals(Object o);\n    @Override\r\npublic Map<String, Object> get(String key);\n    Locale getLocale();\n    String getPath();\n    @Override\r\npublic int hashCode();\n    boolean supportsPath(String path);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/datafaker/src/test/java/net/datafaker/service/FakeValues_toJavaNames_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace/src/test/java/net/datafaker/service/FakeValues_toJavaNames_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace/src/test/java/net/datafaker/service/FakeValues_toJavaNames_Test.java"
+  },
+  "started_at": "2026-09-15T07:35:38.360344+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValues_toJavaNames/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "mutants": [
+    {
+      "id": 86,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 735,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 693,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 701,
+      "mutator": "MathMutator",
+      "description": "Replaced integer multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 701,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 704,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 711,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 92,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 656,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 660,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 662,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 95,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 667,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 96,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 679,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 680,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 681,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 99,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 683,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 100,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 684,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 101,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 685,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 697,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 103,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 697,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 104,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 717,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 725,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 728,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 735,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 735,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 109,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 657,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::copyFrom",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 110,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 672,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Map::putAll",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 111,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 673,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setLabels",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 112,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 682,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setVolumeMounts",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 113,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 686,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setVolumeMounts",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 694,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setCores",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 698,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setCoreLimit",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 706,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setCoreLimit",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 713,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setMemory",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 118,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 722,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setAnnotations",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 752,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setAffinity",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 757,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to io/fabric8/kubernetes/api/model/PodDNSConfig::setOptions",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 121,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 760,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/ExecutorSpec::setDnsConfig",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    },
+    {
+      "id": 122,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 762,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/apple/spark/core/ApplicationSubmissionHelper::getExecutorSpec",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/ExecutorSpec;"
+    }
+  ]
+}

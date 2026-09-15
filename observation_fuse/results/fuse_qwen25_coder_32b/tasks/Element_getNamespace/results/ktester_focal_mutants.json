@@ -1,0 +1,154 @@
+{
+  "mutants": [
+    {
+      "id": 91,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Element.java",
+      "line": 325,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 92,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 309,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 93,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 313,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 94,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 319,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 95,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 324,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 96,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 327,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 97,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 333,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 98,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 335,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 99,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 342,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 100,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 325,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 101,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 315,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/Element::getNamespace",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 102,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 320,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/Element::getNamespace",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 103,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 328,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/Element::getNamespace",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 104,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 336,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/Element::getNamespace",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    },
+    {
+      "id": 105,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Element.java",
+      "line": 343,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/Element::getNamespace",
+      "method_description": "(Ljava/lang/String;)Lorg/jdom2/Namespace;"
+    }
+  ]
+}

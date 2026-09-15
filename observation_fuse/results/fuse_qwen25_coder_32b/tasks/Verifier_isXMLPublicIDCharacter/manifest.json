@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:08:07.867488+00:00",
+  "task_id": "Verifier_isXMLPublicIDCharacter",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Verifier_isXMLPublicIDCharacter",
+    "package": "org.jdom2",
+    "class": "org.jdom2.Verifier",
+    "test-class": "org.jdom2.Verifier_isXMLPublicIDCharacter_Test",
+    "method-name": "isXMLPublicIDCharacter(char)",
+    "source-path": "src/main/java/org/jdom2/Verifier.java",
+    "test-path": "src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java",
+    "focal-method": "public static boolean isXMLPublicIDCharacter(final char c) {\r\n    // [13] PubidChar ::= #x20 | #xD | #xA | [a-zA-Z0-9] |\r\n    // [-'()+,./:=?;*#@$_%]\r\n    if ((c >= 'a') && (c <= 'z'))\r\n        return true;\r\n\r\n    if ((c >= '?') && (c <= 'Z'))\r\n        return true;\r\n\r\n    if ((c >= '\\'') && (c <= ';'))\r\n        return true;\r\n\r\n    if (c == ' ')\r\n        return true;\r\n\r\n    if (c == '!')\r\n        return true;\r\n\r\n    if (c == '=')\r\n        return true;\r\n\r\n    if (c == '#')\r\n        return true;\r\n\r\n    if (c == '$')\r\n        return true;\r\n\r\n    if (c == '_')\r\n        return true;\r\n\r\n    if (c == '%')\r\n        return true;\r\n\r\n    if (c == '\\n')\r\n        return true;\r\n\r\n    if (c == '\\r')\r\n        return true;\r\n\r\n    if (c == '\\t')\r\n        return true;\r\n\r\n    return false;\r\n}",
+    "class-code": "package org.jdom2;\nimport java.util.*;\npublic final class Verifier {\n    \n    public static boolean isXMLPublicIDCharacter(final char c) {\r\n        // [13] PubidChar ::= #x20 | #xD | #xA | [a-zA-Z0-9] |\r\n        // [-'()+,./:=?;*#@$_%]\r\n        if ((c >= 'a') && (c <= 'z'))\r\n            return true;\r\n    \r\n        if ((c >= '?') && (c <= 'Z'))\r\n            return true;\r\n    \r\n        if ((c >= '\\'') && (c <= ';'))\r\n            return true;\r\n    \r\n        if (c == ' ')\r\n            return true;\r\n    \r\n        if (c == '!')\r\n            return true;\r\n    \r\n        if (c == '=')\r\n            return true;\r\n    \r\n        if (c == '#')\r\n            return true;\r\n    \r\n        if (c == '$')\r\n            return true;\r\n    \r\n        if (c == '_')\r\n            return true;\r\n    \r\n        if (c == '%')\r\n            return true;\r\n    \r\n        if (c == '\\n')\r\n            return true;\r\n    \r\n        if (c == '\\r')\r\n            return true;\r\n    \r\n        if (c == '\\t')\r\n            return true;\r\n    \r\n        return false;\r\n    }\npublic static String checkAttributeName(final String name);\n    public static String checkCDATASection(final String data);\n    public static String checkCharacterData(final String text);\n    public static String checkCommentData(final String data);\n    public static String checkElementName(final String name);\n    public static String checkNamespaceCollision(final Attribute attribute, final Element element);\n    public static String checkNamespaceCollision(final Attribute attribute, final Element element, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final List<?> list);\n    public static String checkNamespaceCollision(final Namespace namespace, final List<?> list, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final Attribute attribute);\n    public static String checkNamespaceCollision(final Namespace namespace, final Element element);\n    public static String checkNamespaceCollision(final Namespace namespace, final Element element, final int ignoreatt);\n    public static String checkNamespaceCollision(final Namespace namespace, final Namespace other);\n    public static String checkNamespacePrefix(final String prefix);\n    public static String checkNamespaceURI(final String uri);\n    public static String checkProcessingInstructionData(final String data);\n    public static String checkProcessingInstructionTarget(final String target);\n    public static String checkPublicID(final String publicID);\n    public static String checkSystemLiteral(final String systemLiteral);\n    public static String checkURI(final String uri);\n    public static String checkXMLName(final String name);\n    public static int decodeSurrogatePair(final char high, final char low);\n    public static final boolean isAllXMLWhitespace(final String value);\n    public static boolean isHexDigit(final char c);\n    public static boolean isHighSurrogate(final char ch);\n    public static boolean isLowSurrogate(final char ch);\n    public static boolean isURICharacter(final char c);\n    public static boolean isXMLCharacter(final int c);\n    public static boolean isXMLCombiningChar(final char c);\n    public static boolean isXMLDigit(final char c);\n    public static boolean isXMLExtender(final char c);\n    public static boolean isXMLLetter(final char c);\n    public static boolean isXMLLetterOrDigit(final char c);\n    public static boolean isXMLNameCharacter(final char c);\n    public static boolean isXMLNameStartCharacter(final char c);\n    public static boolean isXMLWhitespace(final char c);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace/src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace/src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java"
+  },
+  "started_at": "2026-09-15T08:08:07.963786+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "mutants": [
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 89,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 15,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 90,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 91,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 92,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 18,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 93,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 94,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 95,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 21,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 96,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 97,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 89,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 24,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 90,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 91,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 92,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 93,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 94,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 95,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 96,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 97,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    },
+    {
+      "id": 32,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Primitives.java",
+      "line": 98,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/Primitives::unwrap",
+      "method_description": "(Ljava/lang/Class;)Ljava/lang/Class;"
+    }
+  ]
+}

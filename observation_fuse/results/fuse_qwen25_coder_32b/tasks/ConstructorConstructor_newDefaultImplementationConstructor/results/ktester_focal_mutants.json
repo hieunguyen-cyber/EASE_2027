@@ -1,0 +1,194 @@
+{
+  "mutants": [
+    {
+      "id": 32,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 298,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 299,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 305,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 311,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 36,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 326,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 327,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 333,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 339,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ConstructorConstructor.java",
+      "line": 345,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 42,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 300,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 43,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 306,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 44,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 312,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 45,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 318,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ConstructorConstructor.java",
+      "line": 328,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 334,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ConstructorConstructor.java",
+      "line": 340,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ConstructorConstructor.java",
+      "line": 347,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    },
+    {
+      "id": 50,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ConstructorConstructor.java",
+      "line": 353,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/ConstructorConstructor::newDefaultImplementationConstructor",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/google/gson/internal/ObjectConstructor;"
+    }
+  ]
+}

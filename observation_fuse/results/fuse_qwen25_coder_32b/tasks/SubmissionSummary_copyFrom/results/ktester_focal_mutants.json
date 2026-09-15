@@ -1,0 +1,344 @@
+{
+  "mutants": [
+    {
+      "id": 1,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 175,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 2,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 175,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 3,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 176,
+      "mutator": "MathMutator",
+      "description": "Replaced integer multiplication with division",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 4,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 176,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 5,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 109,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 6,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 113,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 7,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 124,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 8,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 129,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 9,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 138,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 10,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 149,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 11,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 152,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 155,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 158,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 178,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 15,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 181,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 184,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 189,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 192,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 194,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 107,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionStatus::copyFrom",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 108,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setSubmissionId",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 170,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setDriverMemoryGB",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 171,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setDriverCores",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 24,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 172,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setExecutorInstances",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 173,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setExecutorMemoryGB",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 174,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setExecutorCores",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 175,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setTotalMemoryGB",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 176,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setTotalCores",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 179,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setUser",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 182,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setQueue",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SubmissionSummary.java",
+      "line": 185,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setDagName",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 190,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setSparkVersion",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SubmissionSummary.java",
+      "line": 191,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setApplicationArguments",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SubmissionSummary.java",
+      "line": 195,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/api/SubmissionSummary::setApplicationName",
+      "method_description": "(Lcom/apple/spark/operator/SparkApplication;)V"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:03:59.303641+00:00",
+  "task_id": "AntPathMatcher_isMatch",
+  "project": "windward",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/windward",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "AntPathMatcher_isMatch",
+    "package": "org.flmelody.util",
+    "class": "org.flmelody.util.AntPathMatcher",
+    "test-class": "org.flmelody.util.AntPathMatcher_isMatch_Test",
+    "method-name": "isMatch(String, String)",
+    "source-path": "src/main/java/org/flmelody/util/AntPathMatcher.java",
+    "test-path": "src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java",
+    "focal-method": "public boolean isMatch(final String pattern, final String path) {\r\n    if (pattern.isEmpty()) {\r\n        return path.isEmpty();\r\n    } else if (path.isEmpty() && (pattern.charAt(0) == pathSeparator)) {\r\n        if (matchStart) {\r\n            return true;\r\n        } else if ((pattern.length() == 2) && (pattern.charAt(1) == ASTERISK)) {\r\n            return false;\r\n        }\r\n        return isMatch(pattern.substring(1), path);\r\n    }\r\n    final char patternStart = pattern.charAt(0);\r\n    if (patternStart == ASTERISK) {\r\n        if (pattern.length() == 1) {\r\n            return path.isEmpty() || ((path.charAt(0) != pathSeparator) && isMatch(pattern, path.substring(1)));\r\n        } else if (doubleAsteriskMatch(pattern, path)) {\r\n            return true;\r\n        }\r\n        int start = 0;\r\n        while (start < path.length()) {\r\n            if (isMatch(pattern.substring(1), path.substring(start))) {\r\n                return true;\r\n            }\r\n            start++;\r\n        } \r\n        return isMatch(pattern.substring(1), path.substring(start));\r\n    }\r\n    int pointer = skipBlanks(path);\r\n    return ((!path.isEmpty()) && (compareChar(path.charAt(pointer), patternStart) || (patternStart == QUESTION))) && isMatch(pattern.substring(1), path.substring(pointer + 1));\r\n}",
+    "class-code": "package org.flmelody.util;\n\npublic class AntPathMatcher {\n    private static final char ASTERISK = '*';\n    private static final char QUESTION = '?';\n    private final char pathSeparator;\n    private final boolean matchStart;\n    public boolean isMatch(final String pattern, final String path) {\r\n        if (pattern.isEmpty()) {\r\n            return path.isEmpty();\r\n        } else if (path.isEmpty() && (pattern.charAt(0) == pathSeparator)) {\r\n            if (matchStart) {\r\n                return true;\r\n            } else if ((pattern.length() == 2) && (pattern.charAt(1) == ASTERISK)) {\r\n                return false;\r\n            }\r\n            return isMatch(pattern.substring(1), path);\r\n        }\r\n        final char patternStart = pattern.charAt(0);\r\n        if (patternStart == ASTERISK) {\r\n            if (pattern.length() == 1) {\r\n                return path.isEmpty() || ((path.charAt(0) != pathSeparator) && isMatch(pattern, path.substring(1)));\r\n            } else if (doubleAsteriskMatch(pattern, path)) {\r\n                return true;\r\n            }\r\n            int start = 0;\r\n            while (start < path.length()) {\r\n                if (isMatch(pattern.substring(1), path.substring(start))) {\r\n                    return true;\r\n                }\r\n                start++;\r\n            } \r\n            return isMatch(pattern.substring(1), path.substring(start));\r\n        }\r\n        int pointer = skipBlanks(path);\r\n        return ((!path.isEmpty()) && (compareChar(path.charAt(pointer), patternStart) || (patternStart == QUESTION))) && isMatch(pattern.substring(1), path.substring(pointer + 1));\r\n    }\nprivate boolean compareChar(final char pathChar, final char patternChar);\n    private boolean doubleAsteriskMatch(final String pattern, final String path);\n    public static AntPathMatcher.Builder newBuild();\n    private int skipBlanks(final String path);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/windward/src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace/src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace/src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java"
+  },
+  "started_at": "2026-09-15T07:03:59.397854+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AntPathMatcher_isMatch/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

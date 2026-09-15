@@ -1,0 +1,17 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (9 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 57 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.cores != null) {
+- line 60 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.coreLimit != null) {
+- line 63 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.memory != null) {
+- line 66 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.memoryOverhead != null) {
+- line 69 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.image != null) {
+- line 72 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.env == null) {
+- line 77 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.labels == null) {
+- line 82 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.annotations == null) {
+- line 89 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (another.volumeMounts == null) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testCopyFrom_withDifferentLabels, testCopyFrom_withExceptionOnLabels, testCopyFrom_withMemoryOverhead, testCopyFrom_withNullEnv, testCopyFrom_withNullImage, testCopyFrom_withNullLabels, testCopyFrom_withNullSource, testCopyFrom_withPartialSource, testCopyFrom_withServiceAccount, testCopyFrom_withTerminationGracePeriod, testCopyFrom_withValidSource

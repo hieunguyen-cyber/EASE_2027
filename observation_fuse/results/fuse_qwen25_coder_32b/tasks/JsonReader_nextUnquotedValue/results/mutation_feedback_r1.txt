@@ -1,0 +1,18 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (5 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1083 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (i < buffer.length) {
+- line 1084 | MathMutator | Replaced integer addition with subtraction | source: if (fillBuffer(i + 1)) {
+- line 1104 | MathMutator | Replaced integer addition with subtraction | source: pos += i;
+- line 1083 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (i < buffer.length) {
+- line 1066 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient(); // fall-through
+
+NO_COVERAGE (3 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1096 | MathMutator | Replaced integer addition with subtraction | source: pos += i;
+- line 1092 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (builder == null) {
+- line 1098 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!fillBuffer(1)) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNextUnquotedValue, testNextUnquotedValueAtEndOfInput, testNextUnquotedValueEOFException, testNextUnquotedValueEmptyInput, testNextUnquotedValueWithMultipleValues, testNextUnquotedValueWithSpecialCharacter, testNextUnquotedValueWithWhitespace, testNextUnquotedValueWithoutSpecialCharacters

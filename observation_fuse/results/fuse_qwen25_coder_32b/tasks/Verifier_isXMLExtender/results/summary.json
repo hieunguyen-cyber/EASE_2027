@@ -1,0 +1,243 @@
+{
+  "task_id": "Verifier_isXMLExtender",
+  "project": "jdom2",
+  "focal_class": "org.jdom2.Verifier",
+  "focal_method": "isXMLExtender(char)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLExtender/workspace/src/test/java/org/jdom2/Verifier_isXMLExtender_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 45.639
+  },
+  "started_at": "2026-09-15T08:10:18.358700+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testIsXMLExtender_Parameter_FalseCases",
+      "testIsXMLExtender_Parameter_TrueCases",
+      "testIsXMLExtender_WithFalseCase"
+    ],
+    "test_count": 6
+  },
+  "ktester": {
+    "test_cases": 6,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 24,
+    "tests_failed": 8,
+    "line_missed": 0,
+    "line_covered": 13,
+    "line_coverage": 1.0,
+    "branch_missed": 2,
+    "branch_covered": 28,
+    "branch_coverage": 0.933333,
+    "instruction_missed": 4,
+    "instruction_covered": 73,
+    "instruction_coverage": 0.948052,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 38,
+      "detected": 29,
+      "undetected": 9,
+      "killed": 29,
+      "survived": 6,
+      "no_coverage": 3,
+      "mutation_score": 0.763158,
+      "statuses": {
+        "KILLED": 29,
+        "NO_COVERAGE": 3,
+        "SURVIVED": 6
+      }
+    },
+    "kills_per_test": 4.8333,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 7,
+        "detected": 3,
+        "survived": 4,
+        "no_coverage": 0,
+        "mutation_score": 0.428571
+      },
+      "BooleanFalseReturnValsMutator": {
+        "total": 11,
+        "detected": 11,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "BooleanTrueReturnValsMutator": {
+        "total": 5,
+        "detected": 2,
+        "survived": 0,
+        "no_coverage": 3,
+        "mutation_score": 0.4
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 8,
+        "detected": 8,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 7,
+        "detected": 5,
+        "survived": 2,
+        "no_coverage": 0,
+        "mutation_score": 0.714286
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 9,
+      "existing_tests_before": 6,
+      "tests_after": 16,
+      "seconds": 45.638,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 16,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 16,
+    "tests_failed": 0,
+    "line_missed": 0,
+    "line_covered": 13,
+    "line_coverage": 1.0,
+    "branch_missed": 0,
+    "branch_covered": 30,
+    "branch_coverage": 1.0,
+    "instruction_missed": 0,
+    "instruction_covered": 77,
+    "instruction_coverage": 1.0,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 45.639,
+    "inherited_disabled_methods": 3,
+    "stats": {
+      "total": 38,
+      "detected": 33,
+      "undetected": 5,
+      "killed": 33,
+      "survived": 5,
+      "no_coverage": 0,
+      "mutation_score": 0.868421,
+      "statuses": {
+        "KILLED": 33,
+        "SURVIVED": 5
+      }
+    },
+    "kills_per_test": 2.0625,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 7,
+        "detected": 3,
+        "survived": 4,
+        "no_coverage": 0,
+        "mutation_score": 0.428571
+      },
+      "BooleanFalseReturnValsMutator": {
+        "total": 11,
+        "detected": 11,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "BooleanTrueReturnValsMutator": {
+        "total": 5,
+        "detected": 5,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 8,
+        "detected": 8,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 7,
+        "detected": 6,
+        "survived": 1,
+        "no_coverage": 0,
+        "mutation_score": 0.857143
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.0,
+    "branch_coverage": 0.066667,
+    "instruction_coverage": 0.051948,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": -2.7708,
+    "mutation_score": 0.105263,
+    "mutation_score_points": 10.526,
+    "newly_killed": 3,
+    "lost_kills": 0,
+    "added_test_methods": 10,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 1214,
+        "mutator": "BooleanTrueReturnValsMutator",
+        "description": "replaced boolean return with true for org/jdom2/Verifier::isXMLExtender"
+      },
+      {
+        "line": 1227,
+        "mutator": "BooleanTrueReturnValsMutator",
+        "description": "replaced boolean return with true for org/jdom2/Verifier::isXMLExtender"
+      },
+      {
+        "line": 1230,
+        "mutator": "BooleanTrueReturnValsMutator",
+        "description": "replaced boolean return with true for org/jdom2/Verifier::isXMLExtender"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T08:11:32.543758+00:00"
+}

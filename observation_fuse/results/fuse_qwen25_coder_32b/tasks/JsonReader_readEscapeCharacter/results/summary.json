@@ -1,0 +1,244 @@
+{
+  "task_id": "JsonReader_readEscapeCharacter",
+  "project": "gson",
+  "focal_class": "com.google.gson.stream.JsonReader",
+  "focal_method": "readEscapeCharacter()",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_readEscapeCharacter/workspace/gson/src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 42.094
+  },
+  "started_at": "2026-09-15T07:00:37.438988+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testReadEscapeCharacter_nextLineChange"
+    ],
+    "test_count": 8
+  },
+  "ktester": {
+    "test_cases": 8,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 8,
+    "tests_failed": 1,
+    "line_missed": 13,
+    "line_covered": 15,
+    "line_coverage": 0.535714,
+    "branch_missed": 19,
+    "branch_covered": 12,
+    "branch_coverage": 0.387097,
+    "instruction_missed": 77,
+    "instruction_covered": 81,
+    "instruction_coverage": 0.512658,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 40,
+      "detected": 18,
+      "undetected": 22,
+      "killed": 16,
+      "survived": 3,
+      "no_coverage": 19,
+      "mutation_score": 0.45,
+      "statuses": {
+        "KILLED": 16,
+        "NO_COVERAGE": 19,
+        "SURVIVED": 3,
+        "TIMED_OUT": 2
+      }
+    },
+    "kills_per_test": 2.25,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 8,
+        "detected": 2,
+        "survived": 2,
+        "no_coverage": 4,
+        "mutation_score": 0.25
+      },
+      "MathMutator": {
+        "total": 14,
+        "detected": 7,
+        "survived": 0,
+        "no_coverage": 7,
+        "mutation_score": 0.5
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 7,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 3,
+        "mutation_score": 0.571429
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 3,
+        "detected": 1,
+        "survived": 1,
+        "no_coverage": 1,
+        "mutation_score": 0.333333
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 8,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.5
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 22,
+      "existing_tests_before": 8,
+      "tests_after": 14,
+      "seconds": 42.093,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 14,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 14,
+    "tests_failed": 0,
+    "line_missed": 7,
+    "line_covered": 21,
+    "line_coverage": 0.75,
+    "branch_missed": 10,
+    "branch_covered": 21,
+    "branch_coverage": 0.677419,
+    "instruction_missed": 46,
+    "instruction_covered": 112,
+    "instruction_coverage": 0.708861,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 42.094,
+    "inherited_disabled_methods": 1,
+    "stats": {
+      "total": 40,
+      "detected": 21,
+      "undetected": 19,
+      "killed": 19,
+      "survived": 11,
+      "no_coverage": 8,
+      "mutation_score": 0.525,
+      "statuses": {
+        "KILLED": 19,
+        "NO_COVERAGE": 8,
+        "SURVIVED": 11,
+        "TIMED_OUT": 2
+      }
+    },
+    "kills_per_test": 1.5,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 8,
+        "detected": 2,
+        "survived": 6,
+        "no_coverage": 0,
+        "mutation_score": 0.25
+      },
+      "MathMutator": {
+        "total": 14,
+        "detected": 7,
+        "survived": 0,
+        "no_coverage": 7,
+        "mutation_score": 0.5
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 7,
+        "detected": 7,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 3,
+        "detected": 1,
+        "survived": 1,
+        "no_coverage": 1,
+        "mutation_score": 0.333333
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 8,
+        "detected": 4,
+        "survived": 4,
+        "no_coverage": 0,
+        "mutation_score": 0.5
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.214286,
+    "branch_coverage": 0.290322,
+    "instruction_coverage": 0.196203,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": -0.75,
+    "mutation_score": 0.075,
+    "mutation_score_points": 7.5,
+    "newly_killed": 3,
+    "lost_kills": 0,
+    "added_test_methods": 6,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 1627,
+        "mutator": "PrimitiveReturnsMutator",
+        "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter"
+      },
+      {
+        "line": 1633,
+        "mutator": "PrimitiveReturnsMutator",
+        "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter"
+      },
+      {
+        "line": 1636,
+        "mutator": "PrimitiveReturnsMutator",
+        "description": "replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T07:02:10.680775+00:00"
+}

@@ -1,0 +1,15 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 926 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == null) {
+
+NO_COVERAGE (4 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 929 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.isCDATA()) {
+- line 930 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::textCDATA | source: textCDATA(out, t);
+- line 932 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::textRaw | source: textRaw(out, t);
+- line 943 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractXMLOutputProcessor::printDocType | source: printDocType(out, fstack, (DocType)c);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintContent_withCDATA, testPrintContent_withComment, testPrintContent_withDocumentType, testPrintContent_withElement, testPrintContent_withEntityRef, testPrintContent_withMixedContent, testPrintContent_withProcessingInstruction, testPrintContent_withText, testPrintContent_withWalkerThatThrowsIOException

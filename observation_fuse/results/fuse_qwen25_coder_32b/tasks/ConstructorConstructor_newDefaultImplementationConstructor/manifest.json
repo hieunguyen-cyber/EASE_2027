@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:31:33.290582+00:00",
+  "task_id": "ConstructorConstructor_newDefaultImplementationConstructor",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "ConstructorConstructor_newDefaultImplementationConstructor",
+    "package": "com.google.gson.internal",
+    "class": "com.google.gson.internal.ConstructorConstructor",
+    "test-class": "com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test",
+    "method-name": "newDefaultImplementationConstructor(Type, Class<? super T>)",
+    "source-path": "src/main/java/com/google/gson/internal/ConstructorConstructor.java",
+    "test-path": "src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java",
+    "focal-method": "@SuppressWarnings(\"unchecked\")\r\nprivate static <T> ObjectConstructor<T> newDefaultImplementationConstructor(final Type type, Class<? super T> rawType) {\r\n    /* IMPORTANT: Must only create instances for classes with public no-args constructor.\r\n    For classes with special constructors / factory methods (e.g. EnumSet)\r\n    `newSpecialCollectionConstructor` defined above must be used, to avoid no-args\r\n    constructor check (which is called before this method) detecting internal no-args\r\n    constructors which might be added in a future JDK version\r\n     */\r\n    if (Collection.class.isAssignableFrom(rawType)) {\r\n        if (SortedSet.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new TreeSet<>()));\r\n                }\r\n            };\r\n        } else if (Set.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new LinkedHashSet<>()));\r\n                }\r\n            };\r\n        } else if (Queue.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new ArrayDeque<>()));\r\n                }\r\n            };\r\n        } else {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new ArrayList<>()));\r\n                }\r\n            };\r\n        }\r\n    }\r\n    if (Map.class.isAssignableFrom(rawType)) {\r\n        if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new ConcurrentSkipListMap<>()));\r\n                }\r\n            };\r\n        } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new ConcurrentHashMap<>()));\r\n                }\r\n            };\r\n        } else if (SortedMap.class.isAssignableFrom(rawType)) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new TreeMap<>()));\r\n                }\r\n            };\r\n        } else if ((type instanceof ParameterizedType) && (!String.class.isAssignableFrom(TypeToken.get(((ParameterizedType) (type)).getActualTypeArguments()[0]).getRawType()))) {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new LinkedHashMap<>()));\r\n                }\r\n            };\r\n        } else {\r\n            return new ObjectConstructor<T>() {\r\n                @Override\r\n                public T construct() {\r\n                    return ((T) (new LinkedTreeMap<>()));\r\n                }\r\n            };\r\n        }\r\n    }\r\n    return null;\r\n}",
+    "class-code": "package com.google.gson.internal;\nimport java.util.Set;\nimport java.util.ArrayList;\nimport java.util.LinkedHashSet;\nimport java.util.SortedMap;\nimport com.google.gson.reflect.TypeToken;\nimport java.util.LinkedHashMap;\nimport java.util.SortedSet;\nimport java.lang.reflect.Modifier;\nimport java.util.concurrent.ConcurrentHashMap;\nimport com.google.gson.JsonIOException;\nimport java.lang.reflect.ParameterizedType;\nimport java.util.TreeSet;\nimport java.util.EnumMap;\nimport java.util.List;\nimport java.util.Queue;\nimport java.util.concurrent.ConcurrentNavigableMap;\nimport java.util.ArrayDeque;\nimport java.util.concurrent.ConcurrentSkipListMap;\nimport com.google.gson.ReflectionAccessFilter;\nimport com.google.gson.internal.reflect.ReflectionHelper;\nimport java.util.EnumSet;\nimport java.lang.reflect.Constructor;\nimport java.util.concurrent.ConcurrentMap;\nimport java.util.TreeMap;\nimport java.lang.reflect.InvocationTargetException;\nimport java.lang.reflect.Type;\nimport com.google.gson.ReflectionAccessFilter.FilterResult;\nimport java.util.Collection;\nimport com.google.gson.InstanceCreator;\nimport java.util.Map;\npublic final class ConstructorConstructor {\n    \n    @SuppressWarnings(\"unchecked\")\r\n    private static <T> ObjectConstructor<T> newDefaultImplementationConstructor(final Type type, Class<? super T> rawType) {\r\n        /* IMPORTANT: Must only create instances for classes with public no-args constructor.\r\n        For classes with special constructors / factory methods (e.g. EnumSet)\r\n        `newSpecialCollectionConstructor` defined above must be used, to avoid no-args\r\n        constructor check (which is called before this method) detecting internal no-args\r\n        constructors which might be added in a future JDK version\r\n         */\r\n        if (Collection.class.isAssignableFrom(rawType)) {\r\n            if (SortedSet.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new TreeSet<>()));\r\n                    }\r\n                };\r\n            } else if (Set.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new LinkedHashSet<>()));\r\n                    }\r\n                };\r\n            } else if (Queue.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new ArrayDeque<>()));\r\n                    }\r\n                };\r\n            } else {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new ArrayList<>()));\r\n                    }\r\n                };\r\n            }\r\n        }\r\n        if (Map.class.isAssignableFrom(rawType)) {\r\n            if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new ConcurrentSkipListMap<>()));\r\n                    }\r\n                };\r\n            } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new ConcurrentHashMap<>()));\r\n                    }\r\n                };\r\n            } else if (SortedMap.class.isAssignableFrom(rawType)) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new TreeMap<>()));\r\n                    }\r\n                };\r\n            } else if ((type instanceof ParameterizedType) && (!String.class.isAssignableFrom(TypeToken.get(((ParameterizedType) (type)).getActualTypeArguments()[0]).getRawType()))) {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new LinkedHashMap<>()));\r\n                    }\r\n                };\r\n            } else {\r\n                return new ObjectConstructor<T>() {\r\n                    @Override\r\n                    public T construct() {\r\n                        return ((T) (new LinkedTreeMap<>()));\r\n                    }\r\n                };\r\n            }\r\n        }\r\n        return null;\r\n    }\nstatic String checkInstantiable(Class<?> c);\n    public <T> ObjectConstructor<T> get(TypeToken<T> typeToken);\n    @Override\r\npublic String toString();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace/gson/src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace/gson/src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java"
+  },
+  "started_at": "2026-09-15T06:31:33.373675+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ConstructorConstructor_newDefaultImplementationConstructor/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

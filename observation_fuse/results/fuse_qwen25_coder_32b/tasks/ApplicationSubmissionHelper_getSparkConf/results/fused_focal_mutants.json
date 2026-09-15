@@ -1,0 +1,124 @@
+{
+  "mutants": [
+    {
+      "id": 142,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 158,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 143,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 159,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 144,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 169,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 145,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 170,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 146,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 178,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 147,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 179,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 148,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 187,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 149,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 188,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 150,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 194,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 151,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 195,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 152,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 191,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Map::putAll",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    },
+    {
+      "id": 153,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 201,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with Collections.emptyMap for com/apple/spark/core/ApplicationSubmissionHelper::getSparkConf",
+      "method_description": "(Ljava/lang/String;Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Lcom/apple/spark/AppConfig$SparkCluster;)Ljava/util/Map;"
+    }
+  ]
+}

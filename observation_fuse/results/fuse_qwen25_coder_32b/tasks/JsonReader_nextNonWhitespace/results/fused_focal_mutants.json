@@ -1,0 +1,274 @@
+{
+  "mutants": [
+    {
+      "id": 212,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1396,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 213,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1398,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 214,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1408,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 215,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1410,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 216,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1421,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 217,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1425,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 218,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1431,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 219,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1387,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 220,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1389,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 221,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1397,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 222,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1401,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 223,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1401,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 224,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1401,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 225,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1405,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 226,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1407,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 227,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1411,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 228,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1422,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 229,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1440,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 230,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1456,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 231,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1416,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::checkLenient",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 232,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1432,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipToEndOfLine",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 233,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1447,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::checkLenient",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 234,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1448,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipToEndOfLine",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 235,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1412,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 236,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1438,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 237,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1453,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace",
+      "method_description": "(Z)I"
+    },
+    {
+      "id": 238,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1459,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace",
+      "method_description": "(Z)I"
+    }
+  ]
+}

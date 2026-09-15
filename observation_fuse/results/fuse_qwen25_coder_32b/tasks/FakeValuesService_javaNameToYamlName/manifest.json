@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:33:02.674138+00:00",
+  "task_id": "FakeValuesService_javaNameToYamlName",
+  "project": "datafaker",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/datafaker",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "FakeValuesService_javaNameToYamlName",
+    "package": "net.datafaker.service",
+    "class": "net.datafaker.service.FakeValuesService",
+    "test-class": "net.datafaker.service.FakeValuesService_javaNameToYamlName_Test",
+    "method-name": "javaNameToYamlName(String)",
+    "source-path": "src/main/java/net/datafaker/service/FakeValuesService.java",
+    "test-path": "src/test/java/net/datafaker/service/FakeValuesService_javaNameToYamlName_Test.java",
+    "focal-method": "private String javaNameToYamlName(String expression) {\r\n    String result = name2yaml.get(expression);\r\n    if (result != null) {\r\n        return result;\r\n    }\r\n    final int length = expression.length();\r\n    final boolean firstLetterUpperCase = (length > 0) && Character.isUpperCase(expression.charAt(0));\r\n    int cnt = (firstLetterUpperCase) ? 1 : 0;\r\n    for (int i = 1; i < length; i++) {\r\n        if (Character.isUpperCase(expression.charAt(i))) {\r\n            cnt++;\r\n        }\r\n    }\r\n    if (cnt == 0) {\r\n        name2yaml.put(expression, expression);\r\n        return expression;\r\n    }\r\n    final char[] res = new char[length + (firstLetterUpperCase ? cnt - 1 : cnt)];\r\n    int pos = 0;\r\n    for (int i = 0; i < length; i++) {\r\n        final char c = expression.charAt(i);\r\n        if (cnt > 0) {\r\n            if (Character.isUpperCase(c)) {\r\n                if (pos > 0) {\r\n                    res[pos++] = '_';\r\n                }\r\n                res[pos++] = Character.toLowerCase(c);\r\n                cnt--;\r\n            } else {\r\n                res[pos++] = c;\r\n            }\r\n        } else {\r\n            res[pos++] = c;\r\n        }\r\n    }\r\n    result = new String(res);\r\n    name2yaml.put(expression, result);\r\n    return result;\r\n}",
+    "class-code": "package net.datafaker.service;\nimport java.util.Locale;\nimport net.datafaker.transformations.Schema;\nimport java.util.HashMap;\nimport net.datafaker.internal.helper.SingletonLocale;\nimport net.datafaker.providers.base.Address;\nimport java.net.MalformedURLException;\nimport java.util.IdentityHashMap;\nimport java.util.ArrayList;\nimport net.datafaker.providers.base.Name;\nimport net.datafaker.providers.base.BaseFaker;\nimport java.util.logging.Logger;\nimport net.datafaker.transformations.CsvTransformer;\nimport net.datafaker.transformations.Field;\nimport java.net.URL;\nimport java.nio.file.Files;\nimport net.datafaker.providers.base.ProviderRegistration;\nimport java.util.List;\nimport java.util.function.Supplier;\nimport net.datafaker.transformations.JsonTransformer;\nimport java.util.Collections;\nimport java.util.stream.Collectors;\nimport java.nio.file.Path;\nimport net.datafaker.providers.base.AbstractProvider;\nimport java.lang.reflect.Constructor;\nimport java.io.IOException;\nimport java.lang.reflect.Method;\nimport java.math.BigDecimal;\nimport java.lang.reflect.InvocationTargetException;\nimport com.mifmif.common.regex.Generex;\nimport java.lang.reflect.Array;\nimport static net.datafaker.transformations.Field.field;\nimport java.math.BigInteger;\nimport java.util.Collection;\nimport java.util.Objects;\nimport net.datafaker.transformations.SimpleField;\nimport java.util.logging.Level;\nimport java.util.Map;\nimport java.util.Arrays;\nimport java.util.WeakHashMap;\npublic class FakeValuesService {\n    public static final SingletonLocale DEFAULT_LOCALE = SingletonLocale.get(Locale.ENGLISH);\n    private final Map<String, String> name2yaml = new WeakHashMap<>();\n    private String javaNameToYamlName(String expression) {\r\n        String result = name2yaml.get(expression);\r\n        if (result != null) {\r\n            return result;\r\n        }\r\n        final int length = expression.length();\r\n        final boolean firstLetterUpperCase = (length > 0) && Character.isUpperCase(expression.charAt(0));\r\n        int cnt = (firstLetterUpperCase) ? 1 : 0;\r\n        for (int i = 1; i < length; i++) {\r\n            if (Character.isUpperCase(expression.charAt(i))) {\r\n                cnt++;\r\n            }\r\n        }\r\n        if (cnt == 0) {\r\n            name2yaml.put(expression, expression);\r\n            return expression;\r\n        }\r\n        final char[] res = new char[length + (firstLetterUpperCase ? cnt - 1 : cnt)];\r\n        int pos = 0;\r\n        for (int i = 0; i < length; i++) {\r\n            final char c = expression.charAt(i);\r\n            if (cnt > 0) {\r\n                if (Character.isUpperCase(c)) {\r\n                    if (pos > 0) {\r\n                        res[pos++] = '_';\r\n                    }\r\n                    res[pos++] = Character.toLowerCase(c);\r\n                    cnt--;\r\n                } else {\r\n                    res[pos++] = c;\r\n                }\r\n            } else {\r\n                res[pos++] = c;\r\n            }\r\n        }\r\n        result = new String(res);\r\n        name2yaml.put(expression, result);\r\n        return result;\r\n    }\npublic void addPath(Locale locale, Path path);\n    public void addUrl(Locale locale, URL url);\n    public String bothify(String string, FakerContext context);\n    public String bothify(String input, FakerContext context, boolean isUpper);\n    public String csv(int limit, String... columnExpressions);\n    public String csv(String delimiter, char quote, boolean withHeader, int limit, String... columnExpressions);\n    public String examplify(String example, FakerContext context);\n    public String expression(String expression, BaseFaker faker, FakerContext context);\n    public Object fetch(String key, FakerContext context);\n    public Object fetchObject(String key, FakerContext context);\n    public String fetchString(String key, FakerContext context);\n    public String fileExpression(Path path, BaseFaker faker, FakerContext context);\n    public String json(String... fieldExpressions);\n    public String jsona(String... fieldExpressions);\n    public String letterify(String letterString, FakerContext context);\n    public String letterify(String letterString, FakerContext context, boolean isUpper);\n    public String numerify(String numberString, FakerContext context);\n    public static Class<?> primitiveToWrapper(final Class<?> cls);\n    public String regexify(String regex, FakerContext context);\n    public String resolve(String key, Object current, BaseFaker root, FakerContext context);\n    public String resolve(String key, Object current, ProviderRegistration root, Supplier<String> exceptionMessage, FakerContext context);\n    public String resolve(String key, AbstractProvider<?> provider, FakerContext context);\n    protected String resolveExpression(String expression, Object current, ProviderRegistration root, FakerContext context);\n    @SuppressWarnings(\"unchecked\")\r\npublic String safeFetch(String key, FakerContext context, String defaultIfNull);\n    public String templatify(String letterString, char char2replace, FakerContext context, String... options);\n    public String templatify(String letterString, Map<Character, String[]> optionsMap, FakerContext context);\n    public void updateFakeValuesInterfaceMap(List<SingletonLocale> locales);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/datafaker/src/test/java/net/datafaker/service/FakeValuesService_javaNameToYamlName_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace/src/test/java/net/datafaker/service/FakeValuesService_javaNameToYamlName_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace/src/test/java/net/datafaker/service/FakeValuesService_javaNameToYamlName_Test.java"
+  },
+  "started_at": "2026-09-15T07:33:02.749922+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/FakeValuesService_javaNameToYamlName/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

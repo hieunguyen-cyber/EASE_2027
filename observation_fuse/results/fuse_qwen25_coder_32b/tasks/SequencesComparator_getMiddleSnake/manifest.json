@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:01:44.268974+00:00",
+  "task_id": "SequencesComparator_getMiddleSnake",
+  "project": "commons-collections",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-collections",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "SequencesComparator_getMiddleSnake",
+    "package": "org.apache.commons.collections4.sequence",
+    "class": "org.apache.commons.collections4.sequence.SequencesComparator",
+    "test-class": "org.apache.commons.collections4.sequence.SequencesComparator_getMiddleSnake_Test",
+    "method-name": "getMiddleSnake(int, int, int, int)",
+    "source-path": "src/main/java/org/apache/commons/collections4/sequence/SequencesComparator.java",
+    "test-path": "src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java",
+    "focal-method": "private Snake getMiddleSnake(final int start1, final int end1, final int start2, final int end2) {\r\n    // Myers Algorithm\r\n    // Initialisations\r\n    final int m = end1 - start1;\r\n    final int n = end2 - start2;\r\n    if ((m == 0) || (n == 0)) {\r\n        return null;\r\n    }\r\n    final int delta = m - n;\r\n    final int sum = n + m;\r\n    final int offset = ((sum % 2) == 0 ? sum : sum + 1) / 2;\r\n    vDown[1 + offset] = start1;\r\n    vUp[1 + offset] = end1 + 1;\r\n    for (int d = 0; d <= offset; ++d) {\r\n        // Down\r\n        for (int k = -d; k <= d; k += 2) {\r\n            // First step\r\n            final int i = k + offset;\r\n            if ((k == (-d)) || ((k != d) && (vDown[i - 1] < vDown[i + 1]))) {\r\n                vDown[i] = vDown[i + 1];\r\n            } else {\r\n                vDown[i] = vDown[i - 1] + 1;\r\n            }\r\n            int x = vDown[i];\r\n            int y = ((x - start1) + start2) - k;\r\n            while (((x < end1) && (y < end2)) && equator.equate(sequence1.get(x), sequence2.get(y))) {\r\n                vDown[i] = ++x;\r\n                ++y;\r\n            } \r\n            // Second step\r\n            if (((((delta % 2) != 0) && ((delta - d) <= k)) && (k <= (delta + d))) && (vUp[i - delta] <= vDown[i])) {\r\n                // NOPMD\r\n                return buildSnake(vUp[i - delta], (k + start1) - start2, end1, end2);\r\n            }\r\n        }\r\n        // Up\r\n        for (int k = delta - d; k <= (delta + d); k += 2) {\r\n            // First step\r\n            final int i = (k + offset) - delta;\r\n            if ((k == (delta - d)) || ((k != (delta + d)) && (vUp[i + 1] <= vUp[i - 1]))) {\r\n                vUp[i] = vUp[i + 1] - 1;\r\n            } else {\r\n                vUp[i] = vUp[i - 1];\r\n            }\r\n            int x = vUp[i] - 1;\r\n            int y = ((x - start1) + start2) - k;\r\n            while (((x >= start1) && (y >= start2)) && equator.equate(sequence1.get(x), sequence2.get(y))) {\r\n                vUp[i] = x--;\r\n                y--;\r\n            } \r\n            // Second step\r\n            if (((((delta % 2) == 0) && ((-d) <= k)) && (k <= d)) && (vUp[i] <= vDown[i + delta])) {\r\n                // NOPMD\r\n                return buildSnake(vUp[i], (k + start1) - start2, end1, end2);\r\n            }\r\n        }\r\n    }\r\n    // this should not happen\r\n    throw new IllegalStateException(\"Internal Error\");\r\n}",
+    "class-code": "package org.apache.commons.collections4.sequence;\nimport org.apache.commons.collections4.Equator;\nimport java.util.List;\nimport org.apache.commons.collections4.functors.DefaultEquator;\npublic class SequencesComparator<T> {\n    private final List<T> sequence1;\n    private final List<T> sequence2;\n    private final Equator<? super T> equator;\n    private final int[] vDown;\n    private final int[] vUp;\n    private Snake getMiddleSnake(final int start1, final int end1, final int start2, final int end2) {\r\n        // Myers Algorithm\r\n        // Initialisations\r\n        final int m = end1 - start1;\r\n        final int n = end2 - start2;\r\n        if ((m == 0) || (n == 0)) {\r\n            return null;\r\n        }\r\n        final int delta = m - n;\r\n        final int sum = n + m;\r\n        final int offset = ((sum % 2) == 0 ? sum : sum + 1) / 2;\r\n        vDown[1 + offset] = start1;\r\n        vUp[1 + offset] = end1 + 1;\r\n        for (int d = 0; d <= offset; ++d) {\r\n            // Down\r\n            for (int k = -d; k <= d; k += 2) {\r\n                // First step\r\n                final int i = k + offset;\r\n                if ((k == (-d)) || ((k != d) && (vDown[i - 1] < vDown[i + 1]))) {\r\n                    vDown[i] = vDown[i + 1];\r\n                } else {\r\n                    vDown[i] = vDown[i - 1] + 1;\r\n                }\r\n                int x = vDown[i];\r\n                int y = ((x - start1) + start2) - k;\r\n                while (((x < end1) && (y < end2)) && equator.equate(sequence1.get(x), sequence2.get(y))) {\r\n                    vDown[i] = ++x;\r\n                    ++y;\r\n                } \r\n                // Second step\r\n                if (((((delta % 2) != 0) && ((delta - d) <= k)) && (k <= (delta + d))) && (vUp[i - delta] <= vDown[i])) {\r\n                    // NOPMD\r\n                    return buildSnake(vUp[i - delta], (k + start1) - start2, end1, end2);\r\n                }\r\n            }\r\n            // Up\r\n            for (int k = delta - d; k <= (delta + d); k += 2) {\r\n                // First step\r\n                final int i = (k + offset) - delta;\r\n                if ((k == (delta - d)) || ((k != (delta + d)) && (vUp[i + 1] <= vUp[i - 1]))) {\r\n                    vUp[i] = vUp[i + 1] - 1;\r\n                } else {\r\n                    vUp[i] = vUp[i - 1];\r\n                }\r\n                int x = vUp[i] - 1;\r\n                int y = ((x - start1) + start2) - k;\r\n                while (((x >= start1) && (y >= start2)) && equator.equate(sequence1.get(x), sequence2.get(y))) {\r\n                    vUp[i] = x--;\r\n                    y--;\r\n                } \r\n                // Second step\r\n                if (((((delta % 2) == 0) && ((-d) <= k)) && (k <= d)) && (vUp[i] <= vDown[i + delta])) {\r\n                    // NOPMD\r\n                    return buildSnake(vUp[i], (k + start1) - start2, end1, end2);\r\n                }\r\n            }\r\n        }\r\n        // this should not happen\r\n        throw new IllegalStateException(\"Internal Error\");\r\n    }\nprivate Snake buildSnake(final int start, final int diag, final int end1, final int end2);\n    public EditScript<T> getScript();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-collections/src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace/src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace/src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java"
+  },
+  "started_at": "2026-09-15T06:01:44.343705+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/SequencesComparator_getMiddleSnake/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

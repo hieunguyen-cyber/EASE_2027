@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:54:11.395113+00:00",
+  "task_id": "TypeToken_isAssignableFrom",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "TypeToken_isAssignableFrom",
+    "package": "com.google.gson.reflect",
+    "class": "com.google.gson.reflect.TypeToken",
+    "test-class": "com.google.gson.reflect.TypeToken_isAssignableFrom_Test",
+    "method-name": "isAssignableFrom(Type, ParameterizedType, Map<String, Type>)",
+    "source-path": "src/main/java/com/google/gson/reflect/TypeToken.java",
+    "test-path": "src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java",
+    "focal-method": "private static boolean isAssignableFrom(Type from, ParameterizedType to, Map<String, Type> typeVarMap) {\r\n    if (from == null) {\r\n        return false;\r\n    }\r\n    if (to.equals(from)) {\r\n        return true;\r\n    }\r\n    // First figure out the class and any type information.\r\n    Class<?> clazz = $Gson$Types.getRawType(from);\r\n    ParameterizedType ptype = null;\r\n    if (from instanceof ParameterizedType) {\r\n        ptype = ((ParameterizedType) (from));\r\n    }\r\n    // Load up parameterized variable info if it was parameterized.\r\n    if (ptype != null) {\r\n        Type[] tArgs = ptype.getActualTypeArguments();\r\n        TypeVariable<?>[] tParams = clazz.getTypeParameters();\r\n        for (int i = 0; i < tArgs.length; i++) {\r\n            Type arg = tArgs[i];\r\n            TypeVariable<?> var = tParams[i];\r\n            while (arg instanceof TypeVariable<?>) {\r\n                TypeVariable<?> v = ((TypeVariable<?>) (arg));\r\n                arg = typeVarMap.get(v.getName());\r\n            } \r\n            typeVarMap.put(var.getName(), arg);\r\n        }\r\n        // check if they are equivalent under our current mapping.\r\n        if (typeEquals(ptype, to, typeVarMap)) {\r\n            return true;\r\n        }\r\n    }\r\n    for (Type itype : clazz.getGenericInterfaces()) {\r\n        if (isAssignableFrom(itype, to, new HashMap<>(typeVarMap))) {\r\n            return true;\r\n        }\r\n    }\r\n    // Interfaces didn't work, try the superclass.\r\n    Type sType = clazz.getGenericSuperclass();\r\n    return isAssignableFrom(sType, to, new HashMap<>(typeVarMap));\r\n}",
+    "class-code": "package com.google.gson.reflect;\nimport java.lang.reflect.Type;\nimport java.lang.reflect.TypeVariable;\nimport java.util.HashMap;\nimport java.lang.reflect.ParameterizedType;\nimport com.google.gson.internal.$Gson$Types;\nimport java.util.Objects;\nimport java.lang.reflect.GenericArrayType;\nimport java.util.Map;\npublic class TypeToken<T> {\n    \n    private static boolean isAssignableFrom(Type from, ParameterizedType to, Map<String, Type> typeVarMap) {\r\n        if (from == null) {\r\n            return false;\r\n        }\r\n        if (to.equals(from)) {\r\n            return true;\r\n        }\r\n        // First figure out the class and any type information.\r\n        Class<?> clazz = $Gson$Types.getRawType(from);\r\n        ParameterizedType ptype = null;\r\n        if (from instanceof ParameterizedType) {\r\n            ptype = ((ParameterizedType) (from));\r\n        }\r\n        // Load up parameterized variable info if it was parameterized.\r\n        if (ptype != null) {\r\n            Type[] tArgs = ptype.getActualTypeArguments();\r\n            TypeVariable<?>[] tParams = clazz.getTypeParameters();\r\n            for (int i = 0; i < tArgs.length; i++) {\r\n                Type arg = tArgs[i];\r\n                TypeVariable<?> var = tParams[i];\r\n                while (arg instanceof TypeVariable<?>) {\r\n                    TypeVariable<?> v = ((TypeVariable<?>) (arg));\r\n                    arg = typeVarMap.get(v.getName());\r\n                } \r\n                typeVarMap.put(var.getName(), arg);\r\n            }\r\n            // check if they are equivalent under our current mapping.\r\n            if (typeEquals(ptype, to, typeVarMap)) {\r\n                return true;\r\n            }\r\n        }\r\n        for (Type itype : clazz.getGenericInterfaces()) {\r\n            if (isAssignableFrom(itype, to, new HashMap<>(typeVarMap))) {\r\n                return true;\r\n            }\r\n        }\r\n        // Interfaces didn't work, try the superclass.\r\n        Type sType = clazz.getGenericSuperclass();\r\n        return isAssignableFrom(sType, to, new HashMap<>(typeVarMap));\r\n    }\n@Override\r\npublic final boolean equals(Object o);\n    public static <T> TypeToken<T> get(Class<T> type);\n    public static TypeToken<?> get(Type type);\n    public static TypeToken<?> getArray(Type componentType);\n    public static TypeToken<?> getParameterized(Type rawType, Type... typeArguments);\n    public final Class<? super T> getRawType();\n    public final Type getType();\n    @Override\r\npublic final int hashCode();\n    private static boolean isAssignableFrom(Type from, GenericArrayType to);\n    @Override\r\npublic final String toString();\n    private static boolean typeEquals(ParameterizedType from, ParameterizedType to, Map<String, Type> typeVarMap);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace/gson/src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace/gson/src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java"
+  },
+  "started_at": "2026-09-15T06:54:11.480019+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/TypeToken_isAssignableFrom/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

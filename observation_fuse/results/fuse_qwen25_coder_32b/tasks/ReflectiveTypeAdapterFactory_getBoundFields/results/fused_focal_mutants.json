@@ -1,0 +1,254 @@
+{
+  "mutants": [
+    {
+      "id": 15,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 240,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 291,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 231,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 236,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 240,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 247,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 253,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 253,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 259,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 263,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 268,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 275,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 276,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 285,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 285,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 293,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 297,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 299,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 240,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 291,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 269,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/internal/reflect/ReflectionHelper::makeAccessible",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 286,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/internal/reflect/ReflectionHelper::makeAccessible",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 232,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with Collections.emptyMap for com/google/gson/internal/bind/ReflectiveTypeAdapterFactory::getBoundFields",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ReflectiveTypeAdapterFactory.java",
+      "line": 308,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with Collections.emptyMap for com/google/gson/internal/bind/ReflectiveTypeAdapterFactory::getBoundFields",
+      "method_description": "(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Ljava/lang/Class;ZZ)Ljava/util/Map;"
+    }
+  ]
+}

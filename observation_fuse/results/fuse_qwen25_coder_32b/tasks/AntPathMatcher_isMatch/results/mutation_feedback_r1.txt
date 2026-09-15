@@ -1,0 +1,24 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (6 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 45 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (path.isEmpty() && pattern.charAt(0) == pathSeparator) {
+- line 45 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (path.isEmpty() && pattern.charAt(0) == pathSeparator) {
+- line 58 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: return path.isEmpty()
+- line 60 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (doubleAsteriskMatch(pattern, path)) {
+- line 71 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch | source: return isMatch(pattern.substring(1), path.substring(start));
+- line 58 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch | source: return path.isEmpty()
+
+NO_COVERAGE (8 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 46 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (matchStart) {
+- line 48 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (pattern.length() == 2 && pattern.charAt(1) == ASTERISK) {
+- line 48 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (pattern.length() == 2 && pattern.charAt(1) == ASTERISK) {
+- line 47 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch | source: return true;
+- line 51 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch | source: return isMatch(pattern.substring(1), path);
+- line 61 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/flmelody/util/AntPathMatcher::isMatch | source: return true;
+- line 49 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch | source: return false;
+- line 51 | BooleanTrueReturnValsMutator | replaced boolean return with true for org/flmelody/util/AntPathMatcher::isMatch | source: return isMatch(pattern.substring(1), path);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testIsMatchWithDoubleAsterisk, testIsMatchWithEmptyPatternAndNullPath, testIsMatchWithEmptyPatternAndPath, testIsMatchWithEmptyPatternNonEmptyPath, testIsMatchWithInvalidPatternCharacters, testIsMatchWithNullPath, testIsMatchWithNullPattern, testIsMatchWithNullPatternAndEmptyPath, testIsMatchWithNullPatternAndNullPath, testIsMatchWithParameterizedInputs, testIsMatchWithPathSeparatorConfiguration, testIsMatchWithPatternWithAsterisk, testIsMatchWithQuestionMark, testIsMatchWithVariousPatterns

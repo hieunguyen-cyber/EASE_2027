@@ -1,0 +1,257 @@
+{
+  "task_id": "JsonReader_peekNumber",
+  "project": "gson",
+  "focal_class": "com.google.gson.stream.JsonReader",
+  "focal_method": "peekNumber()",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/stream/JsonReader_peekNumber_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonReader_peekNumber/workspace/gson/src/test/java/com/google/gson/stream/JsonReader_peekNumber_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 240.727
+  },
+  "started_at": "2026-09-15T06:44:59.942557+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testPeekNumber",
+      "testPeekNumberHandlesInvalidInput",
+      "testPeekNumberHandlesLeadingZeroes",
+      "testPeekNumberHandlesLongInput",
+      "testPeekNumberHandlesNegativeSign",
+      "testPeekNumberHandlesNoInput",
+      "testPeekNumberHandlesSpecialCharacters",
+      "testPeekNumberRecognizesSimpleNumber"
+    ],
+    "test_count": 8
+  },
+  "ktester": {
+    "test_cases": 8,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 8,
+    "tests_failed": 8,
+    "line_missed": 33,
+    "line_covered": 30,
+    "line_coverage": 0.47619,
+    "branch_missed": 47,
+    "branch_covered": 22,
+    "branch_coverage": 0.318841,
+    "instruction_missed": 112,
+    "instruction_covered": 118,
+    "instruction_coverage": 0.513043,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 50,
+      "detected": 0,
+      "undetected": 50,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 50,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 50
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 4,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.0
+      },
+      "IncrementsMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "InvertNegsMutator": {
+        "total": 2,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 2,
+        "mutation_score": 0.0
+      },
+      "MathMutator": {
+        "total": 9,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 9,
+        "mutation_score": 0.0
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 2,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 2,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 28,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 28,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 4,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 50,
+      "existing_tests_before": 8,
+      "tests_after": 8,
+      "seconds": 240.726,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 8,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 8,
+    "tests_failed": 0,
+    "line_missed": 63,
+    "line_covered": 0,
+    "line_coverage": 0.0,
+    "branch_missed": 69,
+    "branch_covered": 0,
+    "branch_coverage": 0.0,
+    "instruction_missed": 230,
+    "instruction_covered": 0,
+    "instruction_coverage": 0.0,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 240.727,
+    "inherited_disabled_methods": 8,
+    "stats": {
+      "total": 50,
+      "detected": 0,
+      "undetected": 50,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 50,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 50
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 4,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.0
+      },
+      "IncrementsMutator": {
+        "total": 1,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.0
+      },
+      "InvertNegsMutator": {
+        "total": 2,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 2,
+        "mutation_score": 0.0
+      },
+      "MathMutator": {
+        "total": 9,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 9,
+        "mutation_score": 0.0
+      },
+      "PrimitiveReturnsMutator": {
+        "total": 2,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 2,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 28,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 28,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 4,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 4,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": -0.47619,
+    "branch_coverage": -0.318841,
+    "instruction_coverage": -0.513043,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": 0.0,
+    "mutation_score": 0,
+    "mutation_score_points": 0,
+    "newly_killed": 0,
+    "lost_kills": 0,
+    "added_test_methods": 0,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T06:49:19.575779+00:00"
+}

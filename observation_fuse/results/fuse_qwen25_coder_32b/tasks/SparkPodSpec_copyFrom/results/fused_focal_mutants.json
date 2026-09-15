@@ -1,0 +1,94 @@
+{
+  "mutants": [
+    {
+      "id": 1,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 57,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 2,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 60,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 3,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 63,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 4,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 66,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 5,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 69,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 6,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 72,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 7,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 77,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 8,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 82,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    },
+    {
+      "id": 9,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SparkPodSpec.java",
+      "line": 89,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/operator/SparkPodSpec;)V"
+    }
+  ]
+}

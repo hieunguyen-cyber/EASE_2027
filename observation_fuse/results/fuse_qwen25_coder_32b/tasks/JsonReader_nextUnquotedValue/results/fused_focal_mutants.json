@@ -1,0 +1,164 @@
+{
+  "mutants": [
+    {
+      "id": 276,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1059,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 277,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "JsonReader.java",
+      "line": 1083,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 278,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1059,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 279,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1059,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 280,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1060,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 281,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1084,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 282,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1096,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 283,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1104,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 284,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1084,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 285,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1092,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 286,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1098,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 287,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1103,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 288,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1059,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 289,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1083,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 290,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1066,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::checkLenient",
+      "method_description": "()Ljava/lang/String;"
+    },
+    {
+      "id": 291,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1105,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for com/google/gson/stream/JsonReader::nextUnquotedValue",
+      "method_description": "()Ljava/lang/String;"
+    }
+  ]
+}

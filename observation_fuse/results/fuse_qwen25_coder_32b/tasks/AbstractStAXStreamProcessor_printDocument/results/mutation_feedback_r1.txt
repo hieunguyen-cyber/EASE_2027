@@ -1,0 +1,37 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (32 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 330 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < sz; i++) {
+- line 303 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.isOmitDeclaration()) {
+- line 306 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 309 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (fstack.isOmitEncoding()) {
+- line 311 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 316 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 326 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: List<Content> list = doc.hasRootElement() ? doc.getContent() :
+- line 328 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (list.isEmpty()) {
+- line 335 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.hasNext()) {
+- line 336 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (walker.hasNext()) {
+- line 341 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == null) {
+- line 344 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding) &&
+- line 344 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding) &&
+- line 345 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !walker.isCDATA()) {
+- line 368 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding)) {
+- line 368 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding)) {
+- line 381 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 330 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < sz; i++) {
+- line 305 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeStartDocument | source: out.writeStartDocument();
+- line 307 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(fstack.getLineSeparator());
+- line 310 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeStartDocument | source: out.writeStartDocument("1.0");
+- line 312 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(fstack.getLineSeparator());
+- line 315 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeStartDocument | source: out.writeStartDocument(fstack.getEncoding(), "1.0");
+- line 317 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(fstack.getLineSeparator());
+- line 349 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(padding);
+- line 354 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printComment | source: printComment(out, fstack, (Comment)c);
+- line 357 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printDocType | source: printDocType(out, fstack, (DocType)c);
+- line 360 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printElement | source: printElement(out, fstack, nstack, (Element)c);
+- line 363 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXStreamProcessor::printProcessingInstruction | source: printProcessingInstruction(out, fstack,
+- line 372 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(padding);
+- line 382 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeCharacters | source: out.writeCharacters(fstack.getLineSeparator());
+- line 386 | VoidMethodCallMutator | removed call to javax/xml/stream/XMLStreamWriter::writeEndDocument | source: out.writeEndDocument();

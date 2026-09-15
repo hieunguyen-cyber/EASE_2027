@@ -1,0 +1,204 @@
+{
+  "mutants": [
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 250,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 251,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 199,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 202,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 202,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 206,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 211,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 213,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 213,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 215,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 221,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 29,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 232,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 30,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 236,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 241,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 249,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 250,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 217,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 223,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 255,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractRouterGroup.java",
+      "line": 261,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter",
+      "method_description": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;"
+    }
+  ]
+}

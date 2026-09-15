@@ -1,0 +1,314 @@
+{
+  "mutants": [
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 504,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 533,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 49,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 504,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 50,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 504,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 507,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 52,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 53,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 508,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 510,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 516,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 516,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 516,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 520,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 524,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 532,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 532,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 534,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 537,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 541,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 543,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 543,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 547,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 551,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 69,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 512,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 70,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 514,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 518,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 522,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 73,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 526,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 545,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 549,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Rule.java",
+      "line": 553,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    },
+    {
+      "id": 77,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Rule.java",
+      "line": 560,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern",
+      "method_description": "(Ljava/lang/String;)Lorg/apache/commons/codec/language/bm/Rule$RPattern;"
+    }
+  ]
+}

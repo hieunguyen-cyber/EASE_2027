@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:14:40.842053+00:00",
+  "task_id": "WalkerTRIM_analyzeMultiText",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "WalkerTRIM_analyzeMultiText",
+    "package": "org.jdom2.output.support",
+    "class": "org.jdom2.output.support.WalkerTRIM",
+    "test-class": "org.jdom2.output.support.WalkerTRIM_analyzeMultiText_Test",
+    "method-name": "analyzeMultiText(MultiText, int, int)",
+    "source-path": "src/main/java/org/jdom2/output/support/WalkerTRIM.java",
+    "test-path": "src/test/java/org/jdom2/output/support/WalkerTRIM_analyzeMultiText_Test.java",
+    "focal-method": "@Override\r\nprotected void analyzeMultiText(final MultiText mtext, int offset, int len) {\r\n    while (len > 0) {\r\n        final Content c = get(offset);\r\n        if (c instanceof Text) {\r\n            // either Text or CDATA\r\n            if (!Verifier.isAllXMLWhitespace(c.getValue())) {\r\n                break;\r\n            }\r\n        } else {\r\n            break;\r\n        }\r\n        offset++;\r\n        len--;\r\n    } \r\n    while (len > 0) {\r\n        final Content c = get((offset + len) - 1);\r\n        if (c instanceof Text) {\r\n            // either Text or CDATA\r\n            if (!Verifier.isAllXMLWhitespace(c.getValue())) {\r\n                break;\r\n            }\r\n        } else {\r\n            break;\r\n        }\r\n        len--;\r\n    } \r\n    for (int i = 0; i < len; i++) {\r\n        Trim trim = Trim.NONE;\r\n        if ((i + 1) == len) {\r\n            trim = Trim.RIGHT;\r\n        }\r\n        if (i == 0) {\r\n            trim = Trim.LEFT;\r\n        }\r\n        if (len == 1) {\r\n            trim = Trim.BOTH;\r\n        }\r\n        final Content c = get(offset + i);\r\n        switch (c.getCType()) {\r\n            case Text :\r\n                mtext.appendText(trim, c.getValue());\r\n                break;\r\n            case CDATA :\r\n                mtext.appendCDATA(trim, c.getValue());\r\n                break;\r\n            case EntityRef :\r\n                // treat like any other content.\r\n                // raw.\r\n            default :\r\n                mtext.appendRaw(c);\r\n                break;\r\n        }\r\n    }\r\n}",
+    "class-code": "package org.jdom2.output.support;\nimport org.jdom2.Content;\nimport org.jdom2.Text;\nimport java.util.List;\nimport org.jdom2.Verifier;\npublic class WalkerTRIM extends AbstractFormattedWalker {\n    \n    @Override\r\n    protected void analyzeMultiText(final MultiText mtext, int offset, int len) {\r\n        while (len > 0) {\r\n            final Content c = get(offset);\r\n            if (c instanceof Text) {\r\n                // either Text or CDATA\r\n                if (!Verifier.isAllXMLWhitespace(c.getValue())) {\r\n                    break;\r\n                }\r\n            } else {\r\n                break;\r\n            }\r\n            offset++;\r\n            len--;\r\n        } \r\n        while (len > 0) {\r\n            final Content c = get((offset + len) - 1);\r\n            if (c instanceof Text) {\r\n                // either Text or CDATA\r\n                if (!Verifier.isAllXMLWhitespace(c.getValue())) {\r\n                    break;\r\n                }\r\n            } else {\r\n                break;\r\n            }\r\n            len--;\r\n        } \r\n        for (int i = 0; i < len; i++) {\r\n            Trim trim = Trim.NONE;\r\n            if ((i + 1) == len) {\r\n                trim = Trim.RIGHT;\r\n            }\r\n            if (i == 0) {\r\n                trim = Trim.LEFT;\r\n            }\r\n            if (len == 1) {\r\n                trim = Trim.BOTH;\r\n            }\r\n            final Content c = get(offset + i);\r\n            switch (c.getCType()) {\r\n                case Text :\r\n                    mtext.appendText(trim, c.getValue());\r\n                    break;\r\n                case CDATA :\r\n                    mtext.appendCDATA(trim, c.getValue());\r\n                    break;\r\n                case EntityRef :\r\n                    // treat like any other content.\r\n                    // raw.\r\n                default :\r\n                    mtext.appendRaw(c);\r\n                    break;\r\n            }\r\n        }\r\n    }\n;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/WalkerTRIM_analyzeMultiText_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace/src/test/java/org/jdom2/output/support/WalkerTRIM_analyzeMultiText_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace/src/test/java/org/jdom2/output/support/WalkerTRIM_analyzeMultiText_Test.java"
+  },
+  "started_at": "2026-09-15T08:14:40.928307+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/WalkerTRIM_analyzeMultiText/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

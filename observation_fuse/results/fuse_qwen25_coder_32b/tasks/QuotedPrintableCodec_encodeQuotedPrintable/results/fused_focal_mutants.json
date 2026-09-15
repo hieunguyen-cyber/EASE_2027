@@ -1,0 +1,424 @@
+{
+  "mutants": [
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 215,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 52,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 222,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 224,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 242,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 55,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 248,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 56,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 253,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 256,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 262,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 222,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 226,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 241,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 243,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 63,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 253,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 256,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 263,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 66,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 205,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 67,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 208,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 214,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 226,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 229,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 229,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 256,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 256,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 76,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 265,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 77,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 215,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 78,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 222,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 79,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 224,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 80,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 81,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 248,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 82,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 253,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 83,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 256,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 84,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 262,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 232,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 233,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 234,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 249,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 250,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 251,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 91,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 266,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/io/ByteArrayOutputStream::write",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    },
+    {
+      "id": 92,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "QuotedPrintableCodec.java",
+      "line": 272,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/net/QuotedPrintableCodec::encodeQuotedPrintable",
+      "method_description": "(Ljava/util/BitSet;[BZ)[B"
+    }
+  ]
+}

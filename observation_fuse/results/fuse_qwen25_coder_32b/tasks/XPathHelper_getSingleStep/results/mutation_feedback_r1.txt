@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (22 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (nsa instanceof Content) {
+- line 186 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (content instanceof Text) { // OR CDATA!
+- line 188 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = pnt == null ? null :
+- line 192 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (content instanceof Comment) {
+- line 194 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = pnt == null ? null :
+- line 198 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (content instanceof ProcessingInstruction) {
+- line 200 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = pnt == null ? null :
+- line 205 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (content instanceof Element &&
+- line 206 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: ((Element) content).getNamespace() == Namespace.NO_NAMESPACE) {
+- line 211 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = (pnt instanceof Element) ? ((Element)pnt)
+- line 215 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (content instanceof Element) {
+- line 224 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = (pnt instanceof Element) ?
+- line 232 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final List<?> sibs = pnt == null ? Collections
+- line 237 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (nsa instanceof Attribute) {
+- line 239 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (att.getNamespace() == Namespace.NO_NAMESPACE) {
+- line 190 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs, "text()", buffer);
+- line 196 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs, "comment()", buffer);
+- line 202 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs,
+- line 213 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs, ename, buffer);
+- line 229 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs, xps, buffer);
+- line 234 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return getPositionPath(content, sibs, "node()", buffer);
+- line 249 | NullReturnValsMutator | replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep | source: return buffer;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetSingleStepForCommentNode, testGetSingleStepForElementNode, testGetSingleStepForTextNode

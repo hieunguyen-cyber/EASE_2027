@@ -1,0 +1,16 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (8 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 500 | ConditionalsBoundaryMutator | changed conditional boundary | source: final boolean branchingRequired = replacements.length > 1 && branching;
+- line 481 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Character.isWhitespace(ch)) {
+- line 496 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (branching) {
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean force = lastChar == 'm' && ch == 'n' || lastChar == 'n' && ch == 'm';
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean force = lastChar == 'm' && ch == 'n' || lastChar == 'n' && ch == 'm';
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean force = lastChar == 'm' && ch == 'n' || lastChar == 'n' && ch == 'm';
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean force = lastChar == 'm' && ch == 'n' || lastChar == 'n' && ch == 'm';
+- line 497 | VoidMethodCallMutator | removed call to java/util/List::clear | source: nextBranches.clear();
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEncodeSpecialCharacters, testEncodeTrimmedInput, testSoundexBranchingDisabled, testSoundexBranchingEnabled, testSoundexBranchingWithDifferentCharacters, testSoundexWithConsonantOnlyInput, testSoundexWithEmptyInput, testSoundexWithInvalidCharacter, testSoundexWithLongInput, testSoundexWithMixedCase, testSoundexWithNullInput, testSoundexWithNumericalInput, testSoundexWithOnlyOneCharacter, testSoundexWithSpecialUnicodeCharacters, testSoundexWithVowelStart, testSoundexWithWhitespaceOnlyInput

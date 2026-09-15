@@ -1,0 +1,18 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (10 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 167 | ConditionalsBoundaryMutator | changed conditional boundary | source: Node<K, V> child = (comparison < 0) ? nearest.left : nearest.right;
+- line 193 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (comparison < 0) { // nearest.key is higher
+- line 201 | MathMutator | Replaced integer addition with subtraction | source: modCount++;
+- line 152 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: Comparable<Object> comparableKey = (comparator == NATURAL_ORDER)
+- line 157 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: comparison = (comparableKey != null)
+- line 186 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (comparator == NATURAL_ORDER && !(key instanceof Comparable)) {
+- line 186 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (comparator == NATURAL_ORDER && !(key instanceof Comparable)) {
+- line 167 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: Node<K, V> child = (comparison < 0) ? nearest.left : nearest.right;
+- line 193 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (comparison < 0) { // nearest.key is higher
+- line 198 | VoidMethodCallMutator | removed call to com/google/gson/internal/LinkedTreeMap::rebalance | source: rebalance(nearest, true);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testFindAndCreateNewNode, testFindExistingKey, testFindExistingKeyWithCreate, testFindExistingKeyWithoutCreate, testFindGreaterKey, testFindLesserKey, testFindNonExistingKey, testFindNonExistingKeyWithoutCreate, testFindWithNonComparableKey, testFindWithNullKeyAndCreate, testFindWithNullKeyAndNoCreate

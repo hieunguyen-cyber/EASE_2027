@@ -1,0 +1,20 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (12 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 345 | MathMutator | Replaced integer subtraction with addition | source: sb.setCharAt(sb.length() - 1, ch);
+- line 321 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (quote == ' ') {
+- line 323 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isWhite(ch)) {
+- line 324 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!white) {
+- line 332 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '\'' || ch == '"') {
+- line 332 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '\'' || ch == '"') {
+- line 335 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (ch == '<') {
+- line 340 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == '>') {
+- line 342 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (white) {
+- line 361 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ch == quote) {
+- line 345 | VoidMethodCallMutator | removed call to java/lang/StringBuilder::setCharAt | source: sb.setCharAt(sb.length() - 1, ch);
+- line 368 | EmptyObjectReturnValsMutator | replaced return value with "" for org/jdom2/input/stax/DTDParser::formatInternal | source: return sb.toString();
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testFormatInternal, testFormatInternal_EmptySubset, testFormatInternal_InvalidCharacterHandling, testFormatInternal_MultipleDeclarations, testFormatInternal_NestedDeclarations, testFormatInternal_NonStandardWhitespaceHandling, testFormatInternal_QuotedValues, testFormatInternal_SimpleSubset, testFormatInternal_SingleDeclarationWithoutWhitespace, testFormatInternal_SingleInvalidCharacter, testFormatInternal_WellFormedElement, testFormatInternal_WhitespaceHandling

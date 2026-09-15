@@ -1,0 +1,233 @@
+{
+  "task_id": "Verifier_isXMLPublicIDCharacter",
+  "project": "jdom2",
+  "focal_class": "org.jdom2.Verifier",
+  "focal_method": "isXMLPublicIDCharacter(char)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Verifier_isXMLPublicIDCharacter/workspace/src/test/java/org/jdom2/Verifier_isXMLPublicIDCharacter_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 20.229
+  },
+  "started_at": "2026-09-15T08:08:07.963786+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN",
+    "disabled_methods": [],
+    "test_count": 20
+  },
+  "ktester": {
+    "test_cases": 5,
+    "compile_pass": true,
+    "execution_pass": true,
+    "tests_executed": 20,
+    "tests_failed": 0,
+    "line_missed": 0,
+    "line_covered": 14,
+    "line_coverage": 1.0,
+    "branch_missed": 1,
+    "branch_covered": 31,
+    "branch_coverage": 0.96875,
+    "instruction_missed": 2,
+    "instruction_covered": 74,
+    "instruction_coverage": 0.973684,
+    "line_coverage_passed": 1.0,
+    "branch_coverage_passed": 0.96875,
+    "instruction_coverage_passed": 0.973684,
+    "generation_seconds": null,
+    "stats": {
+      "total": 36,
+      "detected": 32,
+      "undetected": 4,
+      "killed": 32,
+      "survived": 3,
+      "no_coverage": 1,
+      "mutation_score": 0.888889,
+      "statuses": {
+        "KILLED": 32,
+        "NO_COVERAGE": 1,
+        "SURVIVED": 3
+      }
+    },
+    "kills_per_test": 6.4,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 6,
+        "detected": 4,
+        "survived": 2,
+        "no_coverage": 0,
+        "mutation_score": 0.666667
+      },
+      "BooleanFalseReturnValsMutator": {
+        "total": 13,
+        "detected": 12,
+        "survived": 0,
+        "no_coverage": 1,
+        "mutation_score": 0.923077
+      },
+      "BooleanTrueReturnValsMutator": {
+        "total": 1,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 10,
+        "detected": 9,
+        "survived": 1,
+        "no_coverage": 0,
+        "mutation_score": 0.9
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 6,
+        "detected": 6,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 4,
+      "existing_tests_before": 5,
+      "tests_after": 9,
+      "seconds": 20.229,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 9,
+    "compile_pass": true,
+    "execution_pass": true,
+    "tests_executed": 24,
+    "tests_failed": 0,
+    "line_missed": 0,
+    "line_covered": 14,
+    "line_coverage": 1.0,
+    "branch_missed": 0,
+    "branch_covered": 32,
+    "branch_coverage": 1.0,
+    "instruction_missed": 0,
+    "instruction_covered": 76,
+    "instruction_coverage": 1.0,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 1.0,
+    "branch_coverage_passed": 1.0,
+    "instruction_coverage_passed": 1.0,
+    "generation_seconds": 20.229,
+    "inherited_disabled_methods": 0,
+    "stats": {
+      "total": 36,
+      "detected": 36,
+      "undetected": 0,
+      "killed": 36,
+      "survived": 0,
+      "no_coverage": 0,
+      "mutation_score": 1.0,
+      "statuses": {
+        "KILLED": 36
+      }
+    },
+    "kills_per_test": 4.0,
+    "by_mutator": {
+      "ConditionalsBoundaryMutator": {
+        "total": 6,
+        "detected": 6,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "BooleanFalseReturnValsMutator": {
+        "total": 13,
+        "detected": 13,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "BooleanTrueReturnValsMutator": {
+        "total": 1,
+        "detected": 1,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 10,
+        "detected": 10,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      },
+      "RemoveConditionalMutator_ORDER_ELSE": {
+        "total": 6,
+        "detected": 6,
+        "survived": 0,
+        "no_coverage": 0,
+        "mutation_score": 1.0
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.0,
+    "branch_coverage": 0.03125,
+    "instruction_coverage": 0.026316,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.03125,
+    "instruction_coverage_passed": 0.026316,
+    "kills_per_test": -2.4,
+    "mutation_score": 0.111111,
+    "mutation_score_points": 11.111,
+    "newly_killed": 2,
+    "lost_kills": 0,
+    "added_test_methods": 4,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      true,
+      true
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 903,
+        "mutator": "BooleanFalseReturnValsMutator",
+        "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter"
+      },
+      {
+        "line": 903,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T08:08:54.785152+00:00"
+}

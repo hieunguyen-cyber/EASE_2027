@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:42:25.878678+00:00",
+  "task_id": "JsonTreeReader_peek",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "JsonTreeReader_peek",
+    "package": "com.google.gson.internal.bind",
+    "class": "com.google.gson.internal.bind.JsonTreeReader",
+    "test-class": "com.google.gson.internal.bind.JsonTreeReader_peek_Test",
+    "method-name": "peek()",
+    "source-path": "src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+    "test-path": "src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java",
+    "focal-method": "@Override\r\npublic JsonToken peek() throws IOException {\r\n    if (stackSize == 0) {\r\n        return JsonToken.END_DOCUMENT;\r\n    }\r\n    Object o = peekStack();\r\n    if (o instanceof Iterator) {\r\n        boolean isObject = stack[stackSize - 2] instanceof JsonObject;\r\n        Iterator<?> iterator = ((Iterator<?>) (o));\r\n        if (iterator.hasNext()) {\r\n            if (isObject) {\r\n                return JsonToken.NAME;\r\n            } else {\r\n                push(iterator.next());\r\n                return peek();\r\n            }\r\n        } else {\r\n            return isObject ? JsonToken.END_OBJECT : JsonToken.END_ARRAY;\r\n        }\r\n    } else if (o instanceof JsonObject) {\r\n        return JsonToken.BEGIN_OBJECT;\r\n    } else if (o instanceof JsonArray) {\r\n        return JsonToken.BEGIN_ARRAY;\r\n    } else if (o instanceof JsonPrimitive) {\r\n        JsonPrimitive primitive = ((JsonPrimitive) (o));\r\n        if (primitive.isString()) {\r\n            return JsonToken.STRING;\r\n        } else if (primitive.isBoolean()) {\r\n            return JsonToken.BOOLEAN;\r\n        } else if (primitive.isNumber()) {\r\n            return JsonToken.NUMBER;\r\n        } else {\r\n            throw new AssertionError();\r\n        }\r\n    } else if (o instanceof JsonNull) {\r\n        return JsonToken.NULL;\r\n    } else if (o == SENTINEL_CLOSED) {\r\n        throw new IllegalStateException(\"JsonReader is closed\");\r\n    } else {\r\n        throw new MalformedJsonException((\"Custom JsonElement subclass \" + o.getClass().getName()) + \" is not supported\");\r\n    }\r\n}",
+    "class-code": "package com.google.gson.internal.bind;\nimport com.google.gson.JsonObject;\nimport java.io.IOException;\nimport java.io.Reader;\nimport com.google.gson.JsonNull;\nimport com.google.gson.JsonArray;\nimport com.google.gson.JsonElement;\nimport com.google.gson.stream.JsonToken;\nimport java.util.Iterator;\nimport com.google.gson.JsonPrimitive;\nimport java.util.Map;\nimport java.util.Arrays;\nimport com.google.gson.stream.JsonReader;\nimport com.google.gson.stream.MalformedJsonException;\npublic final class JsonTreeReader extends JsonReader {\n    private static final Object SENTINEL_CLOSED = new Object();\n    private Object[] stack = new Object[32];\n    private int stackSize = 0;\n    @Override\r\n    public JsonToken peek() throws IOException {\r\n        if (stackSize == 0) {\r\n            return JsonToken.END_DOCUMENT;\r\n        }\r\n        Object o = peekStack();\r\n        if (o instanceof Iterator) {\r\n            boolean isObject = stack[stackSize - 2] instanceof JsonObject;\r\n            Iterator<?> iterator = ((Iterator<?>) (o));\r\n            if (iterator.hasNext()) {\r\n                if (isObject) {\r\n                    return JsonToken.NAME;\r\n                } else {\r\n                    push(iterator.next());\r\n                    return peek();\r\n                }\r\n            } else {\r\n                return isObject ? JsonToken.END_OBJECT : JsonToken.END_ARRAY;\r\n            }\r\n        } else if (o instanceof JsonObject) {\r\n            return JsonToken.BEGIN_OBJECT;\r\n        } else if (o instanceof JsonArray) {\r\n            return JsonToken.BEGIN_ARRAY;\r\n        } else if (o instanceof JsonPrimitive) {\r\n            JsonPrimitive primitive = ((JsonPrimitive) (o));\r\n            if (primitive.isString()) {\r\n                return JsonToken.STRING;\r\n            } else if (primitive.isBoolean()) {\r\n                return JsonToken.BOOLEAN;\r\n            } else if (primitive.isNumber()) {\r\n                return JsonToken.NUMBER;\r\n            } else {\r\n                throw new AssertionError();\r\n            }\r\n        } else if (o instanceof JsonNull) {\r\n            return JsonToken.NULL;\r\n        } else if (o == SENTINEL_CLOSED) {\r\n            throw new IllegalStateException(\"JsonReader is closed\");\r\n        } else {\r\n            throw new MalformedJsonException((\"Custom JsonElement subclass \" + o.getClass().getName()) + \" is not supported\");\r\n        }\r\n    }\n@Override\r\npublic void beginArray() throws IOException;\n    @Override\r\npublic void beginObject() throws IOException;\n    @Override\r\npublic void close() throws IOException;\n    @Override\r\npublic void endArray() throws IOException;\n    @Override\r\npublic void endObject() throws IOException;\n    @Override\r\npublic String getPath();\n    @Override\r\npublic String getPreviousPath();\n    @Override\r\npublic boolean hasNext() throws IOException;\n    @Override\r\npublic boolean nextBoolean() throws IOException;\n    @Override\r\npublic double nextDouble() throws IOException;\n    @Override\r\npublic int nextInt() throws IOException;\n    JsonElement nextJsonElement() throws IOException;\n    @Override\r\npublic long nextLong() throws IOException;\n    @Override\r\npublic String nextName() throws IOException;\n    @Override\r\npublic void nextNull() throws IOException;\n    @Override\r\npublic String nextString() throws IOException;\n    private Object peekStack();\n    public void promoteNameToValue() throws IOException;\n    private void push(Object newTop);\n    @Override\r\npublic void skipValue() throws IOException;\n    @Override\r\npublic String toString();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace/gson/src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace/gson/src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java"
+  },
+  "started_at": "2026-09-15T06:42:25.956024+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonTreeReader_peek/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

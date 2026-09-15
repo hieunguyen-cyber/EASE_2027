@@ -1,0 +1,374 @@
+{
+  "mutants": [
+    {
+      "id": 30,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 481,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 31,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 445,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 453,
+      "mutator": "MathMutator",
+      "description": "Replaced integer multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 33,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 453,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 456,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 463,
+      "mutator": "MathMutator",
+      "description": "Replaced double multiplication with division",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 405,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 409,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 411,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 416,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 428,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 429,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 430,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 432,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 433,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 434,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 440,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 440,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 449,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 449,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 470,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 478,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 481,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 481,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 406,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::copyFrom",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 421,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Map::putAll",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 422,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setLabels",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 431,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setVolumeMounts",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 435,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setVolumeMounts",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 441,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setServiceAccount",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 446,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setCores",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 450,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setCoreLimit",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 458,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setCoreLimit",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 465,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setMemory",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 474,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setAnnotations",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 498,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/apple/spark/operator/DriverSpec::setAffinity",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ApplicationSubmissionHelper.java",
+      "line": 502,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/apple/spark/core/ApplicationSubmissionHelper::getDriverSpec",
+      "method_description": "(Lcom/apple/spark/api/SubmitApplicationRequest;Lcom/apple/spark/AppConfig;Ljava/lang/String;Lcom/apple/spark/AppConfig$SparkCluster;)Lcom/apple/spark/operator/DriverSpec;"
+    }
+  ]
+}

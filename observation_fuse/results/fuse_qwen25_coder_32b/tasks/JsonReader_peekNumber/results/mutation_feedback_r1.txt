@@ -1,0 +1,49 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (50 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 714 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < '0' || c > '9') {
+- line 714 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c < '0' || c > '9') {
+- line 728 | ConditionalsBoundaryMutator | changed conditional boundary | source: fitsInLong &= value > MIN_INCOMPLETE_INTEGER
+- line 728 | ConditionalsBoundaryMutator | changed conditional boundary | source: fitsInLong &= value > MIN_INCOMPLETE_INTEGER
+- line 664 | IncrementsMutator | Changed increment from 1 to -1 | source: for (; true; i++) {
+- line 721 | InvertNegsMutator | removed negation | source: value = -(c - '0');
+- line 743 | InvertNegsMutator | removed negation | source: peekedLong = negative ? value : -value;
+- line 665 | MathMutator | Replaced integer addition with subtraction | source: if (p + i == l) {
+- line 671 | MathMutator | Replaced integer addition with subtraction | source: if (!fillBuffer(i + 1)) {
+- line 678 | MathMutator | Replaced integer addition with subtraction | source: char c = buffer[p + i];
+- line 721 | MathMutator | Replaced integer subtraction with addition | source: value = -(c - '0');
+- line 727 | MathMutator | Replaced long multiplication with division | source: long newValue = value * 10 - (c - '0');
+- line 727 | MathMutator | Replaced integer subtraction with addition | source: long newValue = value * 10 - (c - '0');
+- line 727 | MathMutator | Replaced long subtraction with addition | source: long newValue = value * 10 - (c - '0');
+- line 728 | MathMutator | Replaced bitwise AND with OR | source: fitsInLong &= value > MIN_INCOMPLETE_INTEGER
+- line 744 | MathMutator | Replaced integer addition with subtraction | source: pos += i;
+- line 665 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (p + i == l) {
+- line 666 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (i == buffer.length) {
+- line 671 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!fillBuffer(i + 1)) {
+- line 681 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_NONE) {
+- line 685 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (last == NUMBER_CHAR_EXP_E) {
+- line 692 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_EXP_E) {
+- line 700 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT) {
+- line 700 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT) {
+- line 707 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT) {
+- line 715 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!isLiteral(c)) {
+- line 720 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE) {
+- line 720 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE) {
+- line 723 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (last == NUMBER_CHAR_DIGIT) {
+- line 724 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (value == 0) {
+- line 728 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: fitsInLong &= value > MIN_INCOMPLETE_INTEGER
+- line 731 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (last == NUMBER_CHAR_DECIMAL) {
+- line 733 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN) {
+- line 733 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- line 742 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value!=0 || !negative)) {
+- ... and 10 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPeekNumber, testPeekNumberHandlesInvalidInput, testPeekNumberHandlesLeadingZeroes, testPeekNumberHandlesLongInput, testPeekNumberHandlesNegativeSign, testPeekNumberHandlesNoInput, testPeekNumberHandlesSpecialCharacters, testPeekNumberRecognizesSimpleNumber

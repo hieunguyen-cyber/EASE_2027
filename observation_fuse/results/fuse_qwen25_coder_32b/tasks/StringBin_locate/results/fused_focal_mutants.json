@@ -1,0 +1,484 @@
+{
+  "mutants": [
+    {
+      "id": 14,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 165,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 15,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 167,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 169,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 17,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 178,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 18,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 181,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 188,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 204,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 210,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 181,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 204,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 195,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 25,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 200,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 217,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 27,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 222,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 28,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 227,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 163,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 166,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 166,
+      "mutator": "MathMutator",
+      "description": "Replaced Unsigned Shift Right with Shift Left",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 32,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "StringBin.java",
+      "line": 168,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "StringBin.java",
+      "line": 170,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 34,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 195,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 195,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 200,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 200,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 217,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 222,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 40,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 227,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 41,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 175,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 181,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 185,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 204,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 207,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 46,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 165,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 167,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 169,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 178,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 181,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 188,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 204,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 210,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 54,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 177,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 187,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 195,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 200,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 209,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 217,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "StringBin.java",
+      "line": 222,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "StringBin.java",
+      "line": 227,
+      "mutator": "PrimitiveReturnsMutator",
+      "description": "replaced int return with 0 for org/jdom2/StringBin::locate",
+      "method_description": "(ILjava/lang/String;[Ljava/lang/String;I)I"
+    }
+  ]
+}

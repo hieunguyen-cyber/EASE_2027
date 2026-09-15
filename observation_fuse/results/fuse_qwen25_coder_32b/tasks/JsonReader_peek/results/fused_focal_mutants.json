@@ -1,0 +1,114 @@
+{
+  "mutants": [
+    {
+      "id": 292,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 432,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 293,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 438,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 294,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 440,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 295,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 442,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 296,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 444,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 297,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 448,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 298,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 451,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 299,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 453,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 300,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 458,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 301,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 461,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+      "id": 302,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 463,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/stream/JsonReader::peek",
+      "method_description": "()Lcom/google/gson/stream/JsonToken;"
+    }
+  ]
+}

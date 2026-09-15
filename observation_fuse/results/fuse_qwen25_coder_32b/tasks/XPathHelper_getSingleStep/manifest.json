@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:57:46.368821+00:00",
+  "task_id": "XPathHelper_getSingleStep",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "XPathHelper_getSingleStep",
+    "package": "org.jdom2.xpath",
+    "class": "org.jdom2.xpath.XPathHelper",
+    "test-class": "org.jdom2.xpath.XPathHelper_getSingleStep_Test",
+    "method-name": "getSingleStep(NamespaceAware, StringBuilder)",
+    "source-path": "src/main/java/org/jdom2/xpath/XPathHelper.java",
+    "test-path": "src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java",
+    "focal-method": "private static final StringBuilder getSingleStep(final NamespaceAware nsa, final StringBuilder buffer) {\r\n    if (nsa instanceof Content) {\r\n        final Content content = ((Content) (nsa));\r\n        final Parent pnt = content.getParent();\r\n        if (content instanceof Text) {\r\n            // OR CDATA!\r\n            final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.text());// CDATA\r\n\r\n            return getPositionPath(content, sibs, \"text()\", buffer);\r\n        } else if (content instanceof Comment) {\r\n            final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.comment());\r\n            return getPositionPath(content, sibs, \"comment()\", buffer);\r\n        } else if (content instanceof ProcessingInstruction) {\r\n            final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.processinginstruction());\r\n            return getPositionPath(content, sibs, \"processing-instruction()\", buffer);\r\n        } else if ((content instanceof Element) && (((Element) (content)).getNamespace() == Namespace.NO_NAMESPACE)) {\r\n            // simple XPath to a no-namespace Element.\r\n            final String ename = ((Element) (content)).getName();\r\n            final List<?> sibs = (pnt instanceof Element) ? ((Element) (pnt)).getChildren(ename) : null;\r\n            return getPositionPath(content, sibs, ename, buffer);\r\n        } else if (content instanceof Element) {\r\n            // complex XPath to an Element with Namespace...\r\n            // we do not want to have to prefix namespaces because that is\r\n            // essentially impossible to get right with the new JDOM2 API.\r\n            final Element emt = ((Element) (content));\r\n            // Note, the getChildren compares only the URI (not the prefix)\r\n            // so the results are the same as an XPath would be.\r\n            final List<?> sibs = (pnt instanceof Element) ? ((Element) (pnt)).getChildren(emt.getName(), emt.getNamespace()) : null;\r\n            String xps = (((\"*[local-name() = '\" + emt.getName()) + \"' and namespace-uri() = '\") + emt.getNamespaceURI()) + \"']\";\r\n            return getPositionPath(content, sibs, xps, buffer);\r\n        } else {\r\n            final List<?> sibs = (pnt == null) ? Collections.singletonList(nsa) : pnt.getContent();\r\n            return getPositionPath(content, sibs, \"node()\", buffer);\r\n        }\r\n    } else if (nsa instanceof Attribute) {\r\n        Attribute att = ((Attribute) (nsa));\r\n        if (att.getNamespace() == Namespace.NO_NAMESPACE) {\r\n            buffer.append(\"@\").append(att.getName());\r\n        } else {\r\n            buffer.append(\"@*[local-name() = '\").append(att.getName());\r\n            buffer.append(\"' and namespace-uri() = '\");\r\n            buffer.append(att.getNamespaceURI()).append(\"']\");\r\n        }\r\n    }\r\n    // do nothing...\r\n    return buffer;\r\n}",
+    "class-code": "package org.jdom2.xpath;\nimport org.jdom2.NamespaceAware;\nimport org.jdom2.Attribute;\nimport org.jdom2.Parent;\nimport org.jdom2.Element;\nimport java.util.ArrayList;\nimport org.jdom2.Namespace;\nimport org.jdom2.Text;\nimport org.jdom2.Content;\nimport org.jdom2.filter.Filters;\nimport java.util.Iterator;\nimport org.jdom2.ProcessingInstruction;\nimport java.util.List;\nimport org.jdom2.Comment;\nimport java.util.Collections;\npublic final class XPathHelper {\n    \n    private static final StringBuilder getSingleStep(final NamespaceAware nsa, final StringBuilder buffer) {\r\n        if (nsa instanceof Content) {\r\n            final Content content = ((Content) (nsa));\r\n            final Parent pnt = content.getParent();\r\n            if (content instanceof Text) {\r\n                // OR CDATA!\r\n                final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.text());// CDATA\r\n    \r\n                return getPositionPath(content, sibs, \"text()\", buffer);\r\n            } else if (content instanceof Comment) {\r\n                final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.comment());\r\n                return getPositionPath(content, sibs, \"comment()\", buffer);\r\n            } else if (content instanceof ProcessingInstruction) {\r\n                final List<?> sibs = (pnt == null) ? null : pnt.getContent(Filters.processinginstruction());\r\n                return getPositionPath(content, sibs, \"processing-instruction()\", buffer);\r\n            } else if ((content instanceof Element) && (((Element) (content)).getNamespace() == Namespace.NO_NAMESPACE)) {\r\n                // simple XPath to a no-namespace Element.\r\n                final String ename = ((Element) (content)).getName();\r\n                final List<?> sibs = (pnt instanceof Element) ? ((Element) (pnt)).getChildren(ename) : null;\r\n                return getPositionPath(content, sibs, ename, buffer);\r\n            } else if (content instanceof Element) {\r\n                // complex XPath to an Element with Namespace...\r\n                // we do not want to have to prefix namespaces because that is\r\n                // essentially impossible to get right with the new JDOM2 API.\r\n                final Element emt = ((Element) (content));\r\n                // Note, the getChildren compares only the URI (not the prefix)\r\n                // so the results are the same as an XPath would be.\r\n                final List<?> sibs = (pnt instanceof Element) ? ((Element) (pnt)).getChildren(emt.getName(), emt.getNamespace()) : null;\r\n                String xps = (((\"*[local-name() = '\" + emt.getName()) + \"' and namespace-uri() = '\") + emt.getNamespaceURI()) + \"']\";\r\n                return getPositionPath(content, sibs, xps, buffer);\r\n            } else {\r\n                final List<?> sibs = (pnt == null) ? Collections.singletonList(nsa) : pnt.getContent();\r\n                return getPositionPath(content, sibs, \"node()\", buffer);\r\n            }\r\n        } else if (nsa instanceof Attribute) {\r\n            Attribute att = ((Attribute) (nsa));\r\n            if (att.getNamespace() == Namespace.NO_NAMESPACE) {\r\n                buffer.append(\"@\").append(att.getName());\r\n            } else {\r\n                buffer.append(\"@*[local-name() = '\").append(att.getName());\r\n                buffer.append(\"' and namespace-uri() = '\");\r\n                buffer.append(att.getNamespaceURI()).append(\"']\");\r\n            }\r\n        }\r\n        // do nothing...\r\n        return buffer;\r\n    }\npublic static String getAbsolutePath(final Attribute to);\n    public static String getAbsolutePath(final Content to);\n    private static StringBuilder getPositionPath(Object node, List<?> siblings, String pathToken, StringBuilder buffer);\n    public static String getRelativePath(final Attribute from, final Attribute to);\n    public static String getRelativePath(final Attribute from, final Content to);\n    public static String getRelativePath(final Content from, final Attribute to);\n    public static String getRelativePath(final Content from, final Content to);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace/src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace/src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java"
+  },
+  "started_at": "2026-09-15T07:57:46.454451+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

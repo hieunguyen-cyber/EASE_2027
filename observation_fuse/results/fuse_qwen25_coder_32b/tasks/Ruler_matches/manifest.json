@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:21.885355+00:00",
+  "task_id": "Ruler_matches",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Ruler_matches",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.Ruler",
+    "test-class": "software.amazon.event.ruler.Ruler_matches_Test",
+    "method-name": "matches(JsonNode, Patterns)",
+    "source-path": "src/main/java/software/amazon/event/ruler/Ruler.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/Ruler_matches_Test.java",
+    "focal-method": "private static boolean matches(final JsonNode val, final Patterns pattern) {\r\n    switch (pattern.type()) {\r\n        case EXACT :\r\n            ValuePatterns valuePattern = ((ValuePatterns) (pattern));\r\n            // if it's a string we match the \"-quoted form, otherwise (true, false, null) as-is.\r\n            final String compareTo = (val.isTextual()) ? ('\"' + val.asText()) + '\"' : val.asText();\r\n            return compareTo.equals(valuePattern.pattern());\r\n        case PREFIX :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return val.isTextual() && ('\"' + val.asText()).startsWith(valuePattern.pattern());\r\n        case ANYTHING_BUT :\r\n            assert pattern instanceof AnythingBut;\r\n            AnythingBut anythingButPattern = ((AnythingBut) (pattern));\r\n            if (val.isTextual()) {\r\n                return anythingButPattern.getValues().stream().noneMatch(v -> v.equals(('\"' + val.asText()) + '\"'));\r\n            } else if (val.isNumber()) {\r\n                return anythingButPattern.getValues().stream().noneMatch(v -> v.equals(ComparableNumber.generate(val.asDouble())));\r\n            }\r\n            return false;\r\n        case ANYTHING_BUT_IGNORE_CASE :\r\n            assert pattern instanceof AnythingButEqualsIgnoreCase;\r\n            AnythingButEqualsIgnoreCase anythingButIgnoreCasePattern = ((AnythingButEqualsIgnoreCase) (pattern));\r\n            if (val.isTextual()) {\r\n                return anythingButIgnoreCasePattern.getValues().stream().noneMatch(v -> v.equalsIgnoreCase(('\"' + val.asText()) + '\"'));\r\n            }\r\n            return false;\r\n        case ANYTHING_BUT_SUFFIX :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return !(val.isTextual() && (val.asText() + '\"').startsWith(valuePattern.pattern()));\r\n        case ANYTHING_BUT_PREFIX :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return !(val.isTextual() && ('\"' + val.asText()).startsWith(valuePattern.pattern()));\r\n        case NUMERIC_EQ :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return val.isNumber() && ComparableNumber.generate(val.asDouble()).equals(valuePattern.pattern());\r\n        case EXISTS :\r\n            return true;\r\n        case ABSENT :\r\n            return false;\r\n        case NUMERIC_RANGE :\r\n            final Range nr = ((Range) (pattern));\r\n            byte[] bytes;\r\n            if (nr.isCIDR) {\r\n                if (!val.isTextual()) {\r\n                    return false;\r\n                }\r\n                try {\r\n                    bytes = CIDR.ipToString(val.asText()).getBytes(StandardCharsets.UTF_8);\r\n                } catch (Exception e) {\r\n                    return false;\r\n                }\r\n            } else {\r\n                if (!val.isNumber()) {\r\n                    return false;\r\n                }\r\n                bytes = ComparableNumber.generate(val.asDouble()).getBytes(StandardCharsets.UTF_8);\r\n            }\r\n            final int comparedToBottom = compare(bytes, nr.bottom);\r\n            if ((comparedToBottom > 0) || ((comparedToBottom == 0) && (!nr.openBottom))) {\r\n                final int comparedToTop = compare(bytes, nr.top);\r\n                return (comparedToTop < 0) || ((comparedToTop == 0) && (!nr.openTop));\r\n            }\r\n            return false;\r\n        case EQUALS_IGNORE_CASE :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return val.isTextual() && (('\"' + val.asText()) + '\"').equalsIgnoreCase(valuePattern.pattern());\r\n        case WILDCARD :\r\n            valuePattern = ((ValuePatterns) (pattern));\r\n            return val.isTextual() && (('\"' + val.asText()) + '\"').matches(valuePattern.pattern().replaceAll(\"\\\\*\", \".*\"));\r\n        default :\r\n            throw new RuntimeException(\"Unsupported Pattern type \" + pattern.type());\r\n    }\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport java.nio.charset.StandardCharsets;\nimport java.io.IOException;\nimport javax.annotation.concurrent.ThreadSafe;\nimport java.util.List;\nimport com.fasterxml.jackson.databind.JsonNode;\nimport java.util.Map;\nimport javax.annotation.concurrent.Immutable;\nimport com.fasterxml.jackson.databind.ObjectMapper;\n@ThreadSafe\r\n@Immutable\r\npublic class Ruler {\n    \n    private static boolean matches(final JsonNode val, final Patterns pattern) {\r\n        switch (pattern.type()) {\r\n            case EXACT :\r\n                ValuePatterns valuePattern = ((ValuePatterns) (pattern));\r\n                // if it's a string we match the \"-quoted form, otherwise (true, false, null) as-is.\r\n                final String compareTo = (val.isTextual()) ? ('\"' + val.asText()) + '\"' : val.asText();\r\n                return compareTo.equals(valuePattern.pattern());\r\n            case PREFIX :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return val.isTextual() && ('\"' + val.asText()).startsWith(valuePattern.pattern());\r\n            case ANYTHING_BUT :\r\n                assert pattern instanceof AnythingBut;\r\n                AnythingBut anythingButPattern = ((AnythingBut) (pattern));\r\n                if (val.isTextual()) {\r\n                    return anythingButPattern.getValues().stream().noneMatch(v -> v.equals(('\"' + val.asText()) + '\"'));\r\n                } else if (val.isNumber()) {\r\n                    return anythingButPattern.getValues().stream().noneMatch(v -> v.equals(ComparableNumber.generate(val.asDouble())));\r\n                }\r\n                return false;\r\n            case ANYTHING_BUT_IGNORE_CASE :\r\n                assert pattern instanceof AnythingButEqualsIgnoreCase;\r\n                AnythingButEqualsIgnoreCase anythingButIgnoreCasePattern = ((AnythingButEqualsIgnoreCase) (pattern));\r\n                if (val.isTextual()) {\r\n                    return anythingButIgnoreCasePattern.getValues().stream().noneMatch(v -> v.equalsIgnoreCase(('\"' + val.asText()) + '\"'));\r\n                }\r\n                return false;\r\n            case ANYTHING_BUT_SUFFIX :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return !(val.isTextual() && (val.asText() + '\"').startsWith(valuePattern.pattern()));\r\n            case ANYTHING_BUT_PREFIX :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return !(val.isTextual() && ('\"' + val.asText()).startsWith(valuePattern.pattern()));\r\n            case NUMERIC_EQ :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return val.isNumber() && ComparableNumber.generate(val.asDouble()).equals(valuePattern.pattern());\r\n            case EXISTS :\r\n                return true;\r\n            case ABSENT :\r\n                return false;\r\n            case NUMERIC_RANGE :\r\n                final Range nr = ((Range) (pattern));\r\n                byte[] bytes;\r\n                if (nr.isCIDR) {\r\n                    if (!val.isTextual()) {\r\n                        return false;\r\n                    }\r\n                    try {\r\n                        bytes = CIDR.ipToString(val.asText()).getBytes(StandardCharsets.UTF_8);\r\n                    } catch (Exception e) {\r\n                        return false;\r\n                    }\r\n                } else {\r\n                    if (!val.isNumber()) {\r\n                        return false;\r\n                    }\r\n                    bytes = ComparableNumber.generate(val.asDouble()).getBytes(StandardCharsets.UTF_8);\r\n                }\r\n                final int comparedToBottom = compare(bytes, nr.bottom);\r\n                if ((comparedToBottom > 0) || ((comparedToBottom == 0) && (!nr.openBottom))) {\r\n                    final int comparedToTop = compare(bytes, nr.top);\r\n                    return (comparedToTop < 0) || ((comparedToTop == 0) && (!nr.openTop));\r\n                }\r\n                return false;\r\n            case EQUALS_IGNORE_CASE :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return val.isTextual() && (('\"' + val.asText()) + '\"').equalsIgnoreCase(valuePattern.pattern());\r\n            case WILDCARD :\r\n                valuePattern = ((ValuePatterns) (pattern));\r\n                return val.isTextual() && (('\"' + val.asText()) + '\"').matches(valuePattern.pattern().replaceAll(\"\\\\*\", \".*\"));\r\n            default :\r\n                throw new RuntimeException(\"Unsupported Pattern type \" + pattern.type());\r\n        }\r\n    }\nstatic int compare(final byte[] a, final byte[] b);\n    public static boolean matchesRule(final String event, final String rule) throws Exception;\n    static JsonNode tryToRetrievePath(JsonNode node, final List<String> path);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice4.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/src/test/java/software/amazon/event/ruler/Ruler_matches_4_3_Test_slice4.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/src/test/java/software/amazon/event/ruler/Ruler_matches_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:21.962224+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Ruler_matches/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,43 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (28 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 761 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b >= 0 && b < decodeTable.length) {
+- line 761 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b >= 0 && b < decodeTable.length) {
+- line 763 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (result >= 0) {
+- line 752 | MathMutator | Replaced integer subtraction with addition | source: final int decodeSize = this.encodeSize - 1;
+- line 765 | MathMutator | Replaced Shift Left with Shift Right | source: context.ibitWorkArea = (context.ibitWorkArea << BITS_PER_ENCODED_BYTE) + result;
+- line 765 | MathMutator | Replaced integer addition with subtraction | source: context.ibitWorkArea = (context.ibitWorkArea << BITS_PER_ENCODED_BYTE) + result;
+- line 767 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 16 & MASK_8BITS);
+- line 767 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 16 & MASK_8BITS);
+- line 768 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 8 & MASK_8BITS);
+- line 768 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 8 & MASK_8BITS);
+- line 768 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 8 & MASK_8BITS);
+- line 769 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 769 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 795 | MathMutator | Replaced Shift Right with Shift Left | source: context.ibitWorkArea = context.ibitWorkArea >> 2; // dump 2 bits
+- line 796 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 8 & MASK_8BITS);
+- line 796 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea >> 8 & MASK_8BITS);
+- line 797 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 797 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 746 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.eof) {
+- line 756 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (b == pad) {
+- line 766 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.modulus == 0) {
+- line 778 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.eof && context.modulus != 0) {
+- line 778 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.eof && context.modulus != 0) {
+- line 753 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < inAvail; i++) {
+- line 761 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (b >= 0 && b < decodeTable.length) {
+- line 761 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (b >= 0 && b < decodeTable.length) {
+- line 763 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (result >= 0) {
+- line 794 | VoidMethodCallMutator | removed call to org/apache/commons/codec/binary/Base64::validateCharacter | source: validateCharacter(MASK_2BITS, context);
+
+NO_COVERAGE (5 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 790 | MathMutator | Replaced Shift Right with Shift Left | source: context.ibitWorkArea = context.ibitWorkArea >> 4; // dump the extra 4 bits
+- line 791 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 791 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.ibitWorkArea & MASK_8BITS);
+- line 786 | VoidMethodCallMutator | removed call to org/apache/commons/codec/binary/Base64::validateTrailingCharacter | source: validateTrailingCharacter();
+- line 789 | VoidMethodCallMutator | removed call to org/apache/commons/codec/binary/Base64::validateCharacter | source: validateCharacter(MASK_4BITS, context);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testDecode, testDecodeWithEOF, testDecodeWithInsufficientInput, testDecodeWithInvalidCharacter, testDecodeWithInvalidModulus, testDecodeWithNegativeInAvail, testDecodeWithPadding, testDecodeWithSpecialCharacters, testDecodeWithValidInput

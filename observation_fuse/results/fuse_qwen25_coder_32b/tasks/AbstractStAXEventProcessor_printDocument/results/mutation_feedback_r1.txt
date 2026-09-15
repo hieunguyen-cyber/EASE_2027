@@ -1,0 +1,35 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (27 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 397 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < sz; i++) {
+- line 375 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.isOmitDeclaration()) {
+- line 378 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (fstack.isOmitEncoding()) {
+- line 380 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 385 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 393 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: List<Content> list = doc.hasRootElement() ? doc.getContent() :
+- line 395 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (list.isEmpty()) {
+- line 403 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.hasNext()) {
+- line 404 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (walker.hasNext()) {
+- line 410 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == null) {
+- line 413 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding) &&
+- line 413 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (padding != null && Verifier.isAllXMLWhitespace(padding) &&
+- line 414 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !walker.isCDATA()) {
+- line 443 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (fstack.getLineSeparator() != null) {
+- line 397 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < sz; i++) {
+- line 377 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createStartDocument(null, null));
+- line 379 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createStartDocument(null, "1.0"));
+- line 381 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createCharacters(fstack.getLineSeparator()));
+- line 384 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createStartDocument(fstack.getEncoding(), "1.0"));
+- line 386 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createCharacters(fstack.getLineSeparator()));
+- line 418 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createCharacters(padding));
+- line 423 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printComment | source: printComment(out, fstack, eventfactory, (Comment) c);
+- line 426 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printDocType | source: printDocType(out, fstack, eventfactory, (DocType)c);
+- line 429 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printElement | source: printElement(out, fstack, nstack, eventfactory,
+- line 433 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printProcessingInstruction | source: printProcessingInstruction(out, fstack, eventfactory,
+- line 444 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createCharacters(fstack.getLineSeparator()));
+- line 448 | VoidMethodCallMutator | removed call to javax/xml/stream/util/XMLEventConsumer::add | source: out.add(eventfactory.createEndDocument());
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintDocument, testPrintDocument_EmptyDocument, testPrintDocument_ThrowsXMLStreamException_OnEmptyDocument, testPrintDocument_ThrowsXMLStreamException_WhenEventFactoryFails, testPrintDocument_ThrowsXMLStreamException_WhenOutputConsumerFails, testPrintDocument_WithEncodingAndSeparator, testPrintDocument_WithMultipleContents, testPrintDocument_WithMultipleContents_ThrowsXMLStreamException_WhenWalkerFails, testPrintDocument_WithOmitDeclaration, testPrintDocument_WithOmitEncoding, testPrintDocument_WithRootElement

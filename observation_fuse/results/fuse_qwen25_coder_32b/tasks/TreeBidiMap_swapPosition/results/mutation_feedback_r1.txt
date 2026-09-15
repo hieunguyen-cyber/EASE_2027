@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (19 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 2108 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: x.getParent(dataElement) != null && x == x.getParent(dataElement).getLeft(dataElement);
+- line 2110 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: y.getParent(dataElement) != null && y == y.getParent(dataElement).getLeft(dataElement);
+- line 2113 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (x == yFormerParent) { // x was y's parent
+- line 2126 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (yFormerParent != null) {
+- line 2138 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (y == xFormerParent) { // y was x's parent
+- line 2151 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (xFormerParent != null) {
+- line 2164 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (x.getLeft(dataElement) != null) {
+- line 2168 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (x.getRight(dataElement) != null) {
+- line 2172 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (y.getLeft(dataElement) != null) {
+- line 2176 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (y.getRight(dataElement) != null) {
+- line 2183 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (rootNode[dataElement.ordinal()] == x) {
+- line 2185 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (rootNode[dataElement.ordinal()] == y) {
+- line 2124 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: x.setParent(yFormerParent, dataElement);
+- line 2134 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: y.setLeft(xFormerLeftChild, dataElement);
+- line 2135 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: y.setRight(xFormerRightChild, dataElement);
+- line 2149 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: y.setParent(xFormerParent, dataElement);
+- line 2159 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: x.setLeft(yFormerLeftChild, dataElement);
+- line 2160 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: x.setRight(yFormerRightChild, dataElement);
+- line 2180 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$3300 | source: x.swapColors(y, dataElement);
+
+NO_COVERAGE (24 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 2108 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: x.getParent(dataElement) != null && x == x.getParent(dataElement).getLeft(dataElement);
+- line 2110 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: y.getParent(dataElement) != null && y == y.getParent(dataElement).getLeft(dataElement);
+- line 2116 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (yWasLeftChild) {
+- line 2127 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (yWasLeftChild) {
+- line 2141 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (xWasLeftChild) {
+- line 2152 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (xWasLeftChild) {
+- line 2114 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: x.setParent(y, dataElement);
+- line 2117 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: y.setLeft(x, dataElement);
+- line 2118 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: y.setRight(xFormerRightChild, dataElement);
+- line 2120 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: y.setRight(x, dataElement);
+- line 2121 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: y.setLeft(xFormerLeftChild, dataElement);
+- line 2128 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: yFormerParent.setLeft(x, dataElement);
+- line 2130 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: yFormerParent.setRight(x, dataElement);
+- line 2139 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: y.setParent(x, dataElement);
+- line 2142 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: x.setLeft(y, dataElement);
+- line 2143 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: x.setRight(yFormerRightChild, dataElement);
+- line 2145 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: x.setRight(y, dataElement);
+- line 2146 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: x.setLeft(yFormerLeftChild, dataElement);
+- line 2153 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: xFormerParent.setLeft(y, dataElement);
+- line 2155 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: xFormerParent.setRight(y, dataElement);
+- line 2165 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: x.getLeft(dataElement).setParent(x, dataElement);
+- ... and 3 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testSwapPosition, testSwapPosition_IllegalArgumentExceptionForNullDataElement, testSwapPosition_NoParentChildRelation_MultipleNodes, testSwapPosition_NullNode, testSwapPosition_SpecialCase_SameNode, testSwapPosition_SwapColors, testSwapPosition_SwapWithRoot, testSwapPosition_ViolatesRedBlackProperties

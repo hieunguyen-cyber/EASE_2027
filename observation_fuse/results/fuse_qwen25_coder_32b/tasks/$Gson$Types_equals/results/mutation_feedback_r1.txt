@@ -1,0 +1,20 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (6 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 182 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (a instanceof Class) {
+- line 187 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!(b instanceof ParameterizedType)) {
+- line 199 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!(b instanceof GenericArrayType)) {
+- line 208 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!(b instanceof WildcardType)) {
+- line 218 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!(b instanceof TypeVariable)) {
+- line 184 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/internal/$Gson$Types::equals | source: return a.equals(b);
+
+NO_COVERAGE (4 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 188 | BooleanTrueReturnValsMutator | replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals | source: return false;
+- line 200 | BooleanTrueReturnValsMutator | replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals | source: return false;
+- line 209 | BooleanTrueReturnValsMutator | replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals | source: return false;
+- line 219 | BooleanTrueReturnValsMutator | replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals | source: return false;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEquals_withDifferentClassTypes, testEquals_withDifferentGenericArrayTypes, testEquals_withDifferentParameterizedTypes, testEquals_withDifferentTypeVariables, testEquals_withDifferentWildcardTypes, testEquals_withGenericArrayTypes, testEquals_withNulls, testEquals_withOneNullAndOneUnknownType, testEquals_withParameterizedTypes, testEquals_withSameClassTypes, testEquals_withTypeVariables, testEquals_withUnknownTypes, testEquals_withWildcardTypes

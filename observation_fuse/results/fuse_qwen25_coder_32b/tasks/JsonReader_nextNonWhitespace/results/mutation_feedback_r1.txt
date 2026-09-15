@@ -1,0 +1,24 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (8 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1421 | MathMutator | Replaced integer addition with subtraction | source: pos++;
+- line 1431 | MathMutator | Replaced integer addition with subtraction | source: pos++;
+- line 1397 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c == '\n') {
+- line 1407 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (p == l) {
+- line 1422 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!skipTo("*/")) {
+- line 1456 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (throwOnEof) {
+- line 1416 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+- line 1447 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::checkLenient | source: checkLenient();
+
+NO_COVERAGE (6 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1398 | MathMutator | Replaced integer addition with subtraction | source: lineNumber++;
+- line 1408 | MathMutator | Replaced integer subtraction with addition | source: pos--; // push back '/' so it's still in the buffer when this method returns
+- line 1410 | MathMutator | Replaced integer addition with subtraction | source: pos++; // consume the '/' again
+- line 1411 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!charsLoaded) {
+- line 1412 | PrimitiveReturnsMutator | replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace | source: return c;
+- line 1438 | PrimitiveReturnsMutator | replaced int return with 0 for com/google/gson/stream/JsonReader::nextNonWhitespace | source: return c;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNextNonWhitespaceHandlesCStyleComments, testNextNonWhitespaceHandlesComments, testNextNonWhitespaceHandlesHashComments, testNextNonWhitespaceHandlesMixedWhitespaceAndComments, testNextNonWhitespaceHandlesMultiLineComments, testNextNonWhitespaceHandlesNewlines, testNextNonWhitespaceHandlesSingleLineComments, testNextNonWhitespaceHandlesSpaces, testNextNonWhitespaceHandlesThrowOnEOFFalse, testNextNonWhitespaceThrowsEOFException, testNextNonWhitespaceThrowsNumberFormatExceptionForMalformedUnicode, testNextNonWhitespaceThrowsSyntaxErrorForUnterminatedComment

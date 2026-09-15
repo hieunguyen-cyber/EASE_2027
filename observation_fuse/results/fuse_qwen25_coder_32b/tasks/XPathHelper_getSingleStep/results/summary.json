@@ -1,0 +1,240 @@
+{
+  "task_id": "XPathHelper_getSingleStep",
+  "project": "jdom2",
+  "focal_class": "org.jdom2.xpath.XPathHelper",
+  "focal_method": "getSingleStep(NamespaceAware, StringBuilder)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/XPathHelper_getSingleStep/workspace/src/test/java/org/jdom2/xpath/XPathHelper_getSingleStep_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 101.206
+  },
+  "started_at": "2026-09-15T07:57:46.454451+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN_FILTERED",
+    "disabled_methods": [
+      "testGetSingleStepForCommentNode",
+      "testGetSingleStepForElementNode",
+      "testGetSingleStepForTextNode"
+    ],
+    "test_count": 3
+  },
+  "ktester": {
+    "test_cases": 3,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 3,
+    "tests_failed": 3,
+    "line_missed": 21,
+    "line_covered": 18,
+    "line_coverage": 0.461538,
+    "branch_missed": 19,
+    "branch_covered": 11,
+    "branch_coverage": 0.366667,
+    "instruction_missed": 108,
+    "instruction_covered": 63,
+    "instruction_coverage": 0.368421,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null,
+    "stats": {
+      "total": 22,
+      "detected": 0,
+      "undetected": 22,
+      "killed": 0,
+      "survived": 0,
+      "no_coverage": 22,
+      "mutation_score": 0.0,
+      "statuses": {
+        "NO_COVERAGE": 22
+      }
+    },
+    "kills_per_test": 0.0,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 7,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 7,
+        "mutation_score": 0.0
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 15,
+        "detected": 0,
+        "survived": 0,
+        "no_coverage": 15,
+        "mutation_score": 0.0
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 22,
+      "existing_tests_before": 3,
+      "tests_after": 10,
+      "seconds": 101.205,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 10,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 10,
+    "tests_failed": 0,
+    "line_missed": 13,
+    "line_covered": 26,
+    "line_coverage": 0.666667,
+    "branch_missed": 15,
+    "branch_covered": 15,
+    "branch_coverage": 0.5,
+    "instruction_missed": 64,
+    "instruction_covered": 107,
+    "instruction_coverage": 0.625731,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": 101.206,
+    "inherited_disabled_methods": 3,
+    "stats": {
+      "total": 22,
+      "detected": 11,
+      "undetected": 11,
+      "killed": 11,
+      "survived": 4,
+      "no_coverage": 7,
+      "mutation_score": 0.5,
+      "statuses": {
+        "KILLED": 11,
+        "NO_COVERAGE": 7,
+        "SURVIVED": 4
+      }
+    },
+    "kills_per_test": 1.1,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 7,
+        "detected": 4,
+        "survived": 0,
+        "no_coverage": 3,
+        "mutation_score": 0.571429
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 15,
+        "detected": 7,
+        "survived": 4,
+        "no_coverage": 4,
+        "mutation_score": 0.466667
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.205129,
+    "branch_coverage": 0.133333,
+    "instruction_coverage": 0.25731,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "kills_per_test": 1.1,
+    "mutation_score": 0.5,
+    "mutation_score_points": 50.0,
+    "newly_killed": 11,
+    "lost_kills": 0,
+    "added_test_methods": 7,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      false,
+      false
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 180,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 186,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 190,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep"
+      },
+      {
+        "line": 192,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 196,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep"
+      },
+      {
+        "line": 205,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 206,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 213,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep"
+      },
+      {
+        "line": 237,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 239,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 249,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T07:59:52.782419+00:00"
+}

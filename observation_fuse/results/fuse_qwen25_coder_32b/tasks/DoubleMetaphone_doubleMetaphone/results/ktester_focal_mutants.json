@@ -1,0 +1,484 @@
+{
+  "mutants": [
+    {
+      "id": 85,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 284,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 301,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 340,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 88,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 372,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 89,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 284,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 296,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 296,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 92,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 296,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 311,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 311,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 95,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 311,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 324,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 324,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 98,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 324,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 331,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 100,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 331,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 101,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 335,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 335,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 103,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 335,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 347,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 347,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 347,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 360,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 360,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 360,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 110,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 275,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 111,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 280,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 112,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 284,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 296,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 311,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 324,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 331,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 335,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 118,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 347,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 360,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 120,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 377,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 121,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 284,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 122,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 295,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 123,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 300,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 124,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 310,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 125,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 323,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 126,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 330,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 127,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 334,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 128,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 339,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 129,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 346,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 130,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "DoubleMetaphone.java",
+      "line": 359,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult::append",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 131,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 276,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/DoubleMetaphone::doubleMetaphone",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
+      "id": 132,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "DoubleMetaphone.java",
+      "line": 377,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for org/apache/commons/codec/language/DoubleMetaphone::doubleMetaphone",
+      "method_description": "(Ljava/lang/String;Z)Ljava/lang/String;"
+    }
+  ]
+}

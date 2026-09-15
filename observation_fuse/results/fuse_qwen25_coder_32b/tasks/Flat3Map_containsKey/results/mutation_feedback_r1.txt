@@ -1,0 +1,13 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (2 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 618 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size > 0) {
+- line 609 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key2 == null) {
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 610 | BooleanFalseReturnValsMutator | replaced boolean return with false for org/apache/commons/collections4/map/Flat3Map::containsKey | source: return true;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testContainsKey_withExistingKey, testContainsKey_withNonExistingKey, testContainsKey_withNullKey, testContainsKey_withNullKey_whenKeysAreNotNull, testContainsKey_withNullKey_whenKeysAreNull, testContainsKey_withNullKey_withMixedKeys, testContainsKey_withNullValue, testContainsKey_withNull_whenSizeIsOne, testContainsKey_withNull_whenSizeIsThree, testContainsKey_withNull_whenSizeIsTwo

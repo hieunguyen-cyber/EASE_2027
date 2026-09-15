@@ -1,0 +1,9 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 325 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < additionalNamespaces.size(); i++) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetNamespaceWithAdditionalNamespace, testGetNamespaceWithAttributeNamespace, testGetNamespaceWithDefaultNamespace, testGetNamespaceWithDetachedElement, testGetNamespaceWithElementNamespace, testGetNamespaceWithNullPrefix, testGetNamespaceWithParentNamespace, testGetNamespaceWithUnknownPrefix, testGetNamespaceWithXMLPrefix

@@ -1,0 +1,244 @@
+{
+  "mutants": [
+    {
+      "id": 52,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Lexer.java",
+      "line": 235,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 236,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 236,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Lexer.java",
+      "line": 251,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Lexer.java",
+      "line": 251,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Lexer.java",
+      "line": 251,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 257,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 257,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 259,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 271,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 273,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 274,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 274,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 274,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 281,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 284,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 288,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 291,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 245,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/Lexer::nextToken",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Lexer.java",
+      "line": 254,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/Lexer::nextToken",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 262,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/Lexer::nextToken",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 267,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/Lexer::nextToken",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Lexer.java",
+      "line": 302,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/Lexer::nextToken",
+      "method_description": "(Lorg/apache/commons/csv/Token;)Lorg/apache/commons/csv/Token;"
+    }
+  ]
+}

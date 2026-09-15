@@ -1,0 +1,45 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (37 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 481 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (driverNodeLabelValues != null && driverNodeLabelValues.size() > 0) {
+- line 445 | MathMutator | Replaced double multiplication with division | source: long adjustedDriverCores = Math.round(originalDriverCores * driverCpuBufferRatioQueue);
+- line 453 | MathMutator | Replaced integer multiplication with division | source: Math.ceil(driverSpec.getCores() * CORE_LIMIT_RATIO * driverCpuBufferRatioQueue)));
+- line 453 | MathMutator | Replaced double multiplication with division | source: Math.ceil(driverSpec.getCores() * CORE_LIMIT_RATIO * driverCpuBufferRatioQueue)));
+- line 456 | MathMutator | Replaced double multiplication with division | source: long adjustedDriverCoreLimit =
+- line 463 | MathMutator | Replaced double multiplication with division | source: long adjustedDriverMem = (long) Math.ceil(originalDriverMem * driverMemBufferRatioQueue);
+- line 405 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (request.getDriver() != null) {
+- line 409 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverLabels != null) {
+- line 411 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverLabels.containsKey(DAG_NAME_LABEL)) {
+- line 416 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverLabels.containsKey(TASK_NAME_LABEL)) {
+- line 428 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (request.getDriver() != null
+- line 429 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && request.getVolumes() != null
+- line 430 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && !request.getVolumes().isEmpty()) {
+- line 432 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (sparkCluster.getDriver() != null
+- line 433 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && sparkCluster.getVolumes() != null
+- line 434 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && !sparkCluster.getVolumes().isEmpty()) {
+- line 440 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverSpec.getServiceAccount() == null || driverSpec.getServiceAccount().isEmpty()) {
+- line 440 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverSpec.getServiceAccount() == null || driverSpec.getServiceAccount().isEmpty()) {
+- line 449 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverSpec.getCoreLimit() == null || driverSpec.getCoreLimit().isEmpty()) {
+- line 449 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverSpec.getCoreLimit() == null || driverSpec.getCoreLimit().isEmpty()) {
+- line 470 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: driverSpec.getAnnotations() == null ? new HashMap<>() : driverSpec.getAnnotations();
+- line 478 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverSpec.getAffinity() == null) {
+- line 481 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (driverNodeLabelValues != null && driverNodeLabelValues.size() > 0) {
+- line 481 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (driverNodeLabelValues != null && driverNodeLabelValues.size() > 0) {
+- line 406 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::copyFrom | source: driverSpec.copyFrom(request.getDriver());
+- line 421 | VoidMethodCallMutator | removed call to java/util/Map::putAll | source: driverLabels.putAll(labels);
+- line 422 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setLabels | source: driverSpec.setLabels(driverLabels);
+- line 431 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setVolumeMounts | source: driverSpec.setVolumeMounts(request.getDriver().getVolumeMounts());
+- line 435 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setVolumeMounts | source: driverSpec.setVolumeMounts(sparkCluster.getDriver().getVolumeMounts());
+- line 441 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setServiceAccount | source: driverSpec.setServiceAccount(sparkCluster.getSparkServiceAccount());
+- line 446 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setCores | source: driverSpec.setCores((int) adjustedDriverCores);
+- line 450 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setCoreLimit | source: driverSpec.setCoreLimit(
+- line 458 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setCoreLimit | source: driverSpec.setCoreLimit(String.valueOf(adjustedDriverCoreLimit));
+- line 465 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setMemory | source: driverSpec.setMemory(adjustedDriverMem + memUnit);
+- line 474 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setAnnotations | source: driverSpec.setAnnotations(driverAnnotations);
+- line 498 | VoidMethodCallMutator | removed call to com/apple/spark/operator/DriverSpec::setAffinity | source: driverSpec.setAffinity(new Affinity(nodeAffinity));
+- line 502 | NullReturnValsMutator | replaced return value with null for com/apple/spark/core/ApplicationSubmissionHelper::getDriverSpec | source: return driverSpec;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetDriverSpecAdjustCoreLimits, testGetDriverSpecDefaultServiceAccount, testGetDriverSpecWithDriverLabels, testGetDriverSpecWithEmptyClusterServiceAccount, testGetDriverSpecWithNoDriverAndVolumes, testGetDriverSpecWithNonNullDriver, testGetDriverSpecWithNullAppConfig, testGetDriverSpecWithNullRequest, testGetDriverSpecWithNullSparkCluster, testGetDriverSpecWithVolumes

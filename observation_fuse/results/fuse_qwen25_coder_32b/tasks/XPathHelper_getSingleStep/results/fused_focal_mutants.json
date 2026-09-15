@@ -1,0 +1,224 @@
+{
+  "mutants": [
+    {
+      "id": 67,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 180,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "XPathHelper.java",
+      "line": 188,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 70,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 192,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "XPathHelper.java",
+      "line": 194,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "XPathHelper.java",
+      "line": 198,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 200,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 205,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 75,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 206,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "XPathHelper.java",
+      "line": 211,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 215,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 224,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 232,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 80,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 237,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 81,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 239,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 82,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 190,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 83,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 196,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 84,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 202,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 85,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 213,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 229,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "XPathHelper.java",
+      "line": 234,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    },
+    {
+      "id": 88,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "XPathHelper.java",
+      "line": 249,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/jdom2/xpath/XPathHelper::getSingleStep",
+      "method_description": "(Lorg/jdom2/NamespaceAware;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+    }
+  ]
+}

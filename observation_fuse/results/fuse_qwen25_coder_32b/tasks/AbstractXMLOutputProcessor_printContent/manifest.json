@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:05:24.115288+00:00",
+  "task_id": "AbstractXMLOutputProcessor_printContent",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "AbstractXMLOutputProcessor_printContent",
+    "package": "org.jdom2.output.support",
+    "class": "org.jdom2.output.support.AbstractXMLOutputProcessor",
+    "test-class": "org.jdom2.output.support.AbstractXMLOutputProcessor_printContent_Test",
+    "method-name": "printContent(Writer, FormatStack, NamespaceStack, Walker)",
+    "source-path": "src/main/java/org/jdom2/output/support/AbstractXMLOutputProcessor.java",
+    "test-path": "src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printContent_Test.java",
+    "focal-method": "protected void printContent(final Writer out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws IOException {\r\n    while (walker.hasNext()) {\r\n        Content c = walker.next();\r\n        if (c == null) {\r\n            // it is a text value of some sort.\r\n            final String t = walker.text();\r\n            if (walker.isCDATA()) {\r\n                textCDATA(out, t);\r\n            } else {\r\n                textRaw(out, t);\r\n            }\r\n        } else {\r\n            switch (c.getCType()) {\r\n                case CDATA :\r\n                    printCDATA(out, fstack, ((CDATA) (c)));\r\n                    break;\r\n                case Comment :\r\n                    printComment(out, fstack, ((Comment) (c)));\r\n                    break;\r\n                case DocType :\r\n                    printDocType(out, fstack, ((DocType) (c)));\r\n                    break;\r\n                case Element :\r\n                    printElement(out, fstack, nstack, ((Element) (c)));\r\n                    break;\r\n                case EntityRef :\r\n                    printEntityRef(out, fstack, ((EntityRef) (c)));\r\n                    break;\r\n                case ProcessingInstruction :\r\n                    printProcessingInstruction(out, fstack, ((ProcessingInstruction) (c)));\r\n                    break;\r\n                case Text :\r\n                    printText(out, fstack, ((Text) (c)));\r\n                    break;\r\n            }\r\n        }\r\n    } \r\n}",
+    "class-code": "package org.jdom2.output.support;\nimport org.jdom2.IllegalDataException;\nimport org.jdom2.output.XMLOutputter;\nimport org.jdom2.Attribute;\nimport org.jdom2.Element;\nimport java.util.ArrayList;\nimport java.io.IOException;\nimport org.jdom2.Namespace;\nimport org.jdom2.Text;\nimport org.jdom2.Document;\nimport javax.xml.transform.Result;\nimport org.jdom2.Verifier;\nimport org.jdom2.util.NamespaceStack;\nimport org.jdom2.Content;\nimport org.jdom2.output.Format.TextMode;\nimport java.io.Writer;\nimport org.jdom2.ProcessingInstruction;\nimport java.util.List;\nimport org.jdom2.EntityRef;\nimport org.jdom2.output.Format;\nimport org.jdom2.CDATA;\nimport org.jdom2.Comment;\nimport java.util.Collections;\nimport org.jdom2.DocType;\npublic abstract class AbstractXMLOutputProcessor extends AbstractOutputProcessor implements XMLOutputProcessor {\n    protected static final String CDATAPRE = \"<![CDATA[\";\n    protected static final String CDATAPOST = \"]]>\";\n    protected void printContent(final Writer out, final FormatStack fstack, final NamespaceStack nstack, final Walker walker) throws IOException {\r\n        while (walker.hasNext()) {\r\n            Content c = walker.next();\r\n            if (c == null) {\r\n                // it is a text value of some sort.\r\n                final String t = walker.text();\r\n                if (walker.isCDATA()) {\r\n                    textCDATA(out, t);\r\n                } else {\r\n                    textRaw(out, t);\r\n                }\r\n            } else {\r\n                switch (c.getCType()) {\r\n                    case CDATA :\r\n                        printCDATA(out, fstack, ((CDATA) (c)));\r\n                        break;\r\n                    case Comment :\r\n                        printComment(out, fstack, ((Comment) (c)));\r\n                        break;\r\n                    case DocType :\r\n                        printDocType(out, fstack, ((DocType) (c)));\r\n                        break;\r\n                    case Element :\r\n                        printElement(out, fstack, nstack, ((Element) (c)));\r\n                        break;\r\n                    case EntityRef :\r\n                        printEntityRef(out, fstack, ((EntityRef) (c)));\r\n                        break;\r\n                    case ProcessingInstruction :\r\n                        printProcessingInstruction(out, fstack, ((ProcessingInstruction) (c)));\r\n                        break;\r\n                    case Text :\r\n                        printText(out, fstack, ((Text) (c)));\r\n                        break;\r\n                }\r\n            }\r\n        } \r\n    }\nprotected void attributeEscapedEntitiesFilter(final Writer out, final FormatStack fstack, final String value) throws IOException;\n    protected void printAttribute(final Writer out, final FormatStack fstack, final Attribute attribute) throws IOException;\n    protected void printCDATA(final Writer out, final FormatStack fstack, final CDATA cdata) throws IOException;\n    protected void printComment(final Writer out, final FormatStack fstack, final Comment comment) throws IOException;\n    protected void printDeclaration(final Writer out, final FormatStack fstack) throws IOException;\n    protected void printDocType(final Writer out, final FormatStack fstack, final DocType docType) throws IOException;\n    protected void printDocument(final Writer out, final FormatStack fstack, final NamespaceStack nstack, final Document doc) throws IOException;\n    protected void printElement(final Writer out, final FormatStack fstack, final NamespaceStack nstack, final Element element) throws IOException;\n    protected void printEntityRef(final Writer out, final FormatStack fstack, final EntityRef entity) throws IOException;\n    protected void printNamespace(final Writer out, final FormatStack fstack, final Namespace ns) throws IOException;\n    protected void printProcessingInstruction(final Writer out, final FormatStack fstack, final ProcessingInstruction pi) throws IOException;\n    protected void printText(final Writer out, final FormatStack fstack, final Text text) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final List<? extends Content> list) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final CDATA cdata) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final Comment comment) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final DocType doctype) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final Document doc) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final Element element) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final EntityRef entity) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final ProcessingInstruction pi) throws IOException;\n    @Override\r\npublic void process(final Writer out, final Format format, final Text text) throws IOException;\n    protected void textCDATA(final Writer out, final String text) throws IOException;\n    protected void textEntityRef(final Writer out, final String name) throws IOException;\n    protected void textRaw(final Writer out, final char ch) throws IOException;\n    protected void textRaw(final Writer out, final String str) throws IOException;\n    protected void write(final Writer out, final char c) throws IOException;\n    protected void write(final Writer out, final String str) throws IOException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printContent_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printContent_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace/src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printContent_Test.java"
+  },
+  "started_at": "2026-09-15T08:05:24.209353+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printContent/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

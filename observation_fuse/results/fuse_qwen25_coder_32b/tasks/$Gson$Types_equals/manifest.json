@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:02:10.863968+00:00",
+  "task_id": "$Gson$Types_equals",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "$Gson$Types_equals",
+    "package": "com.google.gson.internal",
+    "class": "com.google.gson.internal.$Gson$Types",
+    "test-class": "com.google.gson.internal.$Gson$Types_equals_Test",
+    "method-name": "equals(Type, Type)",
+    "source-path": "src/main/java/com/google/gson/internal/$Gson$Types.java",
+    "test-path": "src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java",
+    "focal-method": "public static boolean equals(Type a, Type b) {\r\n    if (a == b) {\r\n        // also handles (a == null && b == null)\r\n        return true;\r\n    } else if (a instanceof Class) {\r\n        // Class already specifies equals().\r\n        return a.equals(b);\r\n    } else if (a instanceof ParameterizedType) {\r\n        if (!(b instanceof ParameterizedType)) {\r\n            return false;\r\n        }\r\n        // TODO: save a .clone() call\r\n        ParameterizedType pa = ((ParameterizedType) (a));\r\n        ParameterizedType pb = ((ParameterizedType) (b));\r\n        return (equal(pa.getOwnerType(), pb.getOwnerType()) && pa.getRawType().equals(pb.getRawType())) && Arrays.equals(pa.getActualTypeArguments(), pb.getActualTypeArguments());\r\n    } else if (a instanceof GenericArrayType) {\r\n        if (!(b instanceof GenericArrayType)) {\r\n            return false;\r\n        }\r\n        GenericArrayType ga = ((GenericArrayType) (a));\r\n        GenericArrayType gb = ((GenericArrayType) (b));\r\n        return equals(ga.getGenericComponentType(), gb.getGenericComponentType());\r\n    } else if (a instanceof WildcardType) {\r\n        if (!(b instanceof WildcardType)) {\r\n            return false;\r\n        }\r\n        WildcardType wa = ((WildcardType) (a));\r\n        WildcardType wb = ((WildcardType) (b));\r\n        return Arrays.equals(wa.getUpperBounds(), wb.getUpperBounds()) && Arrays.equals(wa.getLowerBounds(), wb.getLowerBounds());\r\n    } else if (a instanceof TypeVariable) {\r\n        if (!(b instanceof TypeVariable)) {\r\n            return false;\r\n        }\r\n        TypeVariable<?> va = ((TypeVariable<?>) (a));\r\n        TypeVariable<?> vb = ((TypeVariable<?>) (b));\r\n        return (va.getGenericDeclaration() == vb.getGenericDeclaration()) && va.getName().equals(vb.getName());\r\n    } else {\r\n        // This isn't a type we support. Could be a generic array type, wildcard type, etc.\r\n        return false;\r\n    }\r\n}",
+    "class-code": "package com.google.gson.internal;\nimport java.util.HashMap;\nimport static java.util.Objects.requireNonNull;\nimport static com.google.gson.internal.$Gson$Preconditions.checkArgument;\nimport java.lang.reflect.GenericArrayType;\nimport java.lang.reflect.GenericDeclaration;\nimport java.util.Properties;\nimport java.lang.reflect.Modifier;\nimport java.lang.reflect.Array;\nimport java.lang.reflect.Type;\nimport java.lang.reflect.WildcardType;\nimport java.lang.reflect.TypeVariable;\nimport java.lang.reflect.ParameterizedType;\nimport java.util.Collection;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.util.Map;\nimport java.io.Serializable;\nimport java.util.Arrays;\npublic final class $Gson$Types {\n    static final Type[] EMPTY_TYPE_ARRAY = new Type[]{  };\n    public static boolean equals(Type a, Type b) {\r\n        if (a == b) {\r\n            // also handles (a == null && b == null)\r\n            return true;\r\n        } else if (a instanceof Class) {\r\n            // Class already specifies equals().\r\n            return a.equals(b);\r\n        } else if (a instanceof ParameterizedType) {\r\n            if (!(b instanceof ParameterizedType)) {\r\n                return false;\r\n            }\r\n            // TODO: save a .clone() call\r\n            ParameterizedType pa = ((ParameterizedType) (a));\r\n            ParameterizedType pb = ((ParameterizedType) (b));\r\n            return (equal(pa.getOwnerType(), pb.getOwnerType()) && pa.getRawType().equals(pb.getRawType())) && Arrays.equals(pa.getActualTypeArguments(), pb.getActualTypeArguments());\r\n        } else if (a instanceof GenericArrayType) {\r\n            if (!(b instanceof GenericArrayType)) {\r\n                return false;\r\n            }\r\n            GenericArrayType ga = ((GenericArrayType) (a));\r\n            GenericArrayType gb = ((GenericArrayType) (b));\r\n            return equals(ga.getGenericComponentType(), gb.getGenericComponentType());\r\n        } else if (a instanceof WildcardType) {\r\n            if (!(b instanceof WildcardType)) {\r\n                return false;\r\n            }\r\n            WildcardType wa = ((WildcardType) (a));\r\n            WildcardType wb = ((WildcardType) (b));\r\n            return Arrays.equals(wa.getUpperBounds(), wb.getUpperBounds()) && Arrays.equals(wa.getLowerBounds(), wb.getLowerBounds());\r\n        } else if (a instanceof TypeVariable) {\r\n            if (!(b instanceof TypeVariable)) {\r\n                return false;\r\n            }\r\n            TypeVariable<?> va = ((TypeVariable<?>) (a));\r\n            TypeVariable<?> vb = ((TypeVariable<?>) (b));\r\n            return (va.getGenericDeclaration() == vb.getGenericDeclaration()) && va.getName().equals(vb.getName());\r\n        } else {\r\n            // This isn't a type we support. Could be a generic array type, wildcard type, etc.\r\n            return false;\r\n        }\r\n    }\npublic static GenericArrayType arrayOf(Type componentType);\n    public static Type canonicalize(Type type);\n    static void checkNotPrimitive(Type type);\n    private static boolean equal(Object a, Object b);\n    public static Type getArrayComponentType(Type array);\n    public static Type getCollectionElementType(Type context, Class<?> contextRawType);\n    public static Type[] getMapKeyAndValueTypes(Type context, Class<?> contextRawType);\n    public static Class<?> getRawType(Type type);\n    public static ParameterizedType newParameterizedTypeWithOwner(Type ownerType, Type rawType, Type... typeArguments);\n    public static Type resolve(Type context, Class<?> contextRawType, Type toResolve);\n    public static WildcardType subtypeOf(Type bound);\n    public static WildcardType supertypeOf(Type bound);\n    public static String typeToString(Type type);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace/gson/src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace/gson/src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java"
+  },
+  "started_at": "2026-09-15T07:02:10.940208+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/$Gson$Types_equals/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

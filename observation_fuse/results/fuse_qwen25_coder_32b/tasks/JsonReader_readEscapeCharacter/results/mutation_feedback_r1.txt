@@ -1,0 +1,32 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1602 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (pos + 4 > limit && !fillBuffer(4)) {
+- line 1610 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (c >= '0' && c <= '9') {
+- line 1595 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pos == limit && !fillBuffer(1)) {
+
+NO_COVERAGE (19 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1612 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (c >= 'a' && c <= 'f') {
+- line 1612 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (c >= 'a' && c <= 'f') {
+- line 1614 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (c >= 'A' && c <= 'F') {
+- line 1614 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (c >= 'A' && c <= 'F') {
+- line 1613 | MathMutator | Replaced integer subtraction with addition | source: result += (c - 'a' + 10);
+- line 1613 | MathMutator | Replaced integer addition with subtraction | source: result += (c - 'a' + 10);
+- line 1613 | MathMutator | Replaced integer addition with subtraction | source: result += (c - 'a' + 10);
+- line 1615 | MathMutator | Replaced integer subtraction with addition | source: result += (c - 'A' + 10);
+- line 1615 | MathMutator | Replaced integer addition with subtraction | source: result += (c - 'A' + 10);
+- line 1615 | MathMutator | Replaced integer addition with subtraction | source: result += (c - 'A' + 10);
+- line 1639 | MathMutator | Replaced integer addition with subtraction | source: lineNumber++;
+- line 1595 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pos == limit && !fillBuffer(1)) {
+- line 1612 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (c >= 'a' && c <= 'f') {
+- line 1612 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (c >= 'a' && c <= 'f') {
+- line 1614 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (c >= 'A' && c <= 'F') {
+- line 1614 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (c >= 'A' && c <= 'F') {
+- line 1627 | PrimitiveReturnsMutator | replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter | source: return '\b';
+- line 1633 | PrimitiveReturnsMutator | replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter | source: return '\r';
+- line 1636 | PrimitiveReturnsMutator | replaced char return with 0 for com/google/gson/stream/JsonReader::readEscapeCharacter | source: return '\f';
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testReadEscapeCharacter_backslashEscape, testReadEscapeCharacter_invalidEscapeSequence, testReadEscapeCharacter_nextLineChange, testReadEscapeCharacter_unterminatedEscapeSequence, testReadEscapeCharacter_validEscapeSequences, testReadEscapeCharacter_validSingleQuoteEscape, testReadEscapeCharacter_validTabEscape, testReadEscapeCharacter_validUnicodeEscape

@@ -1,0 +1,16 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (8 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 300 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < res.length; i++) {
+- line 314 | MathMutator | Replaced integer addition with subtraction | source: res[i] = (char) (baseChar + context.getRandomService().nextInt(26)); // a-z
+- line 298 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final int baseChar = isUpper ? 65 : 97;
+- line 303 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (numerify) {
+- line 308 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (numerify) {
+- line 313 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (letterify) {
+- line 300 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < res.length; i++) {
+- line 322 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/service/FakeValuesService::bothify | source: return String.valueOf(res);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  bothifyMixedCaseAndFlags, bothifyOnlyLetterify, bothifyOnlyNumerify, bothifyShouldThrowIllegalArgumentExceptionWhenInputIsEmpty, bothifyShouldThrowIllegalArgumentExceptionWhenInputIsNull, bothifyShouldThrowNullPointerExceptionWhenContextIsNull, bothifyWithDefaults, bothifyWithExactNumerifyFlag, bothifyWithLowercaseAndLetterify, bothifyWithMixedNumerifyAndLetterify, bothifyWithUppercaseAndNumerify

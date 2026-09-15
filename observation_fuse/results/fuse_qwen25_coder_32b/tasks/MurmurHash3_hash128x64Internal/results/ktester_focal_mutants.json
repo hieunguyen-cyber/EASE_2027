@@ -1,0 +1,924 @@
+{
+  "mutants": [
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 521,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 518,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Right with Shift Left",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 522,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 522,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 524,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 527,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 529,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 530,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 532,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 533,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 533,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 80,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 536,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 81,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 538,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 82,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 539,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 83,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 541,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 84,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 542,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 542,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 86,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 548,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 87,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 548,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 549,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 549,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 551,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 551,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 92,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 551,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 551,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 553,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 95,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 553,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 553,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 553,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 555,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 555,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 100,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 555,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 101,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 555,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 557,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 103,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 557,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 557,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 557,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 559,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 559,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 559,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 559,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 110,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 561,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 111,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 561,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 112,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 561,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 561,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 114,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 563,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 563,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 563,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 117,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 564,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 118,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 566,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 567,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 570,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 121,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 570,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 122,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 570,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 123,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 570,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 124,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 572,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 125,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 572,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 126,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 572,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 127,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 572,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 128,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 574,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 129,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 574,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 130,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 574,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 131,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 574,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 132,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 576,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 133,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 576,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 134,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 576,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 135,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 576,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 136,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 578,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 137,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 578,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 138,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 578,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 139,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 578,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 140,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 580,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 141,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 580,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 142,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 580,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 143,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 580,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 144,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 582,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 145,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 582,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 146,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 582,
+      "mutator": "MathMutator",
+      "description": "Replaced Shift Left with Shift Right",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 147,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 582,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 148,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 584,
+      "mutator": "MathMutator",
+      "description": "Replaced bitwise AND with OR",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 149,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 584,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 150,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 585,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 151,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 587,
+      "mutator": "MathMutator",
+      "description": "Replaced long multiplication with division",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 152,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 588,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 153,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 592,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 154,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 593,
+      "mutator": "MathMutator",
+      "description": "Replaced XOR with AND",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 155,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 595,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 156,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 596,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 157,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 601,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 158,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 602,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 159,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 521,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "([BIIJ)[J"
+    },
+    {
+      "id": 160,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "MurmurHash3.java",
+      "line": 604,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/digest/MurmurHash3::hash128x64Internal",
+      "method_description": "([BIIJ)[J"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "mutants": [
+    {
+      "id": 62,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVParser.java",
+      "line": 767,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 63,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 802,
+      "mutator": "MathMutator",
+      "description": "Replaced long addition with subtraction",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 779,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "CSVParser.java",
+      "line": 781,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 66,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 788,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 67,
+      "detected": true,
+      "status": "TIMED_OUT",
+      "source_file": "CSVParser.java",
+      "line": 799,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 801,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 69,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 803,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 70,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 765,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/List::clear",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 769,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/csv/Token::reset",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 773,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/csv/CSVParser::addRecordValue",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 73,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 776,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/csv/CSVParser::addRecordValue",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 780,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/csv/CSVParser::addRecordValue",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    },
+    {
+      "id": 75,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "CSVParser.java",
+      "line": 807,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/csv/CSVParser::nextRecord",
+      "method_description": "()Lorg/apache/commons/csv/CSVRecord;"
+    }
+  ]
+}

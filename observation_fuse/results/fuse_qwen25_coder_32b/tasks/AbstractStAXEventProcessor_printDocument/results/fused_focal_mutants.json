@@ -1,0 +1,274 @@
+{
+  "mutants": [
+    {
+      "id": 35,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 397,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 375,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 37,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 378,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 38,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 380,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 385,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 40,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 393,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 395,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 42,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 403,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 404,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 44,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 410,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 413,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 413,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 47,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 414,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 443,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 397,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 377,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 379,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 381,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 384,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 386,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 418,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 423,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printComment",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 426,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printDocType",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 429,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printElement",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 433,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printProcessingInstruction",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 444,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "AbstractStAXEventProcessor.java",
+      "line": 448,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to javax/xml/stream/util/XMLEventConsumer::add",
+      "method_description": "(Ljavax/xml/stream/util/XMLEventConsumer;Lorg/jdom2/output/support/FormatStack;Lorg/jdom2/util/NamespaceStack;Ljavax/xml/stream/XMLEventFactory;Lorg/jdom2/Document;)V"
+    }
+  ]
+}

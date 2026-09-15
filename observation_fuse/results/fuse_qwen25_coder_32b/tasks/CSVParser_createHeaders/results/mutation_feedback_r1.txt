@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 480 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (formatHeader != null) {
+
+NO_COVERAGE (19 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 504 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < headerRecord.length; i++) {
+- line 523 | MathMutator | Replaced bitwise OR with AND | source: observedMissing |= blankHeader;
+- line 483 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (formatHeader.length == 0) {
+- line 486 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (nextRecord != null) {
+- line 491 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (this.format.getSkipHeaderRecord()) {
+- line 493 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (nextRecord != null) {
+- line 501 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (headerRecord != null) {
+- line 507 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (blankHeader && !this.format.getAllowMissingColumnNames()) {
+- line 507 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (blankHeader && !this.format.getAllowMissingColumnNames()) {
+- line 512 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean containsHeader = blankHeader ? observedMissing : hdrMap.containsKey(header);
+- line 514 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean duplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_ALL;
+- line 515 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean emptyDuplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_EMPTY;
+- line 517 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (containsHeader && !duplicatesAllowed && !(blankHeader && emptyDuplicatesAllowed)) {
+- line 517 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (containsHeader && !duplicatesAllowed && !(blankHeader && emptyDuplicatesAllowed)) {
+- line 517 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (containsHeader && !duplicatesAllowed && !(blankHeader && emptyDuplicatesAllowed)) {
+- line 517 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (containsHeader && !duplicatesAllowed && !(blankHeader && emptyDuplicatesAllowed)) {
+- line 524 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (header != null) {
+- line 526 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (headerNames == null) {
+- line 504 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < headerRecord.length; i++) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testCreateHeaders, testCreateHeadersAllowEmptyDuplicates, testCreateHeadersAllowMissingColumnNames, testCreateHeadersDefaultCSVFormat, testCreateHeadersSkipHeaderRecord, testCreateHeadersWithDuplicateHeaderNames, testCreateHeadersWithManualHeaders, testCreateHeadersWithMissingHeaderName

@@ -1,0 +1,244 @@
+{
+  "mutants": [
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TreeBidiMap.java",
+      "line": 1215,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1215,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TreeBidiMap.java",
+      "line": 1219,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TreeBidiMap.java",
+      "line": 1222,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1225,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1227,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 62,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1237,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 63,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TreeBidiMap.java",
+      "line": 1243,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1250,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1254,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1255,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1216,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::swapPosition",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 68,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1223,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1228,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1230,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1233,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 72,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1234,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 73,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1235,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 74,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1238,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::doRedBlackDeleteFixup",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1251,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::doRedBlackDeleteFixup",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1256,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1258,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TreeBidiMap.java",
+      "line": 1261,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TreeBidiMap.java",
+      "line": 1266,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::shrink",
+      "method_description": "(Lorg/apache/commons/collections4/bidimap/TreeBidiMap$Node;)V"
+    }
+  ]
+}

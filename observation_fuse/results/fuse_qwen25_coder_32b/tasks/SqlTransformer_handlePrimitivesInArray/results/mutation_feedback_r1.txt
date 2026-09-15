@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (22 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 222 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 228 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 234 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 239 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 244 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 249 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 254 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < array.length; j++) {
+- line 220 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (componentType == byte.class) {
+- line 226 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (componentType == short.class) {
+- line 232 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (componentType == boolean.class) {
+- line 237 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (componentType == int.class) {
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (componentType == long.class) {
+- line 247 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (componentType == float.class) {
+- line 252 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (componentType == double.class) {
+- line 222 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 228 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 234 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 239 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 244 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 249 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 254 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < array.length; j++) {
+- line 258 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/transformations/sql/SqlTransformer::handlePrimitivesInArray | source: return joiner.toString();
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testHandlePrimitivesInArrayWithBooleanArray, testHandlePrimitivesInArrayWithByteArray, testHandlePrimitivesInArrayWithDoubleArray, testHandlePrimitivesInArrayWithEmptyBooleanArray, testHandlePrimitivesInArrayWithEmptyByteArray, testHandlePrimitivesInArrayWithEmptyDoubleArray, testHandlePrimitivesInArrayWithEmptyFloatArray, testHandlePrimitivesInArrayWithEmptyIntArray, testHandlePrimitivesInArrayWithEmptyLongArray, testHandlePrimitivesInArrayWithEmptyShortArray, testHandlePrimitivesInArrayWithFloatArray, testHandlePrimitivesInArrayWithIntArray, testHandlePrimitivesInArrayWithLongArray, testHandlePrimitivesInArrayWithShortArray

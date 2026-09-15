@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T07:47:36.178138+00:00",
+  "task_id": "StringBin_locate",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "StringBin_locate",
+    "package": "org.jdom2",
+    "class": "org.jdom2.StringBin",
+    "test-class": "org.jdom2.StringBin_locate_Test",
+    "method-name": "locate(int, String, String[], int)",
+    "source-path": "src/main/java/org/jdom2/StringBin.java",
+    "test-path": "src/test/java/org/jdom2/StringBin_locate_Test.java",
+    "focal-method": "private final int locate(final int hash, final String value, final String[] bucket, final int length) {\r\n    int left = 0;\r\n    int right = length - 1;\r\n    int mid = 0;\r\n    while (left <= right) {\r\n        mid = (left + right) >>> 1;\r\n        if (bucket[mid].hashCode() > hash) {\r\n            right = mid - 1;\r\n        } else if (bucket[mid].hashCode() < hash) {\r\n            left = mid + 1;\r\n        } else {\r\n            // have the same hashcode\r\n            // do a string-compare.\r\n            int cmp = value.compareTo(bucket[mid]);\r\n            if (cmp == 0) {\r\n                // equals.\r\n                return mid;\r\n            } else if (cmp < 0) {\r\n                // our input value comes before the bucket value, search\r\n                // backwards\r\n                while (((--mid) >= left) && (bucket[mid].hashCode() == hash)) {\r\n                    // we have gone back one, and we still have the same\r\n                    // hash code... let's compare.\r\n                    cmp = value.compareTo(bucket[mid]);\r\n                    if (cmp == 0) {\r\n                        // equals, found it.\r\n                        return mid;\r\n                    } else if (cmp > 0) {\r\n                        // we were searching backwards because we started at\r\n                        // the mid point which was after the input value.\r\n                        // now that we have found a value that comes\r\n                        // before the input value it means we have gone too\r\n                        // far... which in turn means the insertion point\r\n                        // is one place after where we are.\r\n                        return (-(mid + 1)) - 1;\r\n                    }\r\n                } \r\n                // this must mean that we ran out of data, or ran out of\r\n                // values with the same hashcode...\r\n                return (-(mid + 1)) - 1;\r\n            } else {\r\n                // we have a value that comes before the value with the\r\n                // same hash as us.\r\n                while (((++mid) <= right) && (bucket[mid].hashCode() == hash)) {\r\n                    // the next value exists and has the same hash code.\r\n                    cmp = value.compareTo(bucket[mid]);\r\n                    if (cmp == 0) {\r\n                        // found our value.\r\n                        return mid;\r\n                    } else if (cmp < 0) {\r\n                        // we were searching forwards because we started at\r\n                        // the mid point which was before the input value.\r\n                        // now that we have found a value that comes\r\n                        // after the input value it means we have gone too\r\n                        // far... which in turn means the insertion point\r\n                        // is at the point where we are.\r\n                        return (-mid) - 1;\r\n                    }\r\n                } \r\n                // we have run out of values, or the value we are on has a\r\n                // different hashcode.\r\n                return (-mid) - 1;\r\n            }\r\n        }\r\n    } \r\n    // nothing had the same hashcode.\r\n    return (-left) - 1;\r\n}",
+    "class-code": "package org.jdom2;\nimport org.jdom2.internal.ArrayCopy;\nfinal class StringBin {\n    \n    private final int locate(final int hash, final String value, final String[] bucket, final int length) {\r\n        int left = 0;\r\n        int right = length - 1;\r\n        int mid = 0;\r\n        while (left <= right) {\r\n            mid = (left + right) >>> 1;\r\n            if (bucket[mid].hashCode() > hash) {\r\n                right = mid - 1;\r\n            } else if (bucket[mid].hashCode() < hash) {\r\n                left = mid + 1;\r\n            } else {\r\n                // have the same hashcode\r\n                // do a string-compare.\r\n                int cmp = value.compareTo(bucket[mid]);\r\n                if (cmp == 0) {\r\n                    // equals.\r\n                    return mid;\r\n                } else if (cmp < 0) {\r\n                    // our input value comes before the bucket value, search\r\n                    // backwards\r\n                    while (((--mid) >= left) && (bucket[mid].hashCode() == hash)) {\r\n                        // we have gone back one, and we still have the same\r\n                        // hash code... let's compare.\r\n                        cmp = value.compareTo(bucket[mid]);\r\n                        if (cmp == 0) {\r\n                            // equals, found it.\r\n                            return mid;\r\n                        } else if (cmp > 0) {\r\n                            // we were searching backwards because we started at\r\n                            // the mid point which was after the input value.\r\n                            // now that we have found a value that comes\r\n                            // before the input value it means we have gone too\r\n                            // far... which in turn means the insertion point\r\n                            // is one place after where we are.\r\n                            return (-(mid + 1)) - 1;\r\n                        }\r\n                    } \r\n                    // this must mean that we ran out of data, or ran out of\r\n                    // values with the same hashcode...\r\n                    return (-(mid + 1)) - 1;\r\n                } else {\r\n                    // we have a value that comes before the value with the\r\n                    // same hash as us.\r\n                    while (((++mid) <= right) && (bucket[mid].hashCode() == hash)) {\r\n                        // the next value exists and has the same hash code.\r\n                        cmp = value.compareTo(bucket[mid]);\r\n                        if (cmp == 0) {\r\n                            // found our value.\r\n                            return mid;\r\n                        } else if (cmp < 0) {\r\n                            // we were searching forwards because we started at\r\n                            // the mid point which was before the input value.\r\n                            // now that we have found a value that comes\r\n                            // after the input value it means we have gone too\r\n                            // far... which in turn means the insertion point\r\n                            // is at the point where we are.\r\n                            return (-mid) - 1;\r\n                        }\r\n                    } \r\n                    // we have run out of values, or the value we are on has a\r\n                    // different hashcode.\r\n                    return (-mid) - 1;\r\n                }\r\n            }\r\n        } \r\n        // nothing had the same hashcode.\r\n        return (-left) - 1;\r\n    }\npublic String reuse(final String value);\n    public int size();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/StringBin_locate_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace/src/test/java/org/jdom2/StringBin_locate_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace/src/test/java/org/jdom2/StringBin_locate_Test.java"
+  },
+  "started_at": "2026-09-15T07:47:36.262104+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/StringBin_locate/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

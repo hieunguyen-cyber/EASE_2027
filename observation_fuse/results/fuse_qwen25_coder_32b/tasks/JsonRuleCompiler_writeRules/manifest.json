@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:19.851959+00:00",
+  "task_id": "JsonRuleCompiler_writeRules",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "JsonRuleCompiler_writeRules",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.JsonRuleCompiler",
+    "test-class": "software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test",
+    "method-name": "writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+    "source-path": "src/main/java/software/amazon/event/ruler/JsonRuleCompiler.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_Test.java",
+    "focal-method": "private static void writeRules(final List<Map<String, List<Patterns>>> rules, final String name, final JsonParser parser, final boolean withQuotes) throws IOException {\r\n    JsonToken token;\r\n    final List<Patterns> values = new ArrayList<>();\r\n    while ((token = parser.nextToken()) != JsonToken.END_ARRAY) {\r\n        switch (token) {\r\n            case START_OBJECT :\r\n                values.add(processMatchExpression(parser));\r\n                break;\r\n            case VALUE_STRING :\r\n                final String toMatch = parser.getText();\r\n                final Range ipRange = CIDR.ipToRangeIfPossible(toMatch);\r\n                if (ipRange != null) {\r\n                    values.add(ipRange);\r\n                } else if (withQuotes) {\r\n                    values.add(Patterns.exactMatch(('\"' + toMatch) + '\"'));\r\n                } else {\r\n                    values.add(Patterns.exactMatch(toMatch));\r\n                }\r\n                break;\r\n            case VALUE_NUMBER_FLOAT :\r\n            case VALUE_NUMBER_INT :\r\n                /* If the rule specifies a match to a number, we'll insert matchers for both the\r\n                 literal expression and the ComparableNumber form. But the number might not\r\n                 be representable as a ComparableNumber, for example an AWS account number,\r\n                 so make that condition survivable.\r\n                 */\r\n                try {\r\n                    values.add(Patterns.numericEquals(parser.getDoubleValue()));\r\n                } catch (Exception e) {\r\n                    // no-op\r\n                }\r\n                values.add(Patterns.exactMatch(parser.getText()));\r\n                break;\r\n            case VALUE_NULL :\r\n            case VALUE_TRUE :\r\n            case VALUE_FALSE :\r\n                values.add(Patterns.exactMatch(parser.getText()));\r\n                break;\r\n            default :\r\n                barf(parser, \"Match value must be String, number, true, false, or null\");\r\n        }\r\n    } \r\n    if (values.isEmpty()) {\r\n        barf(parser, \"Empty arrays are not allowed\");\r\n    }\r\n    // If the rules list is empty, add the first rule\r\n    if (rules.isEmpty()) {\r\n        rules.add(new HashMap<>());\r\n    }\r\n    rules.forEach(rule -> rule.put(name, values));\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport java.util.stream.Collectors;\nimport java.util.Set;\nimport java.util.HashMap;\nimport java.io.InputStream;\nimport java.util.ArrayList;\nimport java.io.IOException;\nimport com.fasterxml.jackson.core.JsonFactory;\nimport com.fasterxml.jackson.core.JsonParseException;\nimport java.io.Reader;\nimport com.fasterxml.jackson.core.JsonParser;\nimport com.fasterxml.jackson.core.JsonToken;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.HashSet;\npublic class JsonRuleCompiler {\n    \n    private static void writeRules(final List<Map<String, List<Patterns>>> rules, final String name, final JsonParser parser, final boolean withQuotes) throws IOException {\r\n        JsonToken token;\r\n        final List<Patterns> values = new ArrayList<>();\r\n        while ((token = parser.nextToken()) != JsonToken.END_ARRAY) {\r\n            switch (token) {\r\n                case START_OBJECT :\r\n                    values.add(processMatchExpression(parser));\r\n                    break;\r\n                case VALUE_STRING :\r\n                    final String toMatch = parser.getText();\r\n                    final Range ipRange = CIDR.ipToRangeIfPossible(toMatch);\r\n                    if (ipRange != null) {\r\n                        values.add(ipRange);\r\n                    } else if (withQuotes) {\r\n                        values.add(Patterns.exactMatch(('\"' + toMatch) + '\"'));\r\n                    } else {\r\n                        values.add(Patterns.exactMatch(toMatch));\r\n                    }\r\n                    break;\r\n                case VALUE_NUMBER_FLOAT :\r\n                case VALUE_NUMBER_INT :\r\n                    /* If the rule specifies a match to a number, we'll insert matchers for both the\r\n                     literal expression and the ComparableNumber form. But the number might not\r\n                     be representable as a ComparableNumber, for example an AWS account number,\r\n                     so make that condition survivable.\r\n                     */\r\n                    try {\r\n                        values.add(Patterns.numericEquals(parser.getDoubleValue()));\r\n                    } catch (Exception e) {\r\n                        // no-op\r\n                    }\r\n                    values.add(Patterns.exactMatch(parser.getText()));\r\n                    break;\r\n                case VALUE_NULL :\r\n                case VALUE_TRUE :\r\n                case VALUE_FALSE :\r\n                    values.add(Patterns.exactMatch(parser.getText()));\r\n                    break;\r\n                default :\r\n                    barf(parser, \"Match value must be String, number, true, false, or null\");\r\n            }\r\n        } \r\n        if (values.isEmpty()) {\r\n            barf(parser, \"Empty arrays are not allowed\");\r\n        }\r\n        // If the rules list is empty, add the first rule\r\n        if (rules.isEmpty()) {\r\n            rules.add(new HashMap<>());\r\n        }\r\n        rules.forEach(rule -> rule.put(name, values));\r\n    }\nprivate static void barf(final JsonParser parser, final String message) throws JsonParseException;\n    public static String check(final byte[] source);\n    public static String check(final InputStream source);\n    public static String check(final Reader source);\n    public static String check(final String source);\n    public static List<Map<String, List<Patterns>>> compile(final byte[] source) throws IOException;\n    public static List<Map<String, List<Patterns>>> compile(final InputStream source) throws IOException;\n    public static List<Map<String, List<Patterns>>> compile(final Reader source) throws IOException;\n    public static List<Map<String, List<Patterns>>> compile(final String source) throws IOException;\n    private static Patterns processMatchExpression(final JsonParser parser) throws IOException;\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice10.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice5.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice10.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_13_0_Test_slice5.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:19.930966+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/JsonRuleCompiler_writeRules/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

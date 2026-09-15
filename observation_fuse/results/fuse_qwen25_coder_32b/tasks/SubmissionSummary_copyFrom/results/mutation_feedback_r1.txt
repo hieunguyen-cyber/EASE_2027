@@ -1,0 +1,18 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 189 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (spec != null) {
+- line 192 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (spec.getSparkConf() != null) {
+- line 194 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (appNameConfigValue != null) {
+- line 107 | VoidMethodCallMutator | removed call to com/apple/spark/api/SubmissionStatus::copyFrom | source: super.copyFrom(sparkApplicationResource);
+- line 108 | VoidMethodCallMutator | removed call to com/apple/spark/api/SubmissionSummary::setSubmissionId | source: setSubmissionId(sparkApplicationResource.getMetadata().getName());
+- line 190 | VoidMethodCallMutator | removed call to com/apple/spark/api/SubmissionSummary::setSparkVersion | source: setSparkVersion(spec.getSparkVersion());
+- line 191 | VoidMethodCallMutator | removed call to com/apple/spark/api/SubmissionSummary::setApplicationArguments | source: setApplicationArguments(spec.getArguments());
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 195 | VoidMethodCallMutator | removed call to com/apple/spark/api/SubmissionSummary::setApplicationName | source: setApplicationName(appNameConfigValue);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testCopyFrom, testCopyFrom_WithInvalidDriverMemory, testCopyFrom_WithInvalidExecutorMemory, testCopyFrom_WithLabels_AndDriverSpecs, testCopyFrom_WithMissingMetadata, testCopyFrom_WithMissingSparkSpec, testCopyFrom_WithoutLabels, testCopyFrom_privateReflection

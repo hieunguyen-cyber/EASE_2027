@@ -1,0 +1,47 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (39 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 584 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (colon > 0) {
+- line 605 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (declaredNamespaces.size() > 0) {
+- line 621 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0, len = atts.getLength(); i < len; i++) {
+- line 641 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (attColon > 0) {
+- line 683 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (nss.getPrefix().length() > 0
+- line 707 | IncrementsMutator | Changed increment from 1 to -1 | source: cnt++;
+- line 590 | MathMutator | Replaced integer addition with subtraction | source: localName = qName.substring(colon + 1);
+- line 647 | MathMutator | Replaced integer addition with subtraction | source: attLocalName = attQName.substring(attColon + 1);
+- line 575 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (suppress)
+- line 581 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!"".equals(qName)) {
+- line 589 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((localName == null) || (localName.equals(""))) {
+- line 589 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((localName == null) || (localName.equals(""))) {
+- line 598 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final Element element = currentLocator == null ? factory.element(
+- line 611 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (atRoot) {
+- line 626 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean specified = (atts instanceof Attributes2) ? ((Attributes2)atts).isSpecified(i) : true;
+- line 630 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!attQName.equals("")) {
+- line 635 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (attQName.startsWith("xmlns:") || attQName.equals("xmlns")) {
+- line 635 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (attQName.startsWith("xmlns:") || attQName.equals("xmlns")) {
+- line 646 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ("".equals(attLocalName)) {
+- line 656 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (XMLConstants.XMLNS_ATTRIBUTE.equals(attLocalName)
+- line 657 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: || XMLConstants.XMLNS_ATTRIBUTE.equals(attPrefix)
+- line 658 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: || XMLConstants.XMLNS_ATTRIBUTE_NS_URI.equals(attURI)) {
+- line 669 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!"".equals(attURI) && "".equals(attPrefix)) {
+- line 669 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!"".equals(attURI) && "".equals(attPrefix)) {
+- line 684 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: && nss.getURI().equals(attURI)) {
+- line 691 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ("".equals(attPrefix)) {
+- line 706 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (tmpmap.containsKey(pfx)) {
+- line 717 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!specified) {
+- line 584 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (colon > 0) {
+- line 605 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (declaredNamespaces.size() > 0) {
+- line 621 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0, len = atts.getLength(); i < len; i++) {
+- line 641 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (attColon > 0) {
+- line 683 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (nss.getPrefix().length() > 0
+- line 606 | VoidMethodCallMutator | removed call to org/jdom2/input/sax/SAXHandler::transferNamespaces | source: transferNamespaces(element);
+- line 609 | VoidMethodCallMutator | removed call to org/jdom2/input/sax/SAXHandler::flushCharacters | source: flushCharacters();
+- line 612 | VoidMethodCallMutator | removed call to org/jdom2/JDOMFactory::setRoot | source: factory.setRoot(currentDocument, element); // Yes, use a factory
+- line 616 | VoidMethodCallMutator | removed call to org/jdom2/JDOMFactory::addContent | source: factory.addContent(getCurrentElement(), element);
+- line 719 | VoidMethodCallMutator | removed call to org/jdom2/Attribute::setSpecified | source: attribute.setSpecified(false);
+- line 721 | VoidMethodCallMutator | removed call to org/jdom2/JDOMFactory::setAttribute | source: factory.setAttribute(element, attribute);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testStartElement, testStartElement_WithSAXException

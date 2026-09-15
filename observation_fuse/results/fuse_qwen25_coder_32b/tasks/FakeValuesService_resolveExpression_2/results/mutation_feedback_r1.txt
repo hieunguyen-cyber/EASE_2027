@@ -1,0 +1,29 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (21 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 553 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < expressions.size(); i++) {
+- line 564 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (j < length && !Character.isWhitespace(expr.charAt(j))) j++;
+- line 566 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (j < length && Character.isWhitespace(expr.charAt(j))) j++;
+- line 545 | IncrementsMutator | Changed increment from 1 to -1 | source: cnt++;
+- line 564 | IncrementsMutator | Changed increment from 1 to -1 | source: while (j < length && !Character.isWhitespace(expr.charAt(j))) j++;
+- line 566 | IncrementsMutator | Changed increment from 1 to -1 | source: while (j < length && Character.isWhitespace(expr.charAt(j))) j++;
+- line 552 | MathMutator | Replaced integer multiplication with division | source: final StringBuilder result = new StringBuilder(expressions.size() * expressionLength);
+- line 556 | MathMutator | Replaced integer modulus with multiplication | source: if (i % 2 == 0) {
+- line 544 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (expression.charAt(i) == '}') {
+- line 548 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0) {
+- line 556 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (i % 2 == 0) {
+- line 557 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!expr.isEmpty()) {
+- line 564 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (j < length && !Character.isWhitespace(expr.charAt(j))) j++;
+- line 566 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (j < length && Character.isWhitespace(expr.charAt(j))) j++;
+- line 567 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final String arguments = j == length ? "" : expr.substring(j);
+- line 571 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (resolved == null) {
+- line 543 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < expressionLength; i++) {
+- line 553 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < expressions.size(); i++) {
+- line 564 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (j < length && !Character.isWhitespace(expr.charAt(j))) j++;
+- line 566 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (j < length && Character.isWhitespace(expr.charAt(j))) j++;
+- line 576 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/service/FakeValuesService::resolveExpression | source: return result.toString();
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testResolveExpressionWithEmptyExpression, testResolveExpressionWithInvalidDirective, testResolveExpressionWithNoExpressions, testResolveExpressionWithNullExpression, testResolveExpressionWithNullExpressions, testResolveExpressionWithNullResolvedValue

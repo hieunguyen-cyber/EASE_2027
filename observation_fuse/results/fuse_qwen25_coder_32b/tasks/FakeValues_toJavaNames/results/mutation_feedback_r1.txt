@@ -1,0 +1,21 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (10 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 189 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (i < length - 1 && Character.isLetter(next)) {
+- line 189 | MathMutator | Replaced integer subtraction with addition | source: if (i < length - 1 && Character.isLetter(next)) {
+- line 171 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (string == null || (length = string.length()) == 0) {
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+- line 186 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: res[pos++] = isMethod ? Character.toLowerCase(c) : Character.toUpperCase(c);
+- line 172 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/service/FakeValues::toJavaNames | source: return string;
+- line 180 | EmptyObjectReturnValsMutator | replaced return value with "" for net/datafaker/service/FakeValues::toJavaNames | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 180 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cnt == 0 && (Character.isUpperCase(string.charAt(0)) && !isMethod || isMethod && Character.isLowerCase(string.charAt(0)))) return string;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testToJavaNamesForMethodWithAllUppercase, testToJavaNamesWithAllUpperCase, testToJavaNamesWithConsecutiveUnderscores, testToJavaNamesWithEmptyString, testToJavaNamesWithLeadingDigit, testToJavaNamesWithLeadingUnderscore, testToJavaNamesWithMethodFlagTrue, testToJavaNamesWithMultipleUnderscores, testToJavaNamesWithNull, testToJavaNamesWithOnlyUnderscores, testToJavaNamesWithSpecialCharacters, testToJavaNamesWithUnderscore, testToJavaNamesWithUpperCase

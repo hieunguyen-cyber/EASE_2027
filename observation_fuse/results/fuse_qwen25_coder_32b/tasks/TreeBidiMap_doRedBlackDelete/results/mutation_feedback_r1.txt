@@ -1,0 +1,33 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1215 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (deletedNode.getLeft(dataElement) != null && deletedNode.getRight(dataElement) != null) {
+- line 1219 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final Node<K, V> replacement = deletedNode.getLeft(dataElement) != null ?
+- line 1222 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (replacement != null) {
+- line 1266 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::shrink | source: shrink();
+
+NO_COVERAGE (19 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1215 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (deletedNode.getLeft(dataElement) != null && deletedNode.getRight(dataElement) != null) {
+- line 1225 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (deletedNode.getParent(dataElement) == null) {
+- line 1227 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (deletedNode == deletedNode.getParent(dataElement).getLeft(dataElement)) {
+- line 1237 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isBlack(deletedNode, dataElement)) {
+- line 1250 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isBlack(deletedNode, dataElement)) {
+- line 1254 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (deletedNode.getParent(dataElement) != null) {
+- line 1255 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (deletedNode == deletedNode.getParent(dataElement).getLeft(dataElement)) {
+- line 1216 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::swapPosition | source: swapPosition(nextGreater(deletedNode, dataElement), deletedNode, dataElement);
+- line 1223 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: replacement.setParent(deletedNode.getParent(dataElement), dataElement);
+- line 1228 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: deletedNode.getParent(dataElement).setLeft(replacement, dataElement);
+- line 1230 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: deletedNode.getParent(dataElement).setRight(replacement, dataElement);
+- line 1233 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: deletedNode.setLeft(null, dataElement);
+- line 1234 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: deletedNode.setRight(null, dataElement);
+- line 1235 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: deletedNode.setParent(null, dataElement);
+- line 1238 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::doRedBlackDeleteFixup | source: doRedBlackDeleteFixup(replacement, dataElement);
+- line 1251 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap::doRedBlackDeleteFixup | source: doRedBlackDeleteFixup(deletedNode, dataElement);
+- line 1256 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2500 | source: deletedNode.getParent(dataElement).setLeft(null, dataElement);
+- line 1258 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2800 | source: deletedNode.getParent(dataElement).setRight(null, dataElement);
+- line 1261 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/bidimap/TreeBidiMap$Node::access$2600 | source: deletedNode.setParent(null, dataElement);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testDoRedBlackDelete_RemovesLeafNode_WhenLeafNodeExists, testDoRedBlackDelete_RemovesNode_WhenNodeExists, testDoRedBlackDelete_SwapsPosition_WithNextGreater_WhenNodeHasBothChildren, testDoRedBlackDelete_WhenNodeHasNoChildren, testDoRedBlackDelete_WhenNodeHasNullParent, testDoRedBlackDelete_WhenNodeStructureIsInvalid, testDoRedBlackDelete_WhenTreeIsEmpty

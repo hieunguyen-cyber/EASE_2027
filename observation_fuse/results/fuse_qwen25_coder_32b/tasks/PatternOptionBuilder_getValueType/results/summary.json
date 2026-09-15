@@ -1,0 +1,62 @@
+{
+  "task_id": "PatternOptionBuilder_getValueType",
+  "project": "commons-cli",
+  "focal_class": "org.apache.commons.cli.PatternOptionBuilder",
+  "focal_method": "getValueType(char)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-cli/src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/PatternOptionBuilder_getValueType/workspace/src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "started_at": "2026-09-15T07:31:04.225322+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "SEED_UNCOMPILABLE",
+    "disabled_methods": [],
+    "test_count": 0
+  },
+  "ktester": {
+    "test_cases": 8,
+    "compile_pass": false,
+    "execution_pass": false,
+    "tests_executed": 0,
+    "tests_failed": 0,
+    "line_missed": 0,
+    "line_covered": 0,
+    "line_coverage": 0.0,
+    "branch_missed": 0,
+    "branch_covered": 0,
+    "branch_coverage": 0.0,
+    "instruction_missed": 0,
+    "instruction_covered": 0,
+    "instruction_coverage": 0.0,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null
+  },
+  "status": "SEED_UNCOMPILABLE",
+  "completed_at": "2026-09-15T07:31:08.269912+00:00"
+}

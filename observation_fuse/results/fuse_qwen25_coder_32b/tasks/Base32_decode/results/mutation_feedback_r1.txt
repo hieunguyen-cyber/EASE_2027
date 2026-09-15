@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (7 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 399 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (inAvail < 0) {
+- line 411 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b >= 0 && b < this.decodeTable.length) {
+- line 411 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b >= 0 && b < this.decodeTable.length) {
+- line 430 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (context.eof && context.modulus > 0) { // if modulus == 0, nothing to do
+- line 402 | MathMutator | Replaced integer subtraction with addition | source: final int decodeSize = this.encodeSize - 1;
+- line 396 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.eof) {
+- line 443 | VoidMethodCallMutator | removed call to org/apache/commons/codec/binary/Base32::validateCharacter | source: validateCharacter(MASK_2BITS, context);
+
+NO_COVERAGE (45 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 449 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 7 & MASK_8BITS);
+- line 449 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 7 & MASK_8BITS);
+- line 449 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 7 & MASK_8BITS);
+- line 453 | MathMutator | Replaced Shift Right with Shift Left | source: context.lbitWorkArea = context.lbitWorkArea >> 4; // drop 4 bits
+- line 454 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 454 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 454 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 455 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 455 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 459 | MathMutator | Replaced Shift Right with Shift Left | source: context.lbitWorkArea = context.lbitWorkArea >> 1;
+- line 460 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 460 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 460 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 461 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 461 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 461 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 462 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 462 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 467 | MathMutator | Replaced Shift Right with Shift Left | source: context.lbitWorkArea = context.lbitWorkArea >> 6;
+- line 468 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 468 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 468 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 469 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 469 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 469 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 8 & MASK_8BITS);
+- line 470 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 470 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea & MASK_8BITS);
+- line 474 | MathMutator | Replaced Shift Right with Shift Left | source: context.lbitWorkArea = context.lbitWorkArea >> 3;
+- line 475 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 24 & MASK_8BITS);
+- line 475 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 24 & MASK_8BITS);
+- line 475 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 24 & MASK_8BITS);
+- line 476 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- line 476 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = (byte) (context.lbitWorkArea >> 16 & MASK_8BITS);
+- ... and 12 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testDecode_boundaryConditions, testDecode_emptyInput, testDecode_eofFlagSet, testDecode_eofWithValidInput, testDecode_invalidTrailingCharacters, testDecode_invalidTrailingCharacters_case1, testDecode_negativeInAvail, testDecode_nonBase32Characters, testDecode_paddingCharacters, testDecode_validInput, testDecode_variousValidInputs

@@ -1,0 +1,144 @@
+{
+  "mutants": [
+    {
+      "id": 4,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 115,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 5,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 122,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 6,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 125,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 7,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 131,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 8,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 133,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 9,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 137,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 10,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 147,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 11,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 154,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 160,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 148,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Deque::addLast",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 155,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::endArray",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 15,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 157,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::endObject",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 16,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 116,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/bind/ObjectTypeAdapter::read",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "ObjectTypeAdapter.java",
+      "line": 161,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/bind/ObjectTypeAdapter::read",
+      "method_description": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (15 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 506 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (inAvail < 0) {
+- line 561 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && context.currentLinePos > 0) { // add chunk separator if required
+- line 561 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && context.currentLinePos > 0) { // add chunk separator if required
+- line 570 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b < 0) {
+- line 569 | IncrementsMutator | Changed increment from 1 to -1 | source: int b = input[inPos++];
+- line 559 | MathMutator | Replaced integer subtraction with addition | source: context.currentLinePos += context.pos - savedPos; // keep track of current line position
+- line 559 | MathMutator | Replaced integer addition with subtraction | source: context.currentLinePos += context.pos - savedPos; // keep track of current line position
+- line 568 | MathMutator | Replaced integer addition with subtraction | source: context.modulus = (context.modulus + 1) % BYTES_PER_UNENCODED_BLOCK;
+- line 568 | MathMutator | Replaced integer modulus with multiplication | source: context.modulus = (context.modulus + 1) % BYTES_PER_UNENCODED_BLOCK;
+- line 501 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (context.eof) {
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (0 == context.modulus && lineLength == 0) {
+- line 508 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (0 == context.modulus && lineLength == 0) {
+- line 561 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && context.currentLinePos > 0) { // add chunk separator if required
+- line 561 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (lineLength > 0 && context.currentLinePos > 0) { // add chunk separator if required
+- line 570 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (b < 0) {
+
+NO_COVERAGE (104 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 584 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && lineLength <= context.currentLinePos) {
+- line 584 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (lineLength > 0 && lineLength <= context.currentLinePos) {
+- line 571 | IncrementsMutator | Changed increment from 256 to -256 | source: b += 256;
+- line 517 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 3) & MASK_5BITS]; // 8-1*5 = 3
+- line 517 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 3) & MASK_5BITS]; // 8-1*5 = 3
+- line 517 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 3) & MASK_5BITS]; // 8-1*5 = 3
+- line 518 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea << 2) & MASK_5BITS]; // 5-3=2
+- line 518 | MathMutator | Replaced Shift Left with Shift Right | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea << 2) & MASK_5BITS]; // 5-3=2
+- line 518 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea << 2) & MASK_5BITS]; // 5-3=2
+- line 519 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 520 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 521 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 522 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 523 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 524 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = pad;
+- line 527 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 11) & MASK_5BITS]; // 16-1*5 = 11
+- line 527 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 11) & MASK_5BITS]; // 16-1*5 = 11
+- line 527 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 11) & MASK_5BITS]; // 16-1*5 = 11
+- line 528 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 6) & MASK_5BITS]; // 16-2*5 = 6
+- line 528 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 6) & MASK_5BITS]; // 16-2*5 = 6
+- line 528 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 6) & MASK_5BITS]; // 16-2*5 = 6
+- line 529 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 1) & MASK_5BITS]; // 16-3*5 = 1
+- line 529 | MathMutator | Replaced Shift Right with Shift Left | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 1) & MASK_5BITS]; // 16-3*5 = 1
+- line 529 | MathMutator | Replaced bitwise AND with OR | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea >> 1) & MASK_5BITS]; // 16-3*5 = 1
+- line 530 | MathMutator | Replaced integer addition with subtraction | source: buffer[context.pos++] = encodeTable[(int) (context.lbitWorkArea << 4) & MASK_5BITS]; // 5-1 = 4
+- ... and 79 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEmptyInput, testEncode, testEncodeCompleteInput, testEncodeNormalInput, testEncodeWithDifferentInput, testEncodeWithEOF, testEncodeWithInvalidContext, testEncodeWithInvalidModulus, testEncodeWithLongInputMoreThanOneLine, testEncodeWithNegativeInAvail, testEncodeWithNullInput, testMultipleBytesEncodingWithLineSeparator, testSingleByteEncoding

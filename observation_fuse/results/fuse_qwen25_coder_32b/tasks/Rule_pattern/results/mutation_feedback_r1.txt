@@ -1,0 +1,29 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (21 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 533 | MathMutator | Replaced integer subtraction with addition | source: String boxContent = content.substring(1, content.length() - 1);
+- line 507 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!boxes) {
+- line 510 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (content.isEmpty()) {
+- line 516 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((startsWith || endsWith) && content.isEmpty()) {
+- line 516 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((startsWith || endsWith) && content.isEmpty()) {
+- line 516 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if ((startsWith || endsWith) && content.isEmpty()) {
+- line 520 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWith) {
+- line 524 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (endsWith) {
+- line 532 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWithBox && endsWithBox) {
+- line 532 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWithBox && endsWithBox) {
+- line 534 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!boxContent.contains("[")) {
+- line 537 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (negate) {
+- line 541 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: final boolean shouldMatch = !negate;
+- line 543 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWith && endsWith) {
+- line 543 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWith && endsWith) {
+- line 547 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (startsWith) {
+- line 551 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (endsWith) {
+- line 518 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern | source: return ALL_STRINGS_RMATCHER;
+- line 545 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern | source: return input -> input.length() == 1 && contains(bContent, input.charAt(0)) == shouldMatch;
+- line 549 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern | source: return input -> input.length() > 0 && contains(bContent, input.charAt(0)) == shouldMatch;
+- line 553 | NullReturnValsMutator | replaced return value with null for org/apache/commons/codec/language/bm/Rule::pattern | source: return input -> input.length() > 0 &&
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPattern, testPattern_CharacterClassMatch, testPattern_EndsWithMatch, testPattern_HandlesInvalidCharactersInRegex, testPattern_HandlesWhitespaceOnlyRegex, testPattern_NegatedCharacterClassMatch, testPattern_ParameterizedCharacterClassMatch, testPattern_RegularExactMatch, testPattern_ReturnsEmptyMatcher_WhenRegexIsEmpty, testPattern_StartsWithEmptyBox, testPattern_StartsWithMatch, testPattern_ThrowsException_WhenRegexIsInvalid, testPattern_ThrowsException_WhenRegexIsNull

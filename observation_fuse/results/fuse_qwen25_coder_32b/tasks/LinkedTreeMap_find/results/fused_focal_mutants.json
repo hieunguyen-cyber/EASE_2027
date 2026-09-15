@@ -1,0 +1,184 @@
+{
+  "mutants": [
+    {
+      "id": 9,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 167,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 10,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 193,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 11,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 200,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 12,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 201,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 13,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 149,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 14,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 152,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 15,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 157,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 16,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 162,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 17,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 168,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 18,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 177,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 19,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 184,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 20,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 22,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 167,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 23,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 193,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 24,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 198,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/internal/LinkedTreeMap::rebalance",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 163,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/LinkedTreeMap::find",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    },
+    {
+      "id": 26,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "LinkedTreeMap.java",
+      "line": 203,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/LinkedTreeMap::find",
+      "method_description": "(Ljava/lang/Object;Z)Lcom/google/gson/internal/LinkedTreeMap$Node;"
+    }
+  ]
+}

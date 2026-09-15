@@ -1,0 +1,49 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (92 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 521 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < nblocks; i++) {
+- line 518 | MathMutator | Replaced Shift Right with Shift Left | source: final int nblocks = length >> 4;
+- line 522 | MathMutator | Replaced Shift Left with Shift Right | source: final int index = offset + (i << 4);
+- line 522 | MathMutator | Replaced integer addition with subtraction | source: final int index = offset + (i << 4);
+- line 524 | MathMutator | Replaced integer addition with subtraction | source: long k2 = getLittleEndianLong(data, index + 8);
+- line 527 | MathMutator | Replaced long multiplication with division | source: k1 *= C1;
+- line 529 | MathMutator | Replaced long multiplication with division | source: k1 *= C2;
+- line 530 | MathMutator | Replaced XOR with AND | source: h1 ^= k1;
+- line 532 | MathMutator | Replaced long addition with subtraction | source: h1 += h2;
+- line 533 | MathMutator | Replaced long multiplication with division | source: h1 = h1 * M + N1;
+- line 533 | MathMutator | Replaced long addition with subtraction | source: h1 = h1 * M + N1;
+- line 536 | MathMutator | Replaced long multiplication with division | source: k2 *= C2;
+- line 538 | MathMutator | Replaced long multiplication with division | source: k2 *= C1;
+- line 539 | MathMutator | Replaced XOR with AND | source: h2 ^= k2;
+- line 541 | MathMutator | Replaced long addition with subtraction | source: h2 += h1;
+- line 542 | MathMutator | Replaced long multiplication with division | source: h2 = h2 * M + N2;
+- line 542 | MathMutator | Replaced long addition with subtraction | source: h2 = h2 * M + N2;
+- line 548 | MathMutator | Replaced Shift Left with Shift Right | source: final int index = offset + (nblocks << 4);
+- line 548 | MathMutator | Replaced integer addition with subtraction | source: final int index = offset + (nblocks << 4);
+- line 549 | MathMutator | Replaced integer addition with subtraction | source: switch (offset + length - index) {
+- line 549 | MathMutator | Replaced integer subtraction with addition | source: switch (offset + length - index) {
+- line 551 | MathMutator | Replaced integer addition with subtraction | source: k2 ^= ((long) data[index + 14] & 0xff) << 48;
+- line 551 | MathMutator | Replaced bitwise AND with OR | source: k2 ^= ((long) data[index + 14] & 0xff) << 48;
+- line 551 | MathMutator | Replaced Shift Left with Shift Right | source: k2 ^= ((long) data[index + 14] & 0xff) << 48;
+- line 551 | MathMutator | Replaced XOR with AND | source: k2 ^= ((long) data[index + 14] & 0xff) << 48;
+- line 553 | MathMutator | Replaced integer addition with subtraction | source: k2 ^= ((long) data[index + 13] & 0xff) << 40;
+- line 553 | MathMutator | Replaced bitwise AND with OR | source: k2 ^= ((long) data[index + 13] & 0xff) << 40;
+- line 553 | MathMutator | Replaced Shift Left with Shift Right | source: k2 ^= ((long) data[index + 13] & 0xff) << 40;
+- line 553 | MathMutator | Replaced XOR with AND | source: k2 ^= ((long) data[index + 13] & 0xff) << 40;
+- line 555 | MathMutator | Replaced integer addition with subtraction | source: k2 ^= ((long) data[index + 12] & 0xff) << 32;
+- line 555 | MathMutator | Replaced bitwise AND with OR | source: k2 ^= ((long) data[index + 12] & 0xff) << 32;
+- line 555 | MathMutator | Replaced Shift Left with Shift Right | source: k2 ^= ((long) data[index + 12] & 0xff) << 32;
+- line 555 | MathMutator | Replaced XOR with AND | source: k2 ^= ((long) data[index + 12] & 0xff) << 32;
+- line 557 | MathMutator | Replaced integer addition with subtraction | source: k2 ^= ((long) data[index + 11] & 0xff) << 24;
+- line 557 | MathMutator | Replaced bitwise AND with OR | source: k2 ^= ((long) data[index + 11] & 0xff) << 24;
+- line 557 | MathMutator | Replaced Shift Left with Shift Right | source: k2 ^= ((long) data[index + 11] & 0xff) << 24;
+- line 557 | MathMutator | Replaced XOR with AND | source: k2 ^= ((long) data[index + 11] & 0xff) << 24;
+- line 559 | MathMutator | Replaced integer addition with subtraction | source: k2 ^= ((long) data[index + 10] & 0xff) << 16;
+- line 559 | MathMutator | Replaced bitwise AND with OR | source: k2 ^= ((long) data[index + 10] & 0xff) << 16;
+- line 559 | MathMutator | Replaced Shift Left with Shift Right | source: k2 ^= ((long) data[index + 10] & 0xff) << 16;
+- ... and 52 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testHash128x64Internal_WithDifferentSeeds, testHash128x64Internal_WithFullLengthBlock, testHash128x64Internal_WithIncorrectOffset, testHash128x64Internal_WithLengthExceedingArray, testHash128x64Internal_WithNegativeOffset, testHash128x64Internal_WithPartialTail, testHash128x64Internal_WithZeroLength

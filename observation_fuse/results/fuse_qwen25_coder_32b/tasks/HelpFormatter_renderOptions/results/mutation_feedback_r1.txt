@@ -1,0 +1,27 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 684 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (getOptionComparator() != null) {
+- line 685 | VoidMethodCallMutator | removed call to java/util/Collections::sort | source: Collections.sort(optList, getOptionComparator());
+- line 741 | NullReturnValsMutator | replaced return value with null for org/apache/commons/cli/HelpFormatter::renderOptions | source: return sb;
+
+NO_COVERAGE (14 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 722 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (optBuf.length() < max) {
+- line 720 | IncrementsMutator | Changed increment from 1 to -1 | source: final StringBuilder optBuf = new StringBuilder(prefixList.get(x++).toString());
+- line 723 | MathMutator | Replaced integer subtraction with addition | source: optBuf.append(createPadding(max - optBuf.length()));
+- line 728 | MathMutator | Replaced integer addition with subtraction | source: final int nextLineTabStop = max + descPad;
+- line 691 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (option.getOpt() == null) {
+- line 696 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (option.hasLongOpt()) {
+- line 701 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (option.hasArg()) {
+- line 703 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (argName != null && argName.isEmpty()) {
+- line 703 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (argName != null && argName.isEmpty()) {
+- line 707 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: optBuf.append(option.hasLongOpt() ? longOptSeparator : " ");
+- line 708 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: optBuf.append("<").append(argName != null ? option.getArgName() : getArgName()).append(">");
+- line 730 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (option.getDescription() != null) {
+- line 736 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (it.hasNext()) {
+- line 722 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (optBuf.length() < max) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testRenderOptions, testRenderOptionsWithDifferentPadding, testRenderOptionsWithEmptyOptions, testRenderOptionsWithMissingOptions, testRenderOptionsWithNegativePadding, testRenderOptionsWithNegativeWidth, testRenderOptionsWithNullOptionDescription, testRenderOptionsWithNullStringBuffer, testRenderOptionsWithOnlyLongOptions, testRenderOptionsWithVeryWideWidth, testRenderOptionsWithoutDescription

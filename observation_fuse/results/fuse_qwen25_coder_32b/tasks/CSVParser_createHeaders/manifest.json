@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:26:13.903898+00:00",
+  "task_id": "CSVParser_createHeaders",
+  "project": "commons-csv",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "CSVParser_createHeaders",
+    "package": "org.apache.commons.csv",
+    "class": "org.apache.commons.csv.CSVParser",
+    "test-class": "org.apache.commons.csv.CSVParser_createHeaders_Test",
+    "method-name": "createHeaders()",
+    "source-path": "src/main/java/org/apache/commons/csv/CSVParser.java",
+    "test-path": "src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java",
+    "focal-method": "private Headers createHeaders() throws IOException {\r\n    Map<String, Integer> hdrMap = null;\r\n    List<String> headerNames = null;\r\n    final String[] formatHeader = this.format.getHeader();\r\n    if (formatHeader != null) {\r\n        hdrMap = createEmptyHeaderMap();\r\n        String[] headerRecord = null;\r\n        if (formatHeader.length == 0) {\r\n            // read the header from the first line of the file\r\n            final CSVRecord nextRecord = this.nextRecord();\r\n            if (nextRecord != null) {\r\n                headerRecord = nextRecord.values();\r\n                headerComment = nextRecord.getComment();\r\n            }\r\n        } else {\r\n            if (this.format.getSkipHeaderRecord()) {\r\n                final CSVRecord nextRecord = this.nextRecord();\r\n                if (nextRecord != null) {\r\n                    headerComment = nextRecord.getComment();\r\n                }\r\n            }\r\n            headerRecord = formatHeader;\r\n        }\r\n        // build the name to index mappings\r\n        if (headerRecord != null) {\r\n            // Track an occurrence of a null, empty or blank header.\r\n            boolean observedMissing = false;\r\n            for (int i = 0; i < headerRecord.length; i++) {\r\n                final String header = headerRecord[i];\r\n                final boolean blankHeader = CSVFormat.isBlank(header);\r\n                if (blankHeader && (!this.format.getAllowMissingColumnNames())) {\r\n                    throw new IllegalArgumentException(\"A header name is missing in \" + Arrays.toString(headerRecord));\r\n                }\r\n                final boolean containsHeader = (blankHeader) ? observedMissing : hdrMap.containsKey(header);\r\n                final DuplicateHeaderMode headerMode = this.format.getDuplicateHeaderMode();\r\n                final boolean duplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_ALL;\r\n                final boolean emptyDuplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_EMPTY;\r\n                if ((containsHeader && (!duplicatesAllowed)) && (!(blankHeader && emptyDuplicatesAllowed))) {\r\n                    throw new IllegalArgumentException(String.format(\"The header contains a duplicate name: \\\"%s\\\" in %s. If this is valid then use CSVFormat.Builder.setDuplicateHeaderMode().\", header, Arrays.toString(headerRecord)));\r\n                }\r\n                observedMissing |= blankHeader;\r\n                if (header != null) {\r\n                    hdrMap.put(header, Integer.valueOf(i));\r\n                    if (headerNames == null) {\r\n                        headerNames = new ArrayList<>(headerRecord.length);\r\n                    }\r\n                    headerNames.add(header);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    if (headerNames == null) {\r\n        headerNames = Collections.emptyList();// immutable\r\n\r\n    } else {\r\n        headerNames = Collections.unmodifiableList(headerNames);\r\n    }\r\n    return new Headers(hdrMap, headerNames);\r\n}",
+    "class-code": "package org.apache.commons.csv;\nimport java.io.Closeable;\nimport java.util.ArrayList;\nimport java.util.LinkedHashMap;\nimport java.io.UncheckedIOException;\nimport java.io.Reader;\nimport java.net.URL;\nimport java.nio.file.Files;\nimport java.util.stream.StreamSupport;\nimport java.io.StringReader;\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.stream.Stream;\nimport java.util.Spliterator;\nimport static org.apache.commons.csv.Token.Type.TOKEN;\nimport java.util.Collections;\nimport java.util.stream.Collectors;\nimport java.nio.file.Path;\nimport java.io.InputStream;\nimport java.io.InputStreamReader;\nimport java.io.IOException;\nimport java.nio.charset.Charset;\nimport java.util.TreeMap;\nimport java.util.Spliterators;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.io.File;\nimport java.util.Map;\nimport java.util.Arrays;\npublic final class CSVParser implements Iterable<CSVRecord> , Closeable {\n    private String headerComment;\n    private final CSVFormat format;\n    private Headers createHeaders() throws IOException {\r\n        Map<String, Integer> hdrMap = null;\r\n        List<String> headerNames = null;\r\n        final String[] formatHeader = this.format.getHeader();\r\n        if (formatHeader != null) {\r\n            hdrMap = createEmptyHeaderMap();\r\n            String[] headerRecord = null;\r\n            if (formatHeader.length == 0) {\r\n                // read the header from the first line of the file\r\n                final CSVRecord nextRecord = this.nextRecord();\r\n                if (nextRecord != null) {\r\n                    headerRecord = nextRecord.values();\r\n                    headerComment = nextRecord.getComment();\r\n                }\r\n            } else {\r\n                if (this.format.getSkipHeaderRecord()) {\r\n                    final CSVRecord nextRecord = this.nextRecord();\r\n                    if (nextRecord != null) {\r\n                        headerComment = nextRecord.getComment();\r\n                    }\r\n                }\r\n                headerRecord = formatHeader;\r\n            }\r\n            // build the name to index mappings\r\n            if (headerRecord != null) {\r\n                // Track an occurrence of a null, empty or blank header.\r\n                boolean observedMissing = false;\r\n                for (int i = 0; i < headerRecord.length; i++) {\r\n                    final String header = headerRecord[i];\r\n                    final boolean blankHeader = CSVFormat.isBlank(header);\r\n                    if (blankHeader && (!this.format.getAllowMissingColumnNames())) {\r\n                        throw new IllegalArgumentException(\"A header name is missing in \" + Arrays.toString(headerRecord));\r\n                    }\r\n                    final boolean containsHeader = (blankHeader) ? observedMissing : hdrMap.containsKey(header);\r\n                    final DuplicateHeaderMode headerMode = this.format.getDuplicateHeaderMode();\r\n                    final boolean duplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_ALL;\r\n                    final boolean emptyDuplicatesAllowed = headerMode == DuplicateHeaderMode.ALLOW_EMPTY;\r\n                    if ((containsHeader && (!duplicatesAllowed)) && (!(blankHeader && emptyDuplicatesAllowed))) {\r\n                        throw new IllegalArgumentException(String.format(\"The header contains a duplicate name: \\\"%s\\\" in %s. If this is valid then use CSVFormat.Builder.setDuplicateHeaderMode().\", header, Arrays.toString(headerRecord)));\r\n                    }\r\n                    observedMissing |= blankHeader;\r\n                    if (header != null) {\r\n                        hdrMap.put(header, Integer.valueOf(i));\r\n                        if (headerNames == null) {\r\n                            headerNames = new ArrayList<>(headerRecord.length);\r\n                        }\r\n                        headerNames.add(header);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        if (headerNames == null) {\r\n            headerNames = Collections.emptyList();// immutable\r\n    \r\n        } else {\r\n            headerNames = Collections.unmodifiableList(headerNames);\r\n        }\r\n        return new Headers(hdrMap, headerNames);\r\n    }\n@Override\r\npublic void close() throws IOException;\n    private Map<String, Integer> createEmptyHeaderMap();\n    public long getCurrentLineNumber();\n    public String getFirstEndOfLine();\n    public String getHeaderComment();\n    public Map<String, Integer> getHeaderMap();\n    Map<String, Integer> getHeaderMapRaw();\n    public List<String> getHeaderNames();\n    public long getRecordNumber();\n    public List<CSVRecord> getRecords();\n    public String getTrailerComment();\n    public boolean hasHeaderComment();\n    public boolean hasTrailerComment();\n    public boolean isClosed();\n    @Override\r\npublic Iterator<CSVRecord> iterator();\n    CSVRecord nextRecord() throws IOException;\n    public static CSVParser parse(final File file, final Charset charset, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final InputStream inputStream, final Charset charset, final CSVFormat format) throws IOException;\n    public static CSVParser parse(final Reader reader, final CSVFormat format) throws IOException;\n    public static CSVParser parse(final String string, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final URL url, final Charset charset, final CSVFormat format) throws IOException;\n    @SuppressWarnings(\"resource\")\r\npublic static CSVParser parse(final Path path, final Charset charset, final CSVFormat format) throws IOException;\n    public Stream<CSVRecord> stream();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv/src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace/src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace/src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java"
+  },
+  "started_at": "2026-09-15T06:26:13.996729+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/CSVParser_createHeaders/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

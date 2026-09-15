@@ -1,0 +1,28 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (20 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1632 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size() > 1) {
+- line 1661 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size() > 1) {
+- line 1654 | MathMutator | Replaced integer subtraction with addition | source: modCount -= 2; // we didn't really modify it.
+- line 1629 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (lengthInBits == 0) {
+- line 1630 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!root.isEmpty()) {
+- line 1643 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (compareKeys(key, found.key)) {
+- line 1648 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isValidBitIndex(bitIndex)) {
+- line 1657 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isNullBitKey(bitIndex)) {
+- line 1658 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!root.isEmpty()) {
+- line 1666 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (KeyAnalyzer.isEqualBitKey(bitIndex)) {
+- line 1632 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (size() > 1) {
+- line 1661 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (size() > 1) {
+- line 1651 | VoidMethodCallMutator | removed call to org/apache/commons/collections4/trie/AbstractPatriciaTrie::incrementSize | source: incrementSize(); // must increment because remove will decrement
+- line 1633 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return nextEntry(root);
+- line 1639 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return firstEntry();
+- line 1644 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return nextEntry(found);
+- line 1655 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return ceil;
+- line 1659 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return firstEntry();
+- line 1662 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return nextEntry(firstEntry());
+- line 1667 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/trie/AbstractPatriciaTrie::higherEntry | source: return nextEntry(found);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testHigherEntryAtHighestKey, testHigherEntryConcurrentModification, testHigherEntryWithAllLowerKeys, testHigherEntryWithComplexKeys, testHigherEntryWithEmptyRoot, testHigherEntryWithExistingKey, testHigherEntryWithExistingKeysLess, testHigherEntryWithFromKeyInclusive, testHigherEntryWithIllegalState, testHigherEntryWithInvalidKeyType, testHigherEntryWithNonExistentKey, testHigherEntryWithNull, testHigherEntryWithSequentialKeys

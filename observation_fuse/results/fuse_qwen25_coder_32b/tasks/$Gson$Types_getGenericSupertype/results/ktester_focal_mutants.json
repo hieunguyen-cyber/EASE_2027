@@ -1,0 +1,164 @@
+{
+  "mutants": [
+    {
+      "id": 53,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 249,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 55,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 247,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 250,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 252,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 259,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 260,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 60,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 262,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 61,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 264,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 249,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 243,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 251,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 253,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 263,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 265,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 272,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for com/google/gson/internal/$Gson$Types::getGenericSupertype",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    }
+  ]
+}

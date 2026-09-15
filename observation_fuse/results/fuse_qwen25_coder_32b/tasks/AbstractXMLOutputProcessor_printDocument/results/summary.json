@@ -1,0 +1,63 @@
+{
+  "task_id": "AbstractXMLOutputProcessor_printDocument",
+  "project": "jdom2",
+  "focal_class": "org.jdom2.output.support.AbstractXMLOutputProcessor",
+  "focal_method": "printDocument(Writer, FormatStack, NamespaceStack, Document)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printDocument_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printDocument/workspace/src/test/java/org/jdom2/output/support/AbstractXMLOutputProcessor_printDocument_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "started_at": "2026-09-15T07:49:01.116435+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "SEED_STILL_RED",
+    "disabled_methods": [],
+    "test_count": 0,
+    "error": "[ERROR] org.jdom2.output.support.AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithTextContentTests.testPrintDocument_withMultipleTextNodes -- Time elapsed: 0.002 s <<< FAILURE!\norg.opentest4j.AssertionFailedError: expected: <<root>First textSecond text</root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root>FirsttextSecondtext</root>>\n\tat org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)\n\tat org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)\n\tat org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)\n\tat org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)\n\tat org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)\n\tat org.jdom2.output.support.AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithTextContentTests.testPrintDocument_withMultipleTextNodes(AbstractXMLOutputProcessor_printDocument_Test.java:61)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1541)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1541)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1541)\n\n[ERROR] Failures: \n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithDifferentDocumentStructure.testPrintDocument_withDocumentWithoutRoot:128 expected: <> but was: <<?xml version=\"1.0\" encoding=\"UTF-8\"?>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithDifferentDocumentStructure.testPrintDocument_withTextAndComment:143 expected: <<root>Some text before comment<!--A comment here-->Some text after comment</root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root>Sometextbeforecomment<!--Acommenthere-->Sometextaftercomment</root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithTextContentTests.testPrintDocument_withMultipleTextNodes:61 expected: <<root>First textSecond text</root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root>FirsttextSecondtext</root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithTextContentTests.testPrintDocument_withSingleTextNode:47 expected: <<root>This is a text node</root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root>Thisisatextnode</root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithVariousContentTests.testPrintDocument_withCDATAContent:114 expected: <<root><![CDATA[This is CDATA content]]></root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root><![CDATA[ThisisCDATAcontent]]></root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithVariousContentTests.testPrintDocument_withCommentContent:88 expected: <<root><!--This is a comment--></root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root><!--Thisisacomment--></root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithVariousContentTests.testPrintDocument_withEmptyDocument:75 expected: <> but was: <<?xml version=\"1.0\" encoding=\"UTF-8\"?>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test$PrintDocumentWithVariousContentTests.testPrintDocument_withProcessingInstruction:101 expected: <<root><?php echo 'Hello'; ?></root>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><root><?phpecho'Hello';?></root>>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test.testPrintDocument_withCDATAContent:228 expected: <<root><![CDATA[This is CDATA content]]></root>> but was: <>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test.testPrintDocument_withCommentContent:200 expected: <<root><!--This is a comment--></root>> but was: <>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test.testPrintDocument_withProcessingInstruction:214 expected: <<root><?php echo 'Hello'; ?></root>> but was: <>\n[ERROR]   AbstractXMLOutputProcessor_printDocument_Test.testPrintDocument_withValidInput:173 expected: <<root/>> but was: <<?xmlversion=\"1.0\"encoding=\"UTF-8\"?>>\n[ERROR] Tests run: 16, Failures: 12, Errors: 0, Skipped: 0\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project jdom2: There are test failures.\n[ERROR] \n[ERROR] Please refer to /home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/AbstractXMLOutputProcessor_printDocument/workspace/target/surefire-reports for the individual test results.\n[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.\n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n"
+  },
+  "ktester": {
+    "test_cases": 12,
+    "compile_pass": true,
+    "execution_pass": false,
+    "tests_executed": 16,
+    "tests_failed": 12,
+    "line_missed": 15,
+    "line_covered": 18,
+    "line_coverage": 0.545455,
+    "branch_missed": 18,
+    "branch_covered": 12,
+    "branch_coverage": 0.4,
+    "instruction_missed": 58,
+    "instruction_covered": 68,
+    "instruction_coverage": 0.539683,
+    "line_coverage_passed": 0.0,
+    "branch_coverage_passed": 0.0,
+    "instruction_coverage_passed": 0.0,
+    "generation_seconds": null
+  },
+  "status": "SEED_STILL_RED",
+  "completed_at": "2026-09-15T07:49:14.409095+00:00"
+}

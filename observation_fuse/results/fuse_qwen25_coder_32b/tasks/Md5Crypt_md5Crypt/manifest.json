@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T07:31:14.536993+00:00",
+  "task_id": "Md5Crypt_md5Crypt",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Md5Crypt_md5Crypt",
+    "package": "org.apache.commons.codec.digest",
+    "class": "org.apache.commons.codec.digest.Md5Crypt",
+    "test-class": "org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test",
+    "method-name": "md5Crypt(byte[], String, String, Random)",
+    "source-path": "src/main/java/org/apache/commons/codec/digest/Md5Crypt.java",
+    "test-path": "src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java",
+    "focal-method": "public static String md5Crypt(final byte[] keyBytes, final String salt, final String prefix, final Random random) {\r\n    final int keyLen = keyBytes.length;\r\n    // Extract the real salt from the given string which can be a complete hash string.\r\n    final String saltString;\r\n    if (salt == null) {\r\n        saltString = B64.getRandomSalt(8, random);\r\n    } else {\r\n        final Pattern p = Pattern.compile((\"^\" + prefix.replace(\"$\", \"\\\\$\")) + \"([\\\\.\\\\/a-zA-Z0-9]{1,8}).*\");\r\n        final Matcher m = p.matcher(salt);\r\n        if (!m.find()) {\r\n            throw new IllegalArgumentException(\"Invalid salt value: \" + salt);\r\n        }\r\n        saltString = m.group(1);\r\n    }\r\n    final byte[] saltBytes = saltString.getBytes(StandardCharsets.UTF_8);\r\n    final MessageDigest ctx = DigestUtils.getMd5Digest();\r\n    /* The password first, since that is what is most unknown */\r\n    ctx.update(keyBytes);\r\n    /* Then our magic string */\r\n    ctx.update(prefix.getBytes(StandardCharsets.UTF_8));\r\n    /* Then the raw salt */\r\n    ctx.update(saltBytes);\r\n    /* Then just as many characters of the MD5(pw,salt,pw) */\r\n    MessageDigest ctx1 = DigestUtils.getMd5Digest();\r\n    ctx1.update(keyBytes);\r\n    ctx1.update(saltBytes);\r\n    ctx1.update(keyBytes);\r\n    byte[] finalb = ctx1.digest();\r\n    int ii = keyLen;\r\n    while (ii > 0) {\r\n        ctx.update(finalb, 0, Math.min(ii, 16));\r\n        ii -= 16;\r\n    } \r\n    /* Don't leave anything around in JVM they could use. */\r\n    Arrays.fill(finalb, ((byte) (0)));\r\n    /* Then something really weird... */\r\n    ii = keyLen;\r\n    final int j = 0;\r\n    while (ii > 0) {\r\n        if ((ii & 1) == 1) {\r\n            ctx.update(finalb[j]);\r\n        } else {\r\n            ctx.update(keyBytes[j]);\r\n        }\r\n        ii >>= 1;\r\n    } \r\n    /* Now make the output string */\r\n    final StringBuilder passwd = new StringBuilder((prefix + saltString) + \"$\");\r\n    finalb = ctx.digest();\r\n    /* and now, just to make sure things don't run too fast On a 60 Mhz Pentium this takes 34 milliseconds, so you\r\n    would need 30 seconds to build a 1000 entry dictionary...\r\n     */\r\n    for (int i = 0; i < ROUNDS; i++) {\r\n        ctx1 = DigestUtils.getMd5Digest();\r\n        if ((i & 1) != 0) {\r\n            ctx1.update(keyBytes);\r\n        } else {\r\n            ctx1.update(finalb, 0, BLOCKSIZE);\r\n        }\r\n        if ((i % 3) != 0) {\r\n            ctx1.update(saltBytes);\r\n        }\r\n        if ((i % 7) != 0) {\r\n            ctx1.update(keyBytes);\r\n        }\r\n        if ((i & 1) != 0) {\r\n            ctx1.update(finalb, 0, BLOCKSIZE);\r\n        } else {\r\n            ctx1.update(keyBytes);\r\n        }\r\n        finalb = ctx1.digest();\r\n    }\r\n    // The following was nearly identical to the Sha2Crypt code.\r\n    // Again, the buflen is not really needed.\r\n    // int buflen = MD5_PREFIX.length() - 1 + salt_string.length() + 1 + BLOCKSIZE + 1;\r\n    B64.b64from24bit(finalb[0], finalb[6], finalb[12], 4, passwd);\r\n    B64.b64from24bit(finalb[1], finalb[7], finalb[13], 4, passwd);\r\n    B64.b64from24bit(finalb[2], finalb[8], finalb[14], 4, passwd);\r\n    B64.b64from24bit(finalb[3], finalb[9], finalb[15], 4, passwd);\r\n    B64.b64from24bit(finalb[4], finalb[10], finalb[5], 4, passwd);\r\n    B64.b64from24bit(((byte) (0)), ((byte) (0)), finalb[11], 2, passwd);\r\n    /* Don't leave anything around in JVM they could use. */\r\n    // Is there a better way to do this with the JVM?\r\n    ctx.reset();\r\n    ctx1.reset();\r\n    Arrays.fill(keyBytes, ((byte) (0)));\r\n    Arrays.fill(saltBytes, ((byte) (0)));\r\n    Arrays.fill(finalb, ((byte) (0)));\r\n    return passwd.toString();\r\n}",
+    "class-code": "package org.apache.commons.codec.digest;\nimport java.util.regex.Pattern;\nimport java.util.Random;\nimport java.util.regex.Matcher;\nimport java.nio.charset.StandardCharsets;\nimport java.security.SecureRandom;\nimport java.security.MessageDigest;\nimport java.util.Arrays;\npublic class Md5Crypt {\n    static final String APR1_PREFIX = \"$apr1$\";\n    private static final int BLOCKSIZE = 16;\n    static final String MD5_PREFIX = \"$1$\";\n    private static final int ROUNDS = 1000;\n    public static String md5Crypt(final byte[] keyBytes, final String salt, final String prefix, final Random random) {\r\n        final int keyLen = keyBytes.length;\r\n        // Extract the real salt from the given string which can be a complete hash string.\r\n        final String saltString;\r\n        if (salt == null) {\r\n            saltString = B64.getRandomSalt(8, random);\r\n        } else {\r\n            final Pattern p = Pattern.compile((\"^\" + prefix.replace(\"$\", \"\\\\$\")) + \"([\\\\.\\\\/a-zA-Z0-9]{1,8}).*\");\r\n            final Matcher m = p.matcher(salt);\r\n            if (!m.find()) {\r\n                throw new IllegalArgumentException(\"Invalid salt value: \" + salt);\r\n            }\r\n            saltString = m.group(1);\r\n        }\r\n        final byte[] saltBytes = saltString.getBytes(StandardCharsets.UTF_8);\r\n        final MessageDigest ctx = DigestUtils.getMd5Digest();\r\n        /* The password first, since that is what is most unknown */\r\n        ctx.update(keyBytes);\r\n        /* Then our magic string */\r\n        ctx.update(prefix.getBytes(StandardCharsets.UTF_8));\r\n        /* Then the raw salt */\r\n        ctx.update(saltBytes);\r\n        /* Then just as many characters of the MD5(pw,salt,pw) */\r\n        MessageDigest ctx1 = DigestUtils.getMd5Digest();\r\n        ctx1.update(keyBytes);\r\n        ctx1.update(saltBytes);\r\n        ctx1.update(keyBytes);\r\n        byte[] finalb = ctx1.digest();\r\n        int ii = keyLen;\r\n        while (ii > 0) {\r\n            ctx.update(finalb, 0, Math.min(ii, 16));\r\n            ii -= 16;\r\n        } \r\n        /* Don't leave anything around in JVM they could use. */\r\n        Arrays.fill(finalb, ((byte) (0)));\r\n        /* Then something really weird... */\r\n        ii = keyLen;\r\n        final int j = 0;\r\n        while (ii > 0) {\r\n            if ((ii & 1) == 1) {\r\n                ctx.update(finalb[j]);\r\n            } else {\r\n                ctx.update(keyBytes[j]);\r\n            }\r\n            ii >>= 1;\r\n        } \r\n        /* Now make the output string */\r\n        final StringBuilder passwd = new StringBuilder((prefix + saltString) + \"$\");\r\n        finalb = ctx.digest();\r\n        /* and now, just to make sure things don't run too fast On a 60 Mhz Pentium this takes 34 milliseconds, so you\r\n        would need 30 seconds to build a 1000 entry dictionary...\r\n         */\r\n        for (int i = 0; i < ROUNDS; i++) {\r\n            ctx1 = DigestUtils.getMd5Digest();\r\n            if ((i & 1) != 0) {\r\n                ctx1.update(keyBytes);\r\n            } else {\r\n                ctx1.update(finalb, 0, BLOCKSIZE);\r\n            }\r\n            if ((i % 3) != 0) {\r\n                ctx1.update(saltBytes);\r\n            }\r\n            if ((i % 7) != 0) {\r\n                ctx1.update(keyBytes);\r\n            }\r\n            if ((i & 1) != 0) {\r\n                ctx1.update(finalb, 0, BLOCKSIZE);\r\n            } else {\r\n                ctx1.update(keyBytes);\r\n            }\r\n            finalb = ctx1.digest();\r\n        }\r\n        // The following was nearly identical to the Sha2Crypt code.\r\n        // Again, the buflen is not really needed.\r\n        // int buflen = MD5_PREFIX.length() - 1 + salt_string.length() + 1 + BLOCKSIZE + 1;\r\n        B64.b64from24bit(finalb[0], finalb[6], finalb[12], 4, passwd);\r\n        B64.b64from24bit(finalb[1], finalb[7], finalb[13], 4, passwd);\r\n        B64.b64from24bit(finalb[2], finalb[8], finalb[14], 4, passwd);\r\n        B64.b64from24bit(finalb[3], finalb[9], finalb[15], 4, passwd);\r\n        B64.b64from24bit(finalb[4], finalb[10], finalb[5], 4, passwd);\r\n        B64.b64from24bit(((byte) (0)), ((byte) (0)), finalb[11], 2, passwd);\r\n        /* Don't leave anything around in JVM they could use. */\r\n        // Is there a better way to do this with the JVM?\r\n        ctx.reset();\r\n        ctx1.reset();\r\n        Arrays.fill(keyBytes, ((byte) (0)));\r\n        Arrays.fill(saltBytes, ((byte) (0)));\r\n        Arrays.fill(finalb, ((byte) (0)));\r\n        return passwd.toString();\r\n    }\npublic static String apr1Crypt(final byte[] keyBytes);\n    public static String apr1Crypt(final byte[] keyBytes, String salt);\n    public static String apr1Crypt(final byte[] keyBytes, final Random random);\n    public static String apr1Crypt(final String keyBytes);\n    public static String apr1Crypt(final String keyBytes, final String salt);\n    public static String md5Crypt(final byte[] keyBytes);\n    public static String md5Crypt(final byte[] keyBytes, final String salt);\n    public static String md5Crypt(final byte[] keyBytes, final String salt, final String prefix);\n    public static String md5Crypt(final byte[] keyBytes, final Random random);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace/src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace/src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java"
+  },
+  "started_at": "2026-09-15T07:31:14.606057+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Md5Crypt_md5Crypt/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

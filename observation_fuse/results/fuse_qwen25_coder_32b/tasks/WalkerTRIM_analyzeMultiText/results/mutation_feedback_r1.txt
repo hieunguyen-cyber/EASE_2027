@@ -1,0 +1,31 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (23 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 86 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (len > 0) {
+- line 100 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (len > 0) {
+- line 113 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < len; i++) {
+- line 96 | IncrementsMutator | Changed increment from 1 to -1 | source: offset++;
+- line 97 | IncrementsMutator | Changed increment from -1 to 1 | source: len--;
+- line 110 | IncrementsMutator | Changed increment from -1 to 1 | source: len--;
+- line 101 | MathMutator | Replaced integer addition with subtraction | source: final Content c = get(offset + len - 1);
+- line 101 | MathMutator | Replaced integer subtraction with addition | source: final Content c = get(offset + len - 1);
+- line 115 | MathMutator | Replaced integer addition with subtraction | source: if (i + 1 == len) {
+- line 124 | MathMutator | Replaced integer addition with subtraction | source: final Content c = get(offset + i);
+- line 88 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c instanceof Text) {
+- line 90 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!Verifier.isAllXMLWhitespace(c.getValue())) {
+- line 102 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (c instanceof Text) {
+- line 104 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!Verifier.isAllXMLWhitespace(c.getValue())) {
+- line 115 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (i + 1 == len) {
+- line 118 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (i == 0) {
+- line 121 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (len == 1) {
+- line 86 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (len > 0) {
+- line 100 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (len > 0) {
+- line 113 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < len; i++) {
+- line 127 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText | source: mtext.appendText(trim, c.getValue());
+- line 130 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendCDATA | source: mtext.appendCDATA(trim, c.getValue());
+- line 136 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendRaw | source: mtext.appendRaw(c);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testAnalyzeMultiText, testAnalyzeMultiTextWithInvalidOffset, testAnalyzeMultiTextWithNegativeLength, testAnalyzeMultiTextWithNullMText, testAnalyzeMultiTextWithZeroLength

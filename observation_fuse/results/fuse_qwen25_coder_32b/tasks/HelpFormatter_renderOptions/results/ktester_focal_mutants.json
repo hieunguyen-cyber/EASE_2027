@@ -1,0 +1,174 @@
+{
+  "mutants": [
+    {
+      "id": 90,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 722,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 720,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 92,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 723,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 728,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 94,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "HelpFormatter.java",
+      "line": 684,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 95,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 691,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 696,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 97,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 701,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 703,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 703,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 100,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 707,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 101,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 708,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 102,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 730,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 103,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 736,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "HelpFormatter.java",
+      "line": 722,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "HelpFormatter.java",
+      "line": 685,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to java/util/Collections::sort",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    },
+    {
+      "id": 106,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "HelpFormatter.java",
+      "line": 741,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/cli/HelpFormatter::renderOptions",
+      "method_description": "(Ljava/lang/StringBuffer;ILorg/apache/commons/cli/Options;II)Ljava/lang/StringBuffer;"
+    }
+  ]
+}

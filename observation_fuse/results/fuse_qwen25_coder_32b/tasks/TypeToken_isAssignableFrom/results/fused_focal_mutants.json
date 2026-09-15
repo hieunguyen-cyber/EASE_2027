@@ -1,0 +1,154 @@
+{
+  "mutants": [
+    {
+      "id": 46,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TypeToken.java",
+      "line": 225,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TypeToken.java",
+      "line": 206,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 48,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 210,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 217,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 222,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 228,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 236,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 242,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 225,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 55,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TypeToken.java",
+      "line": 211,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 56,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TypeToken.java",
+      "line": 237,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "TypeToken.java",
+      "line": 243,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "TypeToken.java",
+      "line": 249,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TypeToken.java",
+      "line": 207,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "TypeToken.java",
+      "line": 249,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/reflect/TypeToken::isAssignableFrom",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z"
+    }
+  ]
+}

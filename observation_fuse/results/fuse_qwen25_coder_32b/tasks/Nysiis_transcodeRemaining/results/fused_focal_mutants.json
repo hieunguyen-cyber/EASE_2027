@@ -1,0 +1,264 @@
+{
+  "mutants": [
+    {
+      "id": 46,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 122,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 122,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 127,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 49,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 142,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 151,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 151,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 52,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Nysiis.java",
+      "line": 151,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 53,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 156,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 54,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 156,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 55,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 161,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 56,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 161,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "Nysiis.java",
+      "line": 161,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 58,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 166,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 123,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 128,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 136,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 63,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 138,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 140,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 65,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 143,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 66,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 145,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "Nysiis.java",
+      "line": 152,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 157,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 69,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 162,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 70,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 167,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Nysiis.java",
+      "line": 170,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/codec/language/Nysiis::transcodeRemaining",
+      "method_description": "(CCCC)[C"
+    }
+  ]
+}

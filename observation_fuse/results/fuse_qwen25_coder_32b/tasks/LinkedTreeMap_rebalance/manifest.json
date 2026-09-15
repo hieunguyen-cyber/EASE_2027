@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:55:40.030288+00:00",
+  "task_id": "LinkedTreeMap_rebalance",
+  "project": "gson",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace",
+  "module_relative": "gson",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace/gson",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "LinkedTreeMap_rebalance",
+    "package": "com.google.gson.internal",
+    "class": "com.google.gson.internal.LinkedTreeMap",
+    "test-class": "com.google.gson.internal.LinkedTreeMap_rebalance_Test",
+    "method-name": "rebalance(Node<K, V>, boolean)",
+    "source-path": "src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+    "test-path": "src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java",
+    "focal-method": "private void rebalance(Node<K, V> unbalanced, boolean insert) {\r\n    for (Node<K, V> node = unbalanced; node != null; node = node.parent) {\r\n        Node<K, V> left = node.left;\r\n        Node<K, V> right = node.right;\r\n        int leftHeight = (left != null) ? left.height : 0;\r\n        int rightHeight = (right != null) ? right.height : 0;\r\n        int delta = leftHeight - rightHeight;\r\n        if (delta == (-2)) {\r\n            Node<K, V> rightLeft = right.left;\r\n            Node<K, V> rightRight = right.right;\r\n            int rightRightHeight = (rightRight != null) ? rightRight.height : 0;\r\n            int rightLeftHeight = (rightLeft != null) ? rightLeft.height : 0;\r\n            int rightDelta = rightLeftHeight - rightRightHeight;\r\n            if ((rightDelta == (-1)) || ((rightDelta == 0) && (!insert))) {\r\n                rotateLeft(node);// AVL right right\r\n\r\n            } else {\r\n                assert rightDelta == 1;\r\n                rotateRight(right);// AVL right left\r\n\r\n                rotateLeft(node);\r\n            }\r\n            if (insert) {\r\n                break;// no further rotations will be necessary\r\n\r\n            }\r\n        } else if (delta == 2) {\r\n            Node<K, V> leftLeft = left.left;\r\n            Node<K, V> leftRight = left.right;\r\n            int leftRightHeight = (leftRight != null) ? leftRight.height : 0;\r\n            int leftLeftHeight = (leftLeft != null) ? leftLeft.height : 0;\r\n            int leftDelta = leftLeftHeight - leftRightHeight;\r\n            if ((leftDelta == 1) || ((leftDelta == 0) && (!insert))) {\r\n                rotateRight(node);// AVL left left\r\n\r\n            } else {\r\n                assert leftDelta == (-1);\r\n                rotateLeft(left);// AVL left right\r\n\r\n                rotateRight(node);\r\n            }\r\n            if (insert) {\r\n                break;// no further rotations will be necessary\r\n\r\n            }\r\n        } else if (delta == 0) {\r\n            node.height = leftHeight + 1;// leftHeight == rightHeight\r\n\r\n            if (insert) {\r\n                break;// the insert caused balance, so rebalancing is done!\r\n\r\n            }\r\n        } else {\r\n            assert (delta == (-1)) || (delta == 1);\r\n            node.height = Math.max(leftHeight, rightHeight) + 1;\r\n            if (!insert) {\r\n                break;// the height hasn't changed, so rebalancing is done!\r\n\r\n            }\r\n        }\r\n    }\r\n}",
+    "class-code": "package com.google.gson.internal;\nimport java.util.Set;\nimport java.util.ConcurrentModificationException;\nimport java.io.IOException;\nimport java.util.AbstractSet;\nimport java.util.LinkedHashMap;\nimport java.util.Comparator;\nimport java.util.AbstractMap;\nimport java.io.ObjectInputStream;\nimport java.io.InvalidObjectException;\nimport java.util.Iterator;\nimport java.util.NoSuchElementException;\nimport java.util.Objects;\nimport java.io.ObjectStreamException;\nimport java.io.Serializable;\n@SuppressWarnings(\"serial\")\r\npublic final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Serializable {\n    Node<K, V> root;\n    int size = 0;\n    int modCount = 0;\n    final Node<K, V> header;\n    private void rebalance(Node<K, V> unbalanced, boolean insert) {\r\n        for (Node<K, V> node = unbalanced; node != null; node = node.parent) {\r\n            Node<K, V> left = node.left;\r\n            Node<K, V> right = node.right;\r\n            int leftHeight = (left != null) ? left.height : 0;\r\n            int rightHeight = (right != null) ? right.height : 0;\r\n            int delta = leftHeight - rightHeight;\r\n            if (delta == (-2)) {\r\n                Node<K, V> rightLeft = right.left;\r\n                Node<K, V> rightRight = right.right;\r\n                int rightRightHeight = (rightRight != null) ? rightRight.height : 0;\r\n                int rightLeftHeight = (rightLeft != null) ? rightLeft.height : 0;\r\n                int rightDelta = rightLeftHeight - rightRightHeight;\r\n                if ((rightDelta == (-1)) || ((rightDelta == 0) && (!insert))) {\r\n                    rotateLeft(node);// AVL right right\r\n    \r\n                } else {\r\n                    assert rightDelta == 1;\r\n                    rotateRight(right);// AVL right left\r\n    \r\n                    rotateLeft(node);\r\n                }\r\n                if (insert) {\r\n                    break;// no further rotations will be necessary\r\n    \r\n                }\r\n            } else if (delta == 2) {\r\n                Node<K, V> leftLeft = left.left;\r\n                Node<K, V> leftRight = left.right;\r\n                int leftRightHeight = (leftRight != null) ? leftRight.height : 0;\r\n                int leftLeftHeight = (leftLeft != null) ? leftLeft.height : 0;\r\n                int leftDelta = leftLeftHeight - leftRightHeight;\r\n                if ((leftDelta == 1) || ((leftDelta == 0) && (!insert))) {\r\n                    rotateRight(node);// AVL left left\r\n    \r\n                } else {\r\n                    assert leftDelta == (-1);\r\n                    rotateLeft(left);// AVL left right\r\n    \r\n                    rotateRight(node);\r\n                }\r\n                if (insert) {\r\n                    break;// no further rotations will be necessary\r\n    \r\n                }\r\n            } else if (delta == 0) {\r\n                node.height = leftHeight + 1;// leftHeight == rightHeight\r\n    \r\n                if (insert) {\r\n                    break;// the insert caused balance, so rebalancing is done!\r\n    \r\n                }\r\n            } else {\r\n                assert (delta == (-1)) || (delta == 1);\r\n                node.height = Math.max(leftHeight, rightHeight) + 1;\r\n                if (!insert) {\r\n                    break;// the height hasn't changed, so rebalancing is done!\r\n    \r\n                }\r\n            }\r\n        }\r\n    }\n@Override\r\npublic void clear();\n    @Override\r\npublic boolean containsKey(Object key);\n    @Override\r\npublic Set<Entry<K, V>> entrySet();\n    Node<K, V> find(K key, boolean create);\n    Node<K, V> findByEntry(Entry<?, ?> entry);\n    @SuppressWarnings(\"unchecked\")\r\nNode<K, V> findByObject(Object key);\n    @Override\r\npublic V get(Object key);\n    @Override\r\npublic Set<K> keySet();\n    @Override\r\npublic V put(K key, V value);\n    @Override\r\npublic V remove(Object key);\n    void removeInternal(Node<K, V> node, boolean unlink);\n    Node<K, V> removeInternalByKey(Object key);\n    private void rotateLeft(Node<K, V> root);\n    private void rotateRight(Node<K, V> root);\n    @Override\r\npublic int size();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/gson/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace/gson/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace/gson/src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java"
+  },
+  "started_at": "2026-09-15T06:55:40.108287+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/LinkedTreeMap_rebalance/workspace/gson/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

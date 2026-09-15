@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T05:39:18.178253+00:00",
+  "task_id": "Nysiis_transcodeRemaining",
+  "project": "commons-codec",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace",
+  "required_java_major": 21,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Nysiis_transcodeRemaining",
+    "package": "org.apache.commons.codec.language",
+    "class": "org.apache.commons.codec.language.Nysiis",
+    "test-class": "org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test",
+    "method-name": "transcodeRemaining(char, char, char, char)",
+    "source-path": "src/main/java/org/apache/commons/codec/language/Nysiis.java",
+    "test-path": "src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java",
+    "focal-method": "private static char[] transcodeRemaining(final char prev, final char curr, final char next, final char aNext) {\r\n    // 1. EV -> AF\r\n    if ((curr == 'E') && (next == 'V')) {\r\n        return CHARS_AF;\r\n    }\r\n    // A, E, I, O, U -> A\r\n    if (isVowel(curr)) {\r\n        return CHARS_A;\r\n    }\r\n    // 2. Q -> G, Z -> S, M -> N\r\n    // 3. KN -> NN else K -> C\r\n    switch (curr) {\r\n        case 'Q' :\r\n            return CHARS_G;\r\n        case 'Z' :\r\n            return CHARS_S;\r\n        case 'M' :\r\n            return CHARS_N;\r\n        case 'K' :\r\n            if (next == 'N') {\r\n                return CHARS_NN;\r\n            }\r\n            return CHARS_C;\r\n        default :\r\n            break;\r\n    }\r\n    // 4. SCH -> SSS\r\n    if (((curr == 'S') && (next == 'C')) && (aNext == 'H')) {\r\n        return CHARS_SSS;\r\n    }\r\n    // PH -> FF\r\n    if ((curr == 'P') && (next == 'H')) {\r\n        return CHARS_FF;\r\n    }\r\n    // 5. H -> If previous or next is a non vowel, previous.\r\n    if ((curr == 'H') && ((!isVowel(prev)) || (!isVowel(next)))) {\r\n        return new char[]{ prev };\r\n    }\r\n    // 6. W -> If previous is vowel, previous.\r\n    if ((curr == 'W') && isVowel(prev)) {\r\n        return new char[]{ prev };\r\n    }\r\n    return new char[]{ curr };\r\n}",
+    "class-code": "package org.apache.commons.codec.language;\nimport java.util.regex.Pattern;\nimport org.apache.commons.codec.EncoderException;\nimport org.apache.commons.codec.StringEncoder;\npublic class Nysiis implements StringEncoder {\n    private static final char[] CHARS_A = new char[]{ 'A' };\n    private static final char[] CHARS_AF = new char[]{ 'A', 'F' };\n    private static final char[] CHARS_C = new char[]{ 'C' };\n    private static final char[] CHARS_FF = new char[]{ 'F', 'F' };\n    private static final char[] CHARS_G = new char[]{ 'G' };\n    private static final char[] CHARS_N = new char[]{ 'N' };\n    private static final char[] CHARS_NN = new char[]{ 'N', 'N' };\n    private static final char[] CHARS_S = new char[]{ 'S' };\n    private static final char[] CHARS_SSS = new char[]{ 'S', 'S', 'S' };\n    private static char[] transcodeRemaining(final char prev, final char curr, final char next, final char aNext) {\r\n        // 1. EV -> AF\r\n        if ((curr == 'E') && (next == 'V')) {\r\n            return CHARS_AF;\r\n        }\r\n        // A, E, I, O, U -> A\r\n        if (isVowel(curr)) {\r\n            return CHARS_A;\r\n        }\r\n        // 2. Q -> G, Z -> S, M -> N\r\n        // 3. KN -> NN else K -> C\r\n        switch (curr) {\r\n            case 'Q' :\r\n                return CHARS_G;\r\n            case 'Z' :\r\n                return CHARS_S;\r\n            case 'M' :\r\n                return CHARS_N;\r\n            case 'K' :\r\n                if (next == 'N') {\r\n                    return CHARS_NN;\r\n                }\r\n                return CHARS_C;\r\n            default :\r\n                break;\r\n        }\r\n        // 4. SCH -> SSS\r\n        if (((curr == 'S') && (next == 'C')) && (aNext == 'H')) {\r\n            return CHARS_SSS;\r\n        }\r\n        // PH -> FF\r\n        if ((curr == 'P') && (next == 'H')) {\r\n            return CHARS_FF;\r\n        }\r\n        // 5. H -> If previous or next is a non vowel, previous.\r\n        if ((curr == 'H') && ((!isVowel(prev)) || (!isVowel(next)))) {\r\n            return new char[]{ prev };\r\n        }\r\n        // 6. W -> If previous is vowel, previous.\r\n        if ((curr == 'W') && isVowel(prev)) {\r\n            return new char[]{ prev };\r\n        }\r\n        return new char[]{ curr };\r\n    }\n@Override\r\npublic Object encode(final Object obj) throws EncoderException;\n    @Override\r\npublic String encode(final String str);\n    public boolean isStrict();\n    private static boolean isVowel(final char c);\n    public String nysiis(String str);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-codec/src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace/src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace/src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java"
+  },
+  "started_at": "2026-09-15T05:39:18.243943+00:00",
+  "environment": {
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "java_major": 21,
+    "required_java_major": 21,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-21.0.12.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Nysiis_transcodeRemaining/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

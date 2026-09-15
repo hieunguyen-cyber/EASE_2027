@@ -1,0 +1,304 @@
+{
+  "mutants": [
+    {
+      "id": 18,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 178,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 19,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 182,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 20,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 186,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 21,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 187,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 22,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 194,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 23,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 195,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 24,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 196,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 25,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 198,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 26,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 199,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 27,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 207,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 28,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 208,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 29,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 214,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 30,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 215,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 31,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 217,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 32,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 218,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 33,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 223,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 34,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 224,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 35,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 180,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 36,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "$Gson$Types.java",
+      "line": 184,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 37,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 205,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 38,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 184,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 39,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 188,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 40,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 194,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 41,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 200,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 42,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 205,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 43,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 209,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 44,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 214,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "$Gson$Types.java",
+      "line": 219,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 46,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 223,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "$Gson$Types.java",
+      "line": 228,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for com/google/gson/internal/$Gson$Types::equals",
+      "method_description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z"
+    }
+  ]
+}

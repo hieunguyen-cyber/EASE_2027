@@ -1,0 +1,30 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (2 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1321 | MathMutator | Replaced integer subtraction with addition | source: pathIndices[stackSize - 1]++;
+- line 1321 | MathMutator | Replaced integer addition with subtraction | source: pathIndices[stackSize - 1]++;
+
+NO_COVERAGE (18 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1266 | IncrementsMutator | Changed increment from 1 to -1 | source: count++;
+- line 1278 | IncrementsMutator | Changed increment from -1 to 1 | source: count--;
+- line 1275 | MathMutator | Replaced integer subtraction with addition | source: pathNames[stackSize - 1] = null; // Free the last path name so that it can be garbage collected
+- line 1277 | MathMutator | Replaced integer subtraction with addition | source: stackSize--;
+- line 1293 | MathMutator | Replaced integer subtraction with addition | source: pathNames[stackSize - 1] = "<skipped>";
+- line 1300 | MathMutator | Replaced integer subtraction with addition | source: pathNames[stackSize - 1] = "<skipped>";
+- line 1307 | MathMutator | Replaced integer subtraction with addition | source: pathNames[stackSize - 1] = "<skipped>";
+- line 1311 | MathMutator | Replaced integer addition with subtraction | source: pos += peekedNumberLength;
+- line 1274 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (count == 0) {
+- line 1292 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (count == 0) {
+- line 1299 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (count == 0) {
+- line 1306 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (count == 0) {
+- line 1265 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::push | source: push(JsonScope.EMPTY_OBJECT);
+- line 1281 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::skipUnquotedValue | source: skipUnquotedValue();
+- line 1284 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::skipQuotedValue | source: skipQuotedValue('\'');
+- line 1290 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::skipUnquotedValue | source: skipUnquotedValue();
+- line 1297 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::skipQuotedValue | source: skipQuotedValue('\'');
+- line 1304 | VoidMethodCallMutator | removed call to com/google/gson/stream/JsonReader::skipQuotedValue | source: skipQuotedValue('"');
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testSkipEmptyArrayInObject, testSkipNestedArray, testSkipPropertyName, testSkipValueAfterEndOfArray, testSkipValueThrowsIOExceptionFromDoPeek, testSkipValueWithArray, testSkipValueWithEmptyStack, testSkipValueWithNoNextValue, testSkipValueWithObject, testSkipValueWithVariousInputs

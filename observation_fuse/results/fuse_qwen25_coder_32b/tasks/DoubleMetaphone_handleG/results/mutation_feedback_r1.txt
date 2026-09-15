@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (18 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 560 | MathMutator | Replaced integer addition with subtraction | source: if (charAt(value, index + 1) == 'H') {
+- line 562 | MathMutator | Replaced integer addition with subtraction | source: } else if (charAt(value, index + 1) == 'N') {
+- line 572 | MathMutator | Replaced integer addition with subtraction | source: } else if (contains(value, index + 1, 2, "LI") && !slavoGermanic) {
+- line 575 | MathMutator | Replaced integer addition with subtraction | source: } else if (index == 0 &&
+- line 576 | MathMutator | Replaced integer addition with subtraction | source: (charAt(value, index + 1) == 'Y' ||
+- line 581 | MathMutator | Replaced integer addition with subtraction | source: } else if ((contains(value, index + 1, 2, "ER") ||
+- line 581 | MathMutator | Replaced integer addition with subtraction | source: } else if ((contains(value, index + 1, 2, "ER") ||
+- line 589 | MathMutator | Replaced integer addition with subtraction | source: } else if (contains(value, index + 1, 1, "E", "I", "Y") ||
+- line 589 | MathMutator | Replaced integer subtraction with addition | source: } else if (contains(value, index + 1, 1, "E", "I", "Y") ||
+- line 604 | MathMutator | Replaced integer addition with subtraction | source: if (charAt(value, index + 1) == 'G') {
+- line 560 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (charAt(value, index + 1) == 'H') {
+- line 562 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (charAt(value, index + 1) == 'N') {
+- line 572 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index + 1, 2, "LI") && !slavoGermanic) {
+- line 575 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (index == 0 &&
+- line 577 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: contains(value, index + 1, 2, ES_EP_EB_EL_EY_IB_IL_IN_IE_EI_ER))) {
+- line 582 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: charAt(value, index + 1) == 'Y') &&
+- line 590 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: contains(value, index - 1, 4, "AGGI", "OGGI")) {
+- line 604 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (charAt(value, index + 1) == 'G') {
+
+NO_COVERAGE (35 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 571 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 574 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 580 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 588 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 602 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 605 | IncrementsMutator | Changed increment from 2 to -2 | source: index += 2;
+- line 565 | MathMutator | Replaced integer addition with subtraction | source: } else if (!contains(value, index + 2, 2, "EY") &&
+- line 565 | MathMutator | Replaced integer addition with subtraction | source: } else if (!contains(value, index + 2, 2, "EY") &&
+- line 583 | MathMutator | Replaced integer subtraction with addition | source: !contains(value, 0, 6, "DANGER", "RANGER", "MANGER") &&
+- line 584 | MathMutator | Replaced integer subtraction with addition | source: !contains(value, index - 1, 1, "E", "I") &&
+- line 593 | MathMutator | Replaced integer addition with subtraction | source: contains(value, 0, 3, "SCH") ||
+- line 597 | MathMutator | Replaced integer addition with subtraction | source: } else if (contains(value, index + 1, 3, "IER")) {
+- line 563 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (index == 1 && isVowel(charAt(value, 0)) && !slavoGermanic) {
+- line 563 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (index == 1 && isVowel(charAt(value, 0)) && !slavoGermanic) {
+- line 563 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (index == 1 && isVowel(charAt(value, 0)) && !slavoGermanic) {
+- line 565 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (!contains(value, index + 2, 2, "EY") &&
+- line 566 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: charAt(value, index + 1) != 'Y' && !slavoGermanic) {
+- line 566 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: charAt(value, index + 1) != 'Y' && !slavoGermanic) {
+- line 572 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (contains(value, index + 1, 2, "LI") && !slavoGermanic) {
+- line 583 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !contains(value, 0, 6, "DANGER", "RANGER", "MANGER") &&
+- line 584 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !contains(value, index - 1, 1, "E", "I") &&
+- line 585 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: !contains(value, index - 1, 3, "RGY", "OGY")) {
+- ... and 13 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testHandleG_withEmptyInput, testHandleG_withGCharacterFollowedByG, testHandleG_withGCharacterFollowedByVowel, testHandleG_withGFollowedByH, testHandleG_withGHCase, testHandleG_withInvalidIndex, testHandleG_withItalianCase, testHandleG_withLiCase, testHandleG_withNAtBeginning, testHandleG_withNAtFirstIndexAndSlavoGermanic, testHandleG_withNCase, testHandleG_withSingleGCharacter, testHandleG_withSlavoGermanicFlag, testHandleG_withVariousInputs, testHandleG_withYCaseAtStart

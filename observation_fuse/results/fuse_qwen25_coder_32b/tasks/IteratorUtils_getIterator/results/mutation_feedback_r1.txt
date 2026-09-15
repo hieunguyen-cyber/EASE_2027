@@ -1,0 +1,24 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (3 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 803 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj instanceof Iterator) {
+- line 806 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj instanceof Iterable) {
+- line 809 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj instanceof Object[]) {
+
+NO_COVERAGE (11 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 821 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj instanceof Node) {
+- line 824 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj instanceof Dictionary) {
+- line 827 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (obj.getClass().isArray()) {
+- line 832 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Iterator.class.isAssignableFrom(method.getReturnType())) {
+- line 834 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (it != null) {
+- line 804 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return (Iterator<?>) obj;
+- line 822 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return new NodeListIterator((Node) obj);
+- line 825 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return new EnumerationIterator<>(((Dictionary<?, ?>) obj).elements());
+- line 828 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return new ArrayIterator<>(obj);
+- line 835 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return it;
+- line 841 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator | source: return singletonIterator(obj);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetIteratorWithArray, testGetIteratorWithCollection, testGetIteratorWithEnumeration, testGetIteratorWithMap, testGetIteratorWithNodeList, testGetIteratorWithNull

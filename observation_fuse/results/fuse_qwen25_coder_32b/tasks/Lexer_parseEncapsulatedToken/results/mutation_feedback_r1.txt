@@ -1,0 +1,21 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (13 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 334 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEscape(c)) {
+- line 335 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEscapeDelimiter()) {
+- line 339 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (unescaped == END_OF_STREAM) { // unexpected char after escape
+- line 345 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (isQuoteChar(c)) {
+- line 346 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isQuoteChar(reader.lookAhead())) {
+- line 354 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isDelimiter(c)) {
+- line 358 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEndOfFile(c)) {
+- line 363 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (readEndOfLine(c)) {
+- line 367 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!Character.isWhitespace((char)c)) {
+- line 374 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (isEndOfFile(c)) {
+- line 356 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::parseEncapsulatedToken | source: return token;
+- line 361 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::parseEncapsulatedToken | source: return token;
+- line 365 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::parseEncapsulatedToken | source: return token;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testParseEncapsulatedToken, testParseEncapsulatedToken_WhenDuplicatedQuote_ShouldParseCorrectly, testParseEncapsulatedToken_WhenEOFReachedBeforeEnd_ShouldThrowIOException, testParseEncapsulatedToken_WhenEscapeCharacterAtEOF_ShouldThrowIOException, testParseEncapsulatedToken_WhenEscapeDelimiterUsed_ShouldParseCorrectly, testParseEncapsulatedToken_WhenExtraWhitespaceBeforeDelimiter_ShouldThrowIOException, testParseEncapsulatedToken_WhenInvalidCharBetweenTokenAndDelimiter_ShouldThrowIOException, testParseEncapsulatedToken_WhenInvalidCharacterAtEOF_ShouldThrowIOException, testParseEncapsulatedToken_WhenInvalidEscapeSequence_ShouldThrowIOException, testParseEncapsulatedToken_WhenValidInput_ShouldParseCorrectly, testParseEncapsulatedToken_WithVariedInputs_ShouldParseCorrectly

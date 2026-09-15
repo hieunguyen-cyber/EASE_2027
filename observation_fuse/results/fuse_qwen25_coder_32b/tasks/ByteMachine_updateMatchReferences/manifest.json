@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:28.078019+00:00",
+  "task_id": "ByteMachine_updateMatchReferences",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "ByteMachine_updateMatchReferences",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.ByteMachine",
+    "test-class": "software.amazon.event.ruler.ByteMachine_updateMatchReferences_Test",
+    "method-name": "updateMatchReferences(ByteMatch)",
+    "source-path": "src/main/java/software/amazon/event/ruler/ByteMachine.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_Test.java",
+    "focal-method": "private void updateMatchReferences(ByteMatch match) {\r\n    Patterns pattern = match.getPattern();\r\n    switch (pattern.type()) {\r\n        case EXACT :\r\n        case PREFIX :\r\n        case EXISTS :\r\n        case EQUALS_IGNORE_CASE :\r\n        case WILDCARD :\r\n            break;\r\n        case SUFFIX :\r\n            hasSuffix.decrementAndGet();\r\n            break;\r\n        case NUMERIC_EQ :\r\n            hasNumeric.decrementAndGet();\r\n            break;\r\n        case NUMERIC_RANGE :\r\n            final Range range = ((Range) (pattern));\r\n            if (range.isCIDR) {\r\n                hasIP.decrementAndGet();\r\n            } else {\r\n                hasNumeric.decrementAndGet();\r\n            }\r\n            break;\r\n        case ANYTHING_BUT :\r\n            anythingButs.remove(match.getNextNameState());\r\n            if (((AnythingBut) (pattern)).isNumeric()) {\r\n                hasNumeric.decrementAndGet();\r\n            }\r\n            break;\r\n        case ANYTHING_BUT_IGNORE_CASE :\r\n            anythingButs.remove(match.getNextNameState());\r\n            break;\r\n        case ANYTHING_BUT_SUFFIX :\r\n            hasSuffix.decrementAndGet();\r\n            anythingButs.remove(match.getNextNameState());\r\n            break;\r\n        case ANYTHING_BUT_PREFIX :\r\n            anythingButs.remove(match.getNextNameState());\r\n            break;\r\n        default :\r\n            throw new AssertionError(\"Not implemented yet\");\r\n    }\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport software.amazon.event.ruler.input.InputMultiByteSet;\nimport java.util.Set;\nimport static software.amazon.event.ruler.MatchType.ANYTHING_BUT_SUFFIX;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_FIRST_BYTE_FOR_TWO_BYTE_CHAR;\nimport java.util.AbstractMap;\nimport java.util.concurrent.ConcurrentHashMap;\nimport static software.amazon.event.ruler.input.DefaultParser.getParser;\nimport static software.amazon.event.ruler.MatchType.EXACT;\nimport static software.amazon.event.ruler.input.MultiByte.MIN_FIRST_BYTE_FOR_ONE_BYTE_CHAR;\nimport software.amazon.event.ruler.input.InputCharacter;\nimport java.util.HashSet;\nimport java.util.Collections;\nimport java.util.stream.Collectors;\nimport java.util.ArrayDeque;\nimport static software.amazon.event.ruler.MatchType.SUFFIX;\nimport software.amazon.event.ruler.input.InputCharacterType;\nimport static software.amazon.event.ruler.MatchType.EXISTS;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_FIRST_BYTE_FOR_ONE_BYTE_CHAR;\nimport static software.amazon.event.ruler.input.MultiByte.MAX_NON_FIRST_BYTE;\nimport java.nio.charset.StandardCharsets;\nimport static software.amazon.event.ruler.CompoundByteTransition.coalesce;\nimport javax.annotation.concurrent.ThreadSafe;\nimport java.util.concurrent.atomic.AtomicInteger;\nimport com.fasterxml.jackson.core.io.doubleparser.FastDoubleParser;\nimport static software.amazon.event.ruler.input.MultiByte.MIN_FIRST_BYTE_FOR_TWO_BYTE_CHAR;\nimport software.amazon.event.ruler.input.InputByte;\nimport software.amazon.event.ruler.input.MultiByte;\nimport java.util.Arrays;\n@ThreadSafe\r\nclass ByteMachine {\n    private final AtomicInteger hasNumeric = new AtomicInteger(0);\n    private final AtomicInteger hasIP = new AtomicInteger(0);\n    private final AtomicInteger hasSuffix = new AtomicInteger(0);\n    private final Set<NameState> anythingButs = ConcurrentHashMap.newKeySet();\n    private void updateMatchReferences(ByteMatch match) {\r\n        Patterns pattern = match.getPattern();\r\n        switch (pattern.type()) {\r\n            case EXACT :\r\n            case PREFIX :\r\n            case EXISTS :\r\n            case EQUALS_IGNORE_CASE :\r\n            case WILDCARD :\r\n                break;\r\n            case SUFFIX :\r\n                hasSuffix.decrementAndGet();\r\n                break;\r\n            case NUMERIC_EQ :\r\n                hasNumeric.decrementAndGet();\r\n                break;\r\n            case NUMERIC_RANGE :\r\n                final Range range = ((Range) (pattern));\r\n                if (range.isCIDR) {\r\n                    hasIP.decrementAndGet();\r\n                } else {\r\n                    hasNumeric.decrementAndGet();\r\n                }\r\n                break;\r\n            case ANYTHING_BUT :\r\n                anythingButs.remove(match.getNextNameState());\r\n                if (((AnythingBut) (pattern)).isNumeric()) {\r\n                    hasNumeric.decrementAndGet();\r\n                }\r\n                break;\r\n            case ANYTHING_BUT_IGNORE_CASE :\r\n                anythingButs.remove(match.getNextNameState());\r\n                break;\r\n            case ANYTHING_BUT_SUFFIX :\r\n                hasSuffix.decrementAndGet();\r\n                anythingButs.remove(match.getNextNameState());\r\n                break;\r\n            case ANYTHING_BUT_PREFIX :\r\n                anythingButs.remove(match.getNextNameState());\r\n                break;\r\n            default :\r\n                throw new AssertionError(\"Not implemented yet\");\r\n        }\r\n    }\nNameState addPattern(final Patterns pattern);\n    void deletePattern(final Patterns pattern);\n    public int evaluateComplexity(MachineComplexityEvaluator evaluator);\n    NameState findPattern(final Patterns pattern);\n    public void gatherObjects(Set<Object> objectSet);\n    boolean isEmpty();\n    @Override\r\npublic String toString();\n    Set<NameState> transitionOn(String valString);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice10.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice3.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice4.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice10.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice3.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_44_0_Test_slice4.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:28.156137+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/ByteMachine_updateMatchReferences/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

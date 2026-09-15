@@ -1,0 +1,364 @@
+{
+  "mutants": [
+    {
+      "id": 258,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 895,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 259,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 895,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 260,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 896,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 261,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 896,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 262,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 897,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 263,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 897,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 264,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 899,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 265,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 900,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 266,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 901,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 267,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 902,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 268,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 903,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 269,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 904,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 270,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 905,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 271,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 906,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 272,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 907,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 273,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 908,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 274,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 895,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 275,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 895,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 276,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 896,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 277,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 896,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 278,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 897,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 279,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 897,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 280,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 895,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 281,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 896,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 282,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 897,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 283,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 899,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 284,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 900,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 285,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 901,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 286,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 902,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 287,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 903,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 288,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 904,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 289,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 905,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 290,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 906,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 291,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 907,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 292,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 908,
+      "mutator": "BooleanFalseReturnValsMutator",
+      "description": "replaced boolean return with false for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    },
+    {
+      "id": 293,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "Verifier.java",
+      "line": 910,
+      "mutator": "BooleanTrueReturnValsMutator",
+      "description": "replaced boolean return with true for org/jdom2/Verifier::isXMLPublicIDCharacter",
+      "method_description": "(C)Z"
+    }
+  ]
+}

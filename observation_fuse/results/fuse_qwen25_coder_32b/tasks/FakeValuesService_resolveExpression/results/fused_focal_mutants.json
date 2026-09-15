@@ -1,0 +1,354 @@
+{
+  "mutants": [
+    {
+      "id": 234,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 684,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 235,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 696,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 236,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 719,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 237,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 732,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 238,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 686,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 239,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 658,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 240,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 664,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 241,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 667,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 242,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 668,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 243,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 670,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 244,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 679,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 245,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 679,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 246,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 687,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 247,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 696,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 248,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 704,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 249,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 710,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 250,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 710,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 251,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 710,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 252,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 710,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 253,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 712,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 254,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 712,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 255,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 721,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 256,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 721,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 257,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 684,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 258,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 696,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 259,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 719,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 260,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 732,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 261,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 659,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 262,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 672,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 263,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 681,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 264,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 689,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 265,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 706,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 266,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 714,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 267,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "FakeValuesService.java",
+      "line": 723,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    },
+    {
+      "id": 268,
+      "detected": true,
+      "status": "RUN_ERROR",
+      "source_file": "FakeValuesService.java",
+      "line": 737,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression",
+      "method_description": "(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Object;Lnet/datafaker/providers/base/ProviderRegistration;Lnet/datafaker/service/FakerContext;)Ljava/lang/Object;"
+    }
+  ]
+}

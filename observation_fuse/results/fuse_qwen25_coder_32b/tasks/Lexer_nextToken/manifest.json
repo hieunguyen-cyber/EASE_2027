@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T06:24:39.828743+00:00",
+  "task_id": "Lexer_nextToken",
+  "project": "commons-csv",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Lexer_nextToken",
+    "package": "org.apache.commons.csv",
+    "class": "org.apache.commons.csv.Lexer",
+    "test-class": "org.apache.commons.csv.Lexer_nextToken_Test",
+    "method-name": "nextToken(Token)",
+    "source-path": "src/main/java/org/apache/commons/csv/Lexer.java",
+    "test-path": "src/test/java/org/apache/commons/csv/Lexer_nextToken_Test.java",
+    "focal-method": "Token nextToken(final Token token) throws IOException {\r\n    // get the last read char (required for empty line detection)\r\n    int lastChar = reader.getLastChar();\r\n    // read the next char and set eol\r\n    int c = reader.read();\r\n    /* Note: The following call will swallow LF if c == CR. But we don't need to know if the last char was CR or LF\r\n    - they are equivalent here.\r\n     */\r\n    boolean eol = readEndOfLine(c);\r\n    // empty line detection: eol AND (last char was EOL or beginning)\r\n    if (ignoreEmptyLines) {\r\n        while (eol && isStartOfLine(lastChar)) {\r\n            // go on char ahead ...\r\n            lastChar = c;\r\n            c = reader.read();\r\n            eol = readEndOfLine(c);\r\n            // reached end of file without any content (empty line at the end)\r\n            if (isEndOfFile(c)) {\r\n                token.type = EOF;\r\n                // don't set token.isReady here because no content\r\n                return token;\r\n            }\r\n        } \r\n    }\r\n    // did we reach eof during the last iteration already ? EOF\r\n    if (isEndOfFile(lastChar) || ((!isLastTokenDelimiter) && isEndOfFile(c))) {\r\n        token.type = EOF;\r\n        // don't set token.isReady here because no content\r\n        return token;\r\n    }\r\n    if (isStartOfLine(lastChar) && isCommentStart(c)) {\r\n        final String line = reader.readLine();\r\n        if (line == null) {\r\n            token.type = EOF;\r\n            // don't set token.isReady here because no content\r\n            return token;\r\n        }\r\n        final String comment = line.trim();\r\n        token.content.append(comment);\r\n        token.type = COMMENT;\r\n        return token;\r\n    }\r\n    // important: make sure a new char gets consumed in each iteration\r\n    while (token.type == INVALID) {\r\n        // ignore whitespaces at beginning of a token\r\n        if (ignoreSurroundingSpaces) {\r\n            while ((Character.isWhitespace(((char) (c))) && (!isDelimiter(c))) && (!eol)) {\r\n                c = reader.read();\r\n                eol = readEndOfLine(c);\r\n            } \r\n        }\r\n        // ok, start of token reached: encapsulated, or token\r\n        if (isDelimiter(c)) {\r\n            // empty token return TOKEN(\"\")\r\n            token.type = TOKEN;\r\n        } else if (eol) {\r\n            // empty token return EORECORD(\"\")\r\n            // noop: token.content.append(\"\");\r\n            token.type = EORECORD;\r\n        } else if (isQuoteChar(c)) {\r\n            // consume encapsulated token\r\n            parseEncapsulatedToken(token);\r\n        } else if (isEndOfFile(c)) {\r\n            // end of file return EOF()\r\n            // noop: token.content.append(\"\");\r\n            token.type = EOF;\r\n            token.isReady = true;// there is data at EOF\r\n\r\n        } else {\r\n            // next token must be a simple token\r\n            // add removed blanks when not ignoring whitespace chars...\r\n            parseSimpleToken(token, c);\r\n        }\r\n    } \r\n    return token;\r\n}",
+    "class-code": "package org.apache.commons.csv;\nimport static org.apache.commons.csv.Constants.FF;\nimport static org.apache.commons.csv.Token.Type.INVALID;\nimport static org.apache.commons.csv.Constants.BACKSPACE;\nimport static org.apache.commons.csv.Constants.UNDEFINED;\nimport java.io.Closeable;\nimport java.io.IOException;\nimport static org.apache.commons.csv.Token.Type.EORECORD;\nimport static org.apache.commons.csv.Constants.CR;\nimport static org.apache.commons.csv.Token.Type.COMMENT;\nimport static org.apache.commons.csv.Constants.TAB;\nimport static org.apache.commons.csv.Constants.LF;\nimport static org.apache.commons.csv.Token.Type.EOF;\nimport static org.apache.commons.csv.Token.Type.TOKEN;\nimport static org.apache.commons.csv.Constants.END_OF_STREAM;\nfinal class Lexer implements Closeable {\n    private final boolean ignoreSurroundingSpaces;\n    private final boolean ignoreEmptyLines;\n    private final ExtendedBufferedReader reader;\n    private boolean isLastTokenDelimiter;\n    Token nextToken(final Token token) throws IOException {\r\n        // get the last read char (required for empty line detection)\r\n        int lastChar = reader.getLastChar();\r\n        // read the next char and set eol\r\n        int c = reader.read();\r\n        /* Note: The following call will swallow LF if c == CR. But we don't need to know if the last char was CR or LF\r\n        - they are equivalent here.\r\n         */\r\n        boolean eol = readEndOfLine(c);\r\n        // empty line detection: eol AND (last char was EOL or beginning)\r\n        if (ignoreEmptyLines) {\r\n            while (eol && isStartOfLine(lastChar)) {\r\n                // go on char ahead ...\r\n                lastChar = c;\r\n                c = reader.read();\r\n                eol = readEndOfLine(c);\r\n                // reached end of file without any content (empty line at the end)\r\n                if (isEndOfFile(c)) {\r\n                    token.type = EOF;\r\n                    // don't set token.isReady here because no content\r\n                    return token;\r\n                }\r\n            } \r\n        }\r\n        // did we reach eof during the last iteration already ? EOF\r\n        if (isEndOfFile(lastChar) || ((!isLastTokenDelimiter) && isEndOfFile(c))) {\r\n            token.type = EOF;\r\n            // don't set token.isReady here because no content\r\n            return token;\r\n        }\r\n        if (isStartOfLine(lastChar) && isCommentStart(c)) {\r\n            final String line = reader.readLine();\r\n            if (line == null) {\r\n                token.type = EOF;\r\n                // don't set token.isReady here because no content\r\n                return token;\r\n            }\r\n            final String comment = line.trim();\r\n            token.content.append(comment);\r\n            token.type = COMMENT;\r\n            return token;\r\n        }\r\n        // important: make sure a new char gets consumed in each iteration\r\n        while (token.type == INVALID) {\r\n            // ignore whitespaces at beginning of a token\r\n            if (ignoreSurroundingSpaces) {\r\n                while ((Character.isWhitespace(((char) (c))) && (!isDelimiter(c))) && (!eol)) {\r\n                    c = reader.read();\r\n                    eol = readEndOfLine(c);\r\n                } \r\n            }\r\n            // ok, start of token reached: encapsulated, or token\r\n            if (isDelimiter(c)) {\r\n                // empty token return TOKEN(\"\")\r\n                token.type = TOKEN;\r\n            } else if (eol) {\r\n                // empty token return EORECORD(\"\")\r\n                // noop: token.content.append(\"\");\r\n                token.type = EORECORD;\r\n            } else if (isQuoteChar(c)) {\r\n                // consume encapsulated token\r\n                parseEncapsulatedToken(token);\r\n            } else if (isEndOfFile(c)) {\r\n                // end of file return EOF()\r\n                // noop: token.content.append(\"\");\r\n                token.type = EOF;\r\n                token.isReady = true;// there is data at EOF\r\n    \r\n            } else {\r\n                // next token must be a simple token\r\n                // add removed blanks when not ignoring whitespace chars...\r\n                parseSimpleToken(token, c);\r\n            }\r\n        } \r\n        return token;\r\n    }\n@Override\r\npublic void close() throws IOException;\n    long getCharacterPosition();\n    long getCurrentLineNumber();\n    String getFirstEol();\n    boolean isClosed();\n    boolean isCommentStart(final int ch);\n    boolean isDelimiter(final int ch) throws IOException;\n    boolean isEndOfFile(final int ch);\n    boolean isEscape(final int ch);\n    boolean isEscapeDelimiter() throws IOException;\n    boolean isQuoteChar(final int ch);\n    boolean isStartOfLine(final int ch);\n    private Token parseEncapsulatedToken(final Token token) throws IOException;\n    private Token parseSimpleToken(final Token token, int ch) throws IOException;\n    boolean readEndOfLine(int ch) throws IOException;\n    int readEscape() throws IOException;\n    void trimTrailingSpaces(final StringBuilder buffer);\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-csv/src/test/java/org/apache/commons/csv/Lexer_nextToken_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace/src/test/java/org/apache/commons/csv/Lexer_nextToken_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace/src/test/java/org/apache/commons/csv/Lexer_nextToken_Test.java"
+  },
+  "started_at": "2026-09-15T06:24:39.919590+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Lexer_nextToken/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

@@ -1,0 +1,22 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (5 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 951 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size > 0) {
+- line 944 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key1 == null) {
+- line 955 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash3 == hashCode && key.equals(key3)) {
+- line 983 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: hash3 = key == null ? 0 : key.hashCode();
+- line 993 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: hash1 = key == null ? 0 : key.hashCode();
+
+NO_COVERAGE (7 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 932 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key3 == null) {
+- line 938 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (key2 == null) {
+- line 955 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (hash3 == hashCode && key.equals(key3)) {
+- line 935 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::put | source: return old;
+- line 941 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::put | source: return old;
+- line 947 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::put | source: return old;
+- line 958 | NullReturnValsMutator | replaced return value with null for org/apache/commons/collections4/map/Flat3Map::put | source: return old;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPut_DelegateMapThrowsException, testPut_ExceedingSize, testPut_ExistingEntry, testPut_NewEntry, testPut_NullKey, testPut_Parameterized, testPut_SpecialCases, testPut_UpdatingWithDifferentKeys, testPut_WhenDelegateMapIsNonNull, testPut_WithFullMapThenClear

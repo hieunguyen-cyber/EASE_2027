@@ -1,0 +1,33 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 235 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ignoreEmptyLines) {
+- line 251 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEndOfFile(lastChar) || !isLastTokenDelimiter && isEndOfFile(c)) {
+- line 251 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEndOfFile(lastChar) || !isLastTokenDelimiter && isEndOfFile(c)) {
+- line 251 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEndOfFile(lastChar) || !isLastTokenDelimiter && isEndOfFile(c)) {
+
+NO_COVERAGE (19 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 236 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (eol && isStartOfLine(lastChar)) {
+- line 236 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (eol && isStartOfLine(lastChar)) {
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isEndOfFile(c)) {
+- line 257 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isStartOfLine(lastChar) && isCommentStart(c)) {
+- line 257 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isStartOfLine(lastChar) && isCommentStart(c)) {
+- line 259 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (line == null) {
+- line 271 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (token.type == INVALID) {
+- line 273 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ignoreSurroundingSpaces) {
+- line 274 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (Character.isWhitespace((char)c) && !isDelimiter(c) && !eol) {
+- line 274 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (Character.isWhitespace((char)c) && !isDelimiter(c) && !eol) {
+- line 274 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (Character.isWhitespace((char)c) && !isDelimiter(c) && !eol) {
+- line 281 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isDelimiter(c)) {
+- line 284 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (eol) {
+- line 288 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (isQuoteChar(c)) {
+- line 291 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (isEndOfFile(c)) {
+- line 245 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::nextToken | source: return token;
+- line 262 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::nextToken | source: return token;
+- line 267 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::nextToken | source: return token;
+- line 302 | NullReturnValsMutator | replaced return value with null for org/apache/commons/csv/Lexer::nextToken | source: return token;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNextTokenHandlesDelimiters, testNextTokenHandlesEOFAfterToken, testNextTokenHandlesEmptyLines, testNextTokenReturnsEOFForEmptyInput, testNextTokenWithSingleToken

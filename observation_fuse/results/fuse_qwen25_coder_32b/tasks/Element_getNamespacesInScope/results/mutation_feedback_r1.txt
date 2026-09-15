@@ -1,0 +1,12 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 1723 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (additionalNamespaces != null) {
+
+NO_COVERAGE (1 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 1725 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!namespaces.containsKey(ns.getPrefix())) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetNamespacesInScope, testGetNamespacesInScope_AsRootElement, testGetNamespacesInScope_WhenParentElementIsNull_ShouldIncludeNoNamespace, testGetNamespacesInScope_WithAdditionalNamespaces, testGetNamespacesInScope_WithAttributes, testGetNamespacesInScope_WithAttributes_ThrowsException, testGetNamespacesInScope_WithConflictingNamespaces, testGetNamespacesInScope_WithInvalidAttributeNamespace, testGetNamespacesInScope_WithNoAdditionalNamespaces_AndNoParent, testGetNamespacesInScope_WithNullAdditionalNamespaces, testGetNamespacesInScope_WithParentElement

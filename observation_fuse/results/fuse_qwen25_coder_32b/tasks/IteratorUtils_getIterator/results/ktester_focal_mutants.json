@@ -1,0 +1,244 @@
+{
+  "mutants": [
+    {
+      "id": 56,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 800,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 57,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "IteratorUtils.java",
+      "line": 803,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "IteratorUtils.java",
+      "line": 806,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 59,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "IteratorUtils.java",
+      "line": 809,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 812,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 815,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 818,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 821,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 64,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 824,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 827,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 832,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 834,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 801,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 69,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 804,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 70,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 807,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 71,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 810,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 813,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 73,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 816,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "IteratorUtils.java",
+      "line": 819,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 822,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 76,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 825,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 828,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 835,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "IteratorUtils.java",
+      "line": 841,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator",
+      "method_description": "(Ljava/lang/Object;)Ljava/util/Iterator;"
+    }
+  ]
+}

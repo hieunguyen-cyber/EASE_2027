@@ -1,0 +1,284 @@
+{
+  "mutants": [
+    {
+      "id": 117,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 780,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 118,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 782,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 119,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 793,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 795,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 121,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 797,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 122,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 784,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 123,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 798,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 124,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 800,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 125,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 801,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 126,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 803,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 127,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 806,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 128,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 791,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 129,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 791,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 130,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 775,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 131,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 780,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 132,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 781,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 133,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 783,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 134,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 787,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 135,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 791,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 136,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 796,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 137,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 780,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 138,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 782,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 139,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 793,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 140,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 795,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 141,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 797,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 142,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 776,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValuesService::javaNameToYamlName",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 143,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "FakeValuesService.java",
+      "line": 789,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValuesService::javaNameToYamlName",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "id": 144,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "FakeValuesService.java",
+      "line": 811,
+      "mutator": "EmptyObjectReturnValsMutator",
+      "description": "replaced return value with \"\" for net/datafaker/service/FakeValuesService::javaNameToYamlName",
+      "method_description": "(Ljava/lang/String;)Ljava/lang/String;"
+    }
+  ]
+}

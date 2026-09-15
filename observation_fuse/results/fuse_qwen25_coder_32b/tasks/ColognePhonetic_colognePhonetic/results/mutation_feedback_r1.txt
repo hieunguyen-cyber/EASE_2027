@@ -1,0 +1,37 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (15 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 339 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (chr < 'A' || chr > 'Z') {
+- line 333 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!input.isEmpty()) {
+- line 345 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'B' || chr == 'P' && nextChar != 'H') {
+- line 349 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (arrayContains(FPVW, chr)) {
+- line 351 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (arrayContains(GKQ, chr)) {
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'X' && !arrayContains(CKQ, lastChar)) {
+- line 356 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'S' || chr == 'Z') {
+- line 358 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'C') {
+- line 359 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (output.isEmpty()) {
+- line 365 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (arrayContains(SZ, lastChar) || !arrayContains(AHKOQUX, nextChar)) {
+- line 370 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (arrayContains(DTX, chr)) {
+- line 339 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (chr < 'A' || chr > 'Z') {
+- line 357 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('8');
+- line 366 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('8');
+- line 385 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put(CHAR_IGNORE); // needed by put
+
+NO_COVERAGE (12 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 345 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'B' || chr == 'P' && nextChar != 'H') {
+- line 353 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (chr == 'X' && !arrayContains(CKQ, lastChar)) {
+- line 360 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (arrayContains(AHKLOQRUX, nextChar)) {
+- line 365 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: } else if (arrayContains(SZ, lastChar) || !arrayContains(AHKOQUX, nextChar)) {
+- line 350 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('3');
+- line 352 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('4');
+- line 354 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('4');
+- line 355 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('8');
+- line 361 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('4');
+- line 363 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('8');
+- line 368 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('4');
+- line 371 | VoidMethodCallMutator | removed call to org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer::put | source: output.put('8');
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testBoundaryCaseWithOnlyIgnoredCharacters, testConsecutiveIgnoredCharacters, testConsecutiveSameCharacters, testEmptyString, testEncode, testEncodeWithSpecialCharacters, testEncodeWithValidPhoneticInputs, testHandlingOfVariousCharacterCases, testInputWithExcessSpaces, testInputWithIgnoredCharacters, testInputWithLeadingAndTrailingSpaces, testIsEncodeEqual, testMixedInputValidity, testMultipleCodesConcatenation, testNullInput, testOnlyUppercaseInput, testPhoneticMapping, testSpecialCharacters

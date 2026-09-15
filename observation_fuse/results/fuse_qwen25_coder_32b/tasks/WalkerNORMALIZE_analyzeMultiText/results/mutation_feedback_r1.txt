@@ -1,0 +1,33 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (25 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 103 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < len; i++) {
+- line 109 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (between && ttext.length() > 0) {
+- line 124 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (between && ttext.length() > 0) {
+- line 104 | MathMutator | Replaced integer addition with subtraction | source: final Content c = get(offset + i);
+- line 108 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Verifier.isAllXMLWhitespace(ttext)) {
+- line 109 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && ttext.length() > 0) {
+- line 113 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 113 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 113 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 123 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Verifier.isAllXMLWhitespace(ttext)) {
+- line 124 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && ttext.length() > 0) {
+- line 128 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 128 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 128 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && (needspace || isSpaceFirst(ttext))) {
+- line 141 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && needspace) {
+- line 141 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (between && needspace) {
+- line 103 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < len; i++) {
+- line 109 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (between && ttext.length() > 0) {
+- line 124 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (between && ttext.length() > 0) {
+- line 114 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText | source: mtext.appendText(Trim.NONE, " ");
+- line 116 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText | source: mtext.appendText(Trim.COMPACT, ttext);
+- line 129 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText | source: mtext.appendText(Trim.NONE, " ");
+- line 131 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendCDATA | source: mtext.appendCDATA(Trim.COMPACT, ttext);
+- line 142 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendText | source: mtext.appendText(Trim.NONE, " ");
+- line 144 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractFormattedWalker$MultiText::appendRaw | source: mtext.appendRaw(c);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testAnalyzeMultiText, testAnalyzeMultiText_withCDataInputs, testAnalyzeMultiText_withTextInputs, testAnalyzeMultiText_withWhitespaceText

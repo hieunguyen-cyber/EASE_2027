@@ -1,0 +1,284 @@
+{
+  "mutants": [
+    {
+      "id": 459,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1319,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "()V"
+    },
+    {
+      "id": 460,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1262,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "()V"
+    },
+    {
+      "id": 461,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1266,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "()V"
+    },
+    {
+      "id": 462,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1270,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "()V"
+    },
+    {
+      "id": 463,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1278,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "()V"
+    },
+    {
+      "id": 464,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1269,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 465,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1275,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 466,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1277,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 467,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1293,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 468,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1300,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 469,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1307,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 470,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1311,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()V"
+    },
+    {
+      "id": 471,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1321,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "()V"
+    },
+    {
+      "id": 472,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "JsonReader.java",
+      "line": 1321,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "()V"
+    },
+    {
+      "id": 473,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1255,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 474,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1274,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 475,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1292,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 476,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1299,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 477,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1306,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 478,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1319,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "()V"
+    },
+    {
+      "id": 479,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1261,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::push",
+      "method_description": "()V"
+    },
+    {
+      "id": 480,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1265,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::push",
+      "method_description": "()V"
+    },
+    {
+      "id": 481,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1281,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipUnquotedValue",
+      "method_description": "()V"
+    },
+    {
+      "id": 482,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1284,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipQuotedValue",
+      "method_description": "()V"
+    },
+    {
+      "id": 483,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "JsonReader.java",
+      "line": 1287,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipQuotedValue",
+      "method_description": "()V"
+    },
+    {
+      "id": 484,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1290,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipUnquotedValue",
+      "method_description": "()V"
+    },
+    {
+      "id": 485,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1297,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipQuotedValue",
+      "method_description": "()V"
+    },
+    {
+      "id": 486,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "JsonReader.java",
+      "line": 1304,
+      "mutator": "VoidMethodCallMutator",
+      "description": "removed call to com/google/gson/stream/JsonReader::skipQuotedValue",
+      "method_description": "()V"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "prepared_at": "2026-09-15T08:29:26.035940+00:00",
+  "task_id": "MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition",
+  "project": "ruler",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition",
+    "package": "software.amazon.event.ruler",
+    "class": "software.amazon.event.ruler.MachineComplexityEvaluator",
+    "test-class": "software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test",
+    "method-name": "getMatchesAccessibleFromEachTransition(ByteState)",
+    "source-path": "src/main/java/software/amazon/event/ruler/MachineComplexityEvaluator.java",
+    "test-path": "src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.java",
+    "focal-method": "private Map<SingleByteTransition, Set<ByteMatch>> getMatchesAccessibleFromEachTransition(ByteState state) {\r\n    Map<SingleByteTransition, Set<ByteMatch>> result = new HashMap<>();\r\n    Set<SingleByteTransition> visited = new HashSet<>();\r\n    Stack<SingleByteTransition> stack = new Stack<>();\r\n    stack.push(state);\r\n    // We'll do a depth-first-search as a state's matches can only be computed once the computation is complete for\r\n    // all deeper states. Let's avoid recursion, which is prone to stack overflow.\r\n    while (!stack.isEmpty()) {\r\n        // Peek instead of pop. Need this transition to remain on stack so we can compute its matches once all\r\n        // deeper states are complete.\r\n        SingleByteTransition transition = stack.peek();\r\n        if (!result.containsKey(transition)) {\r\n            result.put(transition, new HashSet<>());\r\n        }\r\n        Set<ByteMatch> matches = result.get(transition);\r\n        // Visited means we have already processed this transition once (via peeking) and have since computed the\r\n        // matches for all deeper states. Time to compute this transition's matches then pop it from the stack.\r\n        if (visited.contains(transition)) {\r\n            ByteState nextState = transition.getNextByteState();\r\n            if (nextState != null) {\r\n                for (ByteTransition eachTransition : nextState.getTransitions()) {\r\n                    for (SingleByteTransition single : eachTransition.expand()) {\r\n                        matches.addAll(result.get(single));\r\n                    }\r\n                }\r\n            }\r\n            stack.pop();\r\n            continue;\r\n        }\r\n        visited.add(transition);\r\n        // Add all matches directly accessible from this transition.\r\n        matches.addAll(transition.getMatches());\r\n        // Push the next round of deeper states into the stack. By the time we return back to the current transition\r\n        // on the stack, all matches for deeper states will have been computed.\r\n        ByteState nextState = transition.getNextByteState();\r\n        if (nextState != null) {\r\n            for (ByteTransition eachTransition : nextState.getTransitions()) {\r\n                for (SingleByteTransition single : eachTransition.expand()) {\r\n                    if (!visited.contains(single)) {\r\n                        stack.push(single);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    } \r\n    return result;\r\n}",
+    "class-code": "package software.amazon.event.ruler;\nimport static software.amazon.event.ruler.MatchType.WILDCARD;\nimport java.util.LinkedList;\nimport java.util.Set;\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.HashSet;\nimport java.util.Queue;\nimport java.util.Stack;\npublic class MachineComplexityEvaluator {\n    \n    private Map<SingleByteTransition, Set<ByteMatch>> getMatchesAccessibleFromEachTransition(ByteState state) {\r\n        Map<SingleByteTransition, Set<ByteMatch>> result = new HashMap<>();\r\n        Set<SingleByteTransition> visited = new HashSet<>();\r\n        Stack<SingleByteTransition> stack = new Stack<>();\r\n        stack.push(state);\r\n        // We'll do a depth-first-search as a state's matches can only be computed once the computation is complete for\r\n        // all deeper states. Let's avoid recursion, which is prone to stack overflow.\r\n        while (!stack.isEmpty()) {\r\n            // Peek instead of pop. Need this transition to remain on stack so we can compute its matches once all\r\n            // deeper states are complete.\r\n            SingleByteTransition transition = stack.peek();\r\n            if (!result.containsKey(transition)) {\r\n                result.put(transition, new HashSet<>());\r\n            }\r\n            Set<ByteMatch> matches = result.get(transition);\r\n            // Visited means we have already processed this transition once (via peeking) and have since computed the\r\n            // matches for all deeper states. Time to compute this transition's matches then pop it from the stack.\r\n            if (visited.contains(transition)) {\r\n                ByteState nextState = transition.getNextByteState();\r\n                if (nextState != null) {\r\n                    for (ByteTransition eachTransition : nextState.getTransitions()) {\r\n                        for (SingleByteTransition single : eachTransition.expand()) {\r\n                            matches.addAll(result.get(single));\r\n                        }\r\n                    }\r\n                }\r\n                stack.pop();\r\n                continue;\r\n            }\r\n            visited.add(transition);\r\n            // Add all matches directly accessible from this transition.\r\n            matches.addAll(transition.getMatches());\r\n            // Push the next round of deeper states into the stack. By the time we return back to the current transition\r\n            // on the stack, all matches for deeper states will have been computed.\r\n            ByteState nextState = transition.getNextByteState();\r\n            if (nextState != null) {\r\n                for (ByteTransition eachTransition : nextState.getTransitions()) {\r\n                    for (SingleByteTransition single : eachTransition.expand()) {\r\n                        if (!visited.contains(single)) {\r\n                            stack.push(single);\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        } \r\n        return result;\r\n    }\nint evaluate(ByteState state);\n    int getMaxComplexity();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_2_Test_slice0.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/ruler/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice6.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_2_Test_slice0.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice1.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice2.java",
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_2_3_Test_slice6.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.java"
+  },
+  "started_at": "2026-09-15T08:29:26.127539+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

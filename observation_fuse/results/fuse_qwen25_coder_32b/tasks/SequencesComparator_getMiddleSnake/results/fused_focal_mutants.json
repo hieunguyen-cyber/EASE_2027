@@ -1,0 +1,954 @@
+{
+  "mutants": [
+    {
+      "id": 44,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 273,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 45,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 275,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 46,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 47,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 288,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 48,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 288,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 49,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 50,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 51,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 52,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 299,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 53,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 54,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 311,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 55,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 311,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 56,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 57,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 58,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "ConditionalsBoundaryMutator",
+      "description": "changed conditional boundary",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 59,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 289,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 60,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 290,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from 1 to -1",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 61,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 313,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 62,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 314,
+      "mutator": "IncrementsMutator",
+      "description": "Changed increment from -1 to 1",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 63,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 275,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 64,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 65,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "InvertNegsMutator",
+      "description": "removed negation",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 66,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 261,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 67,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 262,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 68,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 267,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 69,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 268,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 70,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 269,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 71,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 269,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 72,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 269,
+      "mutator": "MathMutator",
+      "description": "Replaced integer division with multiplication",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 73,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 270,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 74,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 271,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 75,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 271,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 76,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 278,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 77,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 78,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 79,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 280,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 80,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 282,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 81,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 282,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 82,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 286,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 83,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 286,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 84,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 286,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 85,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 86,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 87,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 88,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 89,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 294,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 90,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 294,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 91,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 294,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 92,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 299,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 93,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 299,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 94,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 301,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 95,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 301,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 96,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 97,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 98,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 99,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 100,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 304,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 101,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 304,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 102,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 306,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 103,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 309,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 104,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 310,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 105,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 310,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 106,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 310,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 107,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "MathMutator",
+      "description": "Replaced integer modulus with multiplication",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 108,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 109,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 318,
+      "mutator": "MathMutator",
+      "description": "Replaced integer addition with subtraction",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 110,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 318,
+      "mutator": "MathMutator",
+      "description": "Replaced integer subtraction with addition",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 111,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 263,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 112,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 263,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 113,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 269,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 114,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 115,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 116,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 288,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 117,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 118,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 119,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 120,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 312,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 121,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+      "description": "removed conditional - replaced equality check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 122,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 273,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 123,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 275,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 124,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 279,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 125,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 288,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 126,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 288,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 127,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 128,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 129,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 293,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 130,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 299,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 131,
+      "detected": false,
+      "status": "NO_COVERAGE",
+      "source_file": "SequencesComparator.java",
+      "line": 302,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 132,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 311,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 133,
+      "detected": false,
+      "status": "SURVIVED",
+      "source_file": "SequencesComparator.java",
+      "line": 311,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 134,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 135,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 136,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 317,
+      "mutator": "RemoveConditionalMutator_ORDER_ELSE",
+      "description": "removed conditional - replaced comparison check with false",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 137,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 294,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/sequence/SequencesComparator::getMiddleSnake",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    },
+    {
+      "id": 138,
+      "detected": true,
+      "status": "KILLED",
+      "source_file": "SequencesComparator.java",
+      "line": 318,
+      "mutator": "NullReturnValsMutator",
+      "description": "replaced return value with null for org/apache/commons/collections4/sequence/SequencesComparator::getMiddleSnake",
+      "method_description": "(IIII)Lorg/apache/commons/collections4/sequence/SequencesComparator$Snake;"
+    }
+  ]
+}

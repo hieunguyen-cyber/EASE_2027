@@ -1,0 +1,24 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (11 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 295 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (key.length() > 1) {
+- line 304 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (key.length() > 2) {
+- line 284 | MathMutator | Replaced integer addition with subtraction | source: final char next = i < len - 1 ? chars[i + 1] : SPACE;
+- line 299 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (lastChar == 'S') {
+- line 307 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last2Char == 'A' && lastChar == 'Y') {
+- line 307 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (last2Char == 'A' && lastChar == 'Y') {
+- line 319 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: return this.isStrict() ? string.substring(0, Math.min(TRUE_LENGTH, string.length())) : string;
+- line 284 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: final char next = i < len - 1 ? chars[i + 1] : SPACE;
+- line 285 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: final char aNext = i < len - 2 ? chars[i + 2] : SPACE;
+- line 304 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (key.length() > 2) {
+- line 259 | EmptyObjectReturnValsMutator | replaced return value with "" for org/apache/commons/codec/language/Nysiis::nysiis | source: return str;
+
+NO_COVERAGE (3 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 300 | MathMutator | Replaced integer subtraction with addition | source: key.deleteCharAt(key.length() - 1);
+- line 301 | MathMutator | Replaced integer subtraction with addition | source: lastChar = key.charAt(key.length() - 1);
+- line 308 | MathMutator | Replaced integer subtraction with addition | source: key.deleteCharAt(key.length() - 2);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testNysiisWithAyEnding, testNysiisWithDtEtcEnding, testNysiisWithEeIeEnding, testNysiisWithEmptyString, testNysiisWithExampleInput1, testNysiisWithExampleInput2, testNysiisWithKnPrefix, testNysiisWithLastCharacterRemove, testNysiisWithLeadingSpaces, testNysiisWithMacPrefix, testNysiisWithNullInput, testNysiisWithNumericInput, testNysiisWithPhPfPrefix, testNysiisWithSchPrefix, testNysiisWithSpecialCase, testNysiisWithSpecialCharacters

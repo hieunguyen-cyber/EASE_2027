@@ -1,0 +1,218 @@
+{
+  "task_id": "IteratorUtils_getIterator",
+  "project": "commons-collections",
+  "focal_class": "org.apache.commons.collections4.IteratorUtils",
+  "focal_method": "getIterator(Object)",
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/commons-collections/src/test/java/org/apache/commons/collections4/IteratorUtils_getIterator_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/IteratorUtils_getIterator/workspace/src/test/java/org/apache/commons/collections4/IteratorUtils_getIterator_Test.java"
+    ],
+    "model": null,
+    "seconds": 0.0
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40,
+    "seconds": 72.173
+  },
+  "started_at": "2026-09-15T06:00:05.330113+00:00",
+  "paper_ktester_reference": {
+    "cpr": 1.0,
+    "epr": 0.7707,
+    "line_coverage": 0.611,
+    "branch_coverage": 0.5259,
+    "line_coverage_passed": 0.5449,
+    "branch_coverage_passed": 0.4623,
+    "average_time_seconds": 152.68,
+    "average_test_cases": 7.33
+  },
+  "seed_health": {
+    "status": "GREEN",
+    "disabled_methods": [],
+    "test_count": 6
+  },
+  "ktester": {
+    "test_cases": 6,
+    "compile_pass": true,
+    "execution_pass": true,
+    "tests_executed": 6,
+    "tests_failed": 0,
+    "line_missed": 15,
+    "line_covered": 13,
+    "line_coverage": 0.464286,
+    "branch_missed": 12,
+    "branch_covered": 12,
+    "branch_coverage": 0.5,
+    "instruction_missed": 59,
+    "instruction_covered": 49,
+    "instruction_coverage": 0.453704,
+    "line_coverage_passed": 0.464286,
+    "branch_coverage_passed": 0.5,
+    "instruction_coverage_passed": 0.453704,
+    "generation_seconds": null,
+    "stats": {
+      "total": 24,
+      "detected": 10,
+      "undetected": 14,
+      "killed": 10,
+      "survived": 3,
+      "no_coverage": 11,
+      "mutation_score": 0.416667,
+      "statuses": {
+        "KILLED": 10,
+        "NO_COVERAGE": 11,
+        "SURVIVED": 3
+      }
+    },
+    "kills_per_test": 1.6667,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 12,
+        "detected": 6,
+        "survived": 0,
+        "no_coverage": 6,
+        "mutation_score": 0.5
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 12,
+        "detected": 4,
+        "survived": 3,
+        "no_coverage": 5,
+        "mutation_score": 0.333333
+      }
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "undetected_before": 14,
+      "existing_tests_before": 6,
+      "tests_after": 11,
+      "seconds": 72.173,
+      "generation_error": false
+    }
+  ],
+  "generation_error": null,
+  "fuse": {
+    "test_cases": 11,
+    "compile_pass": true,
+    "execution_pass": true,
+    "tests_executed": 11,
+    "tests_failed": 0,
+    "line_missed": 9,
+    "line_covered": 19,
+    "line_coverage": 0.678571,
+    "branch_missed": 6,
+    "branch_covered": 18,
+    "branch_coverage": 0.75,
+    "instruction_missed": 35,
+    "instruction_covered": 73,
+    "instruction_coverage": 0.675926,
+    "execution_pass_new_tests_only": true,
+    "line_coverage_passed": 0.678571,
+    "branch_coverage_passed": 0.75,
+    "instruction_coverage_passed": 0.675926,
+    "generation_seconds": 72.173,
+    "inherited_disabled_methods": 0,
+    "stats": {
+      "total": 24,
+      "detected": 17,
+      "undetected": 7,
+      "killed": 17,
+      "survived": 2,
+      "no_coverage": 5,
+      "mutation_score": 0.708333,
+      "statuses": {
+        "KILLED": 17,
+        "NO_COVERAGE": 5,
+        "SURVIVED": 2
+      }
+    },
+    "kills_per_test": 1.5455,
+    "by_mutator": {
+      "NullReturnValsMutator": {
+        "total": 12,
+        "detected": 9,
+        "survived": 0,
+        "no_coverage": 3,
+        "mutation_score": 0.75
+      },
+      "RemoveConditionalMutator_EQUAL_ELSE": {
+        "total": 12,
+        "detected": 8,
+        "survived": 2,
+        "no_coverage": 2,
+        "mutation_score": 0.666667
+      }
+    }
+  },
+  "delta": {
+    "line_coverage": 0.214285,
+    "branch_coverage": 0.25,
+    "instruction_coverage": 0.222222,
+    "line_coverage_passed": 0.214285,
+    "branch_coverage_passed": 0.25,
+    "instruction_coverage_passed": 0.222222,
+    "kills_per_test": -0.1212,
+    "mutation_score": 0.291666,
+    "mutation_score_points": 29.167,
+    "newly_killed": 7,
+    "lost_kills": 0,
+    "added_test_methods": 5,
+    "compile_pass": [
+      true,
+      true
+    ],
+    "execution_pass": [
+      true,
+      true
+    ],
+    "newly_killed_mutants": [
+      {
+        "line": 803,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 804,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator"
+      },
+      {
+        "line": 806,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 821,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 822,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator"
+      },
+      {
+        "line": 827,
+        "mutator": "RemoveConditionalMutator_EQUAL_ELSE",
+        "description": "removed conditional - replaced equality check with false"
+      },
+      {
+        "line": 828,
+        "mutator": "NullReturnValsMutator",
+        "description": "replaced return value with null for org/apache/commons/collections4/IteratorUtils::getIterator"
+      }
+    ],
+    "lost_kill_mutants": []
+  },
+  "status": "COMPLETED",
+  "completed_at": "2026-09-15T06:01:44.010469+00:00"
+}

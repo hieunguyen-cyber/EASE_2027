@@ -1,0 +1,28 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (20 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 250 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int j = 0; j < Math.min(groupCount, keys.size()); j++) {
+- line 251 | MathMutator | Replaced integer addition with subtraction | source: pathVariables.put(keys.get(j), matcher.group(j + 1));
+- line 199 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!relativePath.startsWith(groupPath)) {
+- line 202 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (relativePath.endsWith(UrlUtil.SLASH) && !UrlUtil.SLASH.equals(relativePath)) {
+- line 202 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (relativePath.endsWith(UrlUtil.SLASH) && !UrlUtil.SLASH.equals(relativePath)) {
+- line 206 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!routers.containsKey(relativePath)) {
+- line 211 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (!compiledMatcher.find()) {
+- line 213 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (HttpMethod.GET.name().equalsIgnoreCase(method) && resourceRouter) {
+- line 213 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (HttpMethod.GET.name().equalsIgnoreCase(method) && resourceRouter) {
+- line 215 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (Boolean.TRUE.equals(result)) {
+- line 221 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (matched) {
+- line 232 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (relativePath.matches(routerRegex)) {
+- line 236 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (pathCount != routerCount) {
+- line 241 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (functionMetaInfo == null) {
+- line 249 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (matcher.find()) {
+- line 250 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int j = 0; j < Math.min(groupCount, keys.size()); j++) {
+- line 217 | NullReturnValsMutator | replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter | source: return (R) routers.get(routerKey).get(method);
+- line 223 | NullReturnValsMutator | replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter | source: return (R) routers.get(routerKey).get(method);
+- line 255 | NullReturnValsMutator | replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter | source: return (R) functionMetaInfo;
+- line 261 | NullReturnValsMutator | replaced return value with null for org/flmelody/core/AbstractRouterGroup::matchRouter | source: return (R) routers.get(relativePath).get(method);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testMatchRouter_withInvalidPath_andMethod, testMatchRouter_withPathVariables_andMethod, testMatchRouter_withUnsupportedMethod

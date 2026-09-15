@@ -1,0 +1,40 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+NO_COVERAGE (32 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 178 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (cmp < 0) {
+- line 181 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (--mid >= left && bucket[mid].hashCode() == hash) {
+- line 188 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (cmp > 0) {
+- line 204 | ConditionalsBoundaryMutator | changed conditional boundary | source: while (++mid <= right && bucket[mid].hashCode() == hash) {
+- line 210 | ConditionalsBoundaryMutator | changed conditional boundary | source: } else if (cmp < 0) {
+- line 181 | IncrementsMutator | Changed increment from -1 to 1 | source: while (--mid >= left && bucket[mid].hashCode() == hash) {
+- line 204 | IncrementsMutator | Changed increment from 1 to -1 | source: while (++mid <= right && bucket[mid].hashCode() == hash) {
+- line 195 | InvertNegsMutator | removed negation | source: return - (mid + 1) - 1;
+- line 200 | InvertNegsMutator | removed negation | source: return - (mid + 1) - 1;
+- line 217 | InvertNegsMutator | removed negation | source: return - mid - 1;
+- line 222 | InvertNegsMutator | removed negation | source: return - mid - 1;
+- line 195 | MathMutator | Replaced integer addition with subtraction | source: return - (mid + 1) - 1;
+- line 195 | MathMutator | Replaced integer subtraction with addition | source: return - (mid + 1) - 1;
+- line 200 | MathMutator | Replaced integer addition with subtraction | source: return - (mid + 1) - 1;
+- line 200 | MathMutator | Replaced integer subtraction with addition | source: return - (mid + 1) - 1;
+- line 217 | MathMutator | Replaced integer subtraction with addition | source: return - mid - 1;
+- line 222 | MathMutator | Replaced integer subtraction with addition | source: return - mid - 1;
+- line 181 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (--mid >= left && bucket[mid].hashCode() == hash) {
+- line 185 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cmp == 0) {
+- line 204 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (++mid <= right && bucket[mid].hashCode() == hash) {
+- line 207 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (cmp == 0) {
+- line 178 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (cmp < 0) {
+- line 181 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (--mid >= left && bucket[mid].hashCode() == hash) {
+- line 188 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (cmp > 0) {
+- line 204 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: while (++mid <= right && bucket[mid].hashCode() == hash) {
+- line 210 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: } else if (cmp < 0) {
+- line 187 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return mid;
+- line 195 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return - (mid + 1) - 1;
+- line 200 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return - (mid + 1) - 1;
+- line 209 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return mid;
+- line 217 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return - mid - 1;
+- line 222 | PrimitiveReturnsMutator | replaced int return with 0 for org/jdom2/StringBin::locate | source: return - mid - 1;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testLocateWhenBucketIsNull, testLocateWhenMultipleSameHashButDifferentValues, testLocateWhenValueDoesNotExist, testLocateWhenValueExistsInBucket, testLocateWhenValueIsGreaterThanLargest, testLocateWhenValueIsLessThanSmallest, testLocateWhenValueIsNull, testLocateWithVariousInputs

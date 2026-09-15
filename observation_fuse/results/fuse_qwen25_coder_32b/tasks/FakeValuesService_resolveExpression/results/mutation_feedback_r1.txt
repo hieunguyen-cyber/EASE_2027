@@ -1,0 +1,44 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (20 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 684 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (dotIndex > 0) {
+- line 696 | ConditionalsBoundaryMutator | changed conditional boundary | source: final String simpleDirective = (dotIndex >= 0 || current == null)
+- line 719 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (dotIndex >= 0) {
+- line 732 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (dotIndex >= 0) {
+- line 658 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (directive.isEmpty()) {
+- line 664 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (args.length == 0) {
+- line 667 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (dotIndex == -1) {
+- line 668 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (current instanceof AbstractProvider) {
+- line 679 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 704 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (resolved != null) {
+- line 710 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (dotIndex == -1 && root != null && (current == null || root.getClass() != current.getClass())) {
+- line 710 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (dotIndex == -1 && root != null && (current == null || root.getClass() != current.getClass())) {
+- line 710 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (dotIndex == -1 && root != null && (current == null || root.getClass() != current.getClass())) {
+- line 712 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 712 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 684 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (dotIndex > 0) {
+- line 696 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: final String simpleDirective = (dotIndex >= 0 || current == null)
+- line 719 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (dotIndex >= 0) {
+- line 732 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (dotIndex >= 0) {
+- line 737 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return resolved;
+
+NO_COVERAGE (14 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 686 | MathMutator | Replaced integer addition with subtraction | source: final Method method = BaseFaker.getMethod(ap, directive.substring(dotIndex + 1));
+- line 670 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (method != null) {
+- line 679 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 687 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (method != null) {
+- line 710 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (dotIndex == -1 && root != null && (current == null || root.getClass() != current.getClass())) {
+- line 721 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 721 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (supplier != null && (resolved = supplier.get()) != null) {
+- line 659 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return directive;
+- line 672 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return method.invoke(current);
+- line 681 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return resolved;
+- line 689 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return method.invoke(ap);
+- line 706 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return resolved;
+- line 714 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return resolved;
+- line 723 | NullReturnValsMutator | replaced return value with null for net/datafaker/service/FakeValuesService::resolveExpression | source: return resolved;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testResolveExpression_HandlesIOException, testResolveExpression_HandlesMethodInvocationException, testResolveExpression_ReturnsNullIfUnresolvable, testResolveExpression_ReturnsValueFromCurrent, testResolveExpression_ThrowsException, testResolveExpression_ThrowsIllegalAccessException, testResolveExpression_ThrowsRuntimeException, testResolveExpression_ThrowsUnresolvableDirective, testResolveExpression_UsesRootProvider

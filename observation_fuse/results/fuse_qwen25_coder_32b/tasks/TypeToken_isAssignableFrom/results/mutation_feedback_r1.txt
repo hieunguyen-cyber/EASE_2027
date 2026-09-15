@@ -1,0 +1,20 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (8 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 210 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (to.equals(from)) {
+- line 217 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (from instanceof ParameterizedType) {
+- line 222 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (ptype != null) {
+- line 228 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: while (arg instanceof TypeVariable<?>) {
+- line 236 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (typeEquals(ptype, to, typeVarMap)) {
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (isAssignableFrom(itype, to, new HashMap<>(typeVarMap))) {
+- line 225 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < tArgs.length; i++) {
+- line 249 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom | source: return isAssignableFrom(sType, to, new HashMap<>(typeVarMap));
+
+NO_COVERAGE (2 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 237 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom | source: return true;
+- line 243 | BooleanFalseReturnValsMutator | replaced boolean return with false for com/google/gson/reflect/TypeToken::isAssignableFrom | source: return true;
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testIsAssignableFromDifferentGenericTypes, testIsAssignableFromDifferentParameterizedTypes, testIsAssignableFromEqualTypes, testIsAssignableFromSelfReferencingGenericTypes, testIsAssignableFromWithNullFrom, testIsAssignableFromWithRawType, testIsAssignableFromWithSubstitutedTypeParameters, testIsAssignableFromWithTypeVariableMapping, testIsAssignableFromWithWildcard

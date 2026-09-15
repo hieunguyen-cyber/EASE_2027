@@ -1,0 +1,18 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 738 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (content == null) {
+
+NO_COVERAGE (7 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 739 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (walker.isCDATA()) {
+- line 740 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printCDATA | source: printCDATA(out, fstack, eventfactory, new CDATA(walker.text()));
+- line 742 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printText | source: printText(out, fstack, eventfactory, new Text(walker.text()));
+- line 747 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printCDATA | source: printCDATA(out, fstack, eventfactory, (CDATA) content);
+- line 756 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printEntityRef | source: printEntityRef(out, fstack, eventfactory, (EntityRef) content);
+- line 759 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printProcessingInstruction | source: printProcessingInstruction(out, fstack, eventfactory,
+- line 766 | VoidMethodCallMutator | removed call to org/jdom2/output/support/AbstractStAXEventProcessor::printDocType | source: printDocType(out, fstack, eventfactory, (DocType) content);
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testPrintContent, testPrintContentWithComment, testPrintContentWithElement, testPrintContentWithNullContent, testPrintContentWithNullContentAsCDATA, testPrintContentWithNullEventFactory, testPrintContentWithText, testPrintContentWithUnexpectedContentType, testPrintContentWithUnexpectedContentTypeException, testPrintContentWithWalkerThrowingException

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "completed",
+  "prepared_at": "2026-09-15T08:03:35.470916+00:00",
+  "task_id": "Element_getNamespace",
+  "project": "jdom2",
+  "source_project": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2",
+  "workspace": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace",
+  "module_relative": ".",
+  "build_dir": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace",
+  "required_java_major": 11,
+  "dataset": "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/dataset_info.json",
+  "task": {
+    "id": "Element_getNamespace",
+    "package": "org.jdom2",
+    "class": "org.jdom2.Element",
+    "test-class": "org.jdom2.Element_getNamespace_Test",
+    "method-name": "getNamespace(String)",
+    "source-path": "src/main/java/org/jdom2/Element.java",
+    "test-path": "src/test/java/org/jdom2/Element_getNamespace_Test.java",
+    "focal-method": "public Namespace getNamespace(final String prefix) {\r\n    if (prefix == null) {\r\n        return null;\r\n    }\r\n    if (NS_PREFIX_XML.equals(prefix)) {\r\n        // Namespace \"xml\" is always bound.\r\n        return Namespace.XML_NAMESPACE;\r\n    }\r\n    // Check if the prefix is the prefix for this element\r\n    if (prefix.equals(getNamespacePrefix())) {\r\n        return getNamespace();\r\n    }\r\n    // Scan the additional namespaces\r\n    if (additionalNamespaces != null) {\r\n        for (int i = 0; i < additionalNamespaces.size(); i++) {\r\n            final Namespace ns = additionalNamespaces.get(i);\r\n            if (prefix.equals(ns.getPrefix())) {\r\n                return ns;\r\n            }\r\n        }\r\n    }\r\n    if (attributes != null) {\r\n        for (final Attribute a : attributes) {\r\n            if (prefix.equals(a.getNamespacePrefix())) {\r\n                return a.getNamespace();\r\n            }\r\n        }\r\n    }\r\n    // If we still don't have a match, ask the parent\r\n    if (parent instanceof Element) {\r\n        return ((Element) (parent)).getNamespace(prefix);\r\n    }\r\n    return null;\r\n}",
+    "class-code": "package org.jdom2;\nimport java.util.HashMap;\nimport java.util.ArrayList;\nimport java.io.IOException;\nimport java.net.URISyntaxException;\nimport org.jdom2.ContentList.FilterList;\nimport java.net.URI;\nimport java.io.ObjectOutputStream;\nimport java.util.TreeMap;\nimport java.util.Comparator;\nimport org.jdom2.filter.Filter;\nimport org.jdom2.filter.ElementFilter;\nimport org.jdom2.util.IteratorIterable;\nimport static org.jdom2.JDOMConstants.NS_PREFIX_XML;\nimport java.io.ObjectInputStream;\nimport java.util.Collection;\nimport java.util.Iterator;\nimport java.util.List;\nimport static org.jdom2.JDOMConstants.NS_PREFIX_DEFAULT;\nimport java.util.Collections;\npublic class Element extends Content implements Parent {\n    protected String name;\n    protected Namespace namespace;\n    transient List<Namespace> additionalNamespaces = null;\n    transient AttributeList attributes = null;\n    transient ContentList content = new ContentList(this);\n    public Namespace getNamespace(final String prefix) {\r\n        if (prefix == null) {\r\n            return null;\r\n        }\r\n        if (NS_PREFIX_XML.equals(prefix)) {\r\n            // Namespace \"xml\" is always bound.\r\n            return Namespace.XML_NAMESPACE;\r\n        }\r\n        // Check if the prefix is the prefix for this element\r\n        if (prefix.equals(getNamespacePrefix())) {\r\n            return getNamespace();\r\n        }\r\n        // Scan the additional namespaces\r\n        if (additionalNamespaces != null) {\r\n            for (int i = 0; i < additionalNamespaces.size(); i++) {\r\n                final Namespace ns = additionalNamespaces.get(i);\r\n                if (prefix.equals(ns.getPrefix())) {\r\n                    return ns;\r\n                }\r\n            }\r\n        }\r\n        if (attributes != null) {\r\n            for (final Attribute a : attributes) {\r\n                if (prefix.equals(a.getNamespacePrefix())) {\r\n                    return a.getNamespace();\r\n                }\r\n            }\r\n        }\r\n        // If we still don't have a match, ask the parent\r\n        if (parent instanceof Element) {\r\n            return ((Element) (parent)).getNamespace(prefix);\r\n        }\r\n        return null;\r\n    }\n@Override\r\npublic Element addContent(final int index, final Collection<? extends Content> newContent);\n    @Override\r\npublic Element addContent(final int index, final Content child);\n    public Element addContent(final String str);\n    @Override\r\npublic Element addContent(final Collection<? extends Content> newContent);\n    @Override\r\npublic Element addContent(final Content child);\n    public boolean addNamespaceDeclaration(final Namespace additionalNamespace);\n    @Override\r\npublic void canContainContent(Content child, int index, boolean replace) throws IllegalAddException;\n    @Override\r\npublic Element clone();\n    @Override\r\npublic List<Content> cloneContent();\n    public boolean coalesceText(boolean recursively);\n    @Override\r\npublic Element detach();\n    public List<Namespace> getAdditionalNamespaces();\n    public Attribute getAttribute(final String attname);\n    public Attribute getAttribute(final String attname, final Namespace ns);\n    AttributeList getAttributeList();\n    public String getAttributeValue(final String attname);\n    public String getAttributeValue(final String attname, final String def);\n    public String getAttributeValue(final String attname, final Namespace ns);\n    public String getAttributeValue(final String attname, final Namespace ns, final String def);\n    public List<Attribute> getAttributes();\n    public Element getChild(final String cname);\n    public Element getChild(final String cname, final Namespace ns);\n    public String getChildText(final String cname);\n    public String getChildText(final String cname, final Namespace ns);\n    public String getChildTextNormalize(final String cname);\n    public String getChildTextNormalize(final String cname, final Namespace ns);\n    public String getChildTextTrim(final String cname);\n    public String getChildTextTrim(final String cname, final Namespace ns);\n    public List<Element> getChildren();\n    public List<Element> getChildren(final String cname);\n    public List<Element> getChildren(final String cname, final Namespace ns);\n    @Override\r\npublic List<Content> getContent();\n    @Override\r\npublic Content getContent(final int index);\n    @Override\r\npublic <E extends Content> List<E> getContent(final Filter<E> filter);\n    @Override\r\npublic int getContentSize();\n    @Override\r\npublic IteratorIterable<Content> getDescendants();\n    @Override\r\npublic <F extends Content> IteratorIterable<F> getDescendants(final Filter<F> filter);\n    public String getName();\n    public Namespace getNamespace();\n    public String getNamespacePrefix();\n    public String getNamespaceURI();\n    @Override\r\npublic List<Namespace> getNamespacesInScope();\n    @Override\r\npublic List<Namespace> getNamespacesInherited();\n    @Override\r\npublic List<Namespace> getNamespacesIntroduced();\n    public String getQualifiedName();\n    public String getText();\n    public String getTextNormalize();\n    public String getTextTrim();\n    @Override\r\npublic String getValue();\n    public URI getXMLBaseURI() throws URISyntaxException;\n    public boolean hasAdditionalNamespaces();\n    public boolean hasAttributes();\n    @Override\r\npublic int indexOf(final Content child);\n    public boolean isAncestor(final Element element);\n    public boolean isRootElement();\n    public boolean removeAttribute(final String attname);\n    public boolean removeAttribute(final String attname, final Namespace ns);\n    public boolean removeAttribute(final Attribute attribute);\n    public boolean removeChild(final String cname);\n    public boolean removeChild(final String cname, final Namespace ns);\n    public boolean removeChildren(final String cname);\n    public boolean removeChildren(final String cname, final Namespace ns);\n    @Override\r\npublic List<Content> removeContent();\n    @Override\r\npublic Content removeContent(final int index);\n    @Override\r\npublic boolean removeContent(final Content child);\n    @Override\r\npublic <F extends Content> List<F> removeContent(final Filter<F> filter);\n    public void removeNamespaceDeclaration(final Namespace additionalNamespace);\n    public Element setAttribute(final String name, final String value);\n    public Element setAttribute(final String name, final String value, final Namespace ns);\n    public Element setAttribute(final Attribute attribute);\n    public Element setAttributes(final Collection<? extends Attribute> newAttributes);\n    public Parent setContent(final int index, final Collection<? extends Content> newContent);\n    public Element setContent(final int index, final Content child);\n    public Element setContent(final Collection<? extends Content> newContent);\n    public Element setContent(final Content child);\n    public Element setName(final String name);\n    public Element setNamespace(Namespace namespace);\n    public Element setText(final String text);\n    public void sortAttributes(Comparator<? super Attribute> comparator);\n    public void sortChildren(Comparator<? super Element> comparator);\n    public void sortContent(Comparator<? super Content> comparator);\n    public <E extends Content> void sortContent(Filter<E> filter, Comparator<? super E> comparator);\n    @Override\r\npublic String toString();\n}"
+  },
+  "stage_a": {
+    "source": "artifact",
+    "seed_status": "installed",
+    "seed_files": [
+      "/home/hactt13/rs_testing/mutgen_repo/data/projects/puts/jdom2/src/test/java/org/jdom2/Element_getNamespace_Test.java"
+    ],
+    "installed": [
+      "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace/src/test/java/org/jdom2/Element_getNamespace_Test.java"
+    ],
+    "model": null
+  },
+  "stage_b": {
+    "model": "ollama/qwen2.5-coder:32b",
+    "server": "http://10.148.182.141:11434",
+    "rounds": 1,
+    "max_feedback_mutants": 40
+  },
+  "design": {
+    "seed": "KTester test class for this focal method",
+    "arm_ktester": "PIT on the seed alone",
+    "arm_fuse": "PIT on the seed after MutGen adds mutation-guided tests",
+    "scored_scope": "focal method only",
+    "project_own_tests_on_classpath": false
+  },
+  "isolation": {
+    "disabled_project_tests": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace/src/ktester-test-disabled",
+    "fused_test": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace/src/test/java/org/jdom2/Element_getNamespace_Test.java"
+  },
+  "started_at": "2026-09-15T08:03:35.553248+00:00",
+  "environment": {
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18",
+    "java_major": 11,
+    "required_java_major": 11,
+    "java_path": "/home/hactt13/rs_testing/mutgen_repo/MUTGEN/.tools/jdk-11.0.32.1+1/bin/java",
+    "maven_path": "/home/hactt13/rs_testing/mutgen_repo/observation_fuse/results/fuse_qwen25_coder_32b/tasks/Element_getNamespace/workspace/mvnw",
+    "ollama_server": "http://10.148.182.141:11434",
+    "ollama_model": "qwen2.5-coder:32b"
+  }
+}

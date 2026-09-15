@@ -1,0 +1,9 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (1 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 821 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (size > 0) {
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testGetWithAllKeysNull, testGetWithExceededSize, testGetWithMixedKeys, testGetWithMultipleElements, testGetWithNonExistentKey, testGetWithNullKeyWhenContainsNullValue, testGetWithNullKeyWhenEmpty, testGetWithNullKeyWhenMultipleElements, testGetWithNullKeyWhenSizeThree, testGetWithSingleElement

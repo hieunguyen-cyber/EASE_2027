@@ -1,0 +1,51 @@
+An existing JUnit 5 test class for this focal method is already in place.
+PIT was run against it. The mutants below are the ones it did NOT kill.
+Add new test methods that kill them. Do not rewrite or delete existing tests.
+
+SURVIVED (4 total) -- the mutated line already executes, but no assertion distinguishes the mutant from the original. Assert on the specific value or side effect this line changes:
+- line 215 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (bytesLength < MIN_BYTES) {
+- line 205 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (bytes == null) {
+- line 208 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (printable == null) {
+- line 214 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (strict) {
+
+NO_COVERAGE (37 total) -- no existing test reaches this line. Choose inputs that drive execution into this branch, then assert on the result:
+- line 222 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = 0; i < bytesLength - 3; i++) {
+- line 224 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (pos < SAFE_LENGTH) {
+- line 242 | ConditionalsBoundaryMutator | changed conditional boundary | source: boolean encode = !printable.get(b) || isWhitespace(b) && pos > SAFE_LENGTH - 5;
+- line 248 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (pos > SAFE_LENGTH - 2) {
+- line 253 | ConditionalsBoundaryMutator | changed conditional boundary | source: for (int i = bytesLength - 2; i < bytesLength; i++) {
+- line 256 | ConditionalsBoundaryMutator | changed conditional boundary | source: encode = !printable.get(b) || i > bytesLength - 2 && isWhitespace(b);
+- line 262 | ConditionalsBoundaryMutator | changed conditional boundary | source: if (b < 0) {
+- line 222 | MathMutator | Replaced integer subtraction with addition | source: for (int i = 0; i < bytesLength - 3; i++) {
+- line 226 | MathMutator | Replaced integer addition with subtraction | source: pos += encodeByte(b, !printable.get(b), buffer);
+- line 241 | MathMutator | Replaced integer subtraction with addition | source: int b = getUnsignedOctet(bytesLength - 3, bytes);
+- line 243 | MathMutator | Replaced integer addition with subtraction | source: pos += encodeByte(b, encode, buffer);
+- line 253 | MathMutator | Replaced integer subtraction with addition | source: for (int i = bytesLength - 2; i < bytesLength; i++) {
+- line 256 | MathMutator | Replaced integer subtraction with addition | source: encode = !printable.get(b) || i > bytesLength - 2 && isWhitespace(b);
+- line 263 | MathMutator | Replaced integer addition with subtraction | source: b = 256 + b;
+- line 226 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: pos += encodeByte(b, !printable.get(b), buffer);
+- line 229 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: encodeByte(b, !printable.get(b) || isWhitespace(b), buffer);
+- line 229 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: encodeByte(b, !printable.get(b) || isWhitespace(b), buffer);
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: boolean encode = !printable.get(b) || isWhitespace(b) && pos > SAFE_LENGTH - 5;
+- line 242 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: boolean encode = !printable.get(b) || isWhitespace(b) && pos > SAFE_LENGTH - 5;
+- line 256 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: encode = !printable.get(b) || i > bytesLength - 2 && isWhitespace(b);
+- line 256 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: encode = !printable.get(b) || i > bytesLength - 2 && isWhitespace(b);
+- line 265 | RemoveConditionalMutator_EQUAL_ELSE | removed conditional - replaced equality check with false | source: if (printable.get(b)) {
+- line 222 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = 0; i < bytesLength - 3; i++) {
+- line 224 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (pos < SAFE_LENGTH) {
+- line 242 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: boolean encode = !printable.get(b) || isWhitespace(b) && pos > SAFE_LENGTH - 5;
+- line 248 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (pos > SAFE_LENGTH - 2) {
+- line 253 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: for (int i = bytesLength - 2; i < bytesLength; i++) {
+- line 256 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: encode = !printable.get(b) || i > bytesLength - 2 && isWhitespace(b);
+- line 262 | RemoveConditionalMutator_ORDER_ELSE | removed conditional - replaced comparison check with false | source: if (b < 0) {
+- line 232 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(ESCAPE_CHAR);
+- line 233 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(CR);
+- line 234 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(LF);
+- line 249 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(ESCAPE_CHAR);
+- line 250 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(CR);
+- line 251 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(LF);
+- line 266 | VoidMethodCallMutator | removed call to java/io/ByteArrayOutputStream::write | source: buffer.write(b);
+- ... and 1 more NO_COVERAGE mutants.
+
+Test methods that already exist -- pick different names to avoid a duplicate-method compilation error:
+  testEncodeQuotedPrintable_invalidCharsetName
