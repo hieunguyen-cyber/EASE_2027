@@ -865,10 +865,11 @@ def invoke_mutgen(
     config = UnittestGeneratorLineConfig(
         model=model,
         api_base=server_url,
-        test_file_path=test_path,
-        source_file_path=source_path,
+        workspace=workspace,
+        test_file_path=workspace / test_path,
+        source_file_path=workspace / source_path,
         test_command=test_command,
-        code_coverage_report_path="target/site/jacoco/jacoco.xml",
+        code_coverage_report_path=workspace / "target/site/jacoco/jacoco.xml",
         coverage_type="jacoco",
         target_line_coverage_rate=1.0,
         max_attempts=1,
@@ -882,6 +883,7 @@ def invoke_mutgen(
         coverage_processor=CoverageProcessor(
             coverage_type="jacoco",
             code_coverage_report_path=config.code_coverage_report_path,
+            workspace=workspace,
         ),
         analyzer=Analyzer(),
         router=LLMRouter(model=model, api_base=server_url),

@@ -161,6 +161,11 @@ class MutationDatabase:
         Get or create a file version for the given file path.
         Returns: (file_version_id, source_file_id, is_new_version)
         """
+        # ``Path`` is used throughout the server-safe runner, but sqlite only
+        # accepts scalar values such as ``str`` for query parameters.  Keep the
+        # filesystem API typed while converting at this persistence boundary.
+        file_path = Path(file_path)
+        file_path_text = str(file_path)
         with self.get_connection() as conn:
             cursor = conn.cursor()
             content = file_path.read_text(encoding="utf-8")
@@ -173,10 +178,10 @@ class MutationDatabase:
                     INSERT OR IGNORE INTO SourceFiles (file_path, last_modified)
                     VALUES (?, ?)
                 """,
-                    (str(file_path), file_path.stat().st_mtime),
+                    (file_path_text, file_path.stat().st_mtime),
                 )
                 cursor.execute(
-                    "SELECT id FROM SourceFiles WHERE file_path = ?", (file_path,)
+                    "SELECT id FROM SourceFiles WHERE file_path = ?", (file_path_text,)
                 )
                 source_file_id = cursor.fetchone()[0]
 
@@ -227,7 +232,7 @@ class MutationDatabase:
                         mutant_data["original_code"],
                         mutant_data["mutated_code"],
                         mutant_data["description"],
-                        mutant_data.get("mutant_path", ""),
+                        str(mutant_data.get("mutant_path", "")),
                         mutant_data.get("error_msg", ""),
                     ),
                 )
