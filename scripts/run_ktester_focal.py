@@ -26,14 +26,15 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 
-MUTGEN_ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = MUTGEN_ROOT.parent
-DEFAULT_DATASET = REPOSITORY_ROOT / "data/projects/puts/dataset_info.json"
-DEFAULT_PROJECTS_ROOT = REPOSITORY_ROOT / "data/projects/puts"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+# Backward-compatible name used by Maven/JDK helper functions below.
+MUTGEN_ROOT = REPOSITORY_ROOT
+DEFAULT_DATA_ROOT = REPOSITORY_ROOT / "data" / "projects" / "puts"
+DEFAULT_DATASET = DEFAULT_DATA_ROOT / "dataset_info.json"
+DEFAULT_PROJECTS_ROOT = DEFAULT_DATA_ROOT
 DEFAULT_RUNS_ROOT = Path(
-    os.getenv("MUTGEN_RUNS_ROOT")
-    or MUTGEN_ROOT / "runs/ktester_qwen25_coder_32b"
-)
+    os.getenv("MUTGEN_RUNS_ROOT", str(REPOSITORY_ROOT / "runs" / "ktester_qwen25_coder_32b"))
+).expanduser()
 DEFAULT_TASK_ID = "PatternOptionBuilder_getValueType"
 PITEST_VERSION = "1.18.0"
 PITEST_JUNIT5_VERSION = "1.0.0"

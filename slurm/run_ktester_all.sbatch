@@ -62,12 +62,12 @@ export MAVEN_OPTS="${MAVEN_OPTS:--Xms512m -Xmx8g -XX:+UseG1GC}"
 
 # A separate root prevents completed Qwen runs from being mistaken for Llama runs.
 RUNS_ROOT="${MUTGEN_RUNS_ROOT:-${MUTGEN_ROOT}/runs/ktester_qwen25_coder_32b}"
-DATASET="${MUTGEN_DATASET:-${MUTGEN_ROOT}/../data/projects/puts/dataset_info.json}"
-PROJECTS_ROOT="${MUTGEN_PROJECTS_ROOT:-${MUTGEN_ROOT}/../data/projects/puts}"
+DATASET="${MUTGEN_DATASET:-${MUTGEN_ROOT}/data/projects/puts/dataset_info.json}"
+PROJECTS_ROOT="${MUTGEN_PROJECTS_ROOT:-${MUTGEN_ROOT}/data/projects/puts}"
 
 if [[ ! -f "${DATASET}" ]]; then
   echo "KTester dataset metadata not found: ${DATASET}" >&2
-  echo "Upload the sibling data/projects/puts directory or set MUTGEN_DATASET." >&2
+  echo "Place data/projects/puts in this repository or set MUTGEN_DATASET." >&2
   exit 2
 fi
 if [[ ! -d "${PROJECTS_ROOT}" ]]; then

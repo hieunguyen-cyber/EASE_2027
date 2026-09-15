@@ -1,12 +1,11 @@
 import sys
-import os
 import re
+from pathlib import Path
 from bs4 import BeautifulSoup
 
 def parse_index_html(file_path):
     """Parses an index.html file to extract class name, mutation coverage, killed mutants, and total mutants."""
-    with open(file_path, "r", encoding="utf-8") as file:
-        soup = BeautifulSoup(file, "html.parser")
+    soup = BeautifulSoup(Path(file_path).read_text(encoding="utf-8"), "html.parser")
 
     results = []
     
@@ -41,11 +40,8 @@ def find_and_parse_logs(log_folder):
     """Recursively finds all index.html files in a folder and extracts mutation coverage data."""
     output = []
     
-    for root, _, files in os.walk(log_folder):
-        for file in files:
-            if file == "index.html":
-                file_path = os.path.join(root, file)
-                output.extend(parse_index_html(file_path))
+    for file_path in Path(log_folder).rglob("index.html"):
+        output.extend(parse_index_html(file_path))
     
     return output
 

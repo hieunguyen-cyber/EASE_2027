@@ -2,14 +2,15 @@
 Module for generating mutation testing reports.
 """
 
-import os
 from importlib import resources
+from pathlib import Path
 from typing import Any, Dict, List, Union
 
-from jinja2 import Environment, FileSystemLoader, PackageLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader
 
 from mutahunter.core.db import MutationDatabase
 from mutahunter.core.logger import logger
+from mutahunter.core.paths import RunPaths
 
 MUTAHUNTER_ASCII = r"""
 .  . . . .-. .-. . . . . . . .-. .-. .-. 
@@ -22,9 +23,10 @@ class MutantReport:
     """Class for generating mutation testing reports."""
 
     def __init__(self, db: MutationDatabase) -> None:
-        self.log_file = "logs/_latest/coverage.txt"
+        self.paths = RunPaths.default()
+        self.paths.ensure()
+        self.log_file = self.paths.latest / "coverage.txt"
         self.db = db
-        os.makedirs("logs/_latest/html", exist_ok=True)
         self.template_env = Environment(
             loader=FileSystemLoader(resources.files(__package__).joinpath("templates"))
         )
@@ -105,12 +107,10 @@ class MutantReport:
         return template.render(file_name=file_name, source_lines=source_lines)
 
     def _get_source_code(self, file_name: str) -> str:
-        with open(file_name, "r") as f:
-            return f.read()
+        return Path(file_name).read_text(encoding="utf-8")
 
     def _write_html_report(self, html_content: str, filename: str) -> None:
-        with open(os.path.join("logs/_latest/html", filename), "w") as f:
-            f.write(html_content)
+        (self.paths.html / filename).write_text(html_content, encoding="utf-8")
         logger.info(f"HTML report generated: {filename}")
 
     def _generate_summary_report(
@@ -165,5 +165,5 @@ class MutantReport:
             text (str): The text to log and write.
         """
         logger.info(text)
-        with open(self.log_file, "a") as file:
+        with self.log_file.open("a", encoding="utf-8") as file:
             file.write(text + "\n")

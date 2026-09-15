@@ -1,10 +1,12 @@
-import os
 import xml.etree.ElementTree as ET
+from pathlib import Path
 from typing import Dict, List
 
 
 class CoverageProcessor:
-    def __init__(self, coverage_type: str, code_coverage_report_path: str) -> None:
+    def __init__(
+        self, coverage_type: str, code_coverage_report_path: Path | None, workspace: Path
+    ) -> None:
         """
         Initializes the CoverageProcessor with the given configuration.
 
@@ -13,6 +15,7 @@ class CoverageProcessor:
         """
         self.coverage_type = coverage_type
         self.code_coverage_report_path = code_coverage_report_path
+        self.workspace = workspace
 
         self.line_coverage_rate = 0.00
         self.file_lines_executed = {}  # src_file -> [line_numbers]
@@ -47,26 +50,25 @@ class CoverageProcessor:
         self.file_lines_not_executed.clear()
 
         current_file = None
-        with open(self.code_coverage_report_path, "r") as file:
-            lines = file.readlines()
-            for line in lines:
-                if line.startswith("SF:"):
-                    current_file = line.strip().split(":", 1)[1]
-                    if current_file not in self.file_lines_executed:
-                        self.file_lines_executed[current_file] = []
-                    if current_file not in self.file_lines_not_executed:
-                        self.file_lines_not_executed[current_file] = []
-                elif line.startswith("DA:") and current_file:
-                    parts = line.strip().split(":")[1].split(",")
-                    hits = int(parts[1])
-                    if hits > 0:
-                        line_number = int(parts[0])
-                        self.file_lines_executed[current_file].append(line_number)
-                    else:
-                        line_number = int(parts[0])
-                        self.file_lines_not_executed[current_file].append(line_number)
-                elif line.startswith("end_of_record"):
-                    current_file = None
+        lines = self.code_coverage_report_path.read_text(encoding="utf-8").splitlines()
+        for line in lines:
+            if line.startswith("SF:"):
+                current_file = str(self._resolve_source(line.strip().split(":", 1)[1]))
+                if current_file not in self.file_lines_executed:
+                    self.file_lines_executed[current_file] = []
+                if current_file not in self.file_lines_not_executed:
+                    self.file_lines_not_executed[current_file] = []
+            elif line.startswith("DA:") and current_file:
+                parts = line.strip().split(":")[1].split(",")
+                hits = int(parts[1])
+                if hits > 0:
+                    line_number = int(parts[0])
+                    self.file_lines_executed[current_file].append(line_number)
+                else:
+                    line_number = int(parts[0])
+                    self.file_lines_not_executed[current_file].append(line_number)
+            elif line.startswith("end_of_record"):
+                current_file = None
 
     def parse_coverage_report_cobertura(self):
         self._check_file_exists(self.code_coverage_report_path)
@@ -79,7 +81,7 @@ class CoverageProcessor:
         root = tree.getroot()
 
         for cls in root.findall(".//class"):
-            name_attr = cls.get("filename")
+            name_attr = str(self._resolve_source(cls.get("filename")))
             if name_attr not in self.file_lines_executed:
                 self.file_lines_executed[name_attr] = []
             if name_attr not in self.file_lines_not_executed:
@@ -104,8 +106,7 @@ class CoverageProcessor:
             # package_name = package.get("name").replace("/", ".")
             for sourcefile in package.findall(".//sourcefile"):
                 filename = sourcefile.get("name")
-                full_filename = self.find_source_file(filename)
-                full_filename = full_filename.replace(os.getcwd() + "/", "")
+                full_filename = str(self.find_source_file(filename))
                 if full_filename not in self.file_lines_executed:
                     self.file_lines_executed[full_filename] = []
                 if full_filename not in self.file_lines_not_executed:
@@ -120,11 +121,22 @@ class CoverageProcessor:
                     else:
                         self.file_lines_not_executed[full_filename].append(line_number)
 
-    def find_source_file(self, filename: str):
-        for root, dirs, files in os.walk(os.getcwd()):
-            for file in files:
-                if "src" in root and filename in file:
-                    return os.path.join(root, file)
+    def find_source_file(self, filename: str) -> Path:
+        candidates = [
+            path for path in self.workspace.rglob(filename)
+            if path.is_file() and "src" in path.parts
+        ]
+        if len(candidates) != 1:
+            raise FileNotFoundError(
+                f"Expected one source file named {filename!r} under {self.workspace}; found {len(candidates)}."
+            )
+        return candidates[0].resolve()
+
+    def _resolve_source(self, filename: str | None) -> Path:
+        if not filename:
+            raise ValueError("Coverage report contains an empty source filename.")
+        candidate = Path(filename)
+        return (candidate if candidate.is_absolute() else self.workspace / candidate).resolve()
 
     def calculate_line_coverage_rate_for_file(self, src_file: str):
         lines_executed = self.file_lines_executed.get(src_file, [])
@@ -150,10 +162,10 @@ class CoverageProcessor:
             total_executed_lines / (total_executed_lines + total_missed_lines), 2
         )
 
-    def _check_file_exists(self, file_path: str):
-        if not os.path.exists(file_path):
+    def _check_file_exists(self, file_path: Path | None):
+        if file_path is None or not file_path.is_file():
             raise FileNotFoundError(f"File '{file_path}' not found.")
 
-    def _check_file_extension(self, exts: List[str], file_path: str):
-        if not any(file_path.endswith(ext) for ext in exts):
+    def _check_file_extension(self, exts: List[str], file_path: Path | None):
+        if file_path is None or file_path.suffix not in exts:
             raise ValueError(f"File '{file_path}' is not in {exts} format.")

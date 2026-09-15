@@ -1,5 +1,4 @@
 import json
-import os
 import subprocess
 import pprint
 import re
@@ -136,40 +135,13 @@ class UnittestGenLine:
         except Exception as e:
             raise
 
-    def fix_failed_tests(self) -> dict:
-        try:
-            system_prompt = self.prompt.fix_system_prompt.render(
-                {
-                    "test_framework": self.config.test_framework,
-                    "language": "Java",
-                }
-            )
-            user_prompt = self.prompt.fix_user_prompt.render(
-                language="Java",
-                test_framework=self.config.test_framework,
-                failed_tests=(
-                    json.dumps(self.failed_tests, indent=2)
-                    if self.failed_tests
-                    else None
-                ),
-            )
-            prompt={"system": system_prompt, "user": user_prompt}
-            print(f"unit_test_gen.py, prompt for fix: --------/n ${prompt} ---------/n")
-            response, _, _ = self.router.generate_response(
-                prompt=prompt, streaming=True
-            )
-            response = self.router.extract_yaml_from_response(response)
-            return response
-        except Exception as e:
-            raise
-
     def analyze_code(self):
         system_template = self.prompt.analyzer_system_prompt.render()
         src_code = FileUtils.read_file(self.config.source_file_path)
-        language = filename_to_lang(self.config.source_file_path)
+        language = filename_to_lang(str(self.config.source_file_path))
         source_file_numbered = FileUtils.number_lines(src_code)
         lines_to_cover = self.coverage_processor.file_lines_not_executed.get(
-            self.config.source_file_path, []
+            str(self.config.source_file_path), []
         )
         test_code = FileUtils.read_file(self.config.test_file_path)
         user_template = self.prompt.analyzer_user_prompt.render(
@@ -197,7 +169,7 @@ class UnittestGenLine:
                 or FileUtils.read_file(self.config.source_file_path)
             )
             test_code = FileUtils.read_file(self.config.test_file_path)
-            language = filename_to_lang(self.config.source_file_path)
+            language = filename_to_lang(str(self.config.source_file_path))
             system_prompt = self.prompt.test_generator_system_prompt.render(
                 {
                     "test_framework": self.config.test_framework,
@@ -284,13 +256,12 @@ class UnittestGenLine:
             if self.analyzer.check_syntax(
                 self.config.test_file_path, modified_src_code
             ):
-                with open(self.config.test_file_path, "w") as file:
-                    file.write(modified_src_code)
+                self.config.test_file_path.write_text(modified_src_code, encoding="utf-8")
                 result = subprocess.run(
                     self.config.test_command.split(),
                     capture_output=True,
                     text=True,
-                    cwd=os.getcwd(),
+                    cwd=self.config.workspace,
                 )
                 if result.returncode == 0:
                     logger.info(f"Test passed for\n{new_test_code}")
@@ -317,7 +288,7 @@ class UnittestGenLine:
         self.coverage_processor.parse_coverage_report()
         new_line_coverage_rate = (
             self.coverage_processor.calculate_line_coverage_rate_for_file(
-                self.config.source_file_path
+                str(self.config.source_file_path)
             )
         )
         if new_line_coverage_rate > self.current_line_coverage_rate:

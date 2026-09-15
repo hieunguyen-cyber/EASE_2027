@@ -1,7 +1,6 @@
 # This file uses the 'aider' library by Paul Gauthier, licensed under the Apache-2.0 license.
 # For more information, see https://github.com/paul-gauthier/aider/blob/main/aider/repomap.py
 
-import os
 import warnings
 from collections import Counter, defaultdict, namedtuple
 from importlib import resources
@@ -28,14 +27,14 @@ class RepoMap:
     def __init__(
         self,
         model: Optional[str] = None,
-        root: None = None,
+        root: Path | None = None,
         map_tokens: int = 1024,
         max_context_window: None = None,
     ) -> None:
-        if not root:
-            root = os.getcwd()
+        if root is None:
+            root = Path.cwd()
         self.model = model
-        self.root = root
+        self.root = root.resolve()
 
         self.max_map_tokens = map_tokens
         self.max_context_window = max_context_window
@@ -104,15 +103,14 @@ class RepoMap:
         return repo_content
 
     def get_rel_fname(self, fname: str) -> str:
-        return os.path.relpath(fname, self.root)
+        return str(Path(fname).resolve().relative_to(self.root))
 
     def split_path(self, path):
-        path = os.path.relpath(path, self.root)
-        return [path + ":"]
+        return [self.get_rel_fname(path) + ":"]
 
     def get_mtime(self, fname: str) -> float:
         try:
-            return os.path.getmtime(fname)
+            return Path(fname).stat().st_mtime
         except FileNotFoundError:
             pass
 
@@ -145,8 +143,7 @@ class RepoMap:
             return
         query_scm = query_scm.read_text()
 
-        with open(fname, "r", encoding="utf-8") as f:
-            code = f.read()
+        code = Path(fname).read_text(encoding="utf-8")
         if not code:
             return
         tree = parser.parse(bytes(code, "utf-8"))
@@ -381,8 +378,7 @@ class RepoMap:
     def render_tree(self, abs_fname: str, rel_fname: str, lois: List[int]) -> str:
         key = (rel_fname, tuple(sorted(lois)))
 
-        with open(abs_fname, "r", encoding="utf-8") as f:
-            code = f.read() or ""
+        code = Path(abs_fname).read_text(encoding="utf-8") or ""
 
         if not code.endswith("\n"):
             code += "\n"

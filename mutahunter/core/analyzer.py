@@ -1,4 +1,5 @@
 from importlib import resources
+from pathlib import Path
 from typing import Any, Dict, List
 
 from grep_ast import filename_to_lang
@@ -21,7 +22,7 @@ class Analyzer:
         Returns:
             str: The language identifier.
         """
-        return filename_to_lang(filename)
+        return filename_to_lang(str(filename))
 
     def get_covered_function_blocks(
         self, executed_lines: List[int], source_file_path: str
@@ -114,7 +115,7 @@ class Analyzer:
         source_code = self._read_source_file(source_file_path)
         return self.find_function_blocks_nodes(source_file_path, source_code)
 
-    def _read_source_file(self, file_path: str) -> bytes:
+    def _read_source_file(self, file_path: Path) -> bytes:
         """
         Reads the source code from a file.
 
@@ -124,8 +125,7 @@ class Analyzer:
         Returns:
             bytes: The source code.
         """
-        with open(file_path, "rb") as f:
-            return f.read()
+        return file_path.read_bytes()
 
     def check_syntax(self, source_file_path: str, source_code: str) -> bool:
         """
@@ -137,7 +137,7 @@ class Analyzer:
         Returns:
             bool: True if the syntax is correct, False otherwise.
         """
-        lang = filename_to_lang(source_file_path)
+        lang = filename_to_lang(str(source_file_path))
         parser = get_parser(lang)
         tree = parser.parse(bytes(source_code, "utf8"))
         return not tree.root_node.has_error
@@ -177,7 +177,7 @@ class Analyzer:
     def _find_import_nodes(
         self, source_file_path: str, source_code: bytes, tags: List[str]
     ) -> List[Any]:
-        lang = filename_to_lang(source_file_path)
+        lang = filename_to_lang(str(source_file_path))
         if lang is None:
             raise ValueError(f"Language not supported for file: {source_file_path}")
         parser = get_parser(lang)

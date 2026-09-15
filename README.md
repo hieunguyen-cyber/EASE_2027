@@ -6,6 +6,7 @@ Thank you for your interest in our work. This repository contains the replicatio
 
 ## 📁 Directory Structure
 
+├── data/projects/puts/             # KTester dataset (provided separately)
 ├── HumanEval-Java_fromscratch/     # Example datasets and run scripts  
 ├── mutahunter/                     # Core implementation of our technique  
 ├── scripts/                        # Python utilities for processing  
@@ -77,6 +78,11 @@ repository root with:
 PYTHONPATH="$PWD" python3 -m mutahunter.main --help
 ```
 
+KTester inputs are resolved from `data/projects/puts/` inside this repository.
+Generated MUTGEN logs, reports, databases, and KTester workspaces are kept
+under `runs/` by default; set `MUTGEN_OUTPUT_ROOT` or `MUTGEN_RUNS_ROOT` to use
+a server-managed volume instead.
+
 ## 🚀 Usage Instructions
 
 ### Hosted Ollama configuration
@@ -124,7 +130,7 @@ copies the repository into `runs/ktester/`, so neither the KTester dataset nor
 its original generated test is modified.
 
 ```bash
-cd /home/hactt13/rs_testing/mutgen_repo/MUTGEN
+cd /path/to/EASE_2027
 export PYTHONPATH="$PWD"
 
 # Idempotent; this does not call Ollama.
@@ -160,7 +166,7 @@ KTester's compact `class-code` as the model context, and scopes PIT to the exact
 class, overload, and source-line range.
 
 ```bash
-cd /home/hactt13/rs_testing/mutgen_repo/MUTGEN
+cd /path/to/EASE_2027
 export OLLAMA_SERVER_URL="http://172.16.0.10:11434"
 export OLLAMA_MODEL="llama3.3:70b"
 

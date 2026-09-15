@@ -1,8 +1,8 @@
 import hashlib
-import os
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 
@@ -11,15 +11,18 @@ class DatabaseError(Exception):
 
 
 class MutationDatabase:
-    def __init__(self, db_path: str = "mutahunter.db") -> None:
-        self.db_path = db_path
+    def __init__(self, db_path: Path | None = None) -> None:
+        from mutahunter.core.paths import RunPaths
+
+        self.db_path = db_path or RunPaths.default().database
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self.conn = None
-        if os.path.exists(self.db_path):
+        if self.db_path.exists():
             if not self.check_schema():
                 print(
                     f"Schema mismatch detected. Removing old database: {self.db_path}"
                 )
-                os.remove(self.db_path)
+                self.db_path.unlink()
         self.create_tables()
 
     @contextmanager
@@ -153,15 +156,14 @@ class MutationDatabase:
                 conn.rollback()
                 raise DatabaseError(f"Failed to start new run: {str(e)}")
 
-    def get_file_version(self, file_path: str) -> Tuple[int, int, bool]:
+    def get_file_version(self, file_path: Path) -> Tuple[int, int, bool]:
         """
         Get or create a file version for the given file path.
         Returns: (file_version_id, source_file_id, is_new_version)
         """
         with self.get_connection() as conn:
             cursor = conn.cursor()
-            with open(file_path, "r") as f:
-                content = f.read()
+            content = file_path.read_text(encoding="utf-8")
             file_hash = hashlib.md5(content.encode()).hexdigest()
             try:
 
@@ -171,7 +173,7 @@ class MutationDatabase:
                     INSERT OR IGNORE INTO SourceFiles (file_path, last_modified)
                     VALUES (?, ?)
                 """,
-                    (file_path, os.path.getmtime(file_path)),
+                    (str(file_path), file_path.stat().st_mtime),
                 )
                 cursor.execute(
                     "SELECT id FROM SourceFiles WHERE file_path = ?", (file_path,)

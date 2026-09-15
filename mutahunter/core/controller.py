@@ -1,6 +1,6 @@
 import json
-import os
 import time
+from pathlib import Path
 from subprocess import CompletedProcess
 from typing import Any, Dict, List, Optional
 from uuid import uuid4
@@ -100,8 +100,7 @@ class MutationTestController:
             raise MutationTestingError(f"Failed to complete mutation testing: {str(e)}")
 
     def run_mutation_testing_all(self) -> None:
-        all_covered_files = self.coverage_processor.file_lines_executed.keys()
-        print(f"controller: all_covered_files: ------------\n ${all_covered_files} ---------------\n")
+        all_covered_files = [Path(path) for path in self.coverage_processor.file_lines_executed]
         for covered_file_path in tqdm(all_covered_files):
             if FileOperationHandler.should_skip_file(
                 covered_file_path,
@@ -109,21 +108,20 @@ class MutationTestController:
                 only_mutate_file_paths=self.config.only_mutate_file_paths,
             ):
                 continue
-            executed_lines = self.coverage_processor.file_lines_executed[
-                covered_file_path
-            ]
+            executed_lines = self.coverage_processor.file_lines_executed[str(covered_file_path)]
             if not executed_lines:
                 continue
             mutations = self.engine.generate(
                 source_file_path=covered_file_path,
                 executed_lines=executed_lines,
-                cov_files=list(self.coverage_processor.file_lines_executed.keys()),
+                cov_files=all_covered_files,
             )["mutants"]
             self.process_mutations(mutations, covered_file_path)
 
     def run_mutation_testing_diff(self) -> None:
         modified_files = GitHandler.get_modified_files(
-            covered_files=self.coverage_processor.file_lines_executed.keys()
+            covered_files=[Path(path) for path in self.coverage_processor.file_lines_executed],
+            workspace=self.config.workspace,
         )
         for file_path in tqdm(modified_files):
             if FileOperationHandler.should_skip_file(
@@ -132,19 +130,19 @@ class MutationTestController:
                 only_mutate_file_paths=self.config.only_mutate_file_paths,
             ):
                 continue
-            modified_lines = GitHandler.get_modified_lines(file_path)
+            modified_lines = GitHandler.get_modified_lines(file_path, self.config.workspace)
             if not modified_lines:
                 logger.debug(f"No modified lines found in file: {file_path}")
                 continue
             mutations = self.engine.generate(
                 source_file_path=file_path,
                 executed_lines=modified_lines,
-                cov_files=list(self.coverage_processor.file_lines_executed.keys()),
+                cov_files=[Path(path) for path in self.coverage_processor.file_lines_executed],
             )["mutants"]
             self.process_mutations(mutations, file_path)
 
     def process_mutations(
-        self, mutations: List[Dict[str, Any]], source_file_path: str
+        self, mutations: List[Dict[str, Any]], source_file_path: Path
     ) -> None:
         file_version_id, _, is_new_version = self.db.get_file_version(source_file_path)
 
@@ -186,8 +184,8 @@ class MutationTestController:
 
     def test_mutant(
         self,
-        source_file_path: str,
-        mutant_path: str,
+        source_file_path: Path,
+        mutant_path: Path,
     ) -> None:
 
         params = {
@@ -239,12 +237,10 @@ class MutationTestController:
         for mutant in mutants:
             if mutant["file_path"] not in mutants_by_files:
                 mutants_by_files[mutant["file_path"]] = []
-            else:
-                mutants_by_files[mutant["file_path"]].append(mutant)
+            mutants_by_files[mutant["file_path"]].append(mutant)
 
         for k, v in mutants_by_files.items():
-            with open(k, "r", encoding="utf-8") as f:
-                src_code = f.read()
+            src_code = Path(k).read_text(encoding="utf-8")
             prompt = {
                 "system": self.prompt.analyzer_system_prompt.render(),
                 "user": self.prompt.analyzer_user_prompt.render(
@@ -258,7 +254,10 @@ class MutationTestController:
                 prompt=prompt, streaming=False
             )
             current_time = time.strftime("%Y-%m-%d-%H-%M-%S")
-            with open(
-                f"logs/_latest/llm/audit_{current_time}.md", "w", encoding="utf-8"
-            ) as f:
-                f.write(mode_response)
+            from mutahunter.core.paths import RunPaths
+
+            paths = RunPaths.default()
+            paths.ensure()
+            (paths.llm / f"audit_{current_time}.md").write_text(
+                mode_response, encoding="utf-8"
+            )

@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import yaml
@@ -9,6 +9,7 @@ from mutahunter.core.logger import logger
 from mutahunter.core.prompt_factory import MutationTestingPrompt
 from mutahunter.core.repomap import RepoMap
 from mutahunter.core.router import LLMRouter
+from mutahunter.core.paths import RunPaths
 
 SYSTEM_YAML_FIX = """
 Based on the error message, the YAML content provided is not in the correct format. Please ensure the YAML content is in the correct format and try again.
@@ -38,16 +39,16 @@ class LLMMutationEngine:
         model: str,
         router: LLMRouter,
         prompt: MutationTestingPrompt,
+        workspace: Path,
     ) -> None:
         self.model = model
         self.router = router
-        self.repo_map = RepoMap(model=self.model)
+        self.repo_map = RepoMap(model=self.model, root=workspace)
         self.prompt = prompt
         self.num = 0
 
-    def get_source_code(self, source_file_path: str) -> str:
-        with open(source_file_path, "r") as f:
-            return f.read()
+    def get_source_code(self, source_file_path: Path) -> str:
+        return source_file_path.read_text(encoding="utf-8")
 
     def _add_line_numbers(self, src_code: str) -> str:
         return "\n".join(
@@ -57,10 +58,10 @@ class LLMMutationEngine:
     def generate_mutant(
         self,
         repo_map_result: Dict[str, Any],
-        source_file_path: str,
+        source_file_path: Path,
         executed_lines: List[int],
     ) -> str:
-        language = filename_to_lang(source_file_path)
+        language = filename_to_lang(str(source_file_path))
         src_code = self.get_source_code(source_file_path)
         src_code_with_line_num = self._add_line_numbers(src_code)
 
@@ -79,14 +80,14 @@ class LLMMutationEngine:
             }
         )
         prompt = {"system": system_template, "user": user_template}
-        print(f"llm_mutation_engine: prompt for generating mutants: ---------\n${prompt}----------\n")
+        logger.debug("Requesting mutants for %s", source_file_path)
         model_response, _, _ = self.router.generate_response(
             prompt=prompt, streaming=True
         )
         return model_response
 
     def generate(
-        self, source_file_path: str, executed_lines: List[int], cov_files: List[str]
+        self, source_file_path: Path, executed_lines: List[int], cov_files: List[Path]
     ) -> Dict[str, Any]:
         repo_map_result = self._get_repo_map(cov_files=cov_files)
         if not repo_map_result:
@@ -126,20 +127,17 @@ class LLMMutationEngine:
         )
         return model_response
 
-    def _get_repo_map(self, cov_files: List[str]) -> Optional[Dict[str, Any]]:
-        return self.repo_map.get_repo_map(chat_files=[], other_files=cov_files)
-
-    def _add_line_numbers(self, src_code: str) -> str:
-        return "\n".join(
-            [f"{i + 1} {line}" for i, line in enumerate(src_code.splitlines())]
-        )
+    def _get_repo_map(self, cov_files: List[Path]) -> Optional[Dict[str, Any]]:
+        return self.repo_map.get_repo_map(chat_files=[], other_files=[str(path) for path in cov_files])
 
     def _clean_response(self, response: str) -> str:
         return response.strip().removeprefix("```yaml").rstrip("`")
 
     def _save_yaml(self, data: Dict[str, Any]) -> None:
         output = f"output_{self.num}.yaml"
-        with open(os.path.join("logs/_latest/llm", output), "w") as f:
-            yaml.dump(data, f, default_flow_style=False, indent=2)
+        paths = RunPaths.default()
+        paths.ensure()
+        with (paths.llm / output).open("w", encoding="utf-8") as handle:
+            yaml.dump(data, handle, default_flow_style=False, indent=2)
         self.num += 1
         logger.info(f"YAML output saved to {output}")
